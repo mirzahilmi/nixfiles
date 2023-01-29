@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }: {
   imports = [
@@ -23,6 +24,9 @@
   home = {
     username = "mirza";
     homeDirectory = "/home/mirza";
+    sessionVariables = {
+      DOCKER_CONFIG = "${config.xdg.configHome}/docker";
+    };
   };
 
   dconf.enable = true;
