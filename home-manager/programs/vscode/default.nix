@@ -54,6 +54,12 @@
           version = "2.7.0";
           sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
         }
+        {
+          name = "direnv";
+          publisher = "mkhl";
+          version = "0.16.0";
+          sha256 = "";
+        }
       ];
   };
 }

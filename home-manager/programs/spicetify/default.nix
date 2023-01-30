@@ -3,11 +3,8 @@
   inputs,
   ...
 }: let
-  spicetify = inputs.spicetify-nix;
-  spicePkgs = spicetify.packages.${pkgs.system}.default;
+  spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
 in {
-  imports = [spicetify.homeManagerModule];
-
   programs.spicetify = {
     enable = true;
 

@@ -31,7 +31,7 @@ in {
 
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
-        "cool-retro-term.desktop"
+        "org.codeberg.dnkl.foot.desktop"
         "code.desktop"
         "floorp.desktop"
       ];
@@ -54,7 +54,7 @@ in {
       background-color = "rgb(36,31,49)";
       background-opacity = 0.77000000000000002;
       click-action = "minimize";
-      custom-background-color = true;
+      custom-background-color = false;
       custom-theme-shrink = false;
       dash-max-icon-size = 48;
       disable-overview-on-startup = false;
