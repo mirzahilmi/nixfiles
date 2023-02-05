@@ -12,11 +12,11 @@
 
     ../programs/cli/nix-direnv
     ../programs/cli/tmux
+    ../programs/cli/zsh
     ../programs/cli/home-manager.nix
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
     ../programs/cli/neovim.nix
-    ../programs/cli/zsh
   ];
 
   home = {
