@@ -11,6 +11,9 @@ function vi-yank-wl {
 zle -N vi-yank-wl
 bindkey -M vicmd 'y' vi-yank-wl
 
+# Set keybindings to vi
+zstyle ':prezto:module:editor' key-bindings 'vi'
+
 # Turn down direnv verbosity
 export DIRENV_LOG_FORMAT
 ###################################
