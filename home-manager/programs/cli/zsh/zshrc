@@ -1,4 +1,4 @@
-
+###################################
 # Turn on ZSH VI mode
 bindkey -v
 export KEYTIMEOUT=1
@@ -13,3 +13,4 @@ bindkey -M vicmd 'y' vi-yank-wl
 
 # Turn down direnv verbosity
 export DIRENV_LOG_FORMAT
+###################################
