@@ -86,5 +86,5 @@
     ];
   };
 
-  xdg.configFile."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
+  xdg.configFile."zsh/p10k.zsh".source = ./p10k.zsh;
 }
