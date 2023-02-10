@@ -1,4 +1,4 @@
-{confog, ...}: {
+{config, ...}: {
   programs.zsh.zimfw = {
     enable = true;
     homeDir = "${config.xdg.configHome}/zimfw";
