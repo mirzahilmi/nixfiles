@@ -6,7 +6,8 @@
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    initExtra = builtins.readFile ./.zshrc;
+    initExtraFirst = builtins.readFile ./p10k.config.zsh;
+    initExtra = builtins.readFile ./zshrc;
 
     shellAliases = {
       ll = "ls -l";
@@ -20,6 +21,16 @@
     };
 
     plugins = [
+      {
+        name = "powerlevel10k";
+        file = "powerlevel10k.zsh-theme";
+        src = pkgs.fetchFromGitHub {
+          owner = "romkatv";
+          repo = "powerlevel10k";
+          rev = "v1.20.0";
+          sha256 = "";
+        };
+      }
       {
         name = "fast-syntax-highlighting";
         file = "fast-syntax-highlighting.plugin.zsh";
@@ -74,4 +85,6 @@
       }
     ];
   };
+
+  xdg.configFile."powerlevel10k/p10k.zsh".source = ./p10k.zsh;
 }
