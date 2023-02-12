@@ -1,5 +1,4 @@
 # =============[ VI mode ]=============
-bindkey -v
 export KEYTIMEOUT=1
 
 ##: Yank selected buffer to Clipboard
