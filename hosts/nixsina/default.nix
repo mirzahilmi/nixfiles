@@ -22,9 +22,13 @@
 
   networking = {
     hostName = "nixsina";
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      enableStrongSwan = true;
+    };
   };
 
+  services.xl2tpd.enable = true;
   services.strongswan = {
     enable = true;
     secrets = [
