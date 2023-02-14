@@ -5,7 +5,6 @@
 }: {
   programs.zsh = {
     enable = true;
-    autocd = true;
     dotDir = ".config/zsh";
     initExtra = builtins.readFile ./.zshrc;
 
@@ -13,7 +12,6 @@
       ll = "ls -l";
     };
 
-    syntaxHighlighting.enable = true;
     enableAutosuggestions = true;
 
     history = {
@@ -23,12 +21,13 @@
 
     plugins = [
       {
-        name = "zsh-autosuggestions";
+        name = "fast-syntax-highlighting";
+        file = "fast-syntax-highlighting.plugin.zsh";
         src = pkgs.fetchFromGitHub {
-          owner = "zsh-users";
-          repo = "zsh-autosuggestions";
-          rev = "v0.7.0";
-          sha256 = "0z6i9wjjklb4lvr7zjhbphibsyx51psv50gm07mbb0kj9058j6kc";
+          owner = "zdharma-continuum";
+          repo = "fast-syntax-highlighting";
+          rev = "cf318e06a9b7c9f2219d78f41b46fa6e06011fd9";
+          sha256 = "";
         };
       }
       {
@@ -41,25 +40,17 @@
           sha256 = "sha256-k+MO31FuQ+W5RYJ0HgKmqvlzdGz1zkuWUf7l+WP5tbg=";
         };
       }
-      # {
-      #   name = "editor";
-      #   file = "init.zsh";
-      #   src = pkgs.fetchFromGitHub {
-      #     owner = "sorin-ionescu";
-      #     repo = "prezto";
-      #     rev = "380b96a218ef33d1ff4a641850822f583e11131a";
-      #     sha256 = "sha256-//KY+MHE4H6wEWF6IQebB6uRcWVnlBsrMBaFxekO3kw=";
-      #   } + "/modules/editor";
-      # }
       {
-        name = "run-help";
+        name = "editor";
         file = "init.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "zimfw";
-          repo = "run-help";
-          rev = "ce45a756b384225abc192105d28016ac933986e0";
-          sha256 = "sha256-yTgqJzVp39kMT30LLCGuToIS1GLS79RKTh3h2MwpwD0=";
-        };
+        src =
+          pkgs.fetchFromGitHub {
+            owner = "sorin-ionescu";
+            repo = "prezto";
+            rev = "380b96a218ef33d1ff4a641850822f583e11131a";
+            sha256 = "sha256-//KY+MHE4H6wEWF6IQebB6uRcWVnlBsrMBaFxekO3kw=";
+          }
+          + "/modules/editor";
       }
       {
         name = "archive";
