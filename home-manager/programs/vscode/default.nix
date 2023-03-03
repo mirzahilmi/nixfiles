@@ -188,6 +188,8 @@
       ];
       # Drawio integration
       "hediet.vscode-drawio.theme" = "atlas";
+      # Codesnap
+      "codesnap.transparentBackground" = true;
       # nil & Nix IDE : Nix's Language Server
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
