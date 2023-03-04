@@ -193,7 +193,7 @@
       # Codesnap
       "codesnap.transparentBackground" = true;
       # direnv
-      "direnv.path.executable" = "${pkgs.direnv}";
+      "direnv.path.executable" = "${pkgs.direnv}/bin/direnv";
       # nil & Nix IDE : Nix's Language Server
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
