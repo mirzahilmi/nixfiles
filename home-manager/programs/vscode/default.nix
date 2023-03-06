@@ -152,10 +152,10 @@
 
       # Extensions Configuration
       # VSCord
-      "vscord.app.name" = "Visual Studio Code";
+      "vscord.app.name" = "VSCodium";
       "vscord.status.idle.check" = false;
       "vscord.status.idle.enabled" = false;
-      "vscord.status.state.text.editing" = "Working on {file_name}{file_extension} ={current_line}/{line_count}";
+      "vscord.status.state.text.editing" = "Working on {file_name}{file_extension}:{current_line}/{line_count}";
       "vscord.status.problems.text" = "- {problems_count} problems";
       "vscord.behaviour.suppressNotifications" = true;
       # PHPfmt || PHP's Formatter
