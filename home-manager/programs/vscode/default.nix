@@ -186,6 +186,8 @@
         "DocBlockToComment"
         "IndentTernaryConditions"
       ];
+      # Drawio integration
+      "hediet.vscode-drawio.theme" = "atlas";
       # nil & Nix IDE : Nix's Language Server
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
