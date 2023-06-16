@@ -55,6 +55,12 @@
           version = "2.7.0";
           sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
         }
+        {
+          name = "biome";
+          publisher = "biomejs";
+          version = "2.1.2";
+          sha256 = "sha256-bPAig5KK6hYxyAyt48Mfi2dEf50/hNiNngX7bTzIKcQ=";
+        }
         # {
         #   name = "gruvbox-material";
         #   publisher = "sainnhe";
@@ -185,6 +191,8 @@
       "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
       # golangci-lint : Go's Formatter
       "go.lintTool" = "golangci-lint";
+      # Biome.js
+      "biome.lspBin" = "${pkgs.biome}/bin/biome";
     };
   };
 }

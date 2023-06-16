@@ -1,7 +1,6 @@
 {
   stdenv,
   fetchFromGitHub,
-  ...
 }:
 stdenv.mkDerivation {
   pname = "draw-on-screen";

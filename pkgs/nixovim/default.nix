@@ -2,7 +2,6 @@
   stdenv,
   neovim,
   fetchFromGitHub,
-  ...
 }:
 stdenv.mkDerivation {
   pname = "nixovim";
