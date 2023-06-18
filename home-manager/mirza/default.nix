@@ -33,7 +33,10 @@
   ];
 
   nixpkgs = {
-    overlays = [outputs.overlays.extras];
+    overlays = [
+      outputs.overlays.extras
+      outputs.overlays.unstable-packages
+    ];
     config = {
       allowUnfree = true;
       allowUnfreePredicate = _: true;
