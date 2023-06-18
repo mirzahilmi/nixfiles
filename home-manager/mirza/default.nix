@@ -27,6 +27,7 @@
     ../programs/cli/fzf.nix
     ../programs/cli/git.nix
     ../programs/cli/home-manager.nix
+    ../programs/cli/jq.nix
     ../programs/cli/lsd.nix
     ../programs/cli/ripgrep.nix
   ];
