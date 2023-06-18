@@ -123,6 +123,7 @@
       "editor.matchBrackets" = "never";
       "explorer.compactFolders" = false;
       "editor.wordWrap" = "off";
+      "git.autorefresh" = true;
 
       # Language Specific Behavior
       "[nix]" = {
