@@ -8,6 +8,8 @@
     inputs.spicetify-nix.homeManagerModule
     outputs.homeManagerModules.zimfw
 
+    ./tweaks.nix
+
     ../programs/foot
     ../programs/gnome-tweaks
     ../programs/neovim
