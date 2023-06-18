@@ -1,6 +1,11 @@
-{config, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   programs.git = {
     enable = true;
+    package = pkgs.unstable.git;
     userName = "Mirza Hilmi";
     userEmail = "exquisitemirza@student.ub.ac.id";
     ignores = ["*.env" "*.env.json" "*.env.yaml"];
