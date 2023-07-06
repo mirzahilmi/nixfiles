@@ -192,6 +192,8 @@
       "hediet.vscode-drawio.theme" = "atlas";
       # Codesnap
       "codesnap.transparentBackground" = true;
+      # direnv
+      "direnv.path.executable" = "${pkgs.direnv}";
       # nil & Nix IDE : Nix's Language Server
       "nix.enableLanguageServer" = true;
       "nix.serverPath" = "${pkgs.nil}/bin/nil";
