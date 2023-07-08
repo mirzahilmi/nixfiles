@@ -14,6 +14,7 @@
     ../programs/neovim
     ../programs/spicetify
     ../programs/vscode
+    ../programs/xdgify
 
     ../programs/cli/nix-direnv
     ../programs/cli/tmux
@@ -40,15 +41,6 @@
   home = {
     username = "mirza";
     homeDirectory = "/home/mirza";
-    sessionVariables = {
-      # Declutter $HOME with XDG Based Directory
-      #
-      # Move ~/.docker
-      DOCKER_CONFIG = "${config.xdg.configHome}/docker";
-      # Move ~/.nv
-      CUDA_CACHE_PATH = "${config.xdg.cacheHome}/nv";
-    };
-
     packages = with pkgs; [
       alejandra
       cointop
