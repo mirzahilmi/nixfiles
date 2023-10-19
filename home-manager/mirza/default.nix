@@ -1,8 +1,6 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ../../modules/home-manager/zimfw.nix
-
     ../programs/gnome-tweaks
     ../programs/vscode
     
