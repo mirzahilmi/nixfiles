@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 let
   userName = "mirza";
 in {
@@ -18,5 +18,8 @@ in {
     ];
   };
   
-  home-manager.users.${userName} = import ../../../../home-manager/${userName};
+  home-manager = {
+    sharedModules = [ inputs.zimfw.homeManagerModules.zimfw ];
+    users.${userName} = import ../../../../home-manager/${userName};
+  };
 }

@@ -9,6 +9,7 @@
     };
     hardware.url = "github:nixos/nixos-hardware";
     grub-themes.url = "github:luisnquin/grub-themes";
+    zimfw.url = "github:joedevivo/zimfw.nix";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @inputs :
