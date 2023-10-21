@@ -1,17 +1,8 @@
 # CREDIT: github.com/joedevivo/zimfw.nix
-home-manager:
-let extendedLib = home-manager.lib;
-
-in { config, lib, pkgs, ... }:
-with lib;
-with extendedLib;
+{ config, lib, pkgs, ... }:
 let
-  lib = extendedLib;
   cfg = config.programs.zsh;
-
-  relToDotDir = file:
-    (optionalString (cfg.dotDir != null) (cfg.dotDir + "/")) + file;
-
+  relToDotDir = file: (optionalString (cfg.dotDir != null) (cfg.dotDir + "/")) + file;
 in {
   meta.maintainers = [ maintainers.joedevivo ];
 
