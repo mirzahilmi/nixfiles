@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 let
   userName = "mirza";
 in {
@@ -17,9 +17,6 @@ in {
       "docker"
     ];
   };
-
-  inputs.home-manager = {
-    nixosModules.home-manager = { home-manager.sharedModules = [ inputs.zimfw.homeManagerModules.zimfw ]; };
-    users.${userName} = import ../../../../home-manager/${userName};
-  };
+  
+  home-manager.users.${userName} = import ../../../../home-manager/${userName};
 }
