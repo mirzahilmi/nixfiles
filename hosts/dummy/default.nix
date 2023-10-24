@@ -1,6 +1,6 @@
 # Host-level configuration
 # (it replaces /etc/nixos/configuration.nix)
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, outputs, ... }:
 
 {
   imports = [
