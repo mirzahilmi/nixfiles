@@ -19,7 +19,7 @@ in {
   };
 
   home-manager = {
-    nixosModules.home-manager = { home-manager.sharedModules = [ inputs.zimfw.homeManagerModules.zimfw ] };
+    nixosModules.home-manager = { home-manager.sharedModules = [ inputs.zimfw.homeManagerModules.zimfw ]; };
     users.${userName} = import ../../../../home-manager/${userName};
   };
 }
