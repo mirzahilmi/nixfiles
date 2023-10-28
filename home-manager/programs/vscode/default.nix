@@ -3,7 +3,10 @@
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
-    
+
+    userSettings = lib.importJSON ./settings.json;
+    keybindings  = lib.importJSON ./keybindings.json;
+
     extensions = with pkgs.vscode-extensions; [
       bbenoist.nix
       bmewburn.vscode-intelephense-client
@@ -46,8 +49,5 @@
         sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
       }
     ];
-
-    userSettings = lib.importJSON ./settings.jsonc;
-    keybindings = lib.importJSON ./keybindings.jsonc;
   };
 }
