@@ -2,7 +2,7 @@
 let
   userName = "mirza";
 in {
-  imports = [ ./tweaks.nix (userName) ];
+  imports = [ (import ./tweaks.nix userName) ];
 
   users.extraUsers.${userName} = {
     isNormalUser = true;
