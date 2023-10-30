@@ -9,7 +9,7 @@ let
 in {
   boot.postBootCommands = ''
     if [[ ! -e /var/lib/AccountsService/users/${userName} ]]; then
-      echo '${gdm_user_conf}' > /var/lib/AccountsService/users/${userName}
+      echo '${gdmUserConfig}' > /var/lib/AccountsService/users/${userName}
     fi
   '';
 }
