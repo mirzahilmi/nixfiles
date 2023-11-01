@@ -6,6 +6,7 @@
     ./bootloader.nix
     ./kernel.nix
     ./locale.nix
+    ./xdg-spec.nix
   ];
 
   nix.settings = {

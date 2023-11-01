@@ -2,6 +2,8 @@
 let
   userName = "mirza";
 in {
+  imports = [ ./tweaks.nix (inherit userName) ];
+
   users.extraUsers.${userName} = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -15,17 +17,6 @@ in {
       "docker"
     ];
   };
-
-  boot.postBootCommands = let
-    gdm_user_conf = ''
-      [User]
-      Session=
-      Icon=${../../../../home-manager/assets/otter.png}
-      SystemAccount=false
-    '';
-  in ''
-    echo '${gdm_user_conf}' > /var/lib/AccountsService/users/${userName}
-  '';
 
   home-manager.users.${userName} = import ../../../../home-manager/${userName};
 }
