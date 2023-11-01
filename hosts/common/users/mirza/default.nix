@@ -20,7 +20,7 @@ in {
     gdm_user_conf = ''
       [User]
       Session=
-      Icon=${/home/${userName}/.config/.face}
+      Icon=${../../../../home-manager/assets/otter.png}
       SystemAccount=false
     '';
   in ''
