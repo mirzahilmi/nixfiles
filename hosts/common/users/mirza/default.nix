@@ -1,6 +1,8 @@
 { pkgs, ... }:
-{
-  users.extraUsers."mirza" = {
+let
+  userName = "mirza";
+in {
+  users.extraUsers.${userName} = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Mirza's Avatar";
@@ -14,9 +16,16 @@
     ];
   };
 
-  system.activationScripts.script.text = ''
-    cp ${../../../../home-manager/assets/otter.png} /var/lib/AccountsService/icons/mirza
+  boot.postBootCommands = let
+    gdm_user_conf = ''
+      [User]
+      Session=
+      Icon=${/home/${userName}/.config/.face}
+      SystemAccount=false
+    '';
+  in ''
+    echo '${gdm_user_conf}' > /var/lib/AccountsService/users/${userName}
   '';
 
-  home-manager.users."mirza" = import ../../../../home-manager/mirza;
+  home-manager.users.${userName} = import ../../../../home-manager/${userName};
 }

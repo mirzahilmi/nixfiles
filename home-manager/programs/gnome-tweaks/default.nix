@@ -34,4 +34,6 @@ in {
       picture-uri-dark = wallpaperPath;
     };
   };
+
+  xdg.configFile.".face".source = ../../assets/otter.png;
 }
