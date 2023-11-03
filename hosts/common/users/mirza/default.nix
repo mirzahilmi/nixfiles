@@ -14,5 +14,9 @@
     ];
   };
 
+  system.activationScripts.script.text = ''
+    cp ${../../../../home-manager/assets/otter.png} /var/lib/AccountsService/icons/mirza
+  '';
+
   home-manager.users."mirza" = import ../../../../home-manager/mirza;
 }

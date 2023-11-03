@@ -34,7 +34,4 @@ in {
       picture-uri-dark = wallpaperPath;
     };
   };
-
-  # Profile Picture
-  home.file.".face".source = ../../assets/otter.png;
 }
