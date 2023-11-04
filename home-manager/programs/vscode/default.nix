@@ -134,7 +134,7 @@
       "[php]" = {
         "editor.defaultFormatter" = "kokororin.vscode-phpfmt";
       };
-      "php.validate.executablePath" = "/usr/bin/env php";
+      "php.validate.executablePath" = "${pkgs.php}/bin/php";
       "[java]" = {
         "editor.defaultFormatter" = null;
         "editor.formatOnSave" = false;
@@ -152,7 +152,7 @@
       "vscord.status.problems.text" = "- {problems_count} problems";
       "vscord.behaviour.suppressNotifications" = true;
       # PHPfmt || PHP's Formatter
-      "phpfmt.php_bin" = "/usr/bin/env php";
+      "phpfmt.php_bin" = "${pkgs.php}/bin/php";
       "phpfmt.passes" = [
         "AllmanStyleBraces"
         "AlignDoubleArrow"
