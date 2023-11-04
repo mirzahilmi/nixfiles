@@ -26,7 +26,7 @@
           direnv allow
         fi
         if [[ ! -e shell.nix ]] && [[ ! -e default.nix ]]; then
-          cat > default.nix <<'EOF'
+          cat > default.nix << EOF
           with import <nixpkgs> {};
           mkShell {
             nativeBuildInputs = [
