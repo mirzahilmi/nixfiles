@@ -8,7 +8,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hardware.url = "github:nixos/nixos-hardware";
-    grub-themes-in.url = "github:luisnquin/grub-themes";
+    grub-themes.url = "github:luisnquin/grub-themes";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @inputs :
@@ -30,6 +30,6 @@
       };
     };
 
-    grub-themes = grub-themes-in.packages.${system};  
+    grub-themes = inputs.grub-themes.packages.${system};  
   };
 }
