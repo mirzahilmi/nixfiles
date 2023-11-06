@@ -8,15 +8,17 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hardware.url = "github:nixos/nixos-hardware";
+    grub-themes-in.url = "github:luisnquin/grub-themes";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @inputs :
   let
     inherit (self) outputs;
+    system = "x86_64-linux";
   in {
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = { inherit inputs outputs; };
         modules = [ ./hosts/nixsina ];
       };
@@ -27,5 +29,7 @@
         modules = [ ./hosts/dummy ];
       };
     };
+
+    grub-themes = grub-themes-in.packages.${system};  
   };
 }
