@@ -1,5 +1,5 @@
 # Bootloader (GRUB) configuration
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 {
   boot.loader.grub = {
     enable = true;
@@ -13,7 +13,7 @@
         owner = "shvchk";
         repo = "fallout-grub-theme";
         rev = "e8433860b11abb08720d7c32f5b9a2a534011bca";
-        hash = lib.fakeSha256;
+        hash = "";
       };
       installPhase = "cp -r customize/nixos $out";
     };
