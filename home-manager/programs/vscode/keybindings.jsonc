@@ -1,5 +1,4 @@
 [
-    // ========| Mirza's Keybindings |========
     {
         "key": "ctrl+shift+delete",
         "command": "workbench.action.terminal.kill"
@@ -54,7 +53,6 @@
         "command": "editor.action.copyLinesDownAction",
         "when": "editorTextFocus && !editorReadonly"
     },
-    // ========| Remove unused shortcut to freeup Keybindings |========
     {
         "key": "ctrl+shift+backspace",
         "command": "-search.searchEditor.action.deleteFileResults",

@@ -48,7 +48,6 @@
     ];
 
     userSettings = lib.importJSON ./settings.jsonc;
-
     keybindings = lib.importJSON ./keybindings.jsonc;
   };
 }
