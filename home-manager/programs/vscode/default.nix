@@ -47,8 +47,8 @@
       }
     ];
 
-    userSettings = builtins.fromJSON (builtins.readFile ./settings.jsonc);
+    userSettings = lib.importJSON ./settings.jsonc;
 
-    keybindings = builtins.fromJSON (builtins.readFile ./keybindings.jsonc);
+    keybindings = lib.importJSON ./keybindings.jsonc;
   };
 }
