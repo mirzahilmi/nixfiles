@@ -36,5 +36,5 @@ in {
   };
 
   # Profile Picture
-  home.file.".face".source = ../../assets/otter.png
+  home.file.".face".source = ../../assets/otter.png;
 }
