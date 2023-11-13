@@ -1,5 +1,6 @@
-{ pkgs, ...}:
 {
+  # GNOME Desktop Config
+  programs.xwayland.enable = true;
   services.xserver = {
     enable = true;
     desktopManager.gnome = {
@@ -10,6 +11,4 @@
       wayland = true;
     };
   };
-
-  programs.xwayland.enable = true;
 }

@@ -1,0 +1,112 @@
+{
+    // <================ Typography ================>
+    "editor.fontFamily": "JetBrains Mono",
+    // "editor.fontFamily": "CaskaydiaCove Nerd Font",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16,
+    "editor.fontWeight": "500",
+    "editor.lineHeight": 1.5,
+    "editor.letterSpacing": 0.5,
+    // <================ Terminal ================>
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    // <================ Editor ================>
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "editor.formatOnSave": true,
+    "editor.renderLineHighlight": "none",
+    "editor.renderControlCharacters": false,
+    "editor.scrollbar.verticalScrollbarSize": 2,
+    "editor.scrollbar.horizontalScrollbarSize": 2,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.cursorBlinking": "solid",
+    "editor.cursorStyle": "block",
+    "editor.minimap.enabled": false,
+    "editor.showFoldingControls": "never",
+    "editor.glyphMargin": false,
+    "editor.rulers": [
+        100
+    ],
+    "workbench.activityBar.location": "hidden",
+    "window.titleBarStyle": "custom",
+    "explorer.openEditors.visible": 1,
+    "window.menuBarVisibility": "compact",
+    "files.autoSave": "onFocusChange",
+    "extensions.ignoreRecommendations": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 5,
+    "workbench.editor.limit.perEditorGroup": true,
+    "workbench.editor.showTabs": "multiple",
+    "workbench.layoutControl.type": "menu",
+    "workbench.layoutControl.enabled": false,
+    "workbench.colorCustomizations": {
+        "[Atom Material Theme]": {
+            "statusBar.background": "#23292d",
+            "statusBar.noFolderBackground": "#23292d"
+        },
+        "[Gruvbox Dark Hard]": {
+            "editorGroupHeader.noTabsBackground": "#1d2021"
+        }
+    },
+    "breadcrumbs.enabled": false,
+    "editor.matchBrackets": "never",
+    "editor.roundedSelection": false,
+    "explorer.compactFolders": false,
+    "editor.wordWrap": "off",
+    // <================ Formatter ================>
+    "[php]": {
+        "editor.defaultFormatter": "kokororin.vscode-phpfmt"
+    },
+    "[java]": {
+        "editor.defaultFormatter": null,
+        "editor.formatOnSave": false
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "biomejs.biome"
+    },
+    // <================ Extension ================>
+    // <---------------- Discord ----------------->
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.status.idle.check": false,
+    "vscord.status.idle.enabled": false,
+    "vscord.status.state.text.editing": "Working on {file_name}{file_extension}:{current_line}/{line_count}",
+    "vscord.status.problems.text": "- {problems_count} problems",
+    // <---------------- PHPfmt ----------------->
+    "phpfmt.passes": [
+        "AllmanStyleBraces",
+        "AlignDoubleArrow",
+        "DoubleToSingleQuote",
+        "OrderAndRemoveUseClauses",
+        "PSR2EmptyFunction",
+        "ReindentSwitchBlocks",
+        "ReplaceIsNull",
+        "MergeElseIf",
+        "SortUseNameSpace",
+        "SpaceBetweenMethods",
+        "MergeNamespaceWithOpenTag"
+    ],
+    "phpfmt.exclude": [
+        "AlignDoubleSlashComments",
+        "StripSpaces",
+        "AutoSemicolon",
+        "AlignEquals",
+        "AlignTypehint",
+        "AllmanStyleBraces",
+        "ConvertOpenTagWithEcho",
+        "DocBlockToComment",
+        "IndentTernaryConditions"
+    ],
+    "java.debug.settings.showStaticVariables": true,
+    "intelephense.telemetry.enabled": false,
+    // <---------------- Pets ----------------->
+    "vscode-pets.petColor": "white",
+    "vscode-pets.petSize": "medium",
+    "vscode-pets.theme": "castle",
+    "vscode-pets.petType": "cat",
+    "vscode-pets.position": "explorer",
+    // <---------------- Refactor Later ----------------->
+    "telemetry.telemetryLevel": "off",
+    "nix.enableLanguageServer": true
+}

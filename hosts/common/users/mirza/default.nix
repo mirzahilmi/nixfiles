@@ -14,5 +14,5 @@
     ];
   };
 
-  home-manager.users."mirza" = import ../../../../home-manager/mirza/home.nix;
+  home-manager.users."mirza" = import ../../../../home-manager/mirza;
 }

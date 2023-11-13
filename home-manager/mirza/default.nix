@@ -23,6 +23,9 @@
     floorp
     vesktop
     cool-retro-term
+    wl-clipboard
+    foot
+    
   ];
 
   home.stateVersion = "23.11";

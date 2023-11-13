@@ -1,5 +1,6 @@
 {
-  services.gpg-agent = {
+  programs.gpg = {
     enable = true;
+    homedir = "${config.xdg.dataHome}/gnupg";
   };
 }
