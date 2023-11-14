@@ -31,7 +31,7 @@
         name = "openapi-vs-code";
         publisher = "redocly";
         version = "0.4.0";
-        sha256 = lib.fakeSha256;
+        sha256 = "sha256-u5CAg3ZQrtHpopff6nn2ZLhOwutOl0UMerYUSCr/Yxk=";
       }
       {
         name = "vscord";
