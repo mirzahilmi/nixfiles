@@ -37,7 +37,7 @@
         name = "vscord";
         publisher = "leonardssh";
         version = "5.1.18";
-        sha256 = lib.fakeSha256;
+        sha256 = "ha256-pJ9loVW1uhlITXSNBsCEgW+o3ABn0cxcZxg6S7cKWHI=";
       }
       {
         name = "php-docblocker";
