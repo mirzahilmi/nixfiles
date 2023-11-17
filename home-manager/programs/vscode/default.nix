@@ -19,7 +19,7 @@
         name = "vscode-phpfmt";
         publisher = "kokororin";
         version = "1.1.36";
-        sha256 = lib.fakeSha256;
+        sha256 = "sha256-Ln/vR1kyTzAYGy+q7Ru3HWhEv2mNc8ql3oKxaONUIlg=";
       }
       {
         name = "multi-cursor-case-preserve";
