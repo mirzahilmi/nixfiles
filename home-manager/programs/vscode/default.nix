@@ -43,7 +43,7 @@
         name = "php-docblocker";
         publisher = "neilbrayfield";
         version = "2.7.0";
-        sha256 = lib.fakeSha256;
+        sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
       }
     ];
 
