@@ -25,7 +25,7 @@
         name = "multi-cursor-case-preserve";
         publisher = "cardinal90";
         version = "1.0.5";
-        sha256 = lib.fakeSha256;
+        sha256 = "sha256-eJafjYDydD8DW83VLH9MPFeDENXBx3el7XvjZqu88Jw=";
       }
       {
         name = "openapi-vs-code";
