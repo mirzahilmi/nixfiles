@@ -19,31 +19,31 @@
         name = "vscode-phpfmt";
         publisher = "kokororin";
         version = "1.1.36";
-        sha256 = "";
+        sha256 = lib.fakeSha256;
       }
       {
         name = "multi-cursor-case-preserve";
         publisher = "cardinal90";
         version = "1.0.5";
-        sha256 = "";
+        sha256 = lib.fakeSha256;
       }
       {
         name = "openapi-vs-code";
         publisher = "redocly";
         version = "0.4.0";
-        sha256 = "";
+        sha256 = lib.fakeSha256;
       }
       {
         name = "vscord";
         publisher = "leonardssh";
         version = "5.1.18";
-        sha256 = "";
+        sha256 = lib.fakeSha256;
       }
       {
         name = "php-docblocker";
         publisher = "neilbrayfield";
         version = "2.7.0";
-        sha256 = "";
+        sha256 = lib.fakeSha256;
       }
     ];
 
