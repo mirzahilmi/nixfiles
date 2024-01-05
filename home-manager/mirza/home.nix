@@ -17,6 +17,8 @@
 
   dconf.enable = true;
 
+  nixpkgs.config.allowUnfreePredicate = _: true;
+
   home.packages = with pkgs; [
     floorp
     vesktop
