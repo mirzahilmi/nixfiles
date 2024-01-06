@@ -2,7 +2,7 @@
 {
   home-manager.users."mirza" = import ../../../../home-manager/mirza/home.nix;
 
-  users.extraUsers."mirza" = {
+  users.users."mirza" = {
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Mirza's Avatar";
