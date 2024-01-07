@@ -1,5 +1,7 @@
 { pkgs, ... }:
 {
+  home-manager.users."mirza" = import ../../../../home-manager/mirza/home.nix;
+
   users.extraUsers."mirza" = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -13,6 +15,4 @@
       "docker"
     ];
   };
-
-  home-manager.users."mirza" = import ../../../../home-manager/mirza/home.nix;
 }
