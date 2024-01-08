@@ -2,7 +2,7 @@
 {
   users.extraUsers."mirza" = {
     isNormalUser = true;
-    shell = pkgs.fish;
+    shell = pkgs.zsh;
     description = "Mirza's Avatar";
     initialPassword = "password";
     extraGroups = [
