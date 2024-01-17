@@ -2,15 +2,16 @@
   description = "Nixsina's Flake"
 
   inputs = {
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    hardware.url  = "github:NixOS/nixos-hardware/master";
+    nixpkgs.url   = "github:nixos/nixpkgs/nixos-23.11";
   }
 
-  outputs = { self, nixpkgs, nixos-hardware }: {
-    nixosConfigurations = { 
+  outputs = { self, nixpkgs, ... } @inputs: {
+    nixosConfigurations = {
+      # Primary Laptop
       nixsina = nixpkgs.lib.nixosSystem {
-        modules = [
-          nixos-hardware.nixosModules.lenovo-legion-15arh05h
-        ];
+        modules = [ ./hosts/nixsina ];
+        specialArgs = { inherit inputs; };
       };
     };
   };
