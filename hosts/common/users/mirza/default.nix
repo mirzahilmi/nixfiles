@@ -3,6 +3,12 @@
     isNormalUser = true;
     description = "Mirza's avatar";
     initialPassword = "password";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "audio"
+      "docker"
+    ];
   }
 }

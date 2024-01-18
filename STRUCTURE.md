@@ -1,24 +1,28 @@
 ```shell
-nixfiles
 ├── flake.nix
-├── home
-│   └── mirza
-│       ├── extras
-│       └── global
-├── hosts
-│   ├── common
-│   │   ├── extras
-│   │   └── global
-│   │       ├── bootloader.nix
-│   │       ├── default.nix
-│   │       ├── locale.nix
-│   │       └── network.nix
-│   └── nixsina
-│       └── configuration.nix
+├── home/
+│   └── mirza/
+│       ├── extras/
+│       └── global/
+├── hosts/
+│   ├── common/
+│   │   ├── extras/
+│   │   ├── global/
+│   │   │   ├── bootloader.nix
+│   │   │   ├── default.nix
+│   │   │   └── locale.nix
+│   │   └── users/
+│   │       └── mirza/
+│   │           └── default.nix
+│   └── nixsina/
+│       ├── default.nix
+│       └── hardware-configuration.nix
+├── modules/
+├── pkgs/
+│   ├── default.nix
+│   └── grub-fallout/
+│       └── default.nix
 ├── LICENSE
-├── modules
-├── pkgs
-│   └── default.nix
 └── STRUCTURE.md
 
 ```

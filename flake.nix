@@ -1,18 +1,23 @@
 {
-  description = "Nixsina's Flake"
+  description = "github.com/MirzaHilmi nixfiles";
 
   inputs = {
-    hardware.url  = "github:NixOS/nixos-hardware/master";
-    nixpkgs.url   = "github:nixos/nixpkgs/nixos-23.11";
-  }
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager/release-23.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    hardware.url = "github:nixos/nixos-hardware";
+  };
 
-  outputs = { self, nixpkgs, ... } @inputs: {
+  outputs = { self, nixpkgs, home-manager, ... } @inputs : {
     nixosConfigurations = {
-      # Primary Laptop
-      nixsina = nixpkgs.lib.nixosSystem {
+      "nixsina" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs outputs; };
         modules = [ ./hosts/nixsina ];
-        specialArgs = { inherit inputs; };
       };
     };
-  };
+  }
 }
