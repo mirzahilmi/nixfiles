@@ -19,11 +19,11 @@
     networkmanager.enable = true;
   };
 
-  inputs.nixpkgs = {
+  nixpkgs = {
     config.allowUnfree = true;
   };
 
-  inputs.home-manager = {
+  home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
     users = {
       "mirza" = import ../../home-manager/mirza/home.nix;

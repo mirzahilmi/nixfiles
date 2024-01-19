@@ -5,5 +5,5 @@
     enable = true;
     device = "/dev/vda";
     useOSProber = true;
-  }
+  };
 }

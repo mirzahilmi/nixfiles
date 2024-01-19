@@ -1,6 +1,7 @@
 { pkgs, ...}:
 {
   services.xserver = {
+    enable = true;
     desktopManager.gnome = {
       enable = true;
     };
@@ -16,6 +17,6 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.Vitals
+    gnomeExtensions.vitals
   ];
 }

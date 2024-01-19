@@ -10,13 +10,16 @@
     hardware.url = "github:nixos/nixos-hardware";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @inputs : {
+  outputs = { self, nixpkgs, home-manager, ... } @inputs :
+  let
+    inherit (self) outputs;
+  in {
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs outputs; };
+        specialArgs = {inherit inputs outputs;};
         modules = [ ./hosts/nixsina ];
       };
     };
-  }
+  };
 }

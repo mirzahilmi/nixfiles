@@ -1,7 +1,7 @@
 {
   imports = [
-    "./bootloader.nix"    
-    "./locale.nix"    
+    ./bootloader.nix
+    ./locale.nix
   ];
 
   nix.settings = {
