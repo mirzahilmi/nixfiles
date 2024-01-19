@@ -17,8 +17,14 @@
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = { inherit inputs outputs; };
         modules = [ ./hosts/nixsina ];
+      };
+
+      "dummy" = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs outputs; };
+        modules = [ ./hosts/dummy ];
       };
     };
   };
