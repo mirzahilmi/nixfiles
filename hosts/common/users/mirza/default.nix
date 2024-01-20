@@ -11,4 +11,6 @@
       "docker"
     ];
   };
+
+  home-manager.users."mirza" = import ../../home-manager/mirza/home.nix;
 }

@@ -1,11 +1,10 @@
 # Host-level configuration
 # (it replaces /etc/nixos/configuration.nix)
-{ config, pkgs, inputs, outputs, ... }:
+{ config, pkgs, ... }:
 
 {
   imports = [
     # inputs.hardware.nixosModules.lenovo-legion-15arh05h
-    inputs.home-manager.nixosModules.home-manager    
     
     ./hardware-configuration.nix
     ../common/global
@@ -21,12 +20,5 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    users = {
-      "mirza" = import ../../home-manager/mirza/home.nix;
-    };
   };
 }
