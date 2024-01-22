@@ -89,11 +89,11 @@
       "workbench.colorCustomizations" = {
         "[Atom Material Theme]" = {
           "statusBar.background" = "#23292d";
-          "statusBar.noFolderBackground" = "#23292d"
+          "statusBar.noFolderBackground" = "#23292d";
         };
         "[Gruvbox Dark Hard]" = {
-          "editorGroupHeader.noTabsBackground" = "#1d2021"
-        }
+          "editorGroupHeader.noTabsBackground" = "#1d2021";
+        };
       };
       "breadcrumbs.enabled" = false;
       "editor.matchBrackets" = "never";
@@ -101,14 +101,14 @@
       "explorer.compactFolders" = false;
       "editor.wordWrap" = "off";
       "[php]" = {
-        "editor.defaultFormatter" = "kokororin.vscode-phpfmt"
+        "editor.defaultFormatter" = "kokororin.vscode-phpfmt";
       };
       "[java]" = {
         "editor.defaultFormatter" = null;
-        "editor.formatOnSave" = false
+        "editor.formatOnSave" = false;
       };
       "[javascript]" = {
-        "editor.defaultFormatter" = "biomejs.biome"
+        "editor.defaultFormatter" = "biomejs.biome";
       };
       "vscord.app.name" = "Visual Studio Code";
       "vscord.status.idle.check" = false;
