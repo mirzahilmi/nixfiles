@@ -1,7 +1,7 @@
 {
   programs.zsh.prezto = {
     enable = true;
-    pmodules = pmodules ++ [
+    pmodules = programs.zsh.prezto.pmodules ++ [
       "syntax-highlighting"
       "history-substring-search"
       "autosuggestions"
