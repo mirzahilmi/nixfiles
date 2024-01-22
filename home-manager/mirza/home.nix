@@ -4,10 +4,10 @@
     ../programs/gnome-tweaks
     ../programs/vscode
     
-    ../programs/cli/git
-    ../programs/cli/gpg
-    ../programs/cli/zsh
-    ../programs/cli/prezto
+    ../programs/cli/git.nix
+    ../programs/cli/gpg.nix
+    ../programs/cli/zsh.nix
+    ../programs/cli/prezto.nix
   ];
 
   home = {
