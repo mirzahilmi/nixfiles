@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
     ../common/global
     ../common/extras/gnome-wayland.nix
+    ../common/extras/wayland-tweaks.nix
     ../common/extras/pipewire.nix
     ../common/extras/docker.nix
     ../common/users/mirza
