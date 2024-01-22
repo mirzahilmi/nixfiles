@@ -1,7 +1,9 @@
+{ pkgs, ... }:
 {
   users.extraUsers."mirza" = {
     isNormalUser = true;
-    description = "Mirza's avatar";
+    shell = pkgs.fish;
+    description = "Mirza's Avatar";
     initialPassword = "password";
     extraGroups = [
       "networkmanager"

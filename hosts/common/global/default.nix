@@ -4,6 +4,7 @@
     inputs.home-manager.nixosModules.home-manager
     
     ./bootloader.nix
+    ./kernel.nix
     ./locale.nix
   ];
 
