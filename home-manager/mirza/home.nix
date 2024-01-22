@@ -2,6 +2,12 @@
 {
   imports = [
     ../programs/gnome-tweaks
+    ../programs/vscode
+    
+    ../programs/cli/git
+    ../programs/cli/gpg
+    ../programs/cli/zsh
+    ../programs/cli/prezto
   ];
 
   home = {
