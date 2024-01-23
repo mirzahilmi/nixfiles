@@ -25,7 +25,7 @@
           owner = "zimfw";
           repo = "completion";
           rev = "e544206fae7d08a9853a9dc34af2f840ed5753e4";
-          sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
+          sha256 = "sha256-k+MO31FuQ+W5RYJ0HgKmqvlzdGz1zkuWUf7l+WP5tbg=";
         };
       }
       {
