@@ -6,7 +6,7 @@
     
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
-    ../programs/cli/zsh.nix
+    ../programs/cli/zsh
   ];
 
   home = {

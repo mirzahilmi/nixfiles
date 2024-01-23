@@ -4,6 +4,7 @@
     enable = true;
     autocd = true;
     dotDir = ".config/zsh";
+    initExtra = builtins.readFile ./.zshrc;
     
     shellAliases = {
       ll = "ls -l";
