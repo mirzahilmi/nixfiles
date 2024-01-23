@@ -3,7 +3,7 @@
   programs.zsh = rec {
     enable = true;
     autocd = true;
-    dotDir = "$XDG_CONFIG_HOME/zsh";
+    dotDir = ".config/zsh";
     
     shellAliases = {
       ll = "ls -l";
