@@ -4,6 +4,7 @@
     inputs.home-manager.nixosModules.home-manager
     
     ./bootloader.nix
+    ./fonts.nix
     ./kernel.nix
     ./locale.nix
     ./xdg-spec.nix
