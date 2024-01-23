@@ -5,20 +5,22 @@ let
   wallpaperPath = "file://" + ../../assets/gnome-abstract-dark.png;
 in {
   home.packages = with pkgs; [
+    gnome.gnome-tweaks
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.appindicator
     gnomeExtensions.vitals
   ];
   
   dconf.settings = {
     "${desktopSchema}/interface" = {
       color-scheme = "prefer-dark";
-      font-name = "IBM Plex 10";
-      document-font-name = "IBM Plex 10";
+      # font-name = "IBM Plex 10";
+      # document-font-name = "IBM Plex 10";
       monospace-font-name = "IBM Plex Mono 11";
     };
-    "${gnomeSchema}/nautilus/desktop".font = "IBM Plex 10";
+    # "${gnomeSchema}/nautilus/desktop".font = "IBM Plex 10";
     
     "${gnomeSchema}/shell" = {
       disable-user-extensions = false;

@@ -1,6 +1,5 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = with pkgs; [ gnomeExtensions.appindicator ];
   services.udev.packages = with pkgs; [ gnome.gnome-settings-daemon ];
 
   environment.gnome.excludePackages = (with pkgs; [
