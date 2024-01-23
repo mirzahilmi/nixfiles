@@ -12,7 +12,6 @@
     ../common/extras/wayland-tweaks.nix
     ../common/extras/pipewire.nix
     ../common/extras/docker.nix
-    ../common/extras/zsh.nix
     ../common/users/mirza
   ];
 

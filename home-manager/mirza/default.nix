@@ -7,7 +7,6 @@
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
     ../programs/cli/zsh.nix
-    ../programs/cli/zimfw.nix
   ];
 
   home = {
@@ -25,6 +24,7 @@
     cool-retro-term
     wl-clipboard
     foot
+    lsd
   ];
 
   home.stateVersion = "23.11";
