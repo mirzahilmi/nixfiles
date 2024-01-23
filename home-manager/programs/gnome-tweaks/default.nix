@@ -12,7 +12,13 @@ in {
   ];
   
   dconf.settings = {
-    "${desktopSchema}/interface".color-scheme = "prefer-dark";
+    "${desktopSchema}/interface" = {
+      color-scheme = "prefer-dark";
+      font-name = "IBM Plex 10";
+      document-font-name = "IBM Plex 10";
+      monospace-font-name = "IBM Plex Mono 11";
+    };
+    "${gnomeSchema}/nautilus/desktop".font = "IBM Plex 10";
     
     "${gnomeSchema}/shell" = {
       disable-user-extensions = false;

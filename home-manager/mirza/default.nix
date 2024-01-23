@@ -19,12 +19,14 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
 
   home.packages = with pkgs; [
-    floorp
-    vesktop
+    bat
     cool-retro-term
-    wl-clipboard
+    floorp
     foot
+    libreoffice
     lsd
+    vesktop
+    wl-clipboard
   ];
 
   home.stateVersion = "23.11";
