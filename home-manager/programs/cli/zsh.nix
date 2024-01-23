@@ -25,7 +25,7 @@
           owner = "zimfw";
           repo = "completion";
           rev = "e544206fae7d08a9853a9dc34af2f840ed5753e4";
-          sha256 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+          sha256 = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=";
         };
       }
       {
@@ -35,7 +35,7 @@
           owner = "zimfw";
           repo = "input";
           rev = "b2a8a80071dc781dd1b075a5161d2a0225140916";
-          sha256 = "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB";
+          sha256 = "sha256-BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=";
         };
       }
       {
@@ -45,7 +45,7 @@
           owner = "zimfw";
           repo = "run-help";
           rev = "ce45a756b384225abc192105d28016ac933986e0";
-          sha256 = "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC";
+          sha256 = "sha256-CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC=";
         };
       }
       {
@@ -55,7 +55,7 @@
           owner = "zimfw";
           repo = "archive";
           rev = "c7fe67e56162d50c3d03197a9afd50efcfbea1bf";
-          sha256 = "DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD";
+          sha256 = "sha256-DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD=";
         };
       }
       {
@@ -65,7 +65,7 @@
           owner = "zimfw";
           repo = "utility";
           rev = "6b74db5656509e5fe657901a9f0f52b6c7499904";
-          sha256 = "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE";
+          sha256 = "sha256-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE=";
         };
       }
     ];
