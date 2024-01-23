@@ -65,7 +65,7 @@
           owner = "zimfw";
           repo = "utility";
           rev = "6b74db5656509e5fe657901a9f0f52b6c7499904";
-          sha256 = "sha256-EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE=";
+          sha256 = "sha256-5p2SlB7OuycvDV7c/mCr5ddUw+npZfCD+LfMeyBeGtE=";
         };
       }
     ];
