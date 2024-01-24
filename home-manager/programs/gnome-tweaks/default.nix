@@ -23,5 +23,9 @@ in {
       picture-uri = wallpaperPath;
       picture-uri-dark = wallpaperPath;
     };
+    
+    "${desktopSchema}/wm/preferences" = {
+      button-layout = "close,minimize,maximize:appmenu";
+    };
   };
 }
