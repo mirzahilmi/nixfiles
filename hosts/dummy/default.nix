@@ -4,8 +4,6 @@
 
 {
   imports = [
-    # inputs.hardware.nixosModules.lenovo-legion-15arh05h
-    
     ./hardware-configuration.nix
     ../common/global
     ../common/extras/gnome-wayland.nix

@@ -4,7 +4,7 @@
 
 {
   imports = [
-    # inputs.hardware.nixosModules.lenovo-legion-15arh05h
+    inputs.hardware.nixosModules.lenovo-legion-15arh05h
     
     ./hardware-configuration.nix
     ../common/global
