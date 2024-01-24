@@ -1,11 +1,21 @@
 # Bootloader (GRUB) configuration
 { pkgs, outputs, ... }:
 {
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/vda"; # FIXME Change to the correct disk path
-    useOSProber = true;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
 
-    theme = outputs.grub-themes.fallout;
+    grub = {
+      enable = true;
+      devices = [ "nodev" ];
+      efiSupport = true;
+      useOSProber = true;
+      configurationLimit = 20;
+      theme = outputs.grub-themes.fallout;
+    };
+
+    timeout = 10;
   };
 }
