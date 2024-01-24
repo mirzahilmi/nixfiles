@@ -4,7 +4,7 @@
     enable = true;
   };
 
-  xdg.configFile."nvim" = {
-    source = "${pkgs.vimPlugins.nvchad}";
+  xdg.configFile."nvim/" = {
+    source = (pkgs.callPackage ../../../pkgs/nvchad { }).nvchad;
   };
 }
