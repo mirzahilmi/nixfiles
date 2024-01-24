@@ -6,6 +6,7 @@
     
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
+    ../programs/cli/neovim.nix
     ../programs/cli/zsh
   ];
 
