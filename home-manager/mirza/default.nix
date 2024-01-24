@@ -26,10 +26,10 @@
     libreoffice
     lsd
     (vesktop.overrideAttrs (prev: {
-      desktopItems = [ builtins.elemAt prev.desktopItems 0 .override (_: {
+      desktopItems = [ (builtins.elemAt prev.desktopItems 0 .override (_: {
         icon = "${../assets/discord.svg}";
         desktopName = "Discord";
-      }) ];
+      })) ];
     }))
     wl-clipboard
   ];
