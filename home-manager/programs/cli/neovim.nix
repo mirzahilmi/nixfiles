@@ -5,6 +5,6 @@
   };
 
   xdg.configFile."nvim/" = {
-    source = (pkgs.callPackage ../../../../modules/home-manager/nvchad.nix).nvchad;
+    source = (pkgs.callPackage ../../../../modules/home-manager/nvchad.nix {}).nvchad;
   };
 }
