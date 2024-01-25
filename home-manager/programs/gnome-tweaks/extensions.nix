@@ -5,6 +5,7 @@ let
 in {
   home.packages = with pkgs; [
     gnome.gnome-tweaks
+    gnome.dconf-editor
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
