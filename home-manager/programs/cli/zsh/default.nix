@@ -1,6 +1,6 @@
 { pkgs, config, ... }:
 {
-  programs.zsh = rec {
+  programs.zsh = {
     enable = true;
     autocd = true;
     dotDir = ".config/zsh";
