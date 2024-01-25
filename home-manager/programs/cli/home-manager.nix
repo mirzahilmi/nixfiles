@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   programs.home-manager = {
-    enable = true;
+    enable = lib.mkDefault true;
     path = "${config.xdg.configHome}/nixfiles";
   };
 }
