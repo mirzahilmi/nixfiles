@@ -11,11 +11,11 @@ in {
   dconf.settings = {
     "${desktopSchema}/interface" = {
       color-scheme = "prefer-dark";
-      # font-name = "IBM Plex 10";
-      # document-font-name = "IBM Plex 10";
+      font-name = "IBM Plex Sans 11";
+      document-font-name = "IBM Plex Sans 11";
       monospace-font-name = "IBM Plex Mono 11";
     };
-    # "${gnomeSchema}/nautilus/desktop".font = "IBM Plex 10";
+    "${gnomeSchema}/nautilus/desktop".font = "IBM Plex Sans 11";
     
     "${desktopSchema}/background" = {
       color-shading-type = "solid";

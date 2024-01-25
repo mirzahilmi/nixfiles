@@ -13,6 +13,7 @@
     ../common/extras/pipewire.nix
     ../common/extras/docker.nix
     ../common/extras/zsh.nix
+    ../common/extras/gnupg.nix
     ../common/users/mirza
   ];
 

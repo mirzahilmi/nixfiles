@@ -17,9 +17,4 @@ in {
       "docker"
     ];
   };
-  
-  home-manager = {
-    sharedModules = [ inputs.zimfw.homeManagerModules.zimfw ];
-    users.${userName} = import ../../../../home-manager/${userName};
-  };
 }

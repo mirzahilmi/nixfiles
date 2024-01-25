@@ -32,5 +32,15 @@
     };
 
     grub-themes = inputs.grub-themes.packages.${system};  
+
+    homeConfigurations = {
+      "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          ./home-manager/mirza
+        ];
+      };
+    };
   };
 }
