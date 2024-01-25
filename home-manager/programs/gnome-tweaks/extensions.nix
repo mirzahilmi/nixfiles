@@ -25,15 +25,25 @@ in {
         "clipboard-indicator@tudmotu.com"
         "unlockDialogBackground@sun.wxg@gmail.com"
       ];
+      
+      favorite-apps = [
+        "org.gnome.Nautilus.desktop"
+        "cool-retro-term.desktop"
+        "code.desktop"
+        "floorp.desktop"
+      ];
     };
 
     "${extensionsSchema}/blur-my-shell" = {
       color-and-noise = true;
-      hacks-level = 1;
+      hacks-level     = 1;
     };
     
     "${extensionsSchema}/clipboard-indicator" = {
-      display-mode = 0;
+      display-mode       = 0;
+      disable-down-arrow = true;
+      move-item-first    = true;
+      paste-button       = true;
     };
 
     "${extensionsSchema}/dash-to-dock" = {
@@ -41,7 +51,7 @@ in {
       background-color               = "rgb(36,31,49)";
       background-opacity             = 0.77000000000000002;
       click-action                   = "minimize";
-      custom-background-color        = false;
+      custom-background-color        = true;
       custom-theme-shrink            = false;
       dash-max-icon-size             = 48;
       disable-overview-on-startup    = false;
@@ -53,7 +63,7 @@ in {
       preferred-monitor              = -2;
       preferred-monitor-by-connector = "eDP-2";
       show-trash                     = false;
-      transparency-mode              = "DEFAULT";
+      transparency-mode              = "DYNAMIC";
     };
 
     "${extensionsSchema}/vitals" = {

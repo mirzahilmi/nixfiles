@@ -14,7 +14,17 @@ in {
       font-name = "IBM Plex Sans 11";
       document-font-name = "IBM Plex Sans 11";
       monospace-font-name = "IBM Plex Mono 11";
+      clock-show-seconds = true;
+      clock-show-weekday = true;
+      enable-hot-corners = false;
+      show-battery-percentage = true;
     };
+
+    "${gnomeSchema}/mutter" = {
+      dynamic-workspaces = true;
+      edge-tiling = true;
+    };
+
     "${gnomeSchema}/nautilus/desktop".font = "IBM Plex Sans 11";
     
     "${desktopSchema}/background" = {
@@ -26,6 +36,10 @@ in {
     
     "${desktopSchema}/wm/preferences" = {
       button-layout = "close,minimize,maximize:appmenu";
+    };
+
+    "${desktopSchema}/peripherals/touchpad" = {
+      tap-to-click = true;
     };
   };
 }
