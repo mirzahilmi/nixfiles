@@ -12,5 +12,5 @@ bindkey -M vicmd 'y' vi-yank-wl
 
 # =============[ Key Quirks ]=============
 ##: CTRL L R Issues
-bindkey "^[[1;5C" forward-word
-bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" emacs-forward-word
+bindkey "^[[1;5D" emacs-backward-word
