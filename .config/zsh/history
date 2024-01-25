@@ -22,3 +22,6 @@ echo $GPG_TTY
 : 1706186168:0;gpg --edit-key 71BCEF0BD6178F2DE8EF4F77C92E3238B87A7B1D
 : 1706186191:0;git commit -S -m "feat: Add dconf-editor to user packages"
 : 1706186207:0;git add -A
+: 1706186209:0;home-manager switch --flake .
+: 1706186222:0;git commit -S -m "feat: Add dconf-editor to user packages"
+: 1706187544:0;git add -A

@@ -10,7 +10,7 @@
       user.signing.key = "71BCEF0BD6178F2DE8EF4F77C92E3238B87A7B1D";
       user.signingkey = "71BCEF0BD6178F2DE8EF4F77C92E3238B87A7B1D";
       gpg.program = "${config.home.homeDirectory}/.nix-profile/bin/gpg";
-      # commit.gpgSign = true;
+      commit.gpgSign = true;
       credential.store = "cache";
     };
   };

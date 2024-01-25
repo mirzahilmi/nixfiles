@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.zsh = rec {
     enable = true;
@@ -14,7 +14,7 @@
     enableAutosuggestions = true;
     
     history = {
-      path = "${dotDir}/history";
+      path = "${config.xdg.configHome}/zsh/history";
       size = 1000;
     };
 
