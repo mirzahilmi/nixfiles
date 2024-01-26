@@ -2,7 +2,7 @@
 let
   gnomeSchema = "org/gnome";
   desktopSchema = "${gnomeSchema}/desktop";
-  wallpaperPath = "file://" + ../../assets/gnome-abstract-dark.png;
+  wallpaperPath = "file://" + ../../../assets/gnome-abstract-dark.png;
 in {
   imports = [
     (import ./extensions.nix { inherit pkgs gnomeSchema; })

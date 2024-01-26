@@ -29,7 +29,7 @@
     lsd
     (vesktop.overrideAttrs (prev: {
       desktopItems = [ ((builtins.elemAt prev.desktopItems 0).override (_: {
-        icon = "${../assets/discord.svg}";
+        icon = "${../../assets/discord.svg}";
         desktopName = "Discord";
       })) ];
     }))
