@@ -2,13 +2,13 @@
 {
   imports = [
     ../programs/gnome-tweaks
-    ../programs/home-manager.nix
+    ../programs/spicetify
     ../programs/vscode
     
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
     ../programs/cli/neovim.nix
-    ../programs/cli/spicetify
+    ../programs/cli/home-manager.nix
     ../programs/cli/zsh
   ];
 
