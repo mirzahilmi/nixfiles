@@ -1,9 +1,12 @@
-{ pkgs, inputs, ... }:
 {
+  pkgs,
+  inputs,
+  ...
+}: {
   imports = [
     ../programs/gnome-tweaks
     ../programs/vscode
-    
+
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
     ../programs/cli/neovim.nix
@@ -32,10 +35,12 @@
     libreoffice
     lsd
     (vesktop.overrideAttrs (prev: {
-      desktopItems = [ ((builtins.elemAt prev.desktopItems 0).override (_: {
-        icon = "${../../assets/discord.svg}";
-        desktopName = "Discord";
-      })) ];
+      desktopItems = [
+        ((builtins.elemAt prev.desktopItems 0).override (_: {
+          icon = "${../../assets/discord.svg}";
+          desktopName = "Discord";
+        }))
+      ];
     }))
     wl-clipboard
   ];

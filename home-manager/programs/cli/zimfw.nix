@@ -1,7 +1,7 @@
 {
   programs.zsh.zimfw = {
-    enable     = true;
-    zmodules   = [
+    enable = true;
+    zmodules = [
       "completion"
       "input"
       "run-help"

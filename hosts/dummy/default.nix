@@ -1,8 +1,12 @@
 # Host-level configuration
 # (it replaces /etc/nixos/configuration.nix)
-{ config, pkgs, inputs, outputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ../common/global

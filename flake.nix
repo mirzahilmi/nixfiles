@@ -12,26 +12,30 @@
     spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... } @inputs :
-  let
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
     inherit (self) outputs;
     system = "x86_64-linux";
   in {
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
         inherit system;
-        specialArgs = { inherit inputs outputs; };
-        modules = [ ./hosts/nixsina ];
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/nixsina];
       };
 
       "dummy" = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs outputs; };
-        modules = [ ./hosts/dummy ];
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/dummy];
       };
     };
 
-    grub-themes = inputs.grub-themes.packages.${system};  
+    grub-themes = inputs.grub-themes.packages.${system};
 
     homeConfigurations = {
       "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {

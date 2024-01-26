@@ -1,18 +1,21 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   programs.zsh = {
     enable = true;
     autocd = true;
     dotDir = ".config/zsh";
     initExtra = builtins.readFile ./.zshrc;
-    
+
     shellAliases = {
       ll = "ls -l";
     };
-    
+
     syntaxHighlighting.enable = true;
     enableAutosuggestions = true;
-    
+
     history = {
       path = "${config.xdg.configHome}/zsh/history";
       size = 1000;

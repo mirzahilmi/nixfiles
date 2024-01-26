@@ -1,5 +1,4 @@
-userName:
-let
+userName: let
   gdmUserConfig = ''
     [User]
     Session=

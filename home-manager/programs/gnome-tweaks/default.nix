@@ -1,11 +1,10 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   gnomeSchema = "org/gnome";
   desktopSchema = "${gnomeSchema}/desktop";
   wallpaperPath = "file://" + ../../../assets/gnome-abstract-dark.png;
 in {
   imports = [
-    (import ./extensions.nix { inherit pkgs gnomeSchema; })
+    (import ./extensions.nix {inherit pkgs gnomeSchema;})
   ];
 
   dconf.settings = {
@@ -26,14 +25,14 @@ in {
     };
 
     "${gnomeSchema}/nautilus/desktop".font = "IBM Plex Sans 11";
-    
+
     "${desktopSchema}/background" = {
       color-shading-type = "solid";
       picture-options = "zoom";
       picture-uri = wallpaperPath;
       picture-uri-dark = wallpaperPath;
     };
-    
+
     "${desktopSchema}/wm/preferences" = {
       button-layout = "close,minimize,maximize:appmenu";
     };

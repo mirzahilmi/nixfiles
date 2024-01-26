@@ -1,5 +1,8 @@
-{ pkgs, gnomeSchema, ... }: 
-let
+{
+  pkgs,
+  gnomeSchema,
+  ...
+}: let
   gnomeShellSchema = "${gnomeSchema}/shell";
   extensionsSchema = "${gnomeShellSchema}/extensions";
 in {
@@ -12,7 +15,7 @@ in {
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
   ];
- 
+
   dconf.settings = {
     "${gnomeShellSchema}" = {
       disable-user-extensions = false;
@@ -25,7 +28,7 @@ in {
         "clipboard-indicator@tudmotu.com"
         "unlockDialogBackground@sun.wxg@gmail.com"
       ];
-      
+
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "cool-retro-term.desktop"
@@ -36,51 +39,51 @@ in {
 
     "${extensionsSchema}/blur-my-shell" = {
       color-and-noise = true;
-      hacks-level     = 1;
+      hacks-level = 1;
     };
-    
+
     "${extensionsSchema}/clipboard-indicator" = {
-      display-mode       = 0;
+      display-mode = 0;
       disable-down-arrow = true;
-      move-item-first    = true;
-      paste-button       = true;
+      move-item-first = true;
+      paste-button = true;
     };
 
     "${extensionsSchema}/dash-to-dock" = {
-      apply-custom-theme             = false;
-      background-color               = "rgb(36,31,49)";
-      background-opacity             = 0.77000000000000002;
-      click-action                   = "minimize";
-      custom-background-color        = true;
-      custom-theme-shrink            = false;
-      dash-max-icon-size             = 48;
-      disable-overview-on-startup    = false;
-      dock-position                  = "BOTTOM";
-      height-fraction                = 1.0;
-      hot-keys                       = false;
-      hotkeys-overlay                = false;
-      multi-monitor                  = true;
-      preferred-monitor              = -2;
+      apply-custom-theme = false;
+      background-color = "rgb(36,31,49)";
+      background-opacity = 0.77000000000000002;
+      click-action = "minimize";
+      custom-background-color = true;
+      custom-theme-shrink = false;
+      dash-max-icon-size = 48;
+      disable-overview-on-startup = false;
+      dock-position = "BOTTOM";
+      height-fraction = 1.0;
+      hot-keys = false;
+      hotkeys-overlay = false;
+      multi-monitor = true;
+      preferred-monitor = -2;
       preferred-monitor-by-connector = "eDP-2";
-      show-trash                     = false;
-      transparency-mode              = "DYNAMIC";
+      show-trash = false;
+      transparency-mode = "DYNAMIC";
     };
 
     "${extensionsSchema}/vitals" = {
-      hide-icons           = false;
-      hide-zeros           = false;
-      include-public-ip    = false;
-      include-static-info  = false;
-      memory-measurement   = 1;
-      menu-centered        = false;
+      hide-icons = false;
+      hide-zeros = false;
+      include-public-ip = false;
+      include-static-info = false;
+      memory-measurement = 1;
+      menu-centered = false;
       network-speed-format = 0;
-      position-in-panel    = 1;
-      show-fan             = false;
-      show-network         = true;
-      show-storage         = false;
-      show-temperature     = true;
-      show-voltage         = true;
-      update-time          = 30;
+      position-in-panel = 1;
+      show-fan = false;
+      show-network = true;
+      show-storage = false;
+      show-temperature = true;
+      show-voltage = true;
+      update-time = 30;
       use-higher-precision = false;
     };
   };

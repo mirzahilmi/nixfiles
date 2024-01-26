@@ -1,8 +1,11 @@
-{ pkgs, inputs, ... }:
-let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   userName = "mirza";
 in {
-  imports = [ (import ./tweaks.nix userName) ];
+  imports = [(import ./tweaks.nix userName)];
 
   users.extraUsers.${userName} = {
     isNormalUser = true;

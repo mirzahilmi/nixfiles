@@ -1,11 +1,15 @@
 # Host-level configuration
 # (it replaces /etc/nixos/configuration.nix)
-{ config, pkgs, inputs, outputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}: {
   imports = [
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
-    
+
     ./hardware-configuration.nix
     ../common/global
     ../common/extras/gnome-wayland.nix
