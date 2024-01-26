@@ -38,16 +38,16 @@
           sha256 = "sha256-k+MO31FuQ+W5RYJ0HgKmqvlzdGz1zkuWUf7l+WP5tbg=";
         };
       }
-      {
-        name = "editor";
-        file = "init.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "sorin-ionescu";
-          repo = "prezto";
-          rev = "380b96a218ef33d1ff4a641850822f583e11131a";
-          sha256 = "sha256-//KY+MHE4H6wEWF6IQebB6uRcWVnlBsrMBaFxekO3kw=";
-        } + "/modules/editor";
-      }
+      # {
+      #   name = "editor";
+      #   file = "init.zsh";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "sorin-ionescu";
+      #     repo = "prezto";
+      #     rev = "380b96a218ef33d1ff4a641850822f583e11131a";
+      #     sha256 = "sha256-//KY+MHE4H6wEWF6IQebB6uRcWVnlBsrMBaFxekO3kw=";
+      #   } + "/modules/editor";
+      # }
       {
         name = "run-help";
         file = "init.zsh";
