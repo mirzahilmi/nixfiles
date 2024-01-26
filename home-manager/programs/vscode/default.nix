@@ -14,6 +14,7 @@
       golang.go
       humao.rest-client
       jdinhlife.gruvbox
+      kamadorueda.alejandra
       pkief.material-icon-theme
       tobiasalthoff.atom-material-theme
       usernamehw.errorlens

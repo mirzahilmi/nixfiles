@@ -21,6 +21,7 @@
   nixpkgs.config.allowUnfreePredicate = _: true;
 
   home.packages = with pkgs; [
+    alejandra
     bat
     btop
     cointop
