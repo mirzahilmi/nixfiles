@@ -39,14 +39,14 @@
         };
       }
       {
-        name = "input";
+        name = "editor";
         file = "init.zsh";
         src = pkgs.fetchFromGitHub {
-          owner = "zimfw";
-          repo = "input";
-          rev = "b2a8a80071dc781dd1b075a5161d2a0225140916";
-          sha256 = "sha256-alS02tiio5hfNviAdJ/uOhoNs4ESr7+dxLaJIY4Os3A=";
-        };
+          owner = "sorin-ionescu";
+          repo = "prezto";
+          rev = "380b96a218ef33d1ff4a641850822f583e11131a";
+          sha256 = "";
+        } + "/modules/editor";
       }
       {
         name = "run-help";

@@ -24,8 +24,11 @@
   home.packages = with pkgs; [
     bat
     btop
+    cointop
     cool-retro-term
     floorp
+    gnumake
+    gping
     libreoffice
     lsd
     (vesktop.overrideAttrs (prev: {
