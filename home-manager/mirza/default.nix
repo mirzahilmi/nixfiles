@@ -34,7 +34,6 @@
         desktopName = "Discord";
       })) ];
     }))
-    spotify
     wl-clipboard
   ];
 
