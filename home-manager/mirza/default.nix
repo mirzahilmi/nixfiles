@@ -22,9 +22,9 @@
 
   home.packages = with pkgs; [
     bat
+    btop
     cool-retro-term
     floorp
-    foot
     libreoffice
     lsd
     (vesktop.overrideAttrs (prev: {
@@ -33,6 +33,7 @@
         desktopName = "Discord";
       })) ];
     }))
+    spotify
     wl-clipboard
   ];
 

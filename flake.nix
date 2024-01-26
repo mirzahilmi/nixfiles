@@ -9,7 +9,7 @@
     };
     hardware.url = "github:nixos/nixos-hardware";
     grub-themes.url = "github:luisnquin/grub-themes";
-    zimfw.url = "github:joedevivo/zimfw.nix";
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
   };
 
   outputs = { self, nixpkgs, home-manager, ... } @inputs :

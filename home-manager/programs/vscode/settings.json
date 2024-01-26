@@ -98,5 +98,6 @@
     "vscode-pets.petType": "cat",
     "vscode-pets.position": "explorer",
     "telemetry.telemetryLevel": "off",
-    "nix.enableLanguageServer": true
+    "nix.enableLanguageServer": true,
+    "go.lintTool": "golangci-lint"
 }

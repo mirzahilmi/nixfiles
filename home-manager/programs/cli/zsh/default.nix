@@ -18,7 +18,8 @@
       size = 1000;
     };
 
-    plugins = [
+    plugins = with pkgs; [
+      zsh-autosuggestions
       {
         name = "completion";
         file = "init.zsh";
