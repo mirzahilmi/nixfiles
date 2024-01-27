@@ -2,7 +2,7 @@ userName: let
   gdmUserConfig = ''
     [User]
     Session=
-    Icon=${../../../../../home-manager/assets/otter.png}
+    Icon=${../../../../../assets/otter.png}
     SystemAccount=false
   '';
 in {
