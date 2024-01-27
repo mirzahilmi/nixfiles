@@ -29,7 +29,6 @@
     btop
     cointop
     cool-retro-term
-    direnv
     floorp
     gnumake
     gping
