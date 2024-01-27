@@ -7,6 +7,7 @@
     ../programs/gnome-tweaks
     ../programs/vscode
 
+    ../programs/cli/home-manager.nix
     ../programs/cli/nix-direnv.nix
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix

@@ -1,7 +1,5 @@
 {inputs, ...}: {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
-
     ./bootloader.nix
     ./fonts.nix
     ./kernel.nix
