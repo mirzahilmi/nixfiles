@@ -7,10 +7,10 @@
     ../programs/gnome-tweaks
     ../programs/vscode
 
+    ../programs/cli/nix-direnv.nix
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
     ../programs/cli/neovim.nix
-    ../programs/cli/home-manager.nix
     ../programs/cli/zsh
   ];
 
