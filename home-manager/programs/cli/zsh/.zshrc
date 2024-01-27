@@ -124,3 +124,7 @@ bindkey "^[m" copy-prev-shell-word
 
 # Delete line before cursor
 bindkey "\^U" backward-kill-line
+
+# =============[ Environment Variables ]=============
+# Unclutter direnv verbosity
+export DIRENV_LOG_FORMAT=
