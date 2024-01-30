@@ -4,12 +4,12 @@
   ...
 }: {
   imports = [
+    ../programs/cli/foot
     ../programs/gnome-tweaks
     ../programs/cli/nix-direnv
     ../programs/vscode
 
     ../programs/cli/home-manager.nix
-    ../programs/cli/foot.nix
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
     ../programs/cli/neovim.nix
