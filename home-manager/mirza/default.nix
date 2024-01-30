@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ../programs/cli/foot
+    ../programs/foot
     ../programs/gnome-tweaks
     ../programs/cli/nix-direnv
     ../programs/vscode
