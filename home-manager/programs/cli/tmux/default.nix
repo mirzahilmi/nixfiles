@@ -1,8 +1,11 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    baseIndex = 1;
+    newSession = true;
     mouse = true;
+    baseIndex = 1;
+    escapeTime = 0;
+    prefix = "C-Space";
     keyMode = "vi";
     customPaneNavigationAndResize = true;
     extraConfig = builtins.readFile ./tmux.conf;
