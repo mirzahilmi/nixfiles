@@ -6,7 +6,6 @@
     baseIndex = 1;
     escapeTime = 0;
     prefix = "C-Space";
-    customPaneNavigationAndResize = true;
     extraConfig = builtins.readFile ./tmux.conf;
     plugins = with pkgs.tmuxPlugins; [
       catppuccin

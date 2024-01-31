@@ -19,7 +19,6 @@
       path = "${config.xdg.configHome}/zsh/history";
       size = 1000;
     };
-
     plugins = [
       {
         name = "powerlevel10k";
