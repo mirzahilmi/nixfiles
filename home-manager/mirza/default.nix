@@ -4,6 +4,8 @@
   ...
 }: {
   imports = [
+    inputs.zimfw.homeManagerModules.zimfw
+
     ../programs/foot
     ../programs/gnome-tweaks
     ../programs/vscode
