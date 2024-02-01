@@ -25,7 +25,6 @@
     ../programs/cli/home-manager.nix
     ../programs/cli/lsd.nix
     ../programs/cli/neovim.nix
-    ../programs/cli/ripgrep.nix
   ];
 
   nixpkgs.config.allowUnfreePredicate = _: true;
