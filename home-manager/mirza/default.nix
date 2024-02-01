@@ -28,6 +28,9 @@
     ../programs/cli/ripgrep.nix
   ];
 
+  nixpkgs.config.allowUnfreePredicate = _: true;
+  dconf.enable = true;
+
   home = {
     username = "mirza";
     homeDirectory = "/home/mirza";
@@ -39,30 +42,26 @@
       # Move ~/.nv
       CUDA_CACHE_PATH = "${config.xdg.cacheHome}/nv";
     };
+
+    packages = with pkgs; [
+      alejandra
+      cointop
+      cool-retro-term
+      floorp
+      gnumake
+      gping
+      libreoffice
+      (vesktop.overrideAttrs (prev: {
+        desktopItems = [
+          ((builtins.elemAt prev.desktopItems 0).override (_: {
+            icon = "${../../assets/discord.svg}";
+            desktopName = "Discord";
+          }))
+        ];
+      }))
+      wl-clipboard
+    ];
+
+    stateVersion = "23.11";
   };
-
-  dconf.enable = true;
-
-  nixpkgs.config.allowUnfreePredicate = _: true;
-
-  home.packages = with pkgs; [
-    alejandra
-    cointop
-    cool-retro-term
-    floorp
-    gnumake
-    gping
-    libreoffice
-    (vesktop.overrideAttrs (prev: {
-      desktopItems = [
-        ((builtins.elemAt prev.desktopItems 0).override (_: {
-          icon = "${../../assets/discord.svg}";
-          desktopName = "Discord";
-        }))
-      ];
-    }))
-    wl-clipboard
-  ];
-
-  home.stateVersion = "23.11";
 }
