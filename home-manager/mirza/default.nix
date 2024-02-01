@@ -59,6 +59,7 @@
           }))
         ];
       }))
+      ripgrep
       wl-clipboard
     ];
 
