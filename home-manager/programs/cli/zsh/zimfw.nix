@@ -3,8 +3,9 @@
     enable = true;
     homeDir = "${config.xdg.configHome}/zimfw";
     zmodules = [
-      "completion"
       "archive"
+      "completion"
+      "fzf"
       "utility"
 
       "romkatv/powerlevel10k --name powerlevel10k --use degit"
