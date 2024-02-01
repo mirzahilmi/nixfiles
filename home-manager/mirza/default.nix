@@ -5,8 +5,8 @@
   ...
 }: {
   imports = [
-    inputs.zimfw.homeManagerModules.zimfw
     inputs.spicetify-nix.homeManagerModule
+    inputs.zimfw.homeManagerModules.zimfw
 
     ../programs/foot
     ../programs/gnome-tweaks
@@ -15,10 +15,16 @@
     ../programs/cli/nix-direnv
     ../programs/cli/tmux
     ../programs/cli/zsh
-    ../programs/cli/home-manager.nix
+
+    ../programs/cli/bat.nix
+    ../programs/cli/btop.nix
+    ../programs/cli/fzf.nix
     ../programs/cli/git.nix
     ../programs/cli/gpg.nix
+    ../programs/cli/home-manager.nix
+    ../programs/cli/lsd.nix
     ../programs/cli/neovim.nix
+    ../programs/cli/ripgrep.nix
   ];
 
   home = {
@@ -35,15 +41,12 @@
 
   home.packages = with pkgs; [
     alejandra
-    bat
-    btop
     cointop
     cool-retro-term
     floorp
     gnumake
     gping
     libreoffice
-    lsd
     (vesktop.overrideAttrs (prev: {
       desktopItems = [
         ((builtins.elemAt prev.desktopItems 0).override (_: {
