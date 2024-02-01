@@ -10,6 +10,7 @@
 
     ../programs/foot
     ../programs/gnome-tweaks
+    ../programs/spicetify
     ../programs/vscode
 
     ../programs/cli/nix-direnv
@@ -18,9 +19,9 @@
 
     ../programs/cli/bat.nix
     ../programs/cli/btop.nix
+    ../programs/cli/gpg.nix
     ../programs/cli/fzf.nix
     ../programs/cli/git.nix
-    ../programs/cli/gpg.nix
     ../programs/cli/home-manager.nix
     ../programs/cli/lsd.nix
     ../programs/cli/neovim.nix
