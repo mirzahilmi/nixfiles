@@ -2,6 +2,8 @@
   programs.zsh.zimfw = {
     enable = true;
     homeDir = "${config.xdg.configHome}/zimfw";
+
+    # TODO: Fix git/curl command not found upon module fetch
     zmodules = [
       "archive"
       "completion"
