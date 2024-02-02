@@ -18,7 +18,7 @@
     ../common/extras/docker.nix
     ../common/extras/gnome-wayland.nix
     ../common/extras/gnupg.nix
-    ../common/extras/k3s.nix
+    # ../common/extras/k3s.nix
     ../common/extras/pipewire.nix
     ../common/extras/zsh.nix
   ];
