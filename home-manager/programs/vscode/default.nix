@@ -57,94 +57,94 @@
         }
       ];
 
-    userSettings = with pkgs; {
+    userSettings = {
       # me no like surveillance
-      telemetry.telemetryLevel = "off";
-      intelephense.telemetry.enabled = false;
+      "telemetry.telemetryLevel" = "off";
+      "intelephense.telemetry.enabled" = false;
 
       # Typography
-      editor.fontFamily = "JetBrainsMono Nerd Font";
-      terminal.integrated.fontFamily = "FiraCode Nerd Font";
-      editor.fontLigatures = true;
-      editor.fontSize = 16;
-      editor.fontWeight = "500";
-      editor.lineHeight = 1.5;
-      editor.letterSpacing = 0.5;
+      "editor.fontFamily" = "JetBrainsMono Nerd Font";
+      "terminal.integrated.fontFamily" = "FiraCode Nerd Font";
+      "editor.fontLigatures" = true;
+      "editor.fontSize" = 16;
+      "editor.fontWeight" = "500";
+      "editor.lineHeight" = 1.5;
+      "editor.letterSpacing" = 0.5;
 
       # Code Editor Interface
-      workbench.colorTheme = "Gruvbox Dark Medium";
-      workbench.iconTheme = "material-icon-theme";
-      editor.minimap.enabled = false;
-      editor.cursorStyle = "block";
-      editor.cursorBlinking = "solid";
-      editor.renderLineHighlight = "none";
-      editor.renderControlCharacters = false;
-      editor.scrollbar.verticalScrollbarSize = 2;
-      editor.scrollbar.horizontalScrollbarSize = 2;
-      editor.scrollbar.vertical = "hidden";
-      editor.scrollbar.horizontal = "hidden";
-      editor.showFoldingControls = "never";
-      editor.roundedSelection = false;
-      editor.glyphMargin = false;
-      editor.rulers = [100];
-      workbench.activityBar.location = "hidden";
-      window.titleBarStyle = "custom";
-      explorer.openEditors.visible = 1;
-      window.menuBarVisibility = "compact";
-      workbench.layoutControl.type = "menu";
-      workbench.layoutControl.enabled = false;
-      workbench.colorCustomizations = {
+      "workbench.colorTheme" = "Gruvbox Dark Medium";
+      "workbench.iconTheme" = "material-icon-theme";
+      "editor.minimap.enabled" = false;
+      "editor.cursorStyle" = "block";
+      "editor.cursorBlinking" = "solid";
+      "editor.renderLineHighlight" = "none";
+      "editor.renderControlCharacters" = false;
+      "editor.scrollbar.verticalScrollbarSize" = 2;
+      "editor.scrollbar.horizontalScrollbarSize" = 2;
+      "editor.scrollbar.vertical" = "hidden";
+      "editor.scrollbar.horizontal" = "hidden";
+      "editor.showFoldingControls" = "never";
+      "editor.roundedSelection" = false;
+      "editor.glyphMargin" = false;
+      "editor.rulers" = [100];
+      "workbench.activityBar.location" = "hidden";
+      "window.titleBarStyle" = "custom";
+      "explorer.openEditors.visible" = 1;
+      "window.menuBarVisibility" = "compact";
+      "workbench.layoutControl.type" = "menu";
+      "workbench.layoutControl.enabled" = false;
+      "workbench.colorCustomizations" = {
         "[Atom Material Theme]" = {
-          statusBar.background = "#23292d";
-          statusBar.noFolderBackground = "#23292d";
+          "statusBar.background" = "#23292d";
+          "statusBar.noFolderBackground" = "#23292d";
         };
         "[Gruvbox Dark Hard]" = {
-          editorGroupHeader.noTabsBackground = "#1d2021";
+          "editorGroupHeader.noTabsBackground" = "#1d2021";
         };
       };
-      terminal.integrated.defaultProfile.linux = "zsh";
-      terminal.integrated.persistentSessionReviveProcess = "never";
+      "terminal.integrated.defaultProfile.linux" = "zsh";
+      "terminal.integrated.persistentSessionReviveProcess" = "never";
 
       # Code Editor Behavior
-      editor.formatOnSave = true;
-      files.autoSave = "onFocusChange";
-      extensions.ignoreRecommendations = true;
-      workbench.editor.limit.enabled = true;
-      workbench.editor.limit.value = 5;
-      workbench.editor.limit.perEditorGroup = true;
-      workbench.editor.showTabs = "multiple";
-      breadcrumbs.enabled = false;
-      editor.matchBrackets = "never";
-      explorer.compactFolders = false;
-      editor.wordWrap = "off";
+      "editor.formatOnSave" = true;
+      "files.autoSave" = "onFocusChange";
+      "extensions.ignoreRecommendations" = true;
+      "workbench.editor.limit.enabled" = true;
+      "workbench.editor.limit.value" = 5;
+      "workbench.editor.limit.perEditorGroup" = true;
+      "workbench.editor.showTabs" = "multiple";
+      "breadcrumbs.enabled" = false;
+      "editor.matchBrackets" = "never";
+      "explorer.compactFolders" = false;
+      "editor.wordWrap" = "off";
 
       # Language Specific Behavior
       "[nix]" = {
-        editor.defaultFormatter = "kamadorueda.alejandra";
-        editor.formatOnPaste = true;
-        editor.formatOnSave = true;
-        editor.formatOnType = false;
+        "editor.defaultFormatter" = "kamadorueda.alejandra";
+        "editor.formatOnPaste" = true;
+        "editor.formatOnSave" = true;
+        "editor.formatOnType" = false;
       };
       "[php]" = {
-        editor.defaultFormatter = "kokororin.vscode-phpfmt";
+        "editor.defaultFormatter" = "kokororin.vscode-phpfmt";
       };
       "[java]" = {
-        editor.defaultFormatter = null;
-        editor.formatOnSave = false;
+        "editor.defaultFormatter" = null;
+        "editor.formatOnSave" = false;
       };
       "[javascript]" = {
-        editor.defaultFormatter = "biomejs.biome";
+        "editor.defaultFormatter" = "biomejs.biome";
       };
 
       # Extensions Configuration
       # VSCord
-      vscord.app.name = "Visual Studio Code";
-      vscord.status.idle.check = false;
-      vscord.status.idle.enabled = false;
-      vscord.status.state.text.editing = "Working on {file_name}{file_extension} ={current_line}/{line_count}";
-      vscord.status.problems.text = "- {problems_count} problems";
+      "vscord.app.name" = "Visual Studio Code";
+      "vscord.status.idle.check" = false;
+      "vscord.status.idle.enabled" = false;
+      "vscord.status.state.text.editing" = "Working on {file_name}{file_extension} ={current_line}/{line_count}";
+      "vscord.status.problems.text" = "- {problems_count} problems";
       # PHPfmt || PHP's Formatter
-      phpfmt.passes = [
+      "phpfmt.passes" = [
         "AllmanStyleBraces"
         "AlignDoubleArrow"
         "DoubleToSingleQuote"
@@ -157,7 +157,7 @@
         "SpaceBetweenMethods"
         "MergeNamespaceWithOpenTag"
       ];
-      phpfmt.exclude = [
+      "phpfmt.exclude" = [
         "AlignDoubleSlashComments"
         "StripSpaces"
         "AutoSemicolon"
@@ -169,12 +169,12 @@
         "IndentTernaryConditions"
       ];
       # nil & Nix IDE : Nix's Language Server
-      nix.enableLanguageServer = true;
-      nix.serverPath = "${pkgs.nil}/bin/nil";
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
       # Alejandra : Nix's Formatter
-      alejandra.program = "${pkgs.alejandra}/bin/alejandra";
+      "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
       # golangci-lint : Go's Formatter
-      go.lintTool = "golangci-lint";
+      "go.lintTool" = "golangci-lint";
     };
   };
 }
