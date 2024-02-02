@@ -59,7 +59,7 @@
           }))
         ];
       }))
-      nil
+      nixd
       wl-clipboard
     ];
 
