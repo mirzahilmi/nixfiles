@@ -170,9 +170,9 @@
       ];
       # nil & Nix IDE : Nix's Language Server
       nix.enableLanguageServer = true;
-      nix.serverPath = pkgs.nil;
+      nix.serverPath = "${pkgs.nil}/bin/nil";
       # Alejandra : Nix's Formatter
-      alejandra.program = pkgs.alejandra;
+      alejandra.program = "${pkgs.alejandra}/bin/alejandra";
       # golangci-lint : Go's Formatter
       go.lintTool = "golangci-lint";
     };
