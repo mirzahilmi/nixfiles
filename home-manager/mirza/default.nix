@@ -17,7 +17,6 @@
     ../programs/cli/tmux
     ../programs/cli/zsh
 
-    ../programs/cli/bash.nix
     ../programs/cli/bat.nix
     ../programs/cli/btop.nix
     ../programs/cli/gpg.nix
