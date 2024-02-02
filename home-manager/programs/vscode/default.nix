@@ -17,7 +17,9 @@
         golang.go
         humao.rest-client
         jdinhlife.gruvbox
+        jnoortheen.nix-ide
         kamadorueda.alejandra
+        mkhl.direnv
         pkief.material-icon-theme
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
@@ -52,12 +54,6 @@
           publisher = "neilbrayfield";
           version = "2.7.0";
           sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
-        }
-        {
-          name = "direnv";
-          publisher = "mkhl";
-          version = "0.16.0";
-          sha256 = "sha256-u2AFjvhm3zio1ygW9yD9ZwbywLrEssd0O7/0AtfCvMo=";
         }
       ];
 
