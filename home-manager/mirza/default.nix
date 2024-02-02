@@ -59,6 +59,7 @@
           }))
         ];
       }))
+      nil
       wl-clipboard
     ];
 
