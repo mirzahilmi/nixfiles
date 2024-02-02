@@ -12,12 +12,15 @@
 
     ./hardware-configuration.nix
     ../common/global
-    ../common/extras/gnome-wayland.nix
-    ../common/extras/pipewire.nix
-    ../common/extras/docker.nix
-    ../common/extras/zsh.nix
-    ../common/extras/gnupg.nix
+
     ../common/users/mirza
+
+    ../common/extras/docker.nix
+    ../common/extras/gnome-wayland.nix
+    ../common/extras/gnupg.nix
+    ../common/extras/k3s.nix
+    ../common/extras/pipewire.nix
+    ../common/extras/zsh.nix
   ];
 
   networking = {
