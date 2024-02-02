@@ -15,5 +15,5 @@ bindkey -M vicmd 'y' vi-yank-wl
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Turn down direnv verbosity
-export DIRENV_LOG_FORMAT
+export DIRENV_LOG_FORMAT=''
 ###################################
