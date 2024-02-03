@@ -1,4 +1,4 @@
-{
+{...}: {
   # This one brings our custom packages from the 'pkgs' directory
   extras = final: _prev: import ../pkgs {pkgs = final;};
 
