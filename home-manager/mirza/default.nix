@@ -61,7 +61,7 @@
           }))
         ];
       }))
-      nixd
+      nil
       wl-clipboard
     ];
 
