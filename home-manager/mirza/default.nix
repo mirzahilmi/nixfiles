@@ -1,6 +1,7 @@
 {
   pkgs,
   inputs,
+  outputs,
   config,
   ...
 }: {
@@ -29,11 +30,18 @@
     ../programs/cli/ripgrep.nix
   ];
 
-  nixpkgs.config.allowUnfreePredicate = _: true;
+  nixpkgs = {
+    overlays = [outputs.overlays.extras];
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
+  };
+
   dconf.enable = true;
 
   home = {
-    username = "mirza";
+    overlays = [];
     homeDirectory = "/home/mirza";
     sessionVariables = {
       # Declutter $HOME with XDG Based Directory
@@ -62,6 +70,7 @@
         ];
       }))
       nil
+      nixovim
       wl-clipboard
     ];
 
