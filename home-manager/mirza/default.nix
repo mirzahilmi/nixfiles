@@ -6,7 +6,8 @@
 }: {
   imports = [
     inputs.spicetify-nix.homeManagerModule
-    inputs.zimfw.homeManagerModules.zimfw
+
+    ../../modules/home-manager/zimfw
 
     ../programs/foot
     ../programs/gnome-tweaks
