@@ -85,7 +85,7 @@ in {
       ${optionalString (cfg.zimfw.degit) ''
         zstyle ':zim:zmodule' use 'degit'
       ''}
-      ${optionalString (cfg.zimfw.disableVersionCheck) ''
+      ${optionalString (cfg.zimfw.versionCheck) ''
         zstyle ':zim' disable-version-check yes
       ''}
 
