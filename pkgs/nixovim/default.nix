@@ -12,7 +12,7 @@ stdenv.mkDerivation {
     owner = "nvim-lua";
     repo = "kickstart.nvim";
     rev = "bc4ad1218b908ec4efc3b0f6ea6e3cb4940b0084";
-    sha256 = "";
+    sha256 = "sha256-lkDwjCX2KheZy/JT/CZsBEVIMdifmjR25/IXYXQFADA=";
   };
 
   buildInputs = [neovim];
