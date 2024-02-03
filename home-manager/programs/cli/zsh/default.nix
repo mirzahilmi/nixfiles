@@ -8,7 +8,17 @@
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    initExtraFirst = builtins.readFile ./p10k.config.zsh;
+
+    initExtraFirst = ''
+      ##############################
+      if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
+        source "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh"
+      fi
+      source ${config.programs.zsh.zimfw.homeDir}/modules/powerlevel10k/powerlevel10k.zsh-theme
+      source ~/.config/zsh/p10k.zsh
+      ##############################
+    '';
+
     initExtra = builtins.readFile ./zshrc;
 
     history = {
