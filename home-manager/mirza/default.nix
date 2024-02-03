@@ -49,6 +49,7 @@
       cointop
       cool-retro-term
       floorp
+      git-filter-repo
       gnumake
       gping
       libreoffice
