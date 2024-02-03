@@ -1,8 +1,4 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: let
+{pkgs, ...}: let
   userName = "mirza";
 in {
   imports = [(import ./tweaks.nix userName)];

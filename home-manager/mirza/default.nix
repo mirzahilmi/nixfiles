@@ -41,6 +41,7 @@
   dconf.enable = true;
 
   home = {
+    username = "mirza";
     homeDirectory = "/home/mirza";
     sessionVariables = {
       # Declutter $HOME with XDG Based Directory
