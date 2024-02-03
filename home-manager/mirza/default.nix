@@ -41,7 +41,6 @@
   dconf.enable = true;
 
   home = {
-    overlays = [];
     homeDirectory = "/home/mirza";
     sessionVariables = {
       # Declutter $HOME with XDG Based Directory
