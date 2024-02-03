@@ -18,6 +18,7 @@ stdenv.mkDerivation {
   buildInputs = [neovim];
   buildPhase = ''
     runHook preBuild
+    rm -rf .git .github doc .gitignore .stylua.toml LICENSE.md README.md
     nvim --headless "+Lazy! sync" +qa
     runHook postBuild
   '';
