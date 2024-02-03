@@ -11,6 +11,7 @@
 
     ../programs/foot
     ../programs/gnome-tweaks
+    ../programs/neovim
     ../programs/spicetify
     ../programs/vscode
 
@@ -25,7 +26,6 @@
     ../programs/cli/git.nix
     ../programs/cli/home-manager.nix
     ../programs/cli/lsd.nix
-    ../programs/cli/neovim.nix
     ../programs/cli/ripgrep.nix
   ];
 
