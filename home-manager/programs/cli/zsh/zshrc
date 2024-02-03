@@ -14,6 +14,9 @@ bindkey -M vicmd 'y' vi-yank-wl
 # Set keybindings to vi
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
+# Auto start tmux session
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
+
 # Turn down direnv verbosity
 export DIRENV_LOG_FORMAT=''
 ###################################
