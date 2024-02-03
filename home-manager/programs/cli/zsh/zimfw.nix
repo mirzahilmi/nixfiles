@@ -9,7 +9,7 @@
       "fzf"
       "utility"
 
-      "romkatv/powerlevel10k --name powerlevel10k --use degit"
+      "romkatv/powerlevel10k --name powerlevel10k"
       "zdharma-continuum/fast-syntax-highlighting --name fast-syntax-highlighting"
       "zsh-users/zsh-autosuggestions --name zsh-autosuggestions"
       "sorin-ionescu/prezto --name prezto-keybindings --root modules/editor"
