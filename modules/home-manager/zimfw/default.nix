@@ -77,7 +77,7 @@ in {
 
     programs.zsh.localVariables = {
       ZIM_HOME = cfg.zimfw.homeDir;
-      ZIM_CONFIG_FILE = cfg.zimfw.configFile;
+      ZIM_CONFIG_FILE = "${relativeToDotDir ".zimrc"}";
     };
 
     programs.zsh.initExtra = ''
