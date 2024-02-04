@@ -9,7 +9,7 @@
     disableConfirmationPrompt = true;
     extraConfig = builtins.readFile ./tmux.conf;
     plugins = with pkgs.tmuxPlugins; [
-      catppuccin
+      gruvbox 
       yank
     ];
   };
