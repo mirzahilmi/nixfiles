@@ -1,4 +1,4 @@
-{config, ...}: {
+{...}: {
   programs.zsh.zimfw = {
     enable = true;
 

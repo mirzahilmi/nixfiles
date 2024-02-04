@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{config, ...}: {
   imports = [./zimfw.nix];
 
   programs.zsh = {
