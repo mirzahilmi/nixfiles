@@ -71,7 +71,6 @@
         ];
       }))
       nil
-      nixovim
       wl-clipboard
     ];
 
