@@ -13,7 +13,7 @@
 
     ../programs/foot
     ../programs/gnome-tweaks
-    ../programs/neovim
+    ../programs/nixvim
     ../programs/spicetify
     ../programs/vscode
 
