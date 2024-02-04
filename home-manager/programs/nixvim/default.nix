@@ -5,5 +5,8 @@
     plugins = {
       lightline.enable = true;
     };
+    options = {
+      number = true;
+    };
   };
 }
