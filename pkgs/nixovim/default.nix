@@ -6,7 +6,7 @@
 }:
 stdenv.mkDerivation {
   pname = "nixovim";
-  version = "0.3.0";
+  version = "0.1.3";
 
   src = fetchFromGitHub {
     owner = "nvim-lua";
@@ -27,12 +27,12 @@ stdenv.mkDerivation {
 
   installPhase = ''
     runHook preInstall
-    mkdir $out
+    mkdir -p $out
     cp -a $src/. $out
     runHook postInstall
   '';
 
-  postFixup = ''
-    rm -rf .git .github doc .gitignore .stylua.toml LICENSE.md README.md
+  postInstall = ''
+    rm -r .github .gitignore LICENSE.md README.md
   '';
 }
