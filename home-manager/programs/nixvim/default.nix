@@ -4,7 +4,7 @@
     enableMan = true;
     colorschemes.gruvbox.enable = true;
     plugins = {
-      lightline.enable = true;
+      lualine.enable = true;
     };
     options = {
       number = true;
