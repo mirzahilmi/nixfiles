@@ -7,9 +7,9 @@
 }: {
   imports = [
     inputs.spicetify-nix.homeManagerModule
+    inputs.nixvim.homeManagerModules.nixvim
 
     ../../modules/home-manager/zimfw
-    ../../modules/home-manager/nixovim
 
     ../programs/foot
     ../programs/gnome-tweaks

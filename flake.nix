@@ -7,6 +7,11 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hardware.url = "github:nixos/nixos-hardware";
     grub-themes.url = "github:luisnquin/grub-themes";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
