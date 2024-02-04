@@ -1,5 +1,5 @@
 {
-  environment.sessionVariables = rec {
+  environment.sessionVariables = {
     # User Directories
     XDG_CONFIG_HOME = "$HOME/.config";
     XDG_CACHE_HOME = "$HOME/.cache";

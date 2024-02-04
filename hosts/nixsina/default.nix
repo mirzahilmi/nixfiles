@@ -1,12 +1,6 @@
 # Host-level configuration
 # (it replaces /etc/nixos/configuration.nix)
-{
-  config,
-  pkgs,
-  inputs,
-  outputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = [
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
 
