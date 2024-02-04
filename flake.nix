@@ -31,17 +31,15 @@
       };
 
       "dummy" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/dummy];
       };
     };
 
-    grub-themes = inputs.grub-themes.packages.${system};
-
     homeConfigurations = {
       "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        pkgs = nixpkgs.legacyPackages.${system};
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [
           ./home-manager/mirza

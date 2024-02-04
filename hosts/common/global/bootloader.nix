@@ -1,7 +1,7 @@
 # Bootloader (GRUB) configuration
 {
   pkgs,
-  outputs,
+  inputs,
   ...
 }: {
   boot.loader = {
@@ -16,7 +16,7 @@
       efiSupport = true;
       useOSProber = true;
       configurationLimit = 20;
-      theme = outputs.grub-themes.fallout;
+      theme = inputs.grub-themes.packages.${pkgs.system}.fallout;
     };
 
     timeout = 10;

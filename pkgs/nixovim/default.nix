@@ -32,6 +32,7 @@ stdenv.mkDerivation {
     runHook postInstall
   '';
 
+  # TODO: Remove unwanted file, this doesnt work
   postInstall = ''
     rm -r .github .gitignore LICENSE.md README.md
   '';
