@@ -9,6 +9,7 @@
     inputs.spicetify-nix.homeManagerModule
 
     ../../modules/home-manager/zimfw
+    ../../modules/home-manager/nixovim
 
     ../programs/foot
     ../programs/gnome-tweaks
