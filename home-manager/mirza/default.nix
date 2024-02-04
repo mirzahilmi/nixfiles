@@ -11,11 +11,11 @@
 
     ../../modules/home-manager/zimfw
 
-    ../programs/foot
     ../programs/gnome-tweaks
     ../programs/nixvim
     ../programs/spicetify
     ../programs/vscode
+    ../programs/wezterm
 
     ../programs/cli/nix-direnv
     ../programs/cli/tmux
