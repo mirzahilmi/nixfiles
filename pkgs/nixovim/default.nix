@@ -28,12 +28,8 @@ stdenv.mkDerivation {
   installPhase = ''
     runHook preInstall
     mkdir -p $out
+    rm -rf .github doc .gitignore .stylua.toml LICENSE.md README.md
     cp -a $src/. $out
     runHook postInstall
-  '';
-
-  # TODO: Remove unwanted file, this doesnt work
-  postInstall = ''
-    rm -r .github .gitignore LICENSE.md README.md
   '';
 }
