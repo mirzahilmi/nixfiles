@@ -6,7 +6,7 @@
 }:
 stdenv.mkDerivation {
   pname = "nixovim";
-  version = "0.2.0";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "nvim-lua";
@@ -15,10 +15,12 @@ stdenv.mkDerivation {
     sha256 = "sha256-lkDwjCX2KheZy/JT/CZsBEVIMdifmjR25/IXYXQFADA=";
   };
 
-  buildInputs = [neovim];
+  dontPatch = true;
+  dontConfigure = true;
+
+  nativeBuildInputs = [neovim];
   buildPhase = ''
     runHook preBuild
-    rm -rf .git .github doc .gitignore .stylua.toml LICENSE.md README.md
     nvim --headless "+Lazy! sync" +qa
     runHook postBuild
   '';
@@ -28,5 +30,9 @@ stdenv.mkDerivation {
     mkdir $out
     cp -a $src/. $out
     runHook postInstall
+  '';
+
+  postFixup = ''
+    rm -rf .git .github doc .gitignore .stylua.toml LICENSE.md README.md
   '';
 }
