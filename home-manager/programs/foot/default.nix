@@ -4,7 +4,6 @@
     settings = {
       main = {
         font = "JetBrainsMono Nerd Font:style=Regular:size=12";
-        word-delimiters = "*?_-.[]~&;!#$%^(){}<>";
       };
       mouse.hide-when-typing = "yes";
       colors = {
@@ -28,7 +27,6 @@
         bright7 = "a6adc8";
       };
       csd = {
-        preferred = "client";
         size = 0;
       };
       key-bindings = {
