@@ -62,8 +62,16 @@
       gping
       libreoffice
       nil
-      (st.overrideAttrs (oldAttrs: {
-        buildInputs = oldAttrs.buildInputs ++ [harfbuzz];
+      (st.overrideAttrs (prev: rec {
+        buildInputs = prev.buildInputs ++ [harfbuzz];
+        desktopItem = makeDesktopItem {
+          name = "Simple Terminal";
+          desktopName = "sst";
+          genericName = "Terminal";
+          startupWMClass = "st-256color";
+          exec = "st -f \"JetBrainsMono Nerd Font:style=Regular:size=14\"";
+          icon = ../../assets/terminal.svg;
+        };
         patches = [
           (fetchpatch {
             url = "https://st.suckless.org/patches/bold-is-not-bright/st-bold-is-not-bright-20190127-3be4cf1.diff";
@@ -86,6 +94,9 @@
             sha256 = "sha256-F2LvUT2bPFfkw82vFS16wwGoB+TEIquTG2UnKAZfzh0=";
           })
         ];
+        fixupPhase = ''
+          cp -r ${desktopItem}/share/applications $out/share
+        '';
       }))
       (vesktop.overrideAttrs (prev: {
         desktopItems = [

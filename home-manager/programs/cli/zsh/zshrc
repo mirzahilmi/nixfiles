@@ -15,8 +15,11 @@ bindkey -M vicmd 'y' vi-yank-wl
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto start tmux session
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Turn down direnv verbosity
 export DIRENV_LOG_FORMAT=''
+
+# Set terminal to support 256 color
+export TERM='screen-256color'
 ###################################
