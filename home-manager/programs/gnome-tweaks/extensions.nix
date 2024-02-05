@@ -31,7 +31,7 @@ in {
 
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
-        "rg.codeberg.dnkl.foot.desktop"
+        "org.codeberg.dnkl.foot.desktop"
         "code.desktop"
         "floorp.desktop"
       ];
