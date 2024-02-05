@@ -61,6 +61,7 @@
       floorp
       gnumake
       gping
+      libgcc
       libgccjit
       libreoffice
       nil
