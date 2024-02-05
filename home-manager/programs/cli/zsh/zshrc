@@ -22,4 +22,7 @@ export DIRENV_LOG_FORMAT=''
 
 # Set terminal to support 256 color
 export TERM='screen-256color'
+
+# Bind C-Backspace to delete one word
+bindkey '^H' backward-kill-word
 ###################################
