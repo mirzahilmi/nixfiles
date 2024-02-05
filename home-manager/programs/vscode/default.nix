@@ -74,6 +74,7 @@
       # Code Editor Interface
       "workbench.colorTheme" = "Gruvbox Dark Medium";
       "workbench.iconTheme" = "material-icon-theme";
+      "workbench.sideBar.location" = "right";
       "editor.minimap.enabled" = false;
       "editor.cursorStyle" = "block";
       "editor.cursorBlinking" = "solid";
