@@ -11,7 +11,6 @@
 
     ../../modules/home-manager/zimfw
 
-    ../programs/foot
     ../programs/gnome-tweaks
     ../programs/nixvim
     ../programs/spicetify
@@ -54,6 +53,8 @@
     };
 
     packages = with pkgs; [
+      inputs.st.packages.${pkgs.system}.st-snazzy
+
       alejandra
       cointop
       cool-retro-term

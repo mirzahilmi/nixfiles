@@ -28,7 +28,7 @@
       };
       csd = {
         color = "ff24273a";
-        hide-when-maximized = "yes";
+        size = 0;
       };
     };
   };
