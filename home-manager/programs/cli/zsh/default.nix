@@ -6,6 +6,10 @@
     dotDir = ".config/zsh";
 
     initExtraFirst = ''
+      if [ -z "$TMUX" ]; then
+        exec tmux new-session -A -s workspace
+      fi
+
       if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
         source "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
@@ -16,8 +20,6 @@
     initExtra = ''
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
       export DIRENV_LOG_FORMAT=\'\';
-
-      zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
       # create a zkbd compatible hash;
       # to add other keys to this hash, see: man 5 terminfo
