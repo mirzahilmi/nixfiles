@@ -5,10 +5,6 @@
     enable = true;
     dotDir = ".config/zsh";
 
-    sessionVariables = {
-      TERM = "screen-256color";
-    };
-
     initExtraFirst = ''
       if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
         source "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh"
