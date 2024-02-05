@@ -14,6 +14,11 @@
     '';
 
     initExtra = ''
+      export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
+      export DIRENV_LOG_FORMAT=\'\';
+
+      zstyle ':prezto:module:tmux:auto-start' local 'no'
+
       # create a zkbd compatible hash;
       # to add other keys to this hash, see: man 5 terminfo
       typeset -g -A key
@@ -60,12 +65,6 @@
       fi
 
       bindkey '^H' backward-kill-word
-
-      zstyle ':prezto:module:tmux:auto-start' local 'yes'
-
-      export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
-      export DIRENV_LOG_FORMAT=\'\';
-      export TERM='screen-256color';
     '';
 
     history = {
