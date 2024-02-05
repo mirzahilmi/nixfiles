@@ -2,7 +2,7 @@
   programs.btop = {
     enable = true;
     settings = {
-      color_theme = "flat-remix";
+      color_theme = "gruvbox_material_dark";
     };
   };
 }

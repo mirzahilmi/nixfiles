@@ -12,6 +12,7 @@
 
     ../programs/foot
     ../programs/gnome-tweaks
+    ../programs/neovim
     ../programs/spicetify
     ../programs/vscode
 
@@ -61,7 +62,6 @@
       gnumake
       gping
       libreoffice
-      neovim
       nil
       (vesktop.overrideAttrs (prev: {
         desktopItems = [
