@@ -14,6 +14,7 @@
     '';
 
     initExtra = ''
+      export TERM='screen-256color'
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
       export DIRENV_LOG_FORMAT=\'\';
 
