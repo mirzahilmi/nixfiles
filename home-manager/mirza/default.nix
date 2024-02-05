@@ -44,7 +44,6 @@
     username = "mirza";
     homeDirectory = "/home/mirza";
     sessionVariables = {
-      TERM = "screen-256color";
       # Declutter $HOME with XDG Based Directory
       #
       # Move ~/.docker
