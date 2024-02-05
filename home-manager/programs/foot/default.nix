@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-        font = "JetBrainsMono Nerd Font:style=Medium:size=14";
+        font = "JetBrainsMono Nerd Font:style=Medium:size=12";
         word-delimiters = "*?_-.[]~&;!#$%^(){}<>";
       };
       mouse.hide-when-typing = "yes";
