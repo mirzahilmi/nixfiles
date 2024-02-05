@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   programs.tmux = {
     enable = true;
-    newSession = true;
     mouse = true;
     baseIndex = 1;
     escapeTime = 0;
