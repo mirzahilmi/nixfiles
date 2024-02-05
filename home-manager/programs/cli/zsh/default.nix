@@ -16,7 +16,6 @@
     initExtra = ''
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
       export DIRENV_LOG_FORMAT=\'\';
-      export TERM='xterm-256color';
 
       # create a zkbd compatible hash;
       # to add other keys to this hash, see: man 5 terminfo
