@@ -15,7 +15,6 @@
     ../programs/nixvim
     ../programs/spicetify
     ../programs/vscode
-    ../programs/wezterm
 
     ../programs/cli/nix-direnv
     ../programs/cli/tmux
@@ -62,6 +61,32 @@
       gnumake
       gping
       libreoffice
+      nil
+      (st.overrideAttrs (oldAttrs: {
+        buildInputs = oldAttrs.buildInputs ++ [harfbuzz];
+        patches = [
+          (fetchpatch {
+            url = "https://st.suckless.org/patches/bold-is-not-bright/st-bold-is-not-bright-20190127-3be4cf1.diff";
+            sha256 = "sha256-IhrTgZ8K3tcf5HqSlHm3GTacVJLOhO7QPho6SCGXTHw=";
+          })
+          (fetchpatch {
+            url = "https://st.suckless.org/patches/fullscreen/st-fullscreen-0.8.5.diff";
+            sha256 = "sha256-52lO6K9TGrrdPljXAFo+JB39XHeNF+0ru5QzDJ+9GX8=";
+          })
+          (fetchpatch {
+            url = "https://st.suckless.org/patches/gruvbox/st-gruvbox-dark-0.8.5.diff";
+            sha256 = "sha256-dOkrjXGxFgIRy4n9g2RQjd8EBAvpW4tNmkOVj4TaFGg=";
+          })
+          (fetchpatch {
+            url = "https://st.suckless.org/patches/hidecursor/st-hidecursor-0.8.3.diff";
+            sha256 = "sha256-Bj/n02xUl9iYXYr/3SlIEforFwFxAx8MrPFnimyU7vg=";
+          })
+          (fetchpatch {
+            url = "https://st.suckless.org/patches/ligatures/0.9/st-ligatures-20230105-0.9.diff";
+            sha256 = "sha256-F2LvUT2bPFfkw82vFS16wwGoB+TEIquTG2UnKAZfzh0=";
+          })
+        ];
+      }))
       (vesktop.overrideAttrs (prev: {
         desktopItems = [
           ((builtins.elemAt prev.desktopItems 0).override (_: {
@@ -70,7 +95,6 @@
           }))
         ];
       }))
-      nil
       wl-clipboard
     ];
 
