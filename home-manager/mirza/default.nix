@@ -12,7 +12,6 @@
     ../../modules/home-manager/zimfw
 
     ../programs/gnome-tweaks
-    ../programs/nixvim
     ../programs/spicetify
     ../programs/vscode
 
@@ -62,6 +61,7 @@
       gnumake
       gping
       libreoffice
+      neovim
       nil
       (vesktop.overrideAttrs (prev: {
         desktopItems = [
