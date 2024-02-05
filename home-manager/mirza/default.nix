@@ -11,6 +11,7 @@
 
     ../../modules/home-manager/zimfw
 
+    ../programs/foot
     ../programs/gnome-tweaks
     ../programs/spicetify
     ../programs/vscode
