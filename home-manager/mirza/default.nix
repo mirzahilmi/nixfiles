@@ -95,7 +95,7 @@
           })
           (fetchpatch {
             url = "https://st.suckless.org/patches/blinking_cursor/st-blinking_cursor-20230819-3a6d6d7.diff";
-            sha256 = "sha256-F2LvUT2bPFfkw82vFS16wwGoB+TEIquTG2UnKAZfzh0=";
+            sha256 = "sha256-f79RFl4JFKNF4cAl8WsfNC2Zx5nd8lQ8TuSxl2rBxfY=";
           })
         ];
         fixupPhase = ''
