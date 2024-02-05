@@ -17,7 +17,7 @@
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
       export DIRENV_LOG_FORMAT=\'\';
 
-      zstyle ':prezto:module:tmux:auto-start' local 'no'
+      zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
       # create a zkbd compatible hash;
       # to add other keys to this hash, see: man 5 terminfo
