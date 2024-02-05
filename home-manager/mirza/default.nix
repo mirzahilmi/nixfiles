@@ -53,8 +53,6 @@
     };
 
     packages = with pkgs; [
-      inputs.st.packages.${pkgs.system}.st-snazzy
-
       alejandra
       cointop
       cool-retro-term
