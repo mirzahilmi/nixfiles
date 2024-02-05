@@ -6,6 +6,7 @@
     dotDir = ".config/zsh";
 
     initExtraFirst = ''
+      export TERM='screen-256color'
       if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
         source "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
@@ -14,7 +15,6 @@
     '';
 
     initExtra = ''
-      export TERM='screen-256color'
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>';
       export DIRENV_LOG_FORMAT=\'\';
 
