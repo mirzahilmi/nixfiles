@@ -9,10 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-23.11";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     st.url = "github:siduck/st";
     hardware.url = "github:nixos/nixos-hardware";
     grub-themes.url = "github:luisnquin/grub-themes";
