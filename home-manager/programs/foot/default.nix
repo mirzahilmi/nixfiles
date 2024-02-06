@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-        term = "screen-256color";
+        term = "screen-truecolor";
         font = "JetBrainsMono Nerd Font:style=Regular:size=12";
       };
       mouse.hide-when-typing = "yes";
