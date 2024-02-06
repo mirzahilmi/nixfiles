@@ -56,6 +56,7 @@
       alejandra
       cointop
       cool-retro-term
+      fd
       floorp
       gnumake
       gping
