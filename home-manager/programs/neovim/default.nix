@@ -45,21 +45,15 @@ in {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
+    plugins = [
       treesitterWithGrammars
-      telescope-fzf-native-nvim
     ];
   };
 
-  xdg.dataFile = with pkgs.vimPlugins; {
+  xdg.dataFile = {
     # Treesitter
     "${nvimPlugin}/nvim-treesitter" = {
       source = treesitterWithGrammars;
-      recursive = true;
-    };
-    # Telescope
-    "${nvimPlugin}/telescope-fzf-native.nvim" = {
-      source = telescope-fzf-native-nvim;
       recursive = true;
     };
   };
