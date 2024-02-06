@@ -71,6 +71,7 @@
         ];
       }))
       wl-clipboard
+      xbanish
     ];
 
     stateVersion = "23.11";
