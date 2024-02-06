@@ -40,5 +40,9 @@ in {
     "${desktopSchema}/peripherals/touchpad" = {
       tap-to-click = true;
     };
+
+    "${gnomeSchema}/settings-daemon/plugins/media-keys" = {
+      magnifier = ["<Alt><Super>z"];
+    };
   };
 }

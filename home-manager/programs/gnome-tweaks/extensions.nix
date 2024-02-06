@@ -14,7 +14,7 @@ in {
     gnomeExtensions.dash-to-dock
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
-    gnomeExtensions.draw-on-you-screen-2
+    draw-on-screen
   ];
 
   dconf.settings = {
