@@ -119,8 +119,8 @@
       "workbench.editor.limit.enabled" = true;
       "workbench.editor.limit.value" = 5;
       "workbench.editor.limit.perEditorGroup" = true;
-      "workbench.editor.showTabs" = "multiple";
       "breadcrumbs.enabled" = false;
+      "workbench.editor.showTabs" = "multiple";
       "editor.matchBrackets" = "never";
       "explorer.compactFolders" = false;
       "editor.wordWrap" = "off";
@@ -150,6 +150,7 @@
       "vscord.status.idle.enabled" = false;
       "vscord.status.state.text.editing" = "Working on {file_name}{file_extension} ={current_line}/{line_count}";
       "vscord.status.problems.text" = "- {problems_count} problems";
+      "vscord.behaviour.suppressNotifications" = true;
       # PHPfmt || PHP's Formatter
       "phpfmt.passes" = [
         "AllmanStyleBraces"
