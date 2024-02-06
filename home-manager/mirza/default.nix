@@ -59,6 +59,7 @@
       floorp
       gnumake
       gping
+      libcxxStdenv
       libreoffice
       nil
       (vesktop.overrideAttrs (prev: {
