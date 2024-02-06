@@ -55,6 +55,12 @@
           version = "2.7.0";
           sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
         }
+        {
+          name = "gruvbox-material";
+          publisher = "sainnhe";
+          version = "6.5.2";
+          sha256 = "sha256-D+SZEQQwjZeuyENOYBJGn8tqS3cJiWbEkmEqhNRY/i4=";
+        }
       ];
 
     userSettings = {
