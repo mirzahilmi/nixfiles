@@ -93,7 +93,6 @@
       "editor.showFoldingControls" = "never";
       "editor.roundedSelection" = false;
       "editor.glyphMargin" = false;
-      "editor.rulers" = [100];
       "workbench.activityBar.location" = "hidden";
       "window.titleBarStyle" = "custom";
       "explorer.openEditors.visible" = 1;
