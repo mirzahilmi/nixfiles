@@ -7,8 +7,7 @@
 }: {
   imports = [
     inputs.spicetify-nix.homeManagerModule
-
-    ../../modules/home-manager/zimfw
+    outputs.homeManagerModules.zimfw
 
     ../programs/foot
     ../programs/gnome-tweaks
@@ -37,8 +36,6 @@
       allowUnfreePredicate = _: true;
     };
   };
-
-  dconf.enable = true;
 
   home = {
     username = "mirza";

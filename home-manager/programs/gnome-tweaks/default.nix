@@ -7,42 +7,45 @@ in {
     (import ./extensions.nix {inherit pkgs gnomeSchema;})
   ];
 
-  dconf.settings = {
-    "${desktopSchema}/interface" = {
-      color-scheme = "prefer-dark";
-      font-name = "IBM Plex Sans 11";
-      document-font-name = "IBM Plex Sans 11";
-      monospace-font-name = "IBM Plex Mono 11";
-      clock-show-seconds = true;
-      clock-show-weekday = true;
-      enable-hot-corners = false;
-      show-battery-percentage = true;
-    };
+  dconf = {
+    enable = true;
+    settings = {
+      "${desktopSchema}/interface" = {
+        color-scheme = "prefer-dark";
+        font-name = "IBM Plex Sans 11";
+        document-font-name = "IBM Plex Sans 11";
+        monospace-font-name = "IBM Plex Mono 11";
+        clock-show-seconds = true;
+        clock-show-weekday = true;
+        enable-hot-corners = false;
+        show-battery-percentage = true;
+      };
 
-    "${gnomeSchema}/mutter" = {
-      dynamic-workspaces = true;
-      edge-tiling = true;
-    };
+      "${gnomeSchema}/mutter" = {
+        dynamic-workspaces = true;
+        edge-tiling = true;
+      };
 
-    "${gnomeSchema}/nautilus/desktop".font = "IBM Plex Sans 11";
+      "${gnomeSchema}/nautilus/desktop".font = "IBM Plex Sans 11";
 
-    "${desktopSchema}/background" = {
-      color-shading-type = "solid";
-      picture-options = "zoom";
-      picture-uri = wallpaperPath;
-      picture-uri-dark = wallpaperPath;
-    };
+      "${desktopSchema}/background" = {
+        color-shading-type = "solid";
+        picture-options = "zoom";
+        picture-uri = wallpaperPath;
+        picture-uri-dark = wallpaperPath;
+      };
 
-    "${desktopSchema}/wm/preferences" = {
-      button-layout = "close,minimize,maximize:appmenu";
-    };
+      "${desktopSchema}/wm/preferences" = {
+        button-layout = "close,minimize,maximize:appmenu";
+      };
 
-    "${desktopSchema}/peripherals/touchpad" = {
-      tap-to-click = true;
-    };
+      "${desktopSchema}/peripherals/touchpad" = {
+        tap-to-click = true;
+      };
 
-    "${gnomeSchema}/settings-daemon/plugins/media-keys" = {
-      magnifier = ["<Alt><Super>z"];
+      "${gnomeSchema}/settings-daemon/plugins/media-keys" = {
+        magnifier = ["<Alt><Super>z"];
+      };
     };
   };
 }
