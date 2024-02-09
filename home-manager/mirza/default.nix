@@ -64,7 +64,6 @@
           }))
         ];
       }))
-      sassc
       wl-clipboard
     ];
 
