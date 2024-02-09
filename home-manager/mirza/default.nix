@@ -48,7 +48,6 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
-      unstable.biome
       cointop
       cool-retro-term
       fd
@@ -65,6 +64,7 @@
           }))
         ];
       }))
+      sassc
       wl-clipboard
     ];
 
