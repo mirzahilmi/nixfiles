@@ -100,9 +100,9 @@
       "editor.roundedSelection" = false;
       "editor.glyphMargin" = false;
       "workbench.activityBar.location" = "hidden";
-      "window.titleBarStyle" = "custom";
+      "window.titleBarStyle" = "native";
+      "window.menuBarVisibility" = "toggle";
       "explorer.openEditors.visible" = 1;
-      "window.menuBarVisibility" = "compact";
       "workbench.layoutControl.type" = "menu";
       "workbench.layoutControl.enabled" = false;
       "workbench.colorCustomizations" = {
