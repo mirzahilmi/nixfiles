@@ -11,13 +11,14 @@ in {
     enable = true;
     settings = {
       "${desktopSchema}/interface" = {
-        color-scheme = "prefer-dark";
-        font-name = "IBM Plex Sans 11";
-        document-font-name = "IBM Plex Sans 11";
-        monospace-font-name = "IBM Plex Mono 11";
         clock-show-seconds = true;
         clock-show-weekday = true;
+        color-scheme = "prefer-dark";
+        document-font-name = "IBM Plex Sans 11";
         enable-hot-corners = false;
+        font-name = "IBM Plex Sans 11";
+        gtk-theme = "Adwaita-dark";
+        monospace-font-name = "IBM Plex Mono 11";
         show-battery-percentage = true;
       };
 
