@@ -4,7 +4,7 @@
     ./fonts.nix
     ./kernel.nix
     ./locale.nix
-    ./optimization.nix
+    ./nix.nix
     ./xdg-spec.nix
   ];
 
