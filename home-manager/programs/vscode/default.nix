@@ -102,6 +102,7 @@
       "workbench.activityBar.location" = "hidden";
       "window.titleBarStyle" = "native";
       "window.menuBarVisibility" = "toggle";
+      "window.enableMenuBarMnemonics" = true;
       "explorer.openEditors.visible" = 1;
       "workbench.layoutControl.type" = "menu";
       "workbench.layoutControl.enabled" = false;
