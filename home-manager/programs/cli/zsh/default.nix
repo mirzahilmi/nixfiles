@@ -6,8 +6,12 @@
     dotDir = ".config/zsh";
 
     initExtraFirst = ''
-      if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PROGRAM" != "vscode" ]]; then
-        exec tmux new-session -A -s workspace
+      if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" ]]; then
+        if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+          exec tmux new-session -A -s vscode
+        else
+          exec tmux new-session -A -s workspace
+        fi
       fi
 
       if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
