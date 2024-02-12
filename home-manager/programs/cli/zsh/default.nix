@@ -7,7 +7,7 @@
 
     initExtraFirst = ''
       if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" ]]; then
-        if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+        if [[ "$TERM_PROGRAM" == "vscode" ]]; then
           exec tmux new-session -A -s vscode
         else
           exec tmux new-session -A -s workspace
