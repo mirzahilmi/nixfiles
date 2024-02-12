@@ -12,6 +12,7 @@
 
     ../programs/foot
     ../programs/gnome-tweaks
+    ../programs/k8s
     ../programs/neovim
     ../programs/spicetify
     ../programs/vscode
