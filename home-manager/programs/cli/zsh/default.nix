@@ -6,7 +6,7 @@
     dotDir = ".config/zsh";
 
     initExtraFirst = ''
-      if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PROGRAM" == "vscode" ]]; then
+      if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PROGRAM" != "vscode" ]]; then
         exec tmux new-session -A -s workspace
       fi
 
