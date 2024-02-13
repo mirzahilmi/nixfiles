@@ -4,7 +4,6 @@
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    utility.safeOps = true;
 
     initExtraFirst = ''
       if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PROGRAM" != "vscode" ]]; then
