@@ -19,9 +19,5 @@
       # Change this later to more secure way
       credential.helper = "store --file ${config.xdg.configHome}/git/.key";
     };
-
-    aliases = {
-      ac = "!git add -A && git commit -m $1";
-    };
   };
 }
