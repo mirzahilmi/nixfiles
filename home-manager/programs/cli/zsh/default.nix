@@ -4,6 +4,7 @@
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
+    utility.safeOps = true;
 
     initExtraFirst = ''
       if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" && -z "$INSIDE_EMACS" && "$TERM_PROGRAM" != "vscode" ]]; then
@@ -20,14 +21,19 @@
     initExtra = ''
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
       export DIRENV_LOG_FORMAT=""
+
       flakify() {
         if [ ! -e flake.nix ]; then
-          nix flake new -t github:nix-community/nix-direnv .
+          nix flake init -t github:nix-community/nix-direnv
         elif [ ! -e .envrc ]; then
           echo "use flake" > .envrc
         fi
       }
     '';
+
+    shellAliases = {
+      "k8" = "kubectl";
+    };
 
     history = {
       path = "${config.xdg.configHome}/zsh/history";
