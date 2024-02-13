@@ -21,7 +21,7 @@
     };
 
     aliases = {
-      ac = "add -A && commit -m $1";
+      ac = "!git add -A && git commit -m $1";
     };
   };
 }
