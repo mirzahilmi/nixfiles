@@ -23,6 +23,7 @@
         pkief.material-icon-theme
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
+        adpyke.codesnap
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
