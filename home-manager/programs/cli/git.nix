@@ -5,7 +5,6 @@
 }: {
   programs.git = {
     enable = true;
-    lfs.enable = true;
     package = pkgs.unstable.git;
     userName = "Mirza Hilmi";
     userEmail = "exquisitemirza@student.ub.ac.id";
@@ -19,7 +18,6 @@
       commit.gpgSign = true;
       # Change this later to more secure way
       credential.helper = "store --file ${config.xdg.configHome}/git/.key";
-      filter.lfs.clean = "git-lfs clean -- %f";
     };
   };
 }

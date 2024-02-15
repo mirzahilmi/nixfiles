@@ -35,7 +35,6 @@ in {
         "org.gnome.Nautilus.desktop"
         "org.codeberg.dnkl.foot.desktop"
         "code.desktop"
-        "github-desktop.desktop"
         "floorp.desktop"
       ];
     };

@@ -53,13 +53,6 @@
       cool-retro-term
       fd
       floorp
-      (github-desktop.overrideAttrs (_: rec {
-        version = "3.3.8";
-        src = fetchurl {
-          url = "https://github.com/shiftkey/desktop/releases/download/release-${version}-linux2/GitHubDesktop-linux-amd64-${version}-linux2.deb";
-          hash = "sha256-MXtEIVEsd5GAPGuxMHcFLJ/M009lPRnX6h+kj5UlSG8=";
-        };
-      }))
       gnumake
       gping
       libreoffice
