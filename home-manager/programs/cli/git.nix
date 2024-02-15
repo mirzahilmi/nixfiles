@@ -5,6 +5,7 @@
 }: {
   programs.git = {
     enable = true;
+    lfs.enable = true;
     package = pkgs.unstable.git;
     userName = "Mirza Hilmi";
     userEmail = "exquisitemirza@student.ub.ac.id";
