@@ -53,7 +53,7 @@
       cool-retro-term
       fd
       floorp
-      (github-dekstop.overrideAttrs (_prev: {
+      (github-desktop.overrideAttrs (_prev: {
         version = "3.3.8";
         src = _prev.src.override {hash = "";};
       }))
