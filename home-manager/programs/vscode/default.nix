@@ -23,7 +23,6 @@
         pkief.material-icon-theme
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
-        github.vscode-pull-request-github
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
