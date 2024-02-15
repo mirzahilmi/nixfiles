@@ -53,16 +53,20 @@
       cool-retro-term
       fd
       floorp
+      (github-dekstop.overrideAttrs (_prev: {
+        version = "3.3.8";
+        src = _prev.src.override {hash = "";};
+      }))
       gnumake
       gping
       libreoffice
       nil
       (vesktop.overrideAttrs (_prev: {
         desktopItems = [
-          ((builtins.elemAt _prev.desktopItems 0).override (_: {
+          ((builtins.elemAt _prev.desktopItems 0).override {
             icon = "${../../assets/discord.svg}";
             desktopName = "Discord";
-          }))
+          })
         ];
       }))
       wl-clipboard
