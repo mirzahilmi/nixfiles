@@ -50,6 +50,7 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
+      ciscoPacketTracer8
       cointop
       cool-retro-term
       fd
