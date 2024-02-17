@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  programs.obs = with pkgs; {
+  programs.obs-studio = with pkgs; {
     enable = true;
     package = unstable.obs-studio;
     plugins = with obs-studio-plugins; [
