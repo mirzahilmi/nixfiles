@@ -66,6 +66,7 @@
         ];
       }))
       wl-clipboard
+      zoom-us
     ];
 
     stateVersion = "23.11";
