@@ -61,12 +61,12 @@
           version = "2.1.2";
           sha256 = "sha256-bPAig5KK6hYxyAyt48Mfi2dEf50/hNiNngX7bTzIKcQ=";
         }
-        # {
-        #   name = "gruvbox-material";
-        #   publisher = "sainnhe";
-        #   version = "6.5.2";
-        #   sha256 = "sha256-D+SZEQQwjZeuyENOYBJGn8tqS3cJiWbEkmEqhNRY/i4=";
-        # }
+        {
+          name = "vscode-drawio";
+          publisher = "hediet";
+          version = "1.6.6";
+          sha256 = "sha256-SPcSnS7LnRL5gdiJIVsFaN7eccrUHSj9uQYIQZllm0M=";
+        }
       ];
 
     userSettings = {
