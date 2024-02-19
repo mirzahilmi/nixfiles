@@ -67,6 +67,8 @@
       }))
       wl-clipboard
       zoom-us
+
+      unstable.android-studio
     ];
 
     stateVersion = "23.11";
