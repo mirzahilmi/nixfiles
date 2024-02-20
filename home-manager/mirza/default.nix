@@ -14,6 +14,7 @@
     ../programs/gnome-tweaks
     ../programs/k8s
     ../programs/neovim
+    ../programs/obs
     ../programs/spicetify
     ../programs/vscode
     ../programs/xdgify

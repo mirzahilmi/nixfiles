@@ -10,7 +10,6 @@ in {
 
     enabledExtensions = with spicePkgs.extensions; [
       adblock
-      autoVolume
       fullAppDisplay
       hidePodcasts
       history

@@ -13,6 +13,7 @@
     KUBECONFIG = "${config.xdg.configHome}/kube/config";
     KUBECACHEDIR = "${config.xdg.cacheHome}/kube";
     "_JAVA_OPTIONS=-Djava.util.prefs.userRoot" = "${config.xdg.configHome}/java";
+    GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
   };
 
   # NPM : ~/.npm
