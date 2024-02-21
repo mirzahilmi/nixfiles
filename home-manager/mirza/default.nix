@@ -50,7 +50,6 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
-      ciscoPacketTracer8
       cointop
       cool-retro-term
       fd
@@ -67,6 +66,7 @@
           })
         ];
       }))
+      video-trimmer
       wl-clipboard
       zoom-us
     ];
