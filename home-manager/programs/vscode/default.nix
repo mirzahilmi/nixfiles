@@ -131,7 +131,7 @@
       "editor.matchBrackets" = "never";
       "explorer.compactFolders" = false;
       "editor.wordWrap" = "off";
-      "git.autorefresh" = true;
+      "editor.selectionClipboard" = false;
 
       # Language Specific Behavior
       "[nix]" = {
