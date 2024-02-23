@@ -14,6 +14,7 @@ in {
     gnomeExtensions.dash-to-dock
     gnomeExtensions.appindicator
     gnomeExtensions.vitals
+    gnomeExtensions.app-menu-is-back
     draw-on-screen
   ];
 
@@ -29,6 +30,7 @@ in {
         "clipboard-indicator@tudmotu.com"
         "unlockDialogBackground@sun.wxg@gmail.com"
         "draw-on-your-screen2@zhrexl.github.com"
+        "appmenu-is-back@fthx"
       ];
 
       favorite-apps = [
