@@ -20,7 +20,7 @@
     ../programs/xdgify
 
     ../programs/cli/nix-direnv
-    ../programs/cli/tmux
+    # ../programs/cli/tmux
     ../programs/cli/zsh
 
     ../programs/cli/bat.nix
