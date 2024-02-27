@@ -12,6 +12,7 @@
     ../common/extras/docker.nix
     ../common/extras/gnome-wayland.nix
     ../common/extras/pipewire.nix
+    ../common/extras/virt-manager.nix
     ../common/extras/zsh.nix
   ];
 
