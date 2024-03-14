@@ -7,6 +7,10 @@ in {
     (import ./extensions.nix {inherit pkgs gnomeSchema;})
   ];
 
+  home.packages = with pkgs; [
+    bibata-cursors
+  ];
+
   dconf = {
     enable = true;
     settings = {
@@ -20,6 +24,7 @@ in {
         gtk-theme = "Adwaita-dark";
         monospace-font-name = "IBM Plex Mono 11";
         show-battery-percentage = true;
+        cursor-theme = "Bibata-Original-Classic";
       };
 
       "${gnomeSchema}/mutter" = {
