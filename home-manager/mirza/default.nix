@@ -69,6 +69,8 @@
       video-trimmer
       wl-clipboard
       zoom-us
+
+      unstable.eduvpn-client
     ];
 
     stateVersion = "23.11";
