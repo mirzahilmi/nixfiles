@@ -13,6 +13,7 @@
 
     extensions = with pkgs.vscode-extensions;
       [
+        adpyke.codesnap
         bbenoist.nix
         bmewburn.vscode-intelephense-client
         editorconfig.editorconfig
@@ -23,9 +24,9 @@
         kamadorueda.alejandra
         mkhl.direnv
         pkief.material-icon-theme
+        redhat.vscode-xml
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
-        adpyke.codesnap
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
