@@ -204,6 +204,8 @@
       "go.lintTool" = "golangci-lint";
       # Biome.js
       "biome.lspBin" = "${pkgs.biome}/bin/biome";
+      # XML
+      "xml.server.binary.path:" = "${pkgs.lemminx}/bin/lemminx";
     };
   };
 }
