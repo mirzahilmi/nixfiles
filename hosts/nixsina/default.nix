@@ -14,6 +14,7 @@
     ../common/extras/gns3.nix
     ../common/extras/openssh.nix
     ../common/extras/pipewire.nix
+    ../common/extras/ubridge.nix
     ../common/extras/virt-manager.nix
     ../common/extras/zsh.nix
   ];

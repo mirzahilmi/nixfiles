@@ -5,6 +5,7 @@
       trusted-users = ["root" "@wheel"];
       auto-optimise-store = true;
       warn-dirty = false;
+      "use-xdg-base-directories" = true;
     };
 
     gc = {
@@ -15,8 +16,6 @@
 
     optimise.automatic = true;
   };
-
-  use-xdg-base-directories = true;
 
   nixpkgs.config.allowUnfree = true;
 }
