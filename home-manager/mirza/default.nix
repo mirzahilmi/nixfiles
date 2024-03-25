@@ -54,7 +54,6 @@
       cool-retro-term
       fd
       floorp
-      gns3-gui
       gnumake
       gping
       libreoffice
