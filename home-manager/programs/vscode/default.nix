@@ -205,7 +205,11 @@
       # Biome.js
       "biome.lspBin" = "${pkgs.biome}/bin/biome";
       # XML
-      "xml.server.binary.path:" = "${pkgs.lemminx}/bin/lemminx";
+      "xml.server.preferBinary" = true;
+      "xml.server.binary.path" = "${pkgs.lemminx}/bin/lemminx";
+      "xml.server.binary.trustedHashes" = [
+        "1be10969257c6e350c8b26b5a30f7611fb4720b2584a2872e1059747cab22c42"
+      ];
     };
   };
 }
