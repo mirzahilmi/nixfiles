@@ -24,7 +24,7 @@
         kamadorueda.alejandra
         mkhl.direnv
         pkief.material-icon-theme
-        redhat.vscode-xml
+        redhat.vscode-yaml
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
       ]

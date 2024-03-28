@@ -58,9 +58,9 @@
       gping
       libreoffice
       nil
-      (vesktop.overrideAttrs (_prev: {
+      (vesktop.overrideAttrs (prev: {
         desktopItems = [
-          ((builtins.elemAt _prev.desktopItems 0).override {
+          ((builtins.elemAt prev.desktopItems 0).override {
             icon = "${../../assets/discord.svg}";
             desktopName = "Discord";
           })
