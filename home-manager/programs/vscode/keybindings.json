@@ -54,6 +54,10 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     {
+        "key": "ctrl+`",
+        "command": "workbench.action.createTerminalEditor"
+    },
+    {
         "key": "ctrl+shift+backspace",
         "command": "-search.searchEditor.action.deleteFileResults",
         "when": "inSearchEditor"
@@ -124,5 +128,10 @@
         "key": "ctrl+shift+alt+up",
         "command": "-editor.action.copyLinesUpAction",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+`",
+        "command": "-workbench.action.terminal.toggleTerminal",
+        "when": "terminal.active"
     }
 ]

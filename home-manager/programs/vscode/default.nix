@@ -211,6 +211,14 @@
       "xml.server.binary.trustedHashes" = [
         "1be10969257c6e350c8b26b5a30f7611fb4720b2584a2872e1059747cab22c42"
       ];
+      # Java
+      "java.configuration.runtimes" = [
+        {
+          "name" = "JavaSE-21";
+          "path" = "${pkgs.jdk21}/bin/jdk";
+          "default" = true;
+        }
+      ];
     };
   };
 }
