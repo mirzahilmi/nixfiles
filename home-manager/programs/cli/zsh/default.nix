@@ -18,16 +18,9 @@
     '';
 
     initExtra = ''
+      bindkey -e
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
       export DIRENV_LOG_FORMAT=""
-
-      flakify() {
-        if [ ! -e flake.nix ]; then
-          nix flake init -t github:nix-community/nix-direnv
-        elif [ ! -e .envrc ]; then
-          echo "use flake" > .envrc
-        fi
-      }
     '';
 
     shellAliases = {
