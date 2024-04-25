@@ -23,9 +23,9 @@
         jnoortheen.nix-ide
         kamadorueda.alejandra
         mkhl.direnv
-        pkief.material-icon-theme
         redhat.java
         redhat.vscode-yaml
+        pkief.material-icon-theme
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
       ]
@@ -72,6 +72,12 @@
           version = "1.6.6";
           sha256 = "sha256-SPcSnS7LnRL5gdiJIVsFaN7eccrUHSj9uQYIQZllm0M=";
         }
+        {
+          name = "hungry-delete";
+          publisher = "jasonlhy";
+          version = "1.7.0";
+          sha256 = "sha256-TDs6i0/o0j9XFLQvWze4iloa6yRXce/xIqd2CnA5nug=";
+        }
       ];
 
     userSettings = {
@@ -83,7 +89,7 @@
       "editor.fontFamily" = "JetBrainsMono Nerd Font";
       "terminal.integrated.fontFamily" = "FiraCode Nerd Font";
       "editor.fontLigatures" = true;
-      "editor.fontSize" = 16;
+      "editor.fontSize" = 17;
       "editor.fontWeight" = "500";
       "editor.lineHeight" = 1.5;
       "editor.letterSpacing" = 0.5;
@@ -122,6 +128,8 @@
       };
       "terminal.integrated.defaultProfile.linux" = "zsh";
       "terminal.integrated.persistentSessionReviveProcess" = "never";
+      "editor.stickyScroll.enabled" = true;
+      "editor.stickyScroll.maxLineCount" = 1;
 
       # Code Editor Behavior
       "editor.formatOnSave" = true;
@@ -130,7 +138,7 @@
       "workbench.editor.limit.enabled" = true;
       "workbench.editor.limit.value" = 5;
       "workbench.editor.limit.perEditorGroup" = true;
-      "breadcrumbs.enabled" = false;
+      "breadcrumbs.enabled" = true;
       "workbench.editor.showTabs" = "multiple";
       "editor.matchBrackets" = "never";
       "explorer.compactFolders" = false;

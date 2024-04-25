@@ -63,6 +63,11 @@
         "when": "inSearchEditor"
     },
     {
+        "key": "ctrl+shift+[",
+        "command": "workbench.files.action.collapseExplorerFolders",
+        "when": "sideBarFocus"
+    },
+    {
         "key": "shift+delete",
         "command": "-editor.action.clipboardCutAction"
     },

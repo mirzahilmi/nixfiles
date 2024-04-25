@@ -18,7 +18,6 @@
     '';
 
     initExtra = ''
-      bindkey -e
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
       export DIRENV_LOG_FORMAT=""
     '';

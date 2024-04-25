@@ -13,6 +13,7 @@
     ../common/extras/gnome-wayland.nix
     ../common/extras/openssh.nix
     ../common/extras/pipewire.nix
+    ../common/extras/v4l2loopback.nix
     ../common/extras/virt-manager.nix
     ../common/extras/zsh.nix
   ];

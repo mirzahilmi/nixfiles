@@ -52,6 +52,11 @@ in {
       "${gnomeSchema}/settings-daemon/plugins/media-keys" = {
         magnifier = ["<Alt><Super>z"];
       };
+
+      "${desktopSchema}/wm/keybindings" = {
+        switch-to-workspace-right = ["<Super><Alt>Right"];
+        switch-to-workspace-left = ["<Super><Alt>Left"];
+      };
     };
   };
 }

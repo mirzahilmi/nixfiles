@@ -6,6 +6,7 @@
     modules = [
       "archive"
       "completion"
+      "input"
       "fzf"
       "utility"
 
