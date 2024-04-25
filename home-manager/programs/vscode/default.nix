@@ -89,7 +89,7 @@
       "editor.fontFamily" = "JetBrainsMono Nerd Font";
       "terminal.integrated.fontFamily" = "FiraCode Nerd Font";
       "editor.fontLigatures" = true;
-      "editor.fontSize" = 17;
+      "editor.fontSize" = 16;
       "editor.fontWeight" = "500";
       "editor.lineHeight" = 1.5;
       "editor.letterSpacing" = 0.5;
