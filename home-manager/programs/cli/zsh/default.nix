@@ -20,6 +20,7 @@
     initExtra = ''
       export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
       export DIRENV_LOG_FORMAT=""
+      bindkey -e
     '';
 
     shellAliases = {

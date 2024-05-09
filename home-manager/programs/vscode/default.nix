@@ -28,6 +28,7 @@
         pkief.material-icon-theme
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
+        tamasfe.even-better-toml
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -77,6 +78,24 @@
           publisher = "jasonlhy";
           version = "1.7.0";
           sha256 = "sha256-TDs6i0/o0j9XFLQvWze4iloa6yRXce/xIqd2CnA5nug=";
+        }
+        {
+          name = "vsliveshare";
+          publisher = "MS-vsliveshare";
+          version = "1.0.5918";
+          sha256 = "sha256-Tk0mKydUF8M7l7NC9wEA7t2rzJWy/mq4/HvIHI2/ldQ=";
+        }
+        {
+          name = "vscode-dbml";
+          publisher = "matt-meyers";
+          version = "0.3.5";
+          sha256 = "sha256-AhxXM061HCkJqi/PPe+XepOod+3lyo+4C5JWK6Yk80w=";
+        }
+        {
+          name = "dbml-viewer";
+          publisher = "nicolas-liger";
+          version = "0.1.0";
+          sha256 = "sha256-jhA1w2twXS7r8dDoJ6ANzE20HO1020rOFi7yhR4wbL8=";
         }
       ];
 
@@ -128,8 +147,6 @@
       };
       "terminal.integrated.defaultProfile.linux" = "zsh";
       "terminal.integrated.persistentSessionReviveProcess" = "never";
-      "editor.stickyScroll.enabled" = true;
-      "editor.stickyScroll.maxLineCount" = 1;
 
       # Code Editor Behavior
       "editor.formatOnSave" = true;
@@ -144,6 +161,7 @@
       "explorer.compactFolders" = false;
       "editor.wordWrap" = "off";
       "editor.selectionClipboard" = false;
+      "git.autorefresh" = true;
 
       # Language Specific Behavior
       "[nix]" = {

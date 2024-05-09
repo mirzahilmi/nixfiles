@@ -56,6 +56,7 @@
       floorp
       gnumake
       gping
+      gradience
       libreoffice
       nil
       (vesktop.overrideAttrs (prev: {
