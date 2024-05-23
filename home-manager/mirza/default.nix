@@ -50,8 +50,8 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
-      cointop
       cool-retro-term
+      dbeaver
       fd
       floorp
       gnumake
@@ -67,12 +67,17 @@
           })
         ];
       }))
+      slack
       ubridge
+      ungoogled-chromium
       video-trimmer
       wl-clipboard
       zoom-us
 
+      unstable.du-dust
       unstable.eduvpn-client
+      unstable.postman
+      unstable.zed-editor
     ];
 
     stateVersion = "23.11";

@@ -8,6 +8,7 @@
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
     mutableExtensionsDir = true;
+    package = pkgs.unstable.vscode;
 
     keybindings = lib.importJSON ./keybindings.json;
 
@@ -29,6 +30,7 @@
         tobiasalthoff.atom-material-theme
         usernamehw.errorlens
         tamasfe.even-better-toml
+        github.copilot
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -162,6 +164,7 @@
       "editor.wordWrap" = "off";
       "editor.selectionClipboard" = false;
       "git.autorefresh" = true;
+      "editor.stickyScroll.enabled" = false;
 
       # Language Specific Behavior
       "[nix]" = {
