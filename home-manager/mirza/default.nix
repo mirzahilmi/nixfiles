@@ -15,6 +15,7 @@
     ../programs/k8s
     ../programs/neovim
     ../programs/obs
+    ../programs/openssh
     ../programs/spicetify
     ../programs/vscode
     ../programs/xdgify
@@ -52,6 +53,7 @@
       alejandra
       cool-retro-term
       dbeaver
+      dig
       fd
       floorp
       gnumake
@@ -74,6 +76,8 @@
       wl-clipboard
       zoom-us
 
+      unstable.beekeeper-studio
+      unstable.biome
       unstable.du-dust
       unstable.eduvpn-client
       unstable.postman

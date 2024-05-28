@@ -49,6 +49,10 @@ in {
         tap-to-click = true;
       };
 
+      "${desktopSchema}/peripherals/keyboard" = {
+        repeat-interval = 25;
+      };
+
       "${gnomeSchema}/settings-daemon/plugins/media-keys" = {
         magnifier = ["<Alt><Super>z"];
       };

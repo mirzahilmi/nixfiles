@@ -7,7 +7,6 @@
     enable = true;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    mutableExtensionsDir = true;
     package = pkgs.unstable.vscode;
 
     keybindings = lib.importJSON ./keybindings.json;
@@ -31,6 +30,7 @@
         usernamehw.errorlens
         tamasfe.even-better-toml
         github.copilot
+        github.copilot-chat
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -131,6 +131,7 @@
       "editor.showFoldingControls" = "never";
       "editor.roundedSelection" = false;
       "editor.glyphMargin" = false;
+      "editor.lineNumbers" = "off";
       "workbench.activityBar.location" = "hidden";
       "window.titleBarStyle" = "native";
       "window.menuBarVisibility" = "hidden";

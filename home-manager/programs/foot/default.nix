@@ -5,6 +5,7 @@
       main = {
         term = "screen-256color";
         font = "JetBrainsMono Nerd Font:style=Regular:size=12";
+        pad = "5x5 center";
       };
       mouse.hide-when-typing = "yes";
       colors = {
@@ -27,11 +28,11 @@
         bright6 = "94e2d5";
         bright7 = "a6adc8";
       };
-      csd = {
-        size = 0;
-      };
       key-bindings = {
         fullscreen = "F11";
+      };
+      csd = {
+        preferred = "none";
       };
     };
   };
