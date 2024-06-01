@@ -55,6 +55,7 @@
       dbeaver
       dig
       fd
+      ffmpeg-headless
       floorp
       gnumake
       gping
