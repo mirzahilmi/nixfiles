@@ -52,7 +52,6 @@
     packages = with pkgs; [
       alejandra
       cool-retro-term
-      dbeaver
       dig
       fd
       ffmpeg-headless
@@ -74,6 +73,7 @@
       ubridge
       ungoogled-chromium
       video-trimmer
+      warp-terminal
       wl-clipboard
       zoom-us
 

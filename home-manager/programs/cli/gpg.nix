@@ -7,7 +7,6 @@
   services.gpg-agent = {
     enable = true;
     verbose = true;
-    pinentryFlavor = "gnome3";
     defaultCacheTtl = 3600;
     maxCacheTtl = 86400;
   };
