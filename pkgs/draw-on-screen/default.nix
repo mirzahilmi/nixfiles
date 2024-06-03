@@ -4,13 +4,13 @@
 }:
 stdenv.mkDerivation {
   pname = "draw-on-screen";
-  version = "1.0.0";
+  version = "1.1.0";
 
   src = fetchFromGitHub {
     owner = "zhrexl";
     repo = "DrawOnYourScreen2";
-    rev = "a7469e21ce2b7cc08bbc018c92124c7ba17fad4b";
-    sha256 = "sha256-1oFfHQyGKlMSyN7pItDOeyqjoxpDZW55QeIfwh9SPYk=";
+    rev = "3c4e2efb8080577aafc4178991f3bb2e725dc0ed";
+    sha256 = "sha256-uLe91PQZQIhDWlsUKxpRS3a67PGFGqPVTQtCrWnIfKs=";
   };
 
   dontPatch = true;

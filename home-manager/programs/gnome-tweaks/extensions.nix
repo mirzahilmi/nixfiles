@@ -92,5 +92,9 @@ in {
       update-time = 30;
       use-higher-precision = false;
     };
+
+    "${extensionsSchema}/draw-on-your-screen" = {
+      persistent-over-toggles = false;
+    };
   };
 }
