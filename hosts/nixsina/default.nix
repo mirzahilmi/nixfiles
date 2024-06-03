@@ -11,6 +11,7 @@
 
     ../common/extras/docker.nix
     ../common/extras/gnome-wayland.nix
+    ../common/extras/nvidia.nix
     ../common/extras/openssh.nix
     ../common/extras/pipewire.nix
     ../common/extras/v4l2loopback.nix
