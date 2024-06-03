@@ -143,5 +143,10 @@
         "key": "escape escape",
         "command": "-workbench.action.exitZenMode",
         "when": "inZenMode"
+    },
+    {
+        "key": "ctrl+o",
+        "command": "-workbench.action.files.openFile",
+        "when": "true"
     }
 ]

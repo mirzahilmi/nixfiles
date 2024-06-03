@@ -233,6 +233,11 @@
       "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
       # golangci-lint : Go's Formatter
       "go.lintTool" = "golangci-lint";
+      "go.alternateTools" = {
+        "dlv" = "${pkgs.go}/bin/dlv";
+        "go" = "${pkgs.go}/bin/go";
+        "gopls" = "${pkgs.go}/bin/gopls";
+      };
       # Biome.js
       "biome.lspBin" = "${pkgs.biome}/bin/biome";
       # XML
