@@ -12,8 +12,8 @@
 
     extraConfig = {
       init.defaultBranch = "master";
-      user.signing.key = "71BCEF0BD6178F2DE8EF4F77C92E3238B87A7B1D";
-      user.signingkey = "71BCEF0BD6178F2DE8EF4F77C92E3238B87A7B1D";
+      user.signing.key = "5FD12800DCA4F7B5";
+      user.signingkey = "5FD12800DCA4F7B5";
       gpg.program = "${config.home.homeDirectory}/.nix-profile/bin/gpg";
       commit.gpgSign = true;
       # Change this later to more secure way
