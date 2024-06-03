@@ -51,16 +51,21 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
+      brave
       cool-retro-term
       dig
+      du-dust
+      eduvpn-client
       fd
       ffmpeg-headless
-      floorp
       gnumake
       gping
       gradience
       libreoffice
       nil
+      postman
+      slack
+      ubridge
       (vesktop.overrideAttrs (prev: {
         desktopItems = [
           ((builtins.elemAt prev.desktopItems 0).override {
@@ -69,20 +74,12 @@
           })
         ];
       }))
-      slack
-      ubridge
-      ungoogled-chromium
       video-trimmer
       warp-terminal
       wl-clipboard
       zoom-us
 
       unstable.beekeeper-studio
-      unstable.biome
-      unstable.du-dust
-      unstable.eduvpn-client
-      unstable.postman
-      unstable.zed-editor
     ];
 
     stateVersion = "23.11";

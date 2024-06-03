@@ -7,15 +7,16 @@
   extensionsSchema = "${gnomeShellSchema}/extensions";
 in {
   home.packages = with pkgs; [
+    draw-on-screen
     gnome.gnome-tweaks
     gnome.dconf-editor
+    gnomeExtensions.appindicator
+    gnomeExtensions.app-menu-is-back
     gnomeExtensions.blur-my-shell
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
-    gnomeExtensions.appindicator
+    gnomeExtensions.hide-minimized
     gnomeExtensions.vitals
-    gnomeExtensions.app-menu-is-back
-    draw-on-screen
   ];
 
   dconf.settings = {
@@ -35,9 +36,10 @@ in {
 
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
-        "org.codeberg.dnkl.foot.desktop"
+        "dev.warp.Warp.desktop"
         "code.desktop"
-        "floorp.desktop"
+        "beekeeper-studio.desktop"
+        "brave-browser.desktop"
       ];
     };
 
