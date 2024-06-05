@@ -23,15 +23,16 @@ in {
     "${gnomeShellSchema}" = {
       disable-user-extensions = false;
       enabled-extensions = [
-        "drive-menu@gnome-shell-extensions.gcampax.github.com"
-        "user-theme@gnome-shell-extensions.gcampax.github.com"
-        "dash-to-dock@micxgx.gmail.com"
-        "blur-my-shell@aunetx"
-        "Vitals@CoreCoding.com"
-        "clipboard-indicator@tudmotu.com"
-        "unlockDialogBackground@sun.wxg@gmail.com"
-        "draw-on-your-screen2@zhrexl.github.com"
         "appmenu-is-back@fthx"
+        "blur-my-shell@aunetx"
+        "clipboard-indicator@tudmotu.com"
+        "dash-to-dock@micxgx.gmail.com"
+        "draw-on-your-screen2@zhrexl.github.com"
+        "drive-menu@gnome-shell-extensions.gcampax.github.com"
+        "hide-minimized@danigm.net"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "unlockDialogBackground@sun.wxg@gmail.com"
+        "Vitals@CoreCoding.com"
       ];
 
       favorite-apps = [
@@ -41,11 +42,6 @@ in {
         "beekeeper-studio.desktop"
         "brave-browser.desktop"
       ];
-    };
-
-    "${extensionsSchema}/blur-my-shell" = {
-      color-and-noise = true;
-      hacks-level = 1;
     };
 
     "${extensionsSchema}/clipboard-indicator" = {
@@ -73,6 +69,7 @@ in {
       preferred-monitor-by-connector = "eDP-2";
       show-trash = false;
       transparency-mode = "DYNAMIC";
+      running-indicator-style = "DOTS";
     };
 
     "${extensionsSchema}/vitals" = {

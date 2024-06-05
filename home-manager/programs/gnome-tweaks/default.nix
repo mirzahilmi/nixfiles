@@ -60,6 +60,7 @@ in {
       "${desktopSchema}/wm/keybindings" = {
         switch-to-workspace-right = ["<Super><Alt>Right"];
         switch-to-workspace-left = ["<Super><Alt>Left"];
+        minimize = ["<Super>Down"];
       };
     };
   };
