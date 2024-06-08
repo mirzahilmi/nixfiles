@@ -9,6 +9,8 @@
     hardware.url = "github:nixos/nixos-hardware";
     grub-themes.url = "github:luisnquin/grub-themes";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+    nixvim.url = "github:nix-community/nixvim/nixos-24.05";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {

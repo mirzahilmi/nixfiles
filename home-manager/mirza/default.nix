@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.spicetify-nix.homeManagerModule
+    inputs.nixvim.homeManagerModules.nixvim
     outputs.homeManagerModules.zimfw
 
     ./tweaks.nix
@@ -13,7 +14,7 @@
     ../programs/foot
     ../programs/gnome-tweaks
     ../programs/k8s
-    ../programs/neovim
+    ../programs/nixvim
     ../programs/obs
     ../programs/openssh
     ../programs/spicetify
@@ -52,12 +53,12 @@
     packages = with pkgs; [
       alejandra
       brave
-      cool-retro-term
       dig
       du-dust
       eduvpn-client
       fd
       ffmpeg-headless
+      filezilla
       gnumake
       gping
       gradience
