@@ -68,6 +68,10 @@
         "when": "sideBarFocus"
     },
     {
+        "key": "ctrl+k c",
+        "command": "workbench.action.toggleCenteredLayout"
+    },
+    {
         "key": "shift+delete",
         "command": "-editor.action.clipboardCutAction"
     },
@@ -148,5 +152,9 @@
         "key": "ctrl+o",
         "command": "-workbench.action.files.openFile",
         "when": "true"
+    },
+    {
+        "key": "ctrl+k c",
+        "command": "-workbench.files.action.compareWithClipboard"
     }
 ]

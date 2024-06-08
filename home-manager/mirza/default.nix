@@ -59,6 +59,8 @@
       fd
       ffmpeg-headless
       filezilla
+      gns3-gui
+      gns3-server
       gnumake
       gping
       gradience
@@ -76,7 +78,6 @@
         ];
       }))
       video-trimmer
-      warp-terminal
       wl-clipboard
       zoom-us
 

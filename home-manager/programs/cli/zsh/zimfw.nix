@@ -11,7 +11,7 @@
       "utility"
 
       "romkatv/powerlevel10k --name powerlevel10k"
-      "zdharma-continuum/fast-syntax-highlighting --name fast-syntax-highlighting"
+      "zsh-users/zsh-syntax-highlighting --name zsh-syntax-highlighting"
       "zsh-users/zsh-autosuggestions --name zsh-autosuggestions"
     ];
   };

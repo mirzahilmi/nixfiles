@@ -10,6 +10,10 @@
       #   exec tmux new-session -A -s workspace
       # fi
 
+      if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+        printf '\n%.0s' {1..100}
+      fi
+
       if [[ -r "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
         source "${config.xdg.cacheHome}/p10k-instant-prompt-''${(%):-%n}.zsh"
       fi
