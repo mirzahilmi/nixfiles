@@ -1,5 +1,8 @@
-{pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    gns3-server
-  ];
+{
+  services.gns3-server = {
+    enable = true;
+    vpcs.enable = true;
+    dynamips.enable = true;
+    ubridge.enable = true;
+  };
 }

@@ -11,6 +11,7 @@
 
     ../common/extras/docker.nix
     ../common/extras/gnome-wayland.nix
+    ../common/extras/gns3.nix
     ../common/extras/nvidia.nix
     ../common/extras/openssh.nix
     ../common/extras/pipewire.nix

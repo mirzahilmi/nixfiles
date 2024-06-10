@@ -60,7 +60,6 @@
       ffmpeg-headless
       filezilla
       gns3-gui
-      gns3-server
       gnumake
       gping
       gradience

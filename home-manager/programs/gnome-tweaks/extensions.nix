@@ -52,23 +52,7 @@ in {
     };
 
     "${extensionsSchema}/dash-to-dock" = {
-      apply-custom-theme = false;
-      background-color = "rgb(36,31,49)";
-      background-opacity = 0.77000000000000002;
-      click-action = "minimize";
-      custom-background-color = false;
-      custom-theme-shrink = false;
-      dash-max-icon-size = 48;
-      disable-overview-on-startup = false;
-      dock-position = "BOTTOM";
-      height-fraction = 1.0;
-      hot-keys = false;
-      hotkeys-overlay = false;
-      multi-monitor = true;
-      preferred-monitor = -2;
-      preferred-monitor-by-connector = "eDP-2";
-      show-trash = false;
-      transparency-mode = "DYNAMIC";
+      apply-custom-theme = true;
       running-indicator-style = "DOTS";
     };
 

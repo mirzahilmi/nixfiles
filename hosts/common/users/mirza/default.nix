@@ -16,7 +16,6 @@ in {
         "video"
         "audio"
         "docker"
-        "ubridge"
       ];
       openssh.authorizedKeys.keys = [
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILfBDFCdhrf2o3vuNKovPs+NqBMkCALqaeLwsAV3N7Lq mirza@nixsina"
