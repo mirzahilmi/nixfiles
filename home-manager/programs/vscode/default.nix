@@ -106,6 +106,18 @@
           version = "0.1.0";
           sha256 = "sha256-jhA1w2twXS7r8dDoJ6ANzE20HO1020rOFi7yhR4wbL8=";
         }
+        {
+          name = "sqltools";
+          publisher = "mtxr";
+          version = "0.28.3";
+          sha256 = "sha256-bTrHAhj8uwzRIImziKsOizZf8+k3t+VrkOeZrFx7SH8=";
+        }
+        {
+          name = "sqltools-driver-mysql";
+          publisher = "mtxr";
+          version = "0.6.3";
+          sha256 = "sha256-CO+dcmvaSROX1ruxdrLfQhPF3HgEBtesE0JPyizD7io=";
+        }
       ];
 
     userSettings = {
@@ -262,6 +274,8 @@
           "default" = true;
         }
       ];
+      # SQLTools
+      "sqltools.highlightQuery" = false;
     };
   };
 }
