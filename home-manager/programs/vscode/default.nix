@@ -7,7 +7,14 @@
     enable = true;
     enableUpdateCheck = false;
     enableExtensionUpdateCheck = false;
-    package = pkgs.unstable.vscode;
+
+    # See https://gitlab.gnome.org/GNOME/mutter/-/issues/2689
+    package = pkgs.unstable.vscode.overrideAttrs (prev: rec {
+      desktopItem = prev.desktopItem.override {
+        startupNotify = false;
+      };
+      installPhase = builtins.replaceStrings ["${prev.desktopItem}"] ["${desktopItem}"] prev.installPhase;
+    });
 
     keybindings = lib.importJSON ./keybindings.json;
 
@@ -166,6 +173,7 @@
       "editor.selectionClipboard" = false;
       "git.autorefresh" = true;
       "editor.stickyScroll.enabled" = false;
+      "workbench.tree.enableStickyScroll" = false;
 
       # Language Specific Behavior
       "[nix]" = {
