@@ -9,11 +9,11 @@
     enableExtensionUpdateCheck = false;
 
     # See https://gitlab.gnome.org/GNOME/mutter/-/issues/2689
-    package = pkgs.unstable.vscode.overrideAttrs (prev: rec {
-      desktopItem = prev.desktopItem.override {
+    package = pkgs.unstable.vscode.overrideAttrs (previousAttrs: rec {
+      desktopItem = previousAttrs.desktopItem.override {
         startupNotify = false;
       };
-      installPhase = builtins.replaceStrings ["${prev.desktopItem}"] ["${desktopItem}"] prev.installPhase;
+      installPhase = builtins.replaceStrings ["${previousAttrs.desktopItem}"] ["${desktopItem}"] previousAttrs.installPhase;
     });
 
     keybindings = lib.importJSON ./keybindings.json;
@@ -152,7 +152,7 @@
       "editor.glyphMargin" = false;
       "editor.lineNumbers" = "off";
       "workbench.activityBar.location" = "hidden";
-      "window.titleBarStyle" = "native";
+      "window.titleBarStyle" = "custom";
       "window.menuBarVisibility" = "hidden";
       "window.enableMenuBarMnemonics" = true;
       "explorer.openEditors.visible" = 1;
@@ -169,6 +169,7 @@
       };
       "terminal.integrated.defaultProfile.linux" = "zsh";
       "terminal.integrated.persistentSessionReviveProcess" = "never";
+      "editor.guides.indentation" = false;
 
       # Code Editor Behavior
       "editor.formatOnSave" = true;
@@ -203,6 +204,9 @@
         "editor.formatOnSave" = false;
       };
       "[javascript]" = {
+        "editor.defaultFormatter" = "biomejs.biome";
+      };
+      "[json]" = {
         "editor.defaultFormatter" = "biomejs.biome";
       };
 
@@ -259,6 +263,7 @@
         "gopls" = "${pkgs.go}/bin/gopls";
       };
       # Biome.js
+      "biome.enabled" = true;
       "biome.lspBin" = "${pkgs.biome}/bin/biome";
       # XML
       "xml.server.preferBinary" = true;
@@ -276,6 +281,7 @@
       ];
       # SQLTools
       "sqltools.highlightQuery" = false;
+      "sqltools.results.reuseTabs" = "connection";
     };
   };
 }

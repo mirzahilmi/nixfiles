@@ -13,6 +13,7 @@
 
     ../programs/foot
     ../programs/gnome-tweaks
+    ../programs/gtk
     ../programs/k8s
     ../programs/nixvim
     ../programs/obs
@@ -52,6 +53,7 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
+      biome
       brave
       dig
       du-dust
@@ -66,11 +68,12 @@
       libreoffice
       nil
       postman
+      shotwell
       slack
       ubridge
-      (vesktop.overrideAttrs (prev: {
+      (vesktop.overrideAttrs (previousAttrs: {
         desktopItems = [
-          ((builtins.elemAt prev.desktopItems 0).override {
+          ((builtins.elemAt previousAttrs.desktopItems 0).override {
             icon = "${../../assets/discord.svg}";
             desktopName = "Discord";
           })
@@ -79,8 +82,6 @@
       video-trimmer
       wl-clipboard
       zoom-us
-
-      unstable.beekeeper-studio
     ];
 
     stateVersion = "23.11";

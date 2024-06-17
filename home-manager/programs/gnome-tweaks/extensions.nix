@@ -16,6 +16,7 @@ in {
     gnomeExtensions.clipboard-indicator
     gnomeExtensions.dash-to-dock
     gnomeExtensions.hide-minimized
+    gnomeExtensions.pano
     gnomeExtensions.vitals
   ];
 
@@ -54,6 +55,7 @@ in {
     "${extensionsSchema}/dash-to-dock" = {
       apply-custom-theme = true;
       running-indicator-style = "DOTS";
+      hot-keys = false;
     };
 
     "${extensionsSchema}/vitals" = {

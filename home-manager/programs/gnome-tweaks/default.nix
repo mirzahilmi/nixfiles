@@ -9,6 +9,11 @@ in {
 
   home.packages = with pkgs; [
     bibata-cursors
+
+    # See https://forum.manjaro.org/t/dark-theme-style-not-working-properly-after-update/149062/24
+    xdg-desktop-portal
+    xdg-desktop-portal-gnome
+    xdg-desktop-portal-gtk
   ];
 
   dconf = {

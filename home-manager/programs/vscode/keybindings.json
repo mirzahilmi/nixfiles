@@ -72,6 +72,10 @@
         "command": "workbench.action.toggleCenteredLayout"
     },
     {
+        "key": "ctrl+k enter",
+        "command": "sqltools.executeCurrentQuery"
+    },
+    {
         "key": "shift+delete",
         "command": "-editor.action.clipboardCutAction"
     },
@@ -156,5 +160,9 @@
     {
         "key": "ctrl+k c",
         "command": "-workbench.files.action.compareWithClipboard"
+    },
+    {
+        "key": "ctrl+k enter",
+        "command": "-workbench.action.keepEditor"
     }
 ]
