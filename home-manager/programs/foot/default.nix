@@ -5,6 +5,7 @@
       main = {
         term = "screen-256color";
         font = "JetBrainsMono Nerd Font:style=Regular:size=10";
+        initial-window-size-pixels = "1300x800";
         pad = "5x5 center";
       };
       mouse.hide-when-typing = "yes";
