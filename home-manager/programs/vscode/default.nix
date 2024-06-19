@@ -24,20 +24,20 @@
         bbenoist.nix
         bmewburn.vscode-intelephense-client
         editorconfig.editorconfig
+        github.copilot
+        github.copilot-chat
         golang.go
         humao.rest-client
         jdinhlife.gruvbox
         jnoortheen.nix-ide
+        johnpapa.vscode-peacock
         kamadorueda.alejandra
         mkhl.direnv
+        pkief.material-icon-theme
         redhat.java
         redhat.vscode-yaml
-        pkief.material-icon-theme
         tobiasalthoff.atom-material-theme
-        usernamehw.errorlens
         tamasfe.even-better-toml
-        github.copilot
-        github.copilot-chat
       ]
       ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
@@ -122,108 +122,107 @@
 
     userSettings = {
       # me no like surveillance
-      telemetry.telemetryLevel = "off";
-      intelephense.telemetry.enabled = false;
+      "telemetry.telemetryLevel" = "off";
+      "intelephense.telemetry.enabled" = false;
 
       # Typography
-      editor.fontFamily = "JetBrainsMono Nerd Font";
-      terminal.integrated.fontFamily = "FiraCode Nerd Font";
-      editor.fontLigatures = true;
-      editor.fontSize = 16;
-      editor.fontWeight = "500";
-      editor.lineHeight = 1.5;
-      editor.letterSpacing = 0.5;
+      "editor.fontFamily" = "JetBrainsMono Nerd Font";
+      "terminal.integrated.fontFamily" = "FiraCode Nerd Font";
+      "editor.fontLigatures" = true;
+      "editor.fontSize" = 16;
+      "editor.fontWeight" = "500";
+      "editor.lineHeight" = 1.5;
+      "editor.letterSpacing" = 0.5;
 
       # Code Editor Interface
-      workbench.colorTheme = "Gruvbox Dark Medium";
-      workbench.iconTheme = "material-icon-theme";
-      workbench.sideBar.location = "right";
-      editor.minimap.enabled = false;
-      editor.cursorStyle = "block";
-      editor.cursorBlinking = "solid";
-      editor.renderLineHighlight = "none";
-      editor.renderControlCharacters = false;
-      editor.scrollbar.verticalScrollbarSize = 2;
-      editor.scrollbar.horizontalScrollbarSize = 2;
-      editor.scrollbar.vertical = "hidden";
-      editor.scrollbar.horizontal = "hidden";
-      editor.showFoldingControls = "never";
-      editor.roundedSelection = false;
-      editor.glyphMargin = false;
-      editor.lineNumbers = "off";
-      workbench.activityBar.location = "hidden";
-      window.titleBarStyle = "custom";
-      window.menuBarVisibility = "hidden";
-      window.enableMenuBarMnemonics = true;
-      explorer.openEditors.visible = 1;
-      workbench.layoutControl.type = "menu";
-      workbench.layoutControl.enabled = false;
-      workbench.colorCustomizations = {
+      "workbench.colorTheme" = "Gruvbox Dark Medium";
+      "workbench.iconTheme" = "material-icon-theme";
+      "workbench.sideBar.location" = "right";
+      "editor.minimap.enabled" = false;
+      "editor.cursorStyle" = "block";
+      "editor.cursorBlinking" = "solid";
+      "editor.renderLineHighlight" = "none";
+      "editor.renderControlCharacters" = false;
+      "editor.scrollbar.verticalScrollbarSize" = 2;
+      "editor.scrollbar.horizontalScrollbarSize" = 2;
+      "editor.scrollbar.vertical" = "hidden";
+      "editor.scrollbar.horizontal" = "hidden";
+      "editor.showFoldingControls" = "never";
+      "editor.roundedSelection" = false;
+      "editor.glyphMargin" = false;
+      "editor.lineNumbers" = "off";
+      "workbench.activityBar.location" = "hidden";
+      "window.titleBarStyle" = "custom";
+      "window.enableMenuBarMnemonics" = true;
+      "explorer.openEditors.visible" = 1;
+      "workbench.layoutControl.type" = "menu";
+      "workbench.layoutControl.enabled" = false;
+      "workbench.colorCustomizations" = {
         "[Atom Material Theme]" = {
-          statusBar.background = "#23292d";
-          statusBar.noFolderBackground = "#23292d";
+          "statusBar.background" = "#23292d";
+          "statusBar.noFolderBackground" = "#23292d";
         };
         "[Gruvbox Dark Hard]" = {
-          editorGroupHeader.noTabsBackground = "#1d2021";
+          "editorGroupHeader.noTabsBackground" = "#1d2021";
         };
       };
-      terminal.integrated.defaultProfile.linux = "zsh";
-      terminal.integrated.persistentSessionReviveProcess = "never";
-      editor.guides.indentation = false;
+      "terminal.integrated.defaultProfile.linux" = "zsh";
+      "terminal.integrated.persistentSessionReviveProcess" = "never";
+      "editor.guides.indentation" = false;
 
       # Code Editor Behavior
-      editor.formatOnSave = true;
-      files.autoSave = "onFocusChange";
-      extensions.ignoreRecommendations = true;
-      workbench.editor.limit.enabled = true;
-      workbench.editor.limit.value = 5;
-      workbench.editor.limit.perEditorGroup = true;
-      breadcrumbs.enabled = true;
-      workbench.editor.showTabs = "multiple";
-      editor.matchBrackets = "never";
-      explorer.compactFolders = false;
-      editor.wordWrap = "off";
-      editor.selectionClipboard = false;
-      git.autorefresh = true;
-      editor.stickyScroll.enabled = false;
-      workbench.tree.enableStickyScroll = false;
+      "editor.formatOnSave" = true;
+      "files.autoSave" = "onFocusChange";
+      "extensions.ignoreRecommendations" = true;
+      "workbench.editor.limit.enabled" = true;
+      "workbench.editor.limit.value" = 5;
+      "workbench.editor.limit.perEditorGroup" = true;
+      "breadcrumbs.enabled" = true;
+      "workbench.editor.showTabs" = "multiple";
+      "editor.matchBrackets" = "never";
+      "explorer.compactFolders" = false;
+      "editor.wordWrap" = "off";
+      "editor.selectionClipboard" = false;
+      "git.autorefresh" = true;
+      "editor.stickyScroll.enabled" = false;
+      "workbench.tree.enableStickyScroll" = false;
 
       # Language Specific Behavior
       "[nix]" = {
-        editor.defaultFormatter = "kamadorueda.alejandra";
-        editor.formatOnPaste = true;
-        editor.formatOnSave = true;
-        editor.formatOnType = false;
+        "editor.defaultFormatter" = "kamadorueda.alejandra";
+        "editor.formatOnPaste" = true;
+        "editor.formatOnSave" = true;
+        "editor.formatOnType" = false;
       };
       "[php]" = {
-        editor.defaultFormatter = "kokororin.vscode-phpfmt";
+        "editor.defaultFormatter" = "kokororin.vscode-phpfmt";
       };
-      php.validate.executablePath = "${pkgs.php}/bin/php";
+      "php.validate.executablePath" = "${pkgs.php}/bin/php";
       "[java]" = {
-        editor.defaultFormatter = null;
-        editor.formatOnSave = false;
+        "editor.defaultFormatter" = null;
+        "editor.formatOnSave" = false;
       };
       "[javascript]" = {
-        editor.defaultFormatter = "biomejs.biome";
+        "editor.defaultFormatter" = "biomejs.biome";
       };
       "[json]" = {
-        editor.defaultFormatter = "biomejs.biome";
+        "editor.defaultFormatter" = "biomejs.biome";
       };
       "[jsonc]" = {
-        editor.defaultFormatter = "biomejs.biome";
+        "editor.defaultFormatter" = "biomejs.biome";
       };
 
       # Extensions Configuration
       # VSCord
-      vscord.app.name = "VSCodium";
-      vscord.status.idle.check = false;
-      vscord.status.idle.enabled = false;
-      vscord.status.state.text.editing = "Working on {file_name}{file_extension}:{current_line}/{line_count}";
-      vscord.status.problems.text = "- {problems_count} problems";
-      vscord.behaviour.suppressNotifications = true;
+      "vscord.app.name" = "VSCodium";
+      "vscord.status.idle.check" = false;
+      "vscord.status.idle.enabled" = false;
+      "vscord.status.state.text.editing" = "Working on {file_name}{file_extension}:{current_line}/{line_count}";
+      "vscord.status.problems.text" = "- {problems_count} problems";
+      "vscord.behaviour.suppressNotifications" = true;
       # PHPfmt || PHP's Formatter
-      phpfmt.php_bin = "${pkgs.php}/bin/php";
-      phpfmt.passes = [
+      "phpfmt.php_bin" = "${pkgs.php}/bin/php";
+      "phpfmt.passes" = [
         "AllmanStyleBraces"
         "AlignDoubleArrow"
         "DoubleToSingleQuote"
@@ -236,7 +235,7 @@
         "SpaceBetweenMethods"
         "MergeNamespaceWithOpenTag"
       ];
-      phpfmt.exclude = [
+      "phpfmt.exclude" = [
         "AlignDoubleSlashComments"
         "StripSpaces"
         "AutoSemicolon"
@@ -248,43 +247,47 @@
         "IndentTernaryConditions"
       ];
       # Drawio integration
-      hediet.vscode-drawio.theme = "atlas";
+      "hediet.vscode-drawio.theme" = "atlas";
       # Codesnap
-      codesnap.transparentBackground = true;
+      "codesnap.transparentBackground" = true;
       # direnv
-      direnv.path.executable = "${pkgs.direnv}/bin/direnv";
+      "direnv.path.executable" = "${pkgs.direnv}/bin/direnv";
       # nil & Nix IDE : Nix's Language Server
-      nix.enableLanguageServer = true;
-      nix.serverPath = "${pkgs.nil}/bin/nil";
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
       # Alejandra : Nix's Formatter
-      alejandra.program = "${pkgs.alejandra}/bin/alejandra";
+      "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
       # golangci-lint : Go's Formatter
-      go.lintTool = "golangci-lint";
-      go.alternateTools = {
-        dlv = "${pkgs.go}/bin/dlv";
-        go = "${pkgs.go}/bin/go";
-        gopls = "${pkgs.go}/bin/gopls";
+      "go.lintTool" = "golangci-lint";
+      "go.alternateTools" = {
+        "dlv" = "${pkgs.go}/bin/dlv";
+        "go" = "${pkgs.go}/bin/go";
+        "gopls" = "${pkgs.go}/bin/gopls";
       };
       # Biome.js
-      biome.enabled = true;
-      biome.lspBin = "${pkgs.biome}/bin/biome";
+      "biome.enabled" = true;
+      "biome.lspBin" = "${pkgs.biome}/bin/biome";
       # XML
-      xml.server.preferBinary = true;
-      xml.server.binary.path = "${pkgs.lemminx}/bin/lemminx";
-      xml.server.binary.trustedHashes = [
+      "xml.server.preferBinary" = true;
+      "xml.server.binary.path" = "${pkgs.lemminx}/bin/lemminx";
+      "xml.server.binary.trustedHashes" = [
         "1be10969257c6e350c8b26b5a30f7611fb4720b2584a2872e1059747cab22c42"
       ];
       # Java
-      java.configuration.runtimes = [
+      "java.configuration.runtimes" = [
         {
-          name = "JavaSE-21";
-          path = "${pkgs.jdk21}/bin/jdk";
-          default = true;
+          "name" = "JavaSE-21";
+          "path" = "${pkgs.jdk21}/bin/jdk";
+          "default" = true;
         }
       ];
       # SQLTools
-      sqltools.highlightQuery = false;
-      sqltools.results.reuseTabs = "connection";
+      "sqltools.highlightQuery" = false;
+      "sqltools.results.reuseTabs" = "connection";
+      # Peacock
+      "peacock.affectActivityBar" = false;
+      "peacock.affectSashHover" = false;
+      "peacock.affectTitleBar" = false;
     };
   };
 }

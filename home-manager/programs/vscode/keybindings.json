@@ -1,168 +1,174 @@
 [
-    {
-        "key": "ctrl+shift+delete",
-        "command": "workbench.action.terminal.kill"
-    },
-    {
-        "key": "ctrl+shift+q",
-        "command": "git.openFile",
-        "when": "editorFocus && isInDiffEditor"
-    },
-    {
-        "key": "ctrl+shift+q",
-        "command": "git.openChange",
-        "when": "editorFocus && !isInDiffEditor"
-    },
-    {
-        "key": "shift+delete",
-        "command": "editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "workbench.action.files.saveAll"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "workbench.action.quickOpenView"
-    },
-    {
-        "key": "ctrl+shift+alt+i",
-        "command": "workbench.action.increaseViewSize"
-    },
-    {
-        "key": "ctrl+shift+alt+d",
-        "command": "workbench.action.decreaseViewSize"
-    },
-    {
-        "key": "ctrl+shift+]",
-        "command": "editor.toggleFold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+k ctrl+l",
-        "command": "editor.action.showDefinitionPreviewHover"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "workbench.action.createTerminalEditor"
-    },
-    {
-        "key": "ctrl+shift+backspace",
-        "command": "-search.searchEditor.action.deleteFileResults",
-        "when": "inSearchEditor"
-    },
-    {
-        "key": "ctrl+shift+[",
-        "command": "workbench.files.action.collapseExplorerFolders",
-        "when": "sideBarFocus"
-    },
-    {
-        "key": "ctrl+k c",
-        "command": "workbench.action.toggleCenteredLayout"
-    },
-    {
-        "key": "ctrl+k enter",
-        "command": "sqltools.executeCurrentQuery"
-    },
-    {
-        "key": "shift+delete",
-        "command": "-editor.action.clipboardCutAction"
-    },
-    {
-        "key": "ctrl+shift+k",
-        "command": "-editor.action.deleteLines",
-        "when": "textInputFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "-workbench.action.files.saveAs"
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "-workbench.action.files.saveLocalFile",
-        "when": "remoteFileDialogVisible"
-    },
-    {
-        "key": "ctrl+shift+e",
-        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
-        "when": "inFilesPicker && inQuickOpen"
-    },
-    {
-        "key": "ctrl+q",
-        "command": "-workbench.action.quit"
-    },
-    {
-        "key": "ctrl+shift+alt+i",
-        "command": "-workbench.action.quickchat.toggle",
-        "when": "hasChatProvider"
-    },
-    {
-        "key": "ctrl+shift+]",
-        "command": "-editor.unfold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+[",
-        "command": "-editor.fold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+k ctrl+l",
-        "command": "-editor.toggleFold",
-        "when": "editorTextFocus && foldingEnabled"
-    },
-    {
-        "key": "ctrl+shift+down",
-        "command": "-editor.action.insertCursorBelow",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+up",
-        "command": "-editor.action.insertCursorAbove",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+shift+alt+down",
-        "command": "-editor.action.copyLinesDownAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+shift+alt+up",
-        "command": "-editor.action.copyLinesUpAction",
-        "when": "editorTextFocus && !editorReadonly"
-    },
-    {
-        "key": "ctrl+`",
-        "command": "-workbench.action.terminal.toggleTerminal",
-        "when": "terminal.active"
-    },
-    {
-        "key": "escape escape",
-        "command": "-workbench.action.exitZenMode",
-        "when": "inZenMode"
-    },
-    {
-        "key": "ctrl+o",
-        "command": "-workbench.action.files.openFile",
-        "when": "true"
-    },
-    {
-        "key": "ctrl+k c",
-        "command": "-workbench.files.action.compareWithClipboard"
-    },
-    {
-        "key": "ctrl+k enter",
-        "command": "-workbench.action.keepEditor"
-    }
+	{
+		"key": "ctrl+shift+delete",
+		"command": "workbench.action.terminal.kill"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "git.openFile",
+		"when": "editorFocus && isInDiffEditor"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "git.openChange",
+		"when": "editorFocus && !isInDiffEditor"
+	},
+	{
+		"key": "shift+delete",
+		"command": "editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveAll"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "workbench.action.quickOpenView"
+	},
+	{
+		"key": "ctrl+shift+alt+i",
+		"command": "workbench.action.increaseViewSize"
+	},
+	{
+		"key": "ctrl+shift+alt+d",
+		"command": "workbench.action.decreaseViewSize"
+	},
+	{
+		"key": "ctrl+shift+]",
+		"command": "editor.toggleFold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+l",
+		"command": "editor.action.showDefinitionPreviewHover"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "workbench.action.createTerminalEditor"
+	},
+	{
+		"key": "ctrl+shift+backspace",
+		"command": "-search.searchEditor.action.deleteFileResults",
+		"when": "inSearchEditor"
+	},
+	{
+		"key": "ctrl+shift+[",
+		"command": "workbench.files.action.collapseExplorerFolders",
+		"when": "sideBarFocus"
+	},
+	{
+		"key": "ctrl+k c",
+		"command": "workbench.action.toggleCenteredLayout"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "sqltools.executeCurrentQuery",
+		"when": "editorTextFocus && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+	},
+	{
+		"key": "shift+delete",
+		"command": "-editor.action.clipboardCutAction"
+	},
+	{
+		"key": "ctrl+shift+k",
+		"command": "-editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "-workbench.action.files.saveAs"
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "-workbench.action.files.saveLocalFile",
+		"when": "remoteFileDialogVisible"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quit"
+	},
+	{
+		"key": "ctrl+shift+alt+i",
+		"command": "-workbench.action.quickchat.toggle",
+		"when": "hasChatProvider"
+	},
+	{
+		"key": "ctrl+shift+]",
+		"command": "-editor.unfold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+[",
+		"command": "-editor.fold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+k ctrl+l",
+		"command": "-editor.toggleFold",
+		"when": "editorTextFocus && foldingEnabled"
+	},
+	{
+		"key": "ctrl+shift+down",
+		"command": "-editor.action.insertCursorBelow",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+up",
+		"command": "-editor.action.insertCursorAbove",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "-editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+alt+up",
+		"command": "-editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+`",
+		"command": "-workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	{
+		"key": "escape escape",
+		"command": "-workbench.action.exitZenMode",
+		"when": "inZenMode"
+	},
+	{
+		"key": "ctrl+o",
+		"command": "-workbench.action.files.openFile",
+		"when": "true"
+	},
+	{
+		"key": "ctrl+k c",
+		"command": "-workbench.files.action.compareWithClipboard"
+	},
+	{
+		"key": "ctrl+k enter",
+		"command": "-workbench.action.keepEditor"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "-github.copilot.generate",
+		"when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+	}
 ]
