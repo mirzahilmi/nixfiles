@@ -9,32 +9,30 @@
     inputs.nixvim.homeManagerModules.nixvim
     outputs.homeManagerModules.zimfw
 
-    ./tweaks.nix
+    ./programs/foot
+    ./programs/gnome-tweaks
+    ./programs/gtk
+    ./programs/k8s
+    ./programs/nixvim
+    ./programs/obs
+    ./programs/openssh
+    ./programs/spicetify
+    ./programs/vscode
+    ./programs/xdgify
 
-    ../programs/foot
-    ../programs/gnome-tweaks
-    ../programs/gtk
-    ../programs/k8s
-    ../programs/nixvim
-    ../programs/obs
-    ../programs/openssh
-    ../programs/spicetify
-    ../programs/vscode
-    ../programs/xdgify
+    ./programs/cli/nix-direnv
+    ./programs/cli/tmux
+    ./programs/cli/zsh
 
-    ../programs/cli/nix-direnv
-    ../programs/cli/tmux
-    ../programs/cli/zsh
-
-    ../programs/cli/bat.nix
-    ../programs/cli/btop.nix
-    ../programs/cli/gpg.nix
-    ../programs/cli/fzf.nix
-    ../programs/cli/git.nix
-    ../programs/cli/home-manager.nix
-    ../programs/cli/jq.nix
-    ../programs/cli/lsd.nix
-    ../programs/cli/ripgrep.nix
+    ./programs/cli/bat.nix
+    ./programs/cli/btop.nix
+    ./programs/cli/gpg.nix
+    ./programs/cli/fzf.nix
+    ./programs/cli/git.nix
+    ./programs/cli/home-manager.nix
+    ./programs/cli/jq.nix
+    ./programs/cli/lsd.nix
+    ./programs/cli/ripgrep.nix
   ];
 
   nixpkgs = {
@@ -74,7 +72,7 @@
       (vesktop.overrideAttrs (previousAttrs: {
         desktopItems = [
           ((builtins.elemAt previousAttrs.desktopItems 0).override {
-            icon = "${../../assets/discord.svg}";
+            icon = "${../assets/discord.svg}";
             desktopName = "Discord";
           })
         ];
@@ -85,5 +83,18 @@
     ];
 
     stateVersion = "23.11";
+  };
+
+  xdg.userDirs = {
+    publicShare = null;
+    templates = null;
+  };
+
+  # Add QEMU Connection for virt-manager
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
+    };
   };
 }
