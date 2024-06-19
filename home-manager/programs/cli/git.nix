@@ -12,10 +12,10 @@
 
     extraConfig = {
       init.defaultBranch = "master";
-      user.signing.key = "5FD12800DCA4F7B5";
       user.signingkey = "5FD12800DCA4F7B5";
-      gpg.program = "${config.home.homeDirectory}/.nix-profile/bin/gpg";
+      gpg.program = "${pkgs.gnupg}/bin/gpg";
       commit.gpgSign = true;
+
       # Change this later to more secure way
       credential.helper = "store --file ${config.xdg.configHome}/git/.key";
     };

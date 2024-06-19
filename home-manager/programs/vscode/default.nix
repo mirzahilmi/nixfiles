@@ -260,9 +260,9 @@
       # golangci-lint : Go's Formatter
       "go.lintTool" = "golangci-lint";
       "go.alternateTools" = {
-        "dlv" = "${pkgs.go}/bin/dlv";
-        "go" = "${pkgs.go}/bin/go";
-        "gopls" = "${pkgs.go}/bin/gopls";
+        dlv = "${pkgs.go}/bin/dlv";
+        go = "${pkgs.go}/bin/go";
+        gopls = "${pkgs.go}/bin/gopls";
       };
       # Biome.js
       "biome.enabled" = true;
@@ -276,14 +276,17 @@
       # Java
       "java.configuration.runtimes" = [
         {
-          "name" = "JavaSE-21";
-          "path" = "${pkgs.jdk21}/bin/jdk";
-          "default" = true;
+          name = "JavaSE-21";
+          path = "${pkgs.jdk21}/bin/jdk";
+          default = true;
         }
       ];
       # SQLTools
       "sqltools.highlightQuery" = false;
       "sqltools.results.reuseTabs" = "connection";
+      "sqltools.format" = {
+        reservedWordCase = "upper";
+      };
       # Peacock
       "peacock.affectActivityBar" = false;
       "peacock.affectSashHover" = false;
