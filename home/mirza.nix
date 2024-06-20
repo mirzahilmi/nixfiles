@@ -65,6 +65,7 @@
       gradience
       libreoffice
       nil
+      nmap
       postman
       shotwell
       slack

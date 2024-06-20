@@ -33,6 +33,7 @@
         johnpapa.vscode-peacock
         kamadorueda.alejandra
         mkhl.direnv
+        ms-azuretools.vscode-docker
         pkief.material-icon-theme
         redhat.java
         redhat.vscode-yaml
