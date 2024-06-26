@@ -1,4 +1,5 @@
-{...}: {
+{outputs, ...}: {
+  imports = [outputs.homeManagerModules.zimfw];
   programs.zsh.zimfw = {
     enable = true;
 

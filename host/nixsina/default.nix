@@ -7,16 +7,17 @@
     ./hardware-configuration.nix
     ../common/global
 
-    ../common/users/mirza
+    ../common/user/mirza.nix
 
-    ../common/extras/docker.nix
-    ../common/extras/gnome-wayland.nix
-    ../common/extras/gns3.nix
-    ../common/extras/nvidia.nix
-    ../common/extras/pipewire.nix
-    ../common/extras/v4l2loopback.nix
-    ../common/extras/virt-manager.nix
-    ../common/extras/zsh.nix
+    ../common/extra/docker.nix
+    ../common/extra/gnome-wayland.nix
+    ../common/extra/gns3.nix
+    ../common/extra/nh.nix
+    ../common/extra/nvidia.nix
+    ../common/extra/pipewire.nix
+    ../common/extra/v4l2loopback.nix
+    ../common/extra/virt-manager.nix
+    ../common/extra/zsh.nix
   ];
 
   networking = {
@@ -30,8 +31,6 @@
   services.xl2tpd.enable = true;
   services.strongswan = {
     enable = true;
-    secrets = [
-      "ipsec.d/ipsec.nm-l2tp.secrets"
-    ];
+    secrets = ["ipsec.d/ipsec.nm-l2tp.secrets"];
   };
 }

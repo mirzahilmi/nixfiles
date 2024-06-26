@@ -58,6 +58,11 @@
 		"command": "workbench.action.createTerminalEditor"
 	},
 	{
+		"key": "ctrl+alt+i",
+		"command": "workbench.action.chat.openInEditor",
+		"when": "chatIsEnabled"
+	},
+	{
 		"key": "ctrl+shift+backspace",
 		"command": "-search.searchEditor.action.deleteFileResults",
 		"when": "inSearchEditor"
@@ -170,5 +175,9 @@
 		"key": "ctrl+enter",
 		"command": "-github.copilot.generate",
 		"when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+	},
+	{
+		"key": "ctrl+alt+i",
+		"command": "-workbench.action.chat.open"
 	}
 ]

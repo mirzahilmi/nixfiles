@@ -1,7 +1,7 @@
 {pkgs, ...}: let
   gnomeSchema = "org/gnome";
   desktopSchema = "${gnomeSchema}/desktop";
-  wallpaperPath = "file://" + ../../../assets/post-soviet-life.jpg;
+  wallpaperPath = "file://" + ../../../asset/post-soviet-life.jpg;
 in {
   imports = [
     (import ./extensions.nix {inherit pkgs gnomeSchema;})
@@ -65,6 +65,8 @@ in {
       "${desktopSchema}/wm/keybindings" = {
         switch-to-workspace-right = ["<Super><Alt>Right"];
         switch-to-workspace-left = ["<Super><Alt>Left"];
+        switch-to-workspace-up = [""];
+        switch-to-workspace-down = [""];
       };
     };
   };

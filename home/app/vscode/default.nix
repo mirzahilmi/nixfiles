@@ -261,9 +261,9 @@
       # golangci-lint : Go's Formatter
       "go.lintTool" = "golangci-lint";
       "go.alternateTools" = {
-        dlv = "${pkgs.go}/bin/dlv";
+        dlv = "${pkgs.delve}/bin/dlv";
         go = "${pkgs.go}/bin/go";
-        gopls = "${pkgs.go}/bin/gopls";
+        gopls = "${pkgs.gopls}/bin/gopls";
       };
       # Biome.js
       "biome.enabled" = true;

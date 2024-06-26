@@ -1,44 +1,38 @@
 {
   pkgs,
-  inputs,
   outputs,
   ...
 }: {
   imports = [
-    inputs.spicetify-nix.homeManagerModule
-    inputs.nixvim.homeManagerModules.nixvim
-    outputs.homeManagerModules.zimfw
+    ./app/foot
+    ./app/gnome-tweaks
+    ./app/k8s
+    ./app/nixvim
+    ./app/obs
+    ./app/openssh
+    ./app/spicetify
+    ./app/vscode
+    ./app/xdgify
 
-    ./programs/foot
-    ./programs/gnome-tweaks
-    ./programs/gtk
-    ./programs/k8s
-    ./programs/nixvim
-    ./programs/obs
-    ./programs/openssh
-    ./programs/spicetify
-    ./programs/vscode
-    ./programs/xdgify
+    ./app/cli/nix-direnv
+    ./app/cli/tmux
+    ./app/cli/zsh
 
-    ./programs/cli/nix-direnv
-    ./programs/cli/tmux
-    ./programs/cli/zsh
-
-    ./programs/cli/bat.nix
-    ./programs/cli/btop.nix
-    ./programs/cli/gpg.nix
-    ./programs/cli/fzf.nix
-    ./programs/cli/git.nix
-    ./programs/cli/home-manager.nix
-    ./programs/cli/jq.nix
-    ./programs/cli/lsd.nix
-    ./programs/cli/ripgrep.nix
+    ./app/cli/bat.nix
+    ./app/cli/btop.nix
+    ./app/cli/gpg.nix
+    ./app/cli/fzf.nix
+    ./app/cli/git.nix
+    ./app/cli/home-manager.nix
+    ./app/cli/jq.nix
+    ./app/cli/lsd.nix
+    ./app/cli/ripgrep.nix
   ];
 
   nixpkgs = {
     overlays = [
-      outputs.overlays.extras
-      outputs.overlays.unstable-packages
+      outputs.overlays.extra
+      outputs.overlays.unstable-package
     ];
     config = {
       allowUnfree = true;
@@ -54,14 +48,12 @@
       biome
       brave
       dig
-      du-dust
+      discord
       eduvpn-client
       fd
       ffmpeg-headless
-      filezilla
       gns3-gui
       gnumake
-      gping
       gradience
       libreoffice
       nil
@@ -70,15 +62,6 @@
       shotwell
       slack
       ubridge
-      (vesktop.overrideAttrs (previousAttrs: {
-        desktopItems = [
-          ((builtins.elemAt previousAttrs.desktopItems 0).override {
-            icon = "${../assets/discord.svg}";
-            desktopName = "Discord";
-          })
-        ];
-      }))
-      video-trimmer
       wl-clipboard
       zoom-us
     ];

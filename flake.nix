@@ -21,20 +21,20 @@
   } @ inputs: let
     inherit (self) outputs;
   in {
-    overlays = import ./overlays {inherit inputs;};
+    overlays = import ./overlay {inherit inputs;};
 
-    nixosModules = import ./modules/nixos;
-    homeManagerModules = import ./modules/home-manager;
+    nixosModules = import ./module/nixos;
+    homeManagerModules = import ./module/home-manager;
 
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/nixsina];
+        modules = [./host/nixsina];
       };
 
       "dummy" = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/dummy];
+        modules = [./host/dummy];
       };
     };
 

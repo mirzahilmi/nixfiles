@@ -1,8 +1,6 @@
 {pkgs, ...}: let
   userName = "mirza";
 in {
-  imports = [(import ./tweaks.nix userName)];
-
   users = {
     groups.ubridge = {};
     extraUsers.${userName} = {
@@ -22,4 +20,13 @@ in {
       ];
     };
   };
+
+  boot.postBootCommands = ''
+    if [[ ! -e /var/lib/AccountsService/users/${userName} ]]; then
+      echo '[User]
+      Session=
+      Icon=${../../../asset/otter.png}
+      SystemAccount=false' > /var/lib/AccountsService/users/${userName}
+    fi
+  '';
 }
