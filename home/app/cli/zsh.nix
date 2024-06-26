@@ -11,7 +11,10 @@
     };
     antidote = {
       enable = true;
+      useFriendlyNames = true;
       plugins = [
+        "mattmc3/zephyr path:plugins/completion"
+        "belak/zsh-utils path:editor"
         "zsh-users/zsh-autosuggestions kind:defer"
         "zdharma-continuum/fast-syntax-highlighting kind:defer"
       ];

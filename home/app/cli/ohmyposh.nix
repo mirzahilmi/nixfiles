@@ -1,9 +1,10 @@
 {
-  programs.fzf = {
+  programs.oh-my-posh = {
     enable = true;
     enableZshIntegration = true;
     enableBashIntegration = false;
     enableFishIntegration = false;
-    defaultOptions = ["--layout=reverse --inline-info --height=90%"];
+    enableNushellIntegration = false;
+    useTheme = "space";
   };
 }

@@ -3,6 +3,9 @@
     direnv = {
       enable = true;
       enableZshIntegration = true;
+      enableBashIntegration = false;
+      enableFishIntegration = false;
+      enableNushellIntegration = false;
       nix-direnv.enable = true;
     };
   };
