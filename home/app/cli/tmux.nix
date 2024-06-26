@@ -7,9 +7,11 @@
     terminal = "screen-256color";
     prefix = "C-Space";
     disableConfirmationPrompt = true;
-    extraConfig = builtins.readFile ./tmux.conf;
     plugins = with pkgs.tmuxPlugins; [
       catppuccin
     ];
+    extraConfig = ''
+
+    '';
   };
 }

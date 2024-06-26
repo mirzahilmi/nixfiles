@@ -4,19 +4,16 @@
   ...
 }: {
   imports = [
-    ./app/foot
-    ./app/gnome-tweaks
-    ./app/k8s
-    ./app/nixvim
-    ./app/obs
-    ./app/openssh
-    ./app/spicetify
-    ./app/vscode
-    ./app/xdgify
+    ./common/global
 
-    ./app/cli/nix-direnv
-    ./app/cli/tmux
-    ./app/cli/zsh
+    ./app/gnome
+    ./app/vscode
+
+    ./app/foot.nix
+    ./app/nixvim.nix
+    ./app/obs.nix
+    ./app/openssh.nix
+    ./app/spicetify.nix
 
     ./app/cli/bat.nix
     ./app/cli/btop.nix
@@ -26,7 +23,10 @@
     ./app/cli/home-manager.nix
     ./app/cli/jq.nix
     ./app/cli/lsd.nix
+    ./app/cli/direnv.nix
     ./app/cli/ripgrep.nix
+    ./app/cli/tmux.nix
+    ./app/cli/zsh.nix
   ];
 
   nixpkgs = {
@@ -52,6 +52,7 @@
       eduvpn-client
       fd
       ffmpeg-headless
+      gimp
       gns3-gui
       gnumake
       gradience
