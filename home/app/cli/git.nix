@@ -9,14 +9,17 @@
     userName = "mirza@nixsina";
     userEmail = "miruza.dev@gmail.com";
     ignores = ["*.env" "*.env.json" "*.env.yaml"];
-
+    aliases = {
+      a = "add -A";
+      pus = "push origin HEAD";
+      graph = "log --decorate --oneline --graph";
+    };
     extraConfig = {
       init.defaultBranch = "master";
       user.signingkey = "5FD12800DCA4F7B5";
       gpg.program = "${pkgs.gnupg}/bin/gpg";
       commit.gpgSign = true;
-
-      # Change this later to more secure way
+      commit.verbose = true;
       credential.helper = "store --file ${config.xdg.configHome}/git/.key";
     };
   };
