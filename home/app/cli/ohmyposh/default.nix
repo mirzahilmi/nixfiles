@@ -5,6 +5,6 @@
     enableBashIntegration = false;
     enableFishIntegration = false;
     enableNushellIntegration = false;
-    settings = builtins.fromTOML (builtins.readFile ./zen.toml);
+    settings = builtins.fromJSON (builtins.unsafeDiscardStringContext (builtins.readFile ./zen.json));
   };
 }
