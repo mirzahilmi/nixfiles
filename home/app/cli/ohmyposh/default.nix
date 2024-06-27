@@ -5,6 +5,6 @@
     enableBashIntegration = false;
     enableFishIntegration = false;
     enableNushellIntegration = false;
-    useTheme = "space";
+    settings = builtins.fromTOML (builtins.readFile ./zen.toml);
   };
 }

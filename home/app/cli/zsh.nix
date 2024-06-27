@@ -19,5 +19,8 @@
         "zdharma-continuum/fast-syntax-highlighting kind:defer"
       ];
     };
+    initExtra = ''
+      bindkey -e
+    '';
   };
 }

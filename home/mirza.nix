@@ -15,6 +15,8 @@
     ./app/openssh.nix
     ./app/spicetify.nix
 
+    ./app/cli/ohmyposh
+
     ./app/cli/bat.nix
     ./app/cli/btop.nix
     ./app/cli/direnv.nix
@@ -25,7 +27,6 @@
     ./app/cli/home-manager.nix
     ./app/cli/jq.nix
     ./app/cli/lsd.nix
-    ./app/cli/ohmyposh.nix
     ./app/cli/ripgrep.nix
     ./app/cli/tmux.nix
     ./app/cli/zsh.nix
