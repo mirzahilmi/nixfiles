@@ -6,8 +6,8 @@
   programs.git = {
     enable = true;
     package = pkgs.unstable.git;
-    userName = "mirza@nixsina";
-    userEmail = "miruza.dev@gmail.com";
+    userName = "Mirza Hilmi";
+    userEmail = "dev@mrz.my.id";
     ignores = ["*.env" "*.env.json" "*.env.yaml"];
     aliases = {
       a = "add -A";
