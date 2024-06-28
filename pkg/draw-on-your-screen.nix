@@ -3,7 +3,7 @@
   fetchFromGitHub,
 }:
 stdenv.mkDerivation {
-  pname = "draw-on-screen";
+  pname = "draw-on-your-screen";
   version = "1.1.0";
 
   src = fetchFromGitHub {

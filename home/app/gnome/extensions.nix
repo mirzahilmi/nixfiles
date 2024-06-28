@@ -7,7 +7,7 @@
   extensionsSchema = "${gnomeShellSchema}/extensions";
 in {
   home.packages = with pkgs; [
-    draw-on-screen
+    draw-on-your-screen
     gnome.gnome-tweaks
     gnome.dconf-editor
     gnomeExtensions.appindicator
