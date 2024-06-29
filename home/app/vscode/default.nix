@@ -261,16 +261,13 @@
         # settings for 'nixd' LSP
         "nixd" = {
           formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
+          "nixpkgs"
+            ."expr" = "import (builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").inputs.nixpkgs {}";
           "options" = {
-            # By default, this entriy will be read from `import <nixpkgs> { }`
-            # You can write arbitary nix expression here, to produce valid "options" declaration result.
-            # Tip = for flake-based configuration, utilize `builtins.getFlake`
-            "nixos" = {
-              "expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").nixosConfigurations.${config.home.username}.options";
-            };
-            "home-manager" = {
-              "expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").homeConfigurations.${config.home.username}.options";
-            };
+            "nixos"
+              ."expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").nixosConfigurations.${config.home.username}.options";
+            "home-manager"
+              ."expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").homeConfigurations.${config.home.username}.options";
           };
         };
       };
