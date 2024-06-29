@@ -9,7 +9,6 @@
     ./app/gnome
     ./app/vscode
 
-    ./app/foot.nix
     ./app/nixvim.nix
     ./app/obs.nix
     ./app/openssh.nix
@@ -65,6 +64,7 @@
       postman
       shotwell
       slack
+      st-snazzy
       ubridge
       wl-clipboard
       zoom-us

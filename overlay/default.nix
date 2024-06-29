@@ -1,6 +1,10 @@
 {inputs, ...}: {
   # This one brings custom packages from the 'pkg' directory
-  extra = final: prev: import ../pkg {pkgs = final;};
+  extra = final: prev:
+    import ../pkg {
+      pkgs = final;
+      inherit inputs;
+    };
 
   # Unstable nixpkgs set (declared in the flake inputs) are
   # accessible through 'pkgs.unstable'

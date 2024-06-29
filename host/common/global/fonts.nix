@@ -2,11 +2,11 @@
   fonts.packages = with pkgs; [
     (nerdfonts.override {
       fonts = [
-        "CascadiaCode"
         "FiraCode"
         "Gohu"
         "IBMPlexMono"
         "JetBrainsMono"
+        "UbuntuMono"
       ];
     })
     ibm-plex

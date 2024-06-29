@@ -1,4 +1,10 @@
-{pkgs ? import <nixpkgs> {}}: {
+{
+  pkgs ? import <nixpkgs> {},
+  inputs,
+}: {
   draw-on-your-screen = pkgs.callPackage ./draw-on-your-screen.nix {};
-  tableplus-custom = pkgs.callPackage ./tableplus.nix {};
+  st-snazzy = import ./st-snazzy {
+    inherit (pkgs) system;
+    inherit inputs;
+  };
 }

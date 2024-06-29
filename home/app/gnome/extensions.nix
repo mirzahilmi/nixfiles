@@ -38,7 +38,7 @@ in {
 
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
-        "org.codeberg.dnkl.foot.desktop"
+        "st.desktop"
         "code.desktop"
         "beekeeper-studio.desktop"
         "brave-browser.desktop"
