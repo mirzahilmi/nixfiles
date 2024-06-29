@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   programs.vscode = {
@@ -18,8 +19,8 @@
 
     keybindings = lib.importJSON ./keybindings.json;
 
-    extensions = with pkgs.vscode-extensions;
-      [
+    extensions = with pkgs;
+      (with vscode-extensions; [
         adpyke.codesnap
         bbenoist.nix
         bmewburn.vscode-intelephense-client
@@ -39,8 +40,8 @@
         redhat.vscode-yaml
         tobiasalthoff.atom-material-theme
         tamasfe.even-better-toml
-      ]
-      ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+      ])
+      ++ vscode-utils.extensionsFromVscodeMarketplace [
         {
           name = "vscode-phpfmt";
           publisher = "kokororin";
@@ -253,9 +254,26 @@
       "codesnap.transparentBackground" = true;
       # direnv
       "direnv.path.executable" = "${pkgs.direnv}/bin/direnv";
-      # nil & Nix IDE : Nix's Language Server
+      # Nix IDE : Nix's Language Server
       "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "${pkgs.nil}/bin/nil";
+      "nix.serverPath" = "${pkgs.unstable.nixd}/bin/nixd";
+      "nix.serverSettings" = {
+        # settings for 'nixd' LSP
+        "nixd" = {
+          formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
+          "options" = {
+            # By default, this entriy will be read from `import <nixpkgs> { }`
+            # You can write arbitary nix expression here, to produce valid "options" declaration result.
+            # Tip = for flake-based configuration, utilize `builtins.getFlake`
+            "nixos" = {
+              "expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").nixosConfigurations.${config.home.username}.options";
+            };
+            "home-manager" = {
+              "expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").homeConfigurations.${config.home.username}.options";
+            };
+          };
+        };
+      };
       # Alejandra : Nix's Formatter
       "alejandra.program" = "${pkgs.alejandra}/bin/alejandra";
       # golangci-lint : Go's Formatter

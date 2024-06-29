@@ -5,7 +5,7 @@
     ./kernel.nix
     ./locale.nix
     ./nix.nix
-    ./xdg-spec.nix
+    ./xdg.nix
   ];
 
   system.stateVersion = "23.11";

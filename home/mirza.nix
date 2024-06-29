@@ -45,30 +45,39 @@
   home = {
     username = "mirza";
     homeDirectory = "/home/mirza";
-    packages = with pkgs; [
-      alejandra
-      biome
-      brave
-      dig
-      discord
-      eduvpn-client
-      fd
-      ffmpeg-headless
-      gimp
-      gns3-gui
-      gnumake
-      gradience
-      libreoffice
-      nil
-      nmap
-      postman
-      shotwell
-      slack
-      st-snazzy
-      ubridge
-      wl-clipboard
-      zoom-us
-    ];
+    packages =
+      builtins.attrValues {
+        inherit
+          (pkgs)
+          alejandra
+          biome
+          brave
+          dig
+          discord
+          eduvpn-client
+          fd
+          ffmpeg-headless
+          gimp
+          gns3-gui
+          gnumake
+          gradience
+          libreoffice
+          nmap
+          postman
+          shotwell
+          slack
+          st-snazzy
+          ubridge
+          wl-clipboard
+          zoom-us
+          ;
+      }
+      ++ builtins.attrValues {
+        inherit
+          (pkgs.unstable)
+          nixd
+          ;
+      };
 
     stateVersion = "23.11";
   };

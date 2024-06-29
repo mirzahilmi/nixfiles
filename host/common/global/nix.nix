@@ -1,5 +1,6 @@
-{
+{inputs, ...}: {
   nix = {
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     settings = {
       experimental-features = "nix-command flakes";
       trusted-users = ["root" "@wheel"];
@@ -7,15 +8,12 @@
       warn-dirty = false;
       "use-xdg-base-directories" = true;
     };
-
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 1w";
     };
-
     optimise.automatic = true;
   };
-
   nixpkgs.config.allowUnfree = true;
 }
