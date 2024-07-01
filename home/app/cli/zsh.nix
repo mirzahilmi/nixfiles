@@ -22,7 +22,7 @@
       ];
     };
     completionInit = ''
-      # See https://gist.github.com/ctechols/ca1035271ad134841284
+      ## See https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3994613#gistcomment-3994613
       autoload -Uz compinit
       for dump in ~/.zcompdump(N.mh+24); do
         compinit
@@ -30,11 +30,24 @@
       compinit -C
     '';
     initExtraFirst = ''
-      # zmodload zsh/zprof
+      ## Profiling zsh startup
+      if [ -n "''${ZSH_DEBUGRC+1}" ]; then
+          zmodload zsh/zprof
+      fi
     '';
     initExtra = ''
+      if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+          exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
+      fi
       bindkey -e
-      # zprof
+      zstyle ':fzf-tab:*' fzf-flags --height=90%
+      autoload -z edit-command-line
+      zle -N edit-command-line
+      bindkey "^X^E" edit-command-line
+
+      if [ -n "''${ZSH_DEBUGRC+1}" ]; then
+          zprof
+      fi
     '';
   };
 }

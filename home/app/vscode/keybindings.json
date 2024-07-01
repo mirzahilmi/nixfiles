@@ -179,5 +179,9 @@
 	{
 		"key": "ctrl+alt+i",
 		"command": "-workbench.action.chat.open"
+	},
+	{
+		"key": "ctrl+shift+z",
+		"command": "-redo"
 	}
 ]

@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  osConfig,
   ...
 }: {
   programs.vscode = {
@@ -265,9 +266,9 @@
             ."expr" = "import (builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").inputs.nixpkgs {}";
           "options" = {
             "nixos"
-              ."expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").nixosConfigurations.${config.home.username}.options";
+              ."expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").nixosConfigurations.nixsina.options";
             "home-manager"
-              ."expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").homeConfigurations.${config.home.username}.options";
+              ."expr" = "(builtins.getFlake \"${config.xdg.configHome}/nixfiles/flake.nix\").homeConfigurations.${config.home.username}@nixsina.options";
           };
         };
       };
