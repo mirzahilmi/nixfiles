@@ -11,6 +11,7 @@
     ignores = ["*.env" "*.env.json" "*.env.yaml"];
     aliases = {
       a = "add -A";
+      ac = "!git a && git commit -m";
       dif = "!git diff --name-only --relative --diff-filter=d | xargs bat --diff";
       graph = "log --decorate --oneline --graph";
     };
