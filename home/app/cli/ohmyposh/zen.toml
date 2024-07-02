@@ -14,11 +14,10 @@ type = 'path'
 style = 'plain'
 background = 'transparent'
 foreground = 'blue'
-home_icon = ''
 template = '{{ .Path }} '
 
 [blocks.segments.properties]
-style = 'full'
+style = 'unique'
 
 [[blocks.segments]]
 type = 'git'

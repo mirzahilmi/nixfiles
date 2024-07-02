@@ -13,18 +13,18 @@
       a = "add -A";
       dif = "!git diff --name-only --relative --diff-filter=d | xargs bat --diff";
       graph = "log --decorate --oneline --graph";
-      pus = "push";
-      pusf = "push --force-with-lease";
     };
     extraConfig = {
-      init.defaultBranch = "master";
-      commit.verbose = true;
-      commit.gpgSign = true;
-      gpg.program = "${pkgs.gnupg}/bin/gpg";
-      user.signingkey = "5FD12800DCA4F7B5";
-      credential.helper = "store --file ${config.xdg.configHome}/git/.key";
+      branch.sort = "committerdate";
       column.ui = "auto";
-      branch.sort = "-committerdate";
+      commit.gpgSign = true;
+      commit.verbose = true;
+      push.autoSetupRemote = true;
+      credential.helper = "store --file ${config.xdg.configHome}/git/.key";
+      gpg.program = "${pkgs.gnupg}/bin/gpg";
+      init.defaultBranch = "master";
+      push.default = "simple";
+      user.signingkey = "5FD12800DCA4F7B5";
     };
   };
 }
