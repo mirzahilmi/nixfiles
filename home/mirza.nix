@@ -63,6 +63,7 @@
       postman
       shotwell
       slack
+      ssh-to-age
       st-snazzy
       ubridge
       vivaldi
