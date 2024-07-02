@@ -2,6 +2,7 @@
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
+    enableCompletion = false;
     history = {
       path = "${config.xdg.configHome}/zsh/history";
       size = 2500;
@@ -22,18 +23,13 @@
       ];
     };
     completionInit = ''
-      ## See https://gist.github.com/ctechols/ca1035271ad134841284?permalink_comment_id=3994613#gistcomment-3994613
+      ## See https://gist.github.com/ctechols/ca1035271ad134841284
       autoload -Uz compinit
-      for dump in ~/.zcompdump(N.mh+24); do
-        compinit
-      done
-      compinit -C
+      [[ -n ''${ZDOTDIR}/.zcompdump(#qN.mh+24) ]] && compinit || compinit -C
     '';
     initExtraFirst = ''
       ## Profiling zsh startup
-      if [ -n "''${ZSH_DEBUGRC+1}" ]; then
-          zmodload zsh/zprof
-      fi
+      [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
     '';
     initExtra = ''
       if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
@@ -45,9 +41,7 @@
       zle -N edit-command-line
       bindkey "^X^E" edit-command-line
 
-      if [ -n "''${ZSH_DEBUGRC+1}" ]; then
-          zprof
-      fi
+      [[ -n "''${ZSH_DEBUGRC+1}" ]] && zprof
     '';
   };
 }

@@ -5,6 +5,7 @@
     disableConfirmationPrompt = true;
     escapeTime = 0;
     mouse = true;
+    secureSocket = true;
     shell = "${pkgs.zsh}/bin/zsh";
     sensibleOnTop = false;
     ## See https://github.com/zsh-users/zsh-autosuggestions/issues/229
