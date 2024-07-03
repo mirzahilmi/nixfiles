@@ -9,11 +9,11 @@
     ./app/gnome
     ./app/vscode
 
-    ./app/nixvim.nix
     ./app/obs.nix
     ./app/openssh.nix
     ./app/spicetify.nix
 
+    ./app/cli/nvim
     ./app/cli/ohmyposh
 
     ./app/cli/bat.nix

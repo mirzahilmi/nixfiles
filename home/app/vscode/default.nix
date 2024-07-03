@@ -38,8 +38,9 @@
         pkief.material-icon-theme
         redhat.java
         redhat.vscode-yaml
-        tobiasalthoff.atom-material-theme
+        sumneko.lua
         tamasfe.even-better-toml
+        tobiasalthoff.atom-material-theme
       ])
       ++ vscode-utils.extensionsFromVscodeMarketplace [
         {
