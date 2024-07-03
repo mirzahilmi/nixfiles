@@ -25,9 +25,8 @@
       set -g @catppuccin_status_right_separator ""
       set -g @catppuccin_status_fill "icon"
       set -g @catppuccin_status_connect_separator "no"
-      set -g @catppuccin_status_background "default"
+      set -g @catppuccin_status_background "#212526"
       set -g @catppuccin_directory_text "#{pane_current_path}"
-      set-option -g status-position top
       run-shell ${catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
     '';
   };

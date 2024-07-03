@@ -13,7 +13,6 @@
     ./app/openssh.nix
     ./app/spicetify.nix
 
-    ./app/cli/nvim
     ./app/cli/ohmyposh
 
     ./app/cli/bat.nix
@@ -66,7 +65,7 @@
       ssh-to-age
       st-snazzy
       ubridge
-      vivaldi
+      unzip
       wl-clipboard
       zoom-us
       unstable.nixd
