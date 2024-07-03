@@ -1,0 +1,3 @@
+[submodule "home/app/cli/nvim"]
+	path = home/app/cli/nvim
+	url = git@github.com:mirzahilmi/nvim.git
