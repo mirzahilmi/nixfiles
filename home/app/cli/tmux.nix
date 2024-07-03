@@ -10,7 +10,8 @@
     sensibleOnTop = false;
     ## See https://github.com/zsh-users/zsh-autosuggestions/issues/229
     terminal = "screen-256color";
-    extraConfig = with pkgs; ''
+    plugins = with pkgs.tmuxPlugins; [fzf-tmux-url];
+    extraConfig = with pkgs.tmuxPlugins; ''
       set -g @catppuccin_window_left_separator "█"
       set -g @catppuccin_window_right_separator "█ "
       set -g @catppuccin_window_middle_separator " | "
@@ -27,7 +28,7 @@
       set -g @catppuccin_status_background "default"
       set -g @catppuccin_directory_text "#{pane_current_path}"
       set-option -g status-position top
-      run-shell ${tmuxPlugins.catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
+      run-shell ${catppuccin}/share/tmux-plugins/catppuccin/catppuccin.tmux
     '';
   };
 }

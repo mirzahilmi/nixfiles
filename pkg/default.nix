@@ -3,9 +3,6 @@
   inputs,
 }: {
   draw-on-your-screen = pkgs.callPackage ./draw-on-your-screen.nix {};
-  st-snazzy = import ./st-snazzy {
-    inherit (pkgs) system;
-    inherit (pkgs) fetchpatch;
-    inherit inputs;
-  };
+  st-snazzy = import ./st-snazzy {inherit inputs pkgs;};
+  grubThemes = {fallout = import ./grubfallout.nix {inherit inputs pkgs;};};
 }

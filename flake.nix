@@ -23,10 +23,10 @@
   } @ inputs: let
     inherit (self) outputs;
   in {
-    overlays = import ./overlay {inherit inputs;};
-
     nixosModules = import ./module/nixos;
     homeManagerModules = import ./module/home-manager;
+
+    overlays = import ./overlay {inherit inputs;};
 
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {

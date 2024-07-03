@@ -1,3 +1,3 @@
 {
-  zimfw = import ./zimfw;
+  zimfw = import ./zimfw.nix;
 }

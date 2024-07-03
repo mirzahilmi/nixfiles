@@ -1,9 +1,5 @@
 # Bootloader (GRUB) configuration
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   boot = {
     initrd.verbose = false;
     consoleLogLevel = 0;
@@ -27,7 +23,7 @@
         efiSupport = true;
         useOSProber = true;
         configurationLimit = 20;
-        theme = inputs.grub-themes.packages.${pkgs.system}.fallout;
+        theme = pkgs.grubThemes.fallout;
       };
     };
   };

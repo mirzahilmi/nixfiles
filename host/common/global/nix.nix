@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  outputs,
+  ...
+}: {
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     settings = {
@@ -15,5 +19,8 @@
     };
     optimise.automatic = true;
   };
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    overlays = [outputs.overlays.extra];
+    config.allowUnfree = true;
+  };
 }
