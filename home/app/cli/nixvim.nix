@@ -1,14 +1,14 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
-  imports = [inputs.nixvim.homeManagerModules.nixvim];
+  imports = [];
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
     colorschemes.gruvbox.enable = true;
     clipboard.providers.wl-copy.enable = true;
+    extraPackages = [pkgs.gcc];
     globals = {
       mapleader = " ";
       maplocalleader = " ";
@@ -591,7 +591,33 @@
             end
           '';
         }
-        (import ./treesitter.nix {inherit pkgs;})
+        {
+          pkg = nvim-treesitter.withPlugins (p:
+            with p; [
+              bash
+              go
+              java
+              javascript
+              json
+              hcl
+              kotlin
+              lua
+              markdown
+              markdown_inline
+              nix
+              python
+              regex
+              rust
+              starlark
+              typescript
+              yaml
+            ]);
+          opts = {
+            auto_install = false;
+            ensure_installed = {};
+          };
+          lazy = false;
+        }
       ];
     };
   };
