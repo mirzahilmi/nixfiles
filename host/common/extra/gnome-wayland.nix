@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   # GNOME Desktop Config
   programs.xwayland.enable = true;
   services.xserver = {
@@ -11,4 +11,8 @@
       wayland = true;
     };
   };
+  environment.systemPackages = with pkgs; [
+    xdg-desktop-portal-gnome
+    xdg-desktop-portal-gtk
+  ];
 }

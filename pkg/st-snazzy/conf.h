@@ -5,9 +5,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrainsMono Nerd Font :pixelsize=14:antialias=true:autohint=true";
-static char *font2[] = { "JetBrainsMono Nerd Font :pixelsize=14:antialias=true:autohint=true" };
-static int borderpx = 4;
+static char *font = "JetBrainsMono Nerd Font :pixelsize=15:antialias=true:autohint=true";
+static char *font2[] = { "JetBrainsMono Nerd Font :pixelsize=15:antialias=true:autohint=true" };
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -118,22 +118,22 @@ float alpha = 1.0;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  "#22292b", /* hard contrast: #1d2021 / soft contrast: #32302f */
-  "#e06e6e",
-  "#8ccf7e",
-  "#e5c76b",
-  "#67b0e8",
-  "#c47fd5",
-  "#6da4cd",
-  "#b3b9b8",
-  "#575e60",
-  "#ef7d7d",
-  "#9bdead",
-  "#f4d67a",
-  "#6cb5ed",
-  "#ce89df",
-  "#67cbe7",
-  "#bdc3c2",
+  "#282828",
+  "#ea6962",
+  "#a9b665",
+  "#d8a657",
+  "#7daea3",
+  "#d3869b",
+  "#89b482",
+  "#d4be98",
+  "#928374",
+  "#ef938e",
+  "#bbc585",
+  "#e1bb7e",
+  "#9dc2ba",
+  "#e1acbb",
+  "#a7c7a2",
+  "#e2d3ba",
   [255] = 0,
   /* more colors can be added after 255 to use with DefaultXX */
   "#add8e6", /* 256 -> cursor */
@@ -142,14 +142,13 @@ static const char *colorname[] = {
   "#dadada", /* 259 -> fg */
 };
 
-
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 259;
-unsigned int defaultbg = 258;
-unsigned int defaultcs = 256;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 15;
 unsigned int defaultrcs = 257;
 
 /*

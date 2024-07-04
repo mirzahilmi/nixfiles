@@ -13,6 +13,7 @@
     ./app/openssh.nix
     ./app/spicetify.nix
 
+    ./app/cli/nixvim
     ./app/cli/ohmyposh
 
     ./app/cli/bat.nix
