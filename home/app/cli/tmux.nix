@@ -9,7 +9,7 @@
     shell = "${pkgs.zsh}/bin/zsh";
     sensibleOnTop = false;
     ## See https://github.com/zsh-users/zsh-autosuggestions/issues/229
-    terminal = "xterm-256color";
+    terminal = "screen-256color";
     plugins = with pkgs.tmuxPlugins; [fzf-tmux-url];
     extraConfig = ''
       set -g status-style bg=default

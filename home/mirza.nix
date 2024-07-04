@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./common/global
+    ./common
 
     ./app/gnome
     ./app/vscode
@@ -13,7 +13,6 @@
     ./app/openssh.nix
     ./app/spicetify.nix
 
-    ./app/cli/nixvim
     ./app/cli/ohmyposh
 
     ./app/cli/bat.nix
@@ -26,6 +25,7 @@
     ./app/cli/home-manager.nix
     ./app/cli/jq.nix
     ./app/cli/lsd.nix
+    ./app/cli/nixvim.nix
     ./app/cli/ripgrep.nix
     ./app/cli/tmux.nix
     ./app/cli/zsh.nix

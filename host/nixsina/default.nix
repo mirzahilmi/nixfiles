@@ -5,12 +5,13 @@
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
 
     ./hardware-configuration.nix
-    ../common/global
+
+    ../common
+    ../common/de/gnome
 
     ../common/user/mirza.nix
 
     ../common/extra/docker.nix
-    ../common/extra/gnome-wayland.nix
     ../common/extra/gns3.nix
     ../common/extra/nh.nix
     ../common/extra/nvidia.nix
