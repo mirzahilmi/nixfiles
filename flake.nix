@@ -7,7 +7,6 @@
     home-manager.url = "github:nix-community/home-manager/release-24.05";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # See https://github.com/nix-community/nixvim/issues/333
     nixvim.url = "github:nix-community/nixvim/nixos-24.05";
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
@@ -23,7 +22,6 @@
   } @ inputs: let
     inherit (self) outputs;
   in {
-    nixosModules = import ./module/nixos;
     homeManagerModules = import ./module/home-manager;
 
     overlays = import ./overlay {inherit inputs;};

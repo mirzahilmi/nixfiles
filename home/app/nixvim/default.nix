@@ -6,6 +6,16 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
+    # NOTE: The first thing you will want to do is uncommented on of the three imports below
+    # depending on which module you chose to use to install Nixvim.
+    #
+    # Uncomment if you are using the home-manager module
+    #inputs.nixvim.homeManagerModules.nixvim
+    # Uncomment if you are using the nixos module
+    #inputs.nixvim.nixosModules.nixvim
+    # Uncomment if you are using the nix-darwin module
+    #inputs.nixvim.nixDarwinModules.nixvim
+
     # Plugins
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
@@ -14,6 +24,7 @@
     ./plugins/lsp.nix
     ./plugins/nvim-cmp.nix
     ./plugins/mini.nix
+    ./plugins/neocord.nix
     ./plugins/treesitter.nix
     ./plugins/health.nix
 
@@ -22,9 +33,11 @@
     #  Here are some example plugins that I've included in the Kickstart repository.
     #  Uncomment any of the lines below to enable them (you will need to restart nvim).
     #
-    ./plugins/debug.nix
-    ./plugins/lint.nix
-    ./plugins/autopairs.nix
+    # ./plugins/kickstart/plugins/debug.nix
+    # ./plugins/kickstart/plugins/indent-blankline.nix
+    # ./plugins/kickstart/plugins/lint.nix
+    # ./plugins/kickstart/plugins/autopairs.nix
+    # ./plugins/kickstart/plugins/neo-tree.nix
     #
     # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
     # Add your plugins to ./plugins/custom/plugins and import them below
@@ -116,10 +129,8 @@
     # Don't forget to disable the colorschemes you arent using
     #
     # If you want to see what colorschemes are already installed, you can use `:Telescope colorschme`.
-    colorschemes = {
-      gruvbox = {
-        enable = true;
-      };
+    colorschemes.gruvbox = {
+      enable = true;
     };
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
@@ -140,6 +151,7 @@
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#opts
     opts = {
       # Show line numbers
+      # number = true;
       # You can also add relative line numbers, to help with jumping.
       #  Experiment for yourself to see if you like it!
       relativenumber = true;

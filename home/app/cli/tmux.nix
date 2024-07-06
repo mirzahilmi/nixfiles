@@ -15,6 +15,7 @@
       set -g status-style bg=default
       set-option -g set-titles on
       set-option -g set-titles-string "#W"
+      set-option -g focus-events on
     '';
   };
 }

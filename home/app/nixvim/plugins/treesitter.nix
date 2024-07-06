@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.nixvim = {
     # Highlight, edit, and navigate code
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html
@@ -10,14 +13,14 @@
       # TODO: Don't think I need this as nixGrammars is true which should atuo install these???
       ensureInstalled = [
         "bash"
-	"c"
-	"diff"
-	"html"
-	"lua"
-	"luadoc"
-	"markdown"
-	"vim"
-	"vimdoc"
+        "c"
+        "diff"
+        "html"
+        "lua"
+        "luadoc"
+        "markdown"
+        "vim"
+        "vimdoc"
       ];
 
       # TODO: Figure out how to do this
@@ -34,11 +37,11 @@
 
       indent = true;
       #indent = {
-        #enable = true;
-	# TODO: Figure out how to do this
-	#disable = [
-	#  "ruby"
-	#];
+      #enable = true;
+      # TODO: Figure out how to do this
+      #disable = [
+      #  "ruby"
+      #];
       #};
 
       # There are additional nvim-treesitter modules that you can use to interact

@@ -1,6 +1,9 @@
-{ config, pkgs, inputs, ... }:
-
 {
+  config,
+  pkgs,
+  inputs,
+  ...
+}: {
   programs.nixvim = {
     # Dependencies
     #
@@ -15,7 +18,7 @@
       enable = true;
     };
 
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins 
+    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
       # NOTE: This is how you would ad a vim plugin that is not implemented in Nixvim, also see extraConfigLuaPre below
       # `neodev` configure Lua LSP for your Neovim config, runtime and plugins
@@ -74,31 +77,19 @@
       #  - settings: Override the default settings passed when initializing the server.
       #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
       servers = {
-        nixd = {
-          enable = true;
-        };
         # clangd = {
         #  enable = true;
         #}
-        # gopls = {
-        #  enable = true;
-        #}
-        # pyright = {
-        #  enable = true;
-        #}
-        # rust_analyzer = {
-        #  enable = true;
-        #}
-        # ...etc. See `https://nix-community.github.io/nixvim/plugins/lsp` for a list of pre-configured LSPs
-        #
-        # Some languages (like typscript) have entire language plugins that can be useful:
-        #    `https://nix-community.github.io/nixvim/plugins/typescript-tools/index.html?highlight=typescript-tools#pluginstypescript-toolspackage`
-        #
-        # But for many setups the LSP (`tsserver`) will work just fine
-        # tsserver = {
-        #  enable = true;
-        #}
-
+        gopls = {
+          enable = true;
+          package = null;
+          cmd = ["${pkgs.gopls}/bin/gopls"];
+        };
+        nixd = {
+          enable = true;
+          package = null;
+          cmd = ["${pkgs.nixd}/bin/nixd"];
+        };
         lua-ls = {
           enable = true;
 
