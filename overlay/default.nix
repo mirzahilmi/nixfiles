@@ -3,7 +3,7 @@
   extra = final: prev:
     import ../pkg {
       pkgs = final;
-      inherit inputs;
+      inherit inputs prev;
     };
 
   # Unstable nixpkgs set (declared in the flake inputs) are

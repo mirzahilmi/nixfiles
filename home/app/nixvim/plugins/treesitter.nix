@@ -10,19 +10,6 @@
     plugins.treesitter = {
       enable = true;
 
-      # TODO: Don't think I need this as nixGrammars is true which should atuo install these???
-      ensureInstalled = [
-        "bash"
-        "c"
-        "diff"
-        "html"
-        "lua"
-        "luadoc"
-        "markdown"
-        "vim"
-        "vimdoc"
-      ];
-
       # TODO: Figure out how to do this
       #highlight = {
       #  enable = true;

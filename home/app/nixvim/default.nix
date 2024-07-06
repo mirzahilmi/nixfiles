@@ -6,16 +6,6 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
 
-    # NOTE: The first thing you will want to do is uncommented on of the three imports below
-    # depending on which module you chose to use to install Nixvim.
-    #
-    # Uncomment if you are using the home-manager module
-    #inputs.nixvim.homeManagerModules.nixvim
-    # Uncomment if you are using the nixos module
-    #inputs.nixvim.nixosModules.nixvim
-    # Uncomment if you are using the nix-darwin module
-    #inputs.nixvim.nixDarwinModules.nixvim
-
     # Plugins
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
@@ -25,22 +15,11 @@
     ./plugins/nvim-cmp.nix
     ./plugins/mini.nix
     ./plugins/neocord.nix
+    # ./plugins/lualine.nix
+    ./plugins/lint.nix
+    ./plugins/autopairs.nix
     ./plugins/treesitter.nix
     ./plugins/health.nix
-
-    # NOTE: Add/Configure additional plugins for Kickstart.nixvim
-    #
-    #  Here are some example plugins that I've included in the Kickstart repository.
-    #  Uncomment any of the lines below to enable them (you will need to restart nvim).
-    #
-    # ./plugins/kickstart/plugins/debug.nix
-    # ./plugins/kickstart/plugins/indent-blankline.nix
-    # ./plugins/kickstart/plugins/lint.nix
-    # ./plugins/kickstart/plugins/autopairs.nix
-    # ./plugins/kickstart/plugins/neo-tree.nix
-    #
-    # NOTE: Configure your own plugins `see https://nix-community.github.io/nixvim/`
-    # Add your plugins to ./plugins/custom/plugins and import them below
   ];
 
   /*
@@ -123,16 +102,9 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-
-    # You can easily change to a different colorscheme.
-    # Add your colorscheme here and enable it.
-    # Don't forget to disable the colorschemes you arent using
-    #
-    # If you want to see what colorschemes are already installed, you can use `:Telescope colorschme`.
-    colorschemes.gruvbox = {
-      enable = true;
-    };
-
+    viAlias = true;
+    vimAlias = true;
+    colorschemes.gruvbox.enable = true;
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
     globals = {
       # Set <space> as the leader key
@@ -144,16 +116,23 @@
       have_nerd_font = true;
     };
 
+    highlightOverride = {
+      # Turn off SignColumn color, me no like
+      SignColumn = {
+        bg = "none";
+      };
+      CursorLineNr = {
+        bg = "none";
+      };
+    };
+
     # [[ Setting options ]]
     # See `:help vim.opt`
     # NOTE: You can change these options as you wish!
     #  For more options, you can see `:help option-list`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#opts
     opts = {
-      # Show line numbers
-      # number = true;
-      # You can also add relative line numbers, to help with jumping.
-      #  Experiment for yourself to see if you like it!
+      number = true;
       relativenumber = true;
 
       # Enable mouse mode, can be useful for resizing splits for example!
@@ -177,7 +156,6 @@
       ignorecase = true;
       smartcase = true;
 
-      # Keep signcolumn on by default
       signcolumn = "yes";
 
       # Decrease update time
@@ -201,8 +179,8 @@
       # Preview subsitutions live, as you type!
       inccommand = "split";
 
-      # Show which line your cursor is on
       cursorline = true;
+      cursorlineopt = "number";
 
       # Minimal number of screen lines to keep above and below the cursor
       scrolloff = 10;
@@ -234,7 +212,6 @@
           desc = "Exit terminal mode";
         };
       }
-      # TIP: Disable arrow keys in normal mode
       {
         mode = "n";
         key = "<left>";
@@ -342,7 +319,6 @@
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
-      # Useful for getting pretty icons, but requires a Nerd Font.
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
     ];
 

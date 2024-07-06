@@ -89,6 +89,7 @@
           enable = true;
           package = null;
           cmd = ["${pkgs.nixd}/bin/nixd"];
+          settings.formatting.command = ["alejandra"];
         };
         lua-ls = {
           enable = true;

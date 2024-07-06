@@ -32,6 +32,7 @@
       '';
       formattersByFt = {
         lua = ["stylua"];
+        nix = ["alejandra"];
         # Conform can also run multiple formatters sequentially
         # python = [ "isort "black" ];
         #
