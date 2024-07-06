@@ -89,7 +89,7 @@
           enable = true;
           package = null;
           cmd = ["${pkgs.nixd}/bin/nixd"];
-          settings.formatting.command = ["alejandra"];
+          settings.formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
         };
         lua-ls = {
           enable = true;
@@ -280,7 +280,6 @@
             end,
           })
         end
-
         -- The following autocommand is used to enable inlay hints in your
         -- code, if the language server you are using supports them
         --
