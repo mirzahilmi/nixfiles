@@ -249,6 +249,7 @@
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
+      vim-be-good
     ];
 
     # TODO: Figure out where to move this
