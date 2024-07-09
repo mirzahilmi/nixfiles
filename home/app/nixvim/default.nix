@@ -16,6 +16,7 @@
     ./plugins/mini.nix
     ./plugins/neocord.nix
     # ./plugins/lualine.nix
+    ./plugins/oil.nix
     ./plugins/lint.nix
     ./plugins/autopairs.nix
     ./plugins/treesitter.nix
@@ -37,7 +38,6 @@
 
       # Set to true if you have a Nerd Font installed and selected in the terminal
       have_nerd_font = true;
-      netrw_liststyle = 3; # tree view style
     };
 
     highlightOverride = {
@@ -195,14 +195,6 @@
         action = "<C-w><C-k>";
         options = {
           desc = "Move focus to the upper window";
-        };
-      }
-      {
-        mode = "n";
-        key = "<leader>rw";
-        action = ":Lexplore %:p:h<CR>";
-        options = {
-          desc = "Toggle netrw";
         };
       }
     ];

@@ -91,6 +91,9 @@
           cmd = ["${pkgs.nixd}/bin/nixd"];
           settings.formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
         };
+        yamlls = {
+          enable = true;
+        };
         lua-ls = {
           enable = true;
 
@@ -237,6 +240,14 @@
       #capabilities = ''
       #  capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
       #'';
+
+      postConfig = ''
+        vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+          vim.lsp.diagnostic.on_publish_diagnostics, {
+            update_in_insert = true,
+          }
+        )
+      '';
 
       # This function gets run when an LSP attaches to a particular buffer.
       #   That is to say, every time a new file is opened that is associated with

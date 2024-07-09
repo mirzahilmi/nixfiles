@@ -23,32 +23,33 @@
       (with vscode-extensions; [
         adpyke.codesnap
         bbenoist.nix
-        bmewburn.vscode-intelephense-client
+        # bmewburn.vscode-intelephense-client
         editorconfig.editorconfig
         github.copilot
         github.copilot-chat
-        golang.go
+        # golang.go
         humao.rest-client
         jdinhlife.gruvbox
         jnoortheen.nix-ide
         johnpapa.vscode-peacock
         kamadorueda.alejandra
         mkhl.direnv
-        ms-azuretools.vscode-docker
+        # ms-azuretools.vscode-docker
         pkief.material-icon-theme
-        redhat.java
+        # redhat.java
         redhat.vscode-yaml
-        sumneko.lua
-        tamasfe.even-better-toml
-        tobiasalthoff.atom-material-theme
+        # sumneko.lua
+        # tamasfe.even-better-toml
+        # tobiasalthoff.atom-material-theme
+        # vscodevim.vim
       ])
       ++ vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          name = "vscode-phpfmt";
-          publisher = "kokororin";
-          version = "1.1.36";
-          sha256 = "sha256-Ln/vR1kyTzAYGy+q7Ru3HWhEv2mNc8ql3oKxaONUIlg=";
-        }
+        # {
+        #   name = "vscode-phpfmt";
+        #   publisher = "kokororin";
+        #   version = "1.1.36";
+        #   sha256 = "sha256-Ln/vR1kyTzAYGy+q7Ru3HWhEv2mNc8ql3oKxaONUIlg=";
+        # }
         {
           name = "multi-cursor-case-preserve";
           publisher = "cardinal90";
@@ -61,24 +62,24 @@
           version = "0.4.0";
           sha256 = "sha256-u5CAg3ZQrtHpopff6nn2ZLhOwutOl0UMerYUSCr/Yxk=";
         }
-        {
-          name = "vscord";
-          publisher = "leonardssh";
-          version = "5.1.18";
-          sha256 = "sha256-pJ9loVW1uhlITXSNBsCEgW+o3ABn0cxcZxg6S7cKWHI=";
-        }
-        {
-          name = "php-docblocker";
-          publisher = "neilbrayfield";
-          version = "2.7.0";
-          sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
-        }
-        {
-          name = "biome";
-          publisher = "biomejs";
-          version = "2.1.2";
-          sha256 = "sha256-bPAig5KK6hYxyAyt48Mfi2dEf50/hNiNngX7bTzIKcQ=";
-        }
+        # {
+        #   name = "vscord";
+        #   publisher = "leonardssh";
+        #   version = "5.1.18";
+        #   sha256 = "sha256-pJ9loVW1uhlITXSNBsCEgW+o3ABn0cxcZxg6S7cKWHI=";
+        # }
+        # {
+        #   name = "php-docblocker";
+        #   publisher = "neilbrayfield";
+        #   version = "2.7.0";
+        #   sha256 = "sha256-swuDZJVWvgAvBuoI1xTwzBtKstet8ahkDQKpZlfz830=";
+        # }
+        # {
+        #   name = "biome";
+        #   publisher = "biomejs";
+        #   version = "2.1.2";
+        #   sha256 = "sha256-bPAig5KK6hYxyAyt48Mfi2dEf50/hNiNngX7bTzIKcQ=";
+        # }
         {
           name = "vscode-drawio";
           publisher = "hediet";
@@ -91,12 +92,12 @@
           version = "1.7.0";
           sha256 = "sha256-TDs6i0/o0j9XFLQvWze4iloa6yRXce/xIqd2CnA5nug=";
         }
-        {
-          name = "vsliveshare";
-          publisher = "MS-vsliveshare";
-          version = "1.0.5918";
-          sha256 = "sha256-Tk0mKydUF8M7l7NC9wEA7t2rzJWy/mq4/HvIHI2/ldQ=";
-        }
+        # {
+        #   name = "vsliveshare";
+        #   publisher = "MS-vsliveshare";
+        #   version = "1.0.5918";
+        #   sha256 = "sha256-Tk0mKydUF8M7l7NC9wEA7t2rzJWy/mq4/HvIHI2/ldQ=";
+        # }
         {
           name = "vscode-dbml";
           publisher = "matt-meyers";
@@ -308,6 +309,9 @@
       "peacock.affectActivityBar" = false;
       "peacock.affectSashHover" = false;
       "peacock.affectTitleBar" = false;
+
+      # VSCode Vim
+      "vim.cursorStylePerMode.insert" = "block-outline";
     };
   };
 }

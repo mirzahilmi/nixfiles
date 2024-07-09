@@ -1,9 +1,4 @@
 {
-  config,
-  pkgs,
-  inputs,
-  ...
-}: {
   programs.nixvim = {
     # Highlight, edit, and navigate code
     # https://nix-community.github.io/nixvim/plugins/treesitter/index.html

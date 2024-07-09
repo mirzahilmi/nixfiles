@@ -13,6 +13,7 @@
     ./app/obs.nix
     ./app/openssh.nix
     ./app/spicetify.nix
+    ./app/wezterm.nix
 
     ./app/cli/ohmyposh
 
@@ -58,6 +59,7 @@
       gns3-gui
       gnumake
       gradience
+      hoppscotch
       libreoffice
       nmap
       postman
@@ -69,6 +71,7 @@
       unzip
       wl-clipboard
       zoom-us
+      qgis
       unstable.nixd
     ];
 
