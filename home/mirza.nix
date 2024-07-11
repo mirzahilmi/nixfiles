@@ -60,6 +60,7 @@
       gnumake
       gradience
       hoppscotch
+      insomnia
       libreoffice
       nmap
       postman
@@ -73,6 +74,7 @@
       zoom-us
       qgis
       unstable.nixd
+      # unstable.zed-editor
     ];
 
     stateVersion = "23.11";

@@ -17,6 +17,7 @@
     ./plugins/neocord.nix
     # ./plugins/lualine.nix
     ./plugins/oil.nix
+    ./plugins/alpha.nix
     ./plugins/lint.nix
     ./plugins/autopairs.nix
     ./plugins/treesitter.nix
@@ -56,7 +57,6 @@
     #  For more options, you can see `:help option-list`
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#opts
     opts = {
-      number = true;
       relativenumber = true;
 
       # Enable mouse mode, can be useful for resizing splits for example!
@@ -210,7 +210,7 @@
     #  See `:help lua-guide-autocommands`
     # https://nix-community.github.io/nixvim/NeovimOptions/autoCmd/index.html
     autoCmd = [
-      # Highlight when yanking (copying) text
+      #  Highlight when yanking (copying) text
       #  Try it with `yap` in normal mode
       #  See `:help vim.highlight.on_yank()`
       {
