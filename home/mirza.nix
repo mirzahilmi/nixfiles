@@ -61,6 +61,7 @@
       gradience
       hoppscotch
       insomnia
+      # l5p-keyboard-rgb
       libreoffice
       nmap
       postman

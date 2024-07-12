@@ -11,6 +11,7 @@
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
+    # l5p-keyboard-rgb.url = "github:4JX/L5P-Keyboard-RGB";
     st.url = "github:siduck/st";
   };
 

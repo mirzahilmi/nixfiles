@@ -29,11 +29,11 @@
         github.copilot-chat
         # golang.go
         humao.rest-client
-        jdinhlife.gruvbox
+        # jdinhlife.gruvbox
         jnoortheen.nix-ide
-        johnpapa.vscode-peacock
+        # johnpapa.vscode-peacock
         kamadorueda.alejandra
-        mkhl.direnv
+        # mkhl.direnv
         # ms-azuretools.vscode-docker
         pkief.material-icon-theme
         # redhat.java
@@ -122,6 +122,18 @@
           version = "0.6.3";
           sha256 = "sha256-CO+dcmvaSROX1ruxdrLfQhPF3HgEBtesE0JPyizD7io=";
         }
+        # {
+        #   name = "kanagawa";
+        #   publisher = "qufiwefefwoyn";
+        #   version = "1.5.1";
+        #   sha256 = "sha256-AGGioXcK/fjPaFaWk2jqLxovUNR59gwpotcSpGNbj1c";
+        # }
+        # {
+        #   name = "kanagawa-vscode-color-theme";
+        #   publisher = "metaphore";
+        #   version = "0.4.0";
+        #   sha256 = "sha256-B25saMkaTx73uncPtAQFKQfH1j5VMbD67lgJPJcm3vk";
+        # }
       ];
 
     userSettings = {
@@ -139,7 +151,7 @@
       "editor.letterSpacing" = 0.5;
 
       # Code Editor Interface
-      "workbench.colorTheme" = "Gruvbox Dark Medium";
+      # "workbench.colorTheme" = "Gruvbox Dark Medium";
       "workbench.iconTheme" = "material-icon-theme";
       "workbench.sideBar.location" = "right";
       "editor.minimap.enabled" = false;
