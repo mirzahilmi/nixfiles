@@ -29,7 +29,7 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    colorschemes.gruvbox.enable = true;
+    colorscheme = "gruvbox-material";
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
     globals = {
       # Set <space> as the leader key
@@ -39,16 +39,9 @@
 
       # Set to true if you have a Nerd Font installed and selected in the terminal
       have_nerd_font = true;
-    };
 
-    highlightOverride = {
-      # Turn off SignColumn color, me no like
-      SignColumn = {
-        bg = "none";
-      };
-      CursorLineNr = {
-        bg = "none";
-      };
+      gruvbox_material_diagnostic_text_highlight = 1;
+      gruvbox_material_diagnostic_virtual_text = 1;
     };
 
     # [[ Setting options ]]
@@ -116,6 +109,8 @@
       tabstop = 4; # number of space inserted with <tab>
       shiftwidth = 4; # number of space inserted with > or <
       smartindent = true;
+
+      termguicolors = true;
     };
 
     # [[ Basic Keymaps ]]
@@ -248,6 +243,7 @@
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
+      gruvbox-material
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
       vim-be-good
     ];
