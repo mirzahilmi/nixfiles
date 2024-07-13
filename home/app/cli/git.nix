@@ -20,6 +20,7 @@
       column.ui = "auto";
       commit.gpgSign = true;
       commit.verbose = true;
+      pull.rebase = false;
       push.autoSetupRemote = true;
       credential.helper = "store --file ${config.xdg.configHome}/git/.key";
       gpg.program = "${pkgs.gnupg}/bin/gpg";

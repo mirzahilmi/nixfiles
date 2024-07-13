@@ -19,6 +19,7 @@
     ./plugins/oil.nix
     ./plugins/alpha.nix
     # ./plugins/dadbod.nix
+    # ./plugins/trouble.nix
     ./plugins/lint.nix
     ./plugins/autopairs.nix
     ./plugins/treesitter.nix
