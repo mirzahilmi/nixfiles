@@ -4,28 +4,30 @@
     enableBashIntegration = false;
     enableZshIntegration = true;
     extraConfig = ''
-      return {
-          default_prog = {
-            "${pkgs.bash}/bin/bash", "-c", [[
-              if [ -x "$(command -v ${pkgs.tmux}/bin/tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ]; then
-                exec ${pkgs.tmux}/bin/tmux new-session -A -s ''${USER} >/dev/null 2>&1
-              fi
-            ]]
-          },
-          font = wezterm.font("JetBrainsMono Nerd Font", {weight = "Regular"}),
-          font_size = 10.75,
-          scrollback_lines = 1024,
-          color_scheme = "Gruvbox Dark (Gogh)",
-          window_decorations = "RESIZE",
-          enable_wayland = true,
-          enable_tab_bar = false,
-          use_fancy_tab_bar = false,
-          window_padding = { left = 0, right = 0, top = 0, bottom = 0 },
-          check_for_updates = false,
-          force_reverse_video_cursor = true,
-          warn_about_missing_glyphs = false,
-          xcursor_theme = "Bibata-Original-Classic";
+      local config = wezterm.config_builder()
+
+      config.default_prog = {
+        "${pkgs.bash}/bin/bash", "-c", [[
+          if [ -x "$(command -v ${pkgs.tmux}/bin/tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ]; then
+            exec ${pkgs.tmux}/bin/tmux new-session -A -s ''${USER} >/dev/null 2>&1
+          fi
+        ]]
       }
+      config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = "Regular"})
+      config.font_size = 11
+      config.scrollback_lines = 1024
+      config.color_scheme = "Gruvbox dark, hard (base16)"
+      config.window_decorations = "RESIZE"
+      config.enable_wayland = true
+      config.enable_tab_bar = false
+      config.use_fancy_tab_bar = false
+      config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
+      config.check_for_updates = false
+      config.force_reverse_video_cursor = true
+      config.warn_about_missing_glyphs = false
+      config.xcursor_theme = "Bibata-Original-Classic"
+
+      return config
     '';
   };
 }

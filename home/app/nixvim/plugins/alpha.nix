@@ -92,7 +92,7 @@ in {
             (
               mkButton {
                 val = "󰅚 Quit Neovim";
-                shortcut = "q";
+                shortcut = "ZQ";
                 cmd = "function() vim.cmd[[qa]] end";
                 hl = "String";
               }
