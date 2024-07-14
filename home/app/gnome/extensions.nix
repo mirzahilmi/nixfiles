@@ -38,10 +38,8 @@ in {
 
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
-        "st.desktop"
-        "codium.desktop"
+        "org.wezfurlong.wezterm.desktop"
         "code.desktop"
-        "beekeeper-studio.desktop"
         "brave-browser.desktop"
       ];
     };

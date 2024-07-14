@@ -32,9 +32,9 @@
       [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
     '';
     initExtra = ''
-      if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
-          exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
-      fi
+      # if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+      #     exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
+      # fi
       bindkey -e
       zstyle ':fzf-tab:*' fzf-flags --height=90%
       autoload -z edit-command-line

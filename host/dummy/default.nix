@@ -1,5 +1,3 @@
-# Host-level configuration
-# (it replaces /etc/nixos/configuration.nix)
 {
   imports = [
     ./hardware-configuration.nix
@@ -10,11 +8,8 @@
     ../common/extras/zsh.nix
     ../common/users/mirza
   ];
-
   networking = {
     hostName = "dummy";
     networkmanager.enable = true;
   };
-
-  services.openssh.enable = true;
 }

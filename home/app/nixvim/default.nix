@@ -7,6 +7,7 @@
     inputs.nixvim.homeManagerModules.nixvim
 
     # Plugins
+    ./plugins/gruvbox.nix
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
     ./plugins/telescope.nix
@@ -31,7 +32,6 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    colorscheme = "gruvbox-material";
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=globals#globals
     globals = {
       # Set <space> as the leader key
@@ -41,9 +41,6 @@
 
       # Set to true if you have a Nerd Font installed and selected in the terminal
       have_nerd_font = true;
-
-      gruvbox_material_diagnostic_text_highlight = 1;
-      gruvbox_material_diagnostic_virtual_text = 1;
     };
 
     # [[ Setting options ]]
@@ -245,7 +242,6 @@
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugins#extraplugins
     extraPlugins = with pkgs.vimPlugins; [
-      gruvbox-material
       nvim-web-devicons # TODO: Figure out how to configure using this with telescope
       vim-be-good
     ];
