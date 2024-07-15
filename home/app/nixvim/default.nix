@@ -29,6 +29,8 @@
 
   programs.nixvim = {
     enable = true;
+    ## Wont add until https://github.com/NixOS/nixpkgs/issues/321051
+    # package = pkgs.unstable.neovim;
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;

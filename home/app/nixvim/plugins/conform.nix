@@ -50,6 +50,7 @@
         action.__raw = ''
           function()
             require('conform').format { async = true, lsp_fallback = true }
+            vim.notify("Buffer Formatted", vim.log.levels.INFO)
           end
         '';
         options = {

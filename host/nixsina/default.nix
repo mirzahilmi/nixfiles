@@ -19,6 +19,8 @@
     ../common/extra/v4l2loopback.nix
     ../common/extra/virt-manager.nix
     ../common/extra/zsh.nix
+
+    ../../module/nixos/ssh.nix
   ];
 
   networking = {

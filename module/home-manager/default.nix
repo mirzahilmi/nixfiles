@@ -1,3 +1,0 @@
-{
-  zimfw = import ./zimfw.nix;
-}

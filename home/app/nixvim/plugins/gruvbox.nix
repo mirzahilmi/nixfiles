@@ -8,7 +8,8 @@
     };
     highlightOverride = {
       AlphaHeader = {fg = "#d8a657";};
-      DiffAdd = {bg = "#3c3836";};
+      TelescopeSelection = {bg = "#3c3836";};
+      TelescopeMatching = {fg = "#fe8019";};
     };
   };
 }

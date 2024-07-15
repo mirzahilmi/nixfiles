@@ -26,6 +26,7 @@
       config.force_reverse_video_cursor = true
       config.warn_about_missing_glyphs = false
       config.xcursor_theme = "Bibata-Original-Classic"
+      config.hide_mouse_cursor_when_typing = true
 
       return config
     '';
