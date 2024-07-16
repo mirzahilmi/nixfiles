@@ -13,7 +13,6 @@
     ./app/obs.nix
     ./app/openssh.nix
     ./app/spicetify.nix
-    ./app/wezterm.nix
 
     ./app/cli/ohmyposh
 
@@ -30,6 +29,8 @@
     ./app/cli/ripgrep.nix
     ./app/cli/tmux.nix
     ./app/cli/zsh.nix
+
+    ../module/home-manager/wezterm.nix
   ];
 
   nixpkgs = {
