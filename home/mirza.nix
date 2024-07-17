@@ -23,7 +23,6 @@
     ./app/cli/fzf.nix
     ./app/cli/gpg.nix
     ./app/cli/git.nix
-    ./app/cli/home-manager.nix
     ./app/cli/jq.nix
     ./app/cli/lsd.nix
     ./app/cli/ripgrep.nix

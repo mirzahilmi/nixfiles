@@ -117,6 +117,9 @@
             end
           '';
         };
+        pickers = {
+          find_files = {hidden = true;};
+        };
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
       };
     };
