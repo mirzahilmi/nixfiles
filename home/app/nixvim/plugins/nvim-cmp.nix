@@ -22,9 +22,9 @@
     #    See the README about individual language/framework/plugin snippets:
     #    https://github.com/rafamadriz/friendly-snippets
     # https://nix-community.github.io/nixvim/plugins/friendly-snippets.html
-    # plugins.friendly-snippets = {
-    #   enable = true;
-    # };
+    plugins.friendly-snippets = {
+      enable = true;
+    };
 
     # TODO: Waiting on this bug to be fixed https://github.com/NixOS/nixpkgs/issues/306367
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extralua#extraluapackages
@@ -40,6 +40,14 @@
       enable = true;
 
       settings = {
+        window = {
+          __raw = ''
+            {
+              completion = cmp.config.window.bordered(),
+              documentation = cmp.config.window.bordered(),
+            }
+          '';
+        };
         snippet = {
           expand = ''
             function(args)

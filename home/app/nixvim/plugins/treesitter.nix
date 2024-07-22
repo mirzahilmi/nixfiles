@@ -5,6 +5,8 @@
     plugins.treesitter = {
       enable = true;
 
+      ensureInstalled = ["hurl"];
+
       # TODO: Figure out how to do this
       #highlight = {
       #  enable = true;

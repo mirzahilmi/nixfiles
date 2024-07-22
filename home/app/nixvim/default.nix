@@ -7,7 +7,6 @@
     inputs.nixvim.homeManagerModules.nixvim
 
     # Plugins
-    ./plugins/gruvbox.nix
     ./plugins/gitsigns.nix
     ./plugins/which-key.nix
     ./plugins/telescope.nix
@@ -22,6 +21,9 @@
     # ./plugins/dadbod.nix
     # ./plugins/trouble.nix
     # ./plugins/text-case.nix
+    ./plugins/gruvbox.nix
+    # ./plugins/base16.nix
+    # ./plugins/bg-nvim.nix
     ./plugins/lint.nix
     ./plugins/autopairs.nix
     ./plugins/treesitter.nix

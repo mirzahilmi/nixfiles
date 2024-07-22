@@ -59,8 +59,7 @@
       gns3-gui
       gnumake
       gradience
-      hoppscotch
-      insomnia
+      hurl
       # l5p-keyboard-rgb
       libreoffice
       nmap
