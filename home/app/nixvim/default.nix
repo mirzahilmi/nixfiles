@@ -19,7 +19,7 @@
     ./plugins/oil.nix
     ./plugins/alpha.nix
     # ./plugins/dadbod.nix
-    # ./plugins/trouble.nix
+    ./plugins/trouble.nix
     # ./plugins/text-case.nix
     ./plugins/gruvbox.nix
     # ./plugins/base16.nix

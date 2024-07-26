@@ -11,7 +11,6 @@
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
     spicetify-nix.url = "github:the-argus/spicetify-nix";
-    # l5p-keyboard-rgb.url = "github:4JX/L5P-Keyboard-RGB";
     st.url = "github:siduck/st";
   };
 
@@ -29,21 +28,21 @@
 
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
         modules = [./host/nixsina];
+        specialArgs = {inherit inputs outputs;};
       };
 
       "dummy" = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
         modules = [./host/dummy];
+        specialArgs = {inherit inputs outputs;};
       };
     };
 
     homeConfigurations = {
       "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {
+        modules = [./home/mirza.nix];
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/mirza.nix];
       };
     };
   };
