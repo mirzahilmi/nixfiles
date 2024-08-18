@@ -1,7 +1,8 @@
 let
   mkButton = {
     cmd,
-    hl ? "Keyword",
+    hl_shortcut ? "TSDanger",
+    hl ? "",
     shortcut,
     val,
   }: {
@@ -9,7 +10,8 @@ let
     inherit val;
     on_press = {__raw = cmd;};
     opts = {
-      inherit shortcut hl;
+      inherit hl_shortcut hl;
+      shortcut = " ${shortcut} ";
       position = "center";
       cursor = 3;
       width = 38;
@@ -94,7 +96,7 @@ in {
                 val = "󰅚 Quit Neovim";
                 shortcut = "ZQ";
                 cmd = "function() vim.cmd[[qa]] end";
-                hl = "String";
+                hl = "Keyword";
               }
             )
           ];
@@ -102,6 +104,31 @@ in {
         {
           type = "padding";
           val = 2;
+        }
+        {
+          type = "group";
+          val = [
+            {
+              type = "text";
+              val.__raw = "vim.fn.getcwd()";
+              opts = {
+                hl = "TSField";
+                position = "center";
+              };
+            }
+            {
+              type = "padding";
+              val = 1;
+            }
+            {
+              type = "text";
+              val.__raw = "\" v\" .. vim.version().major .. \".\" .. vim.version().minor .. \".\" .. vim.version().patch";
+              opts = {
+                hl = "Orange";
+                position = "center";
+              };
+            }
+          ];
         }
       ];
     };

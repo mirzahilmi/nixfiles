@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.nixosModules.nixvim
 
     # Plugins
     ./plugins/gitsigns.nix

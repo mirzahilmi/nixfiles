@@ -11,6 +11,8 @@
 
     ../common/user/mirza.nix
 
+    ../../module/nixos/nixvim
+
     ../common/extra/docker.nix
     ../common/extra/gns3.nix
     ../common/extra/nh.nix

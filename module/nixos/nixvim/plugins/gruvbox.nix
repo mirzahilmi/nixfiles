@@ -7,6 +7,7 @@
     };
     highlightOverride = {
       TelescopeSelection = {link = "CursorLine";};
+      TelescopeMatching = {link = "OrangeBold";};
       NormalFloat = {link = "@none";};
       FloatBorder = {link = "@none";};
     };

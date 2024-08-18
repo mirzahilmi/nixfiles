@@ -7,7 +7,6 @@
     ./common
 
     ./app/gnome
-    ./app/nixvim
     ./app/vscode
 
     ./app/obs.nix
@@ -60,7 +59,6 @@
       gnumake
       gradience
       hurl
-      # l5p-keyboard-rgb
       libreoffice
       nmap
       parabolic
@@ -73,9 +71,11 @@
       unzip
       wl-clipboard
       zoom-us
-      qgis
+      (qgis.override {
+        extraPythonPackages = ps: with ps; [pyqtwebengine];
+      })
       unstable.nixd
-      # unstable.zed-editor
+      unstable.zed-editor
     ];
 
     stateVersion = "23.11";

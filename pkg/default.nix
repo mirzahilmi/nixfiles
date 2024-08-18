@@ -14,5 +14,6 @@
     prev.vimPlugins
     // {
       bg-nvim = pkgs.callPackage ./bg-nvim.nix {};
+      oil-git-status-nvim = pkgs.callPackage ./oil-git-status-nvim.nix {};
     };
 }
