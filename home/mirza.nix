@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./common
+    ./shared
 
     ../module/home-manager/gnome
     ../module/home-manager/vscode

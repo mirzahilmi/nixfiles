@@ -32,6 +32,17 @@
         ui-select.enable = true;
       };
 
+      settings = {
+        defaults = {
+          layout_config = {
+            prompt_position = "top";
+            preview_cutoff = 120;
+          };
+          sorting_strategy = "ascending";
+        };
+        extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
+      };
+
       # You can put your default mappings / updates / etc. in here
       #  See `:help telescope.builtin`
       keymaps = {
@@ -105,14 +116,6 @@
             desc = "[ ] Find existing buffers";
           };
         };
-      };
-      settings = {
-        defaults = {
-          layout_config = {
-            preview_cutoff = 120;
-          };
-        };
-        extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
       };
     };
 
