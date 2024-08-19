@@ -36,7 +36,6 @@
       #     exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
       # fi
       bindkey -e
-      zstyle ':fzf-tab:*' fzf-flags --height=90%
       autoload -z edit-command-line
       zle -N edit-command-line
       bindkey "^X^E" edit-command-line

@@ -4,14 +4,17 @@
   ...
 }: let
   spicetify = inputs.spicetify-nix;
+  spicetifyPkgs = spicetify.legacyPackages.${pkgs.system};
 in {
-  imports = [spicetify.homeManagerModule];
+  imports = [spicetify.homeManagerModules.default];
   programs.spicetify = {
     enable = true;
-    enabledExtensions = with spicetify.packages.${pkgs.system}.default.extensions; [
+    enabledExtensions = with spicetifyPkgs.extensions; [
       adblock
       hidePodcasts
       history
+      beautifulLyrics
+      shuffle
       volumePercentage
     ];
   };

@@ -14,7 +14,7 @@
         ]]
       }
       config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = "Regular"})
-      config.font_size = 13
+      config.font_size = 12
       config.scrollback_lines = 1024
       config.color_scheme = "Default Dark (base16)"
       config.window_decorations = "RESIZE"

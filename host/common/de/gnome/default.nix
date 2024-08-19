@@ -1,8 +1,12 @@
 # GNOME Desktop Environtment/Manager Setup
 # Runned under Wayland
-{
+{outputs, ...}: {
   imports = [
     ./pkgs.nix
+  ];
+
+  nixpkgs.overlays = [
+    outputs.overlays.gnome-dynamic-triple-buffering
   ];
 
   services.xserver = {
@@ -13,5 +17,6 @@
       wayland = true;
     };
   };
+
   programs.xwayland.enable = true;
 }

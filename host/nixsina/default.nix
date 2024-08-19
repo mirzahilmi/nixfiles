@@ -16,7 +16,6 @@
     ../common/extra/docker.nix
     ../common/extra/gns3.nix
     ../common/extra/nh.nix
-    ../common/extra/nvidia.nix
     ../common/extra/pipewire.nix
     ../common/extra/v4l2loopback.nix
     ../common/extra/virt-manager.nix

@@ -10,6 +10,7 @@
       TelescopeMatching = {link = "OrangeBold";};
       NormalFloat = {link = "@none";};
       FloatBorder = {link = "@none";};
+      Directory = {link = "Yellow";};
     };
   };
 }

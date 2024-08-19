@@ -1,7 +1,7 @@
 {pkgs, ...}: let
   gnomeSchema = "org/gnome";
   desktopSchema = "${gnomeSchema}/desktop";
-  wallpaperPath = "file://" + ../../../asset/post-soviet-life.jpg;
+  wallpaperPath = "file://" + ../../../img/post-soviet-life.jpg;
 in {
   imports = [
     (import ./extensions.nix {inherit pkgs gnomeSchema;})

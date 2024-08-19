@@ -54,7 +54,6 @@
       eduvpn-client
       fd
       ffmpeg-headless
-      gimp
       gns3-gui
       gnumake
       gradience
@@ -71,9 +70,6 @@
       unzip
       wl-clipboard
       zoom-us
-      (qgis.override {
-        extraPythonPackages = ps: with ps; [pyqtwebengine];
-      })
       unstable.nixd
       unstable.zed-editor
     ];

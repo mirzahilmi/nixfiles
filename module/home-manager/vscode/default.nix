@@ -10,12 +10,7 @@
     enableExtensionUpdateCheck = false;
 
     ## See https://gitlab.gnome.org/GNOME/mutter/-/issues/2689
-    package = pkgs.unstable.vscode.overrideAttrs (previousAttrs: rec {
-      desktopItem = previousAttrs.desktopItem.override {
-        startupNotify = false;
-      };
-      installPhase = builtins.replaceStrings ["${previousAttrs.desktopItem}"] ["${desktopItem}"] previousAttrs.installPhase;
-    });
+    package = pkgs.unstable.vscode;
 
     keybindings = lib.importJSON ./keybindings.json;
 

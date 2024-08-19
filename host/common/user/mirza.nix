@@ -25,7 +25,7 @@ in {
     if [[ ! -e /var/lib/AccountsService/users/${userName} ]]; then
       echo '[User]
       Session=
-      Icon=${../../../asset/otter.png}
+      Icon=${../../../img/otter.png}
       SystemAccount=false' > /var/lib/AccountsService/users/${userName}
     fi
   '';
