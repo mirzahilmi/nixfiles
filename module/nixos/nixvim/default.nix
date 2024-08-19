@@ -14,16 +14,17 @@
     ./plugins/lsp.nix
     ./plugins/nvim-cmp.nix
     ./plugins/mini.nix
-    ./plugins/neocord.nix
+    # ./plugins/neocord.nix
+    ./plugins/cord.nix
     # ./plugins/lualine.nix
     ./plugins/oil.nix
-    ./plugins/alpha.nix
+    # ./plugins/alpha.nix
     # ./plugins/dadbod.nix
     ./plugins/trouble.nix
     # ./plugins/text-case.nix
     ./plugins/gruvbox.nix
     # ./plugins/base16.nix
-    # ./plugins/bg-nvim.nix
+    ./plugins/bg-nvim.nix
     ./plugins/lint.nix
     ./plugins/autopairs.nix
     ./plugins/treesitter.nix

@@ -20,7 +20,10 @@
     optimise.automatic = true;
   };
   nixpkgs = {
-    overlays = [outputs.overlays.extra];
+    overlays = [
+      outputs.overlays.extra
+      outputs.overlays.unstable-package
+    ];
     config.allowUnfree = true;
   };
 }
