@@ -22,7 +22,6 @@
     self,
     nixpkgs,
     home-manager,
-    disko,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -33,11 +32,7 @@
 
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
-        modules = [
-          disko.nixosModules.disko
-          (import ./disko.nix {device = "/dev/sda";})
-          ./host/nixsina
-        ];
+        modules = [./host/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
 

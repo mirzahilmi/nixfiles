@@ -3,7 +3,9 @@
 {inputs, ...}: {
   imports = [
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
+    inputs.disko.nixosModules.disko
 
+    (import ./disko.nix {device = "/dev/sda";})
     ./hardware-configuration.nix
 
     ../common
