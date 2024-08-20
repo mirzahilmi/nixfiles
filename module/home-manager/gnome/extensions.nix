@@ -39,7 +39,7 @@ in {
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
         "org.wezfurlong.wezterm.desktop"
-        "code.desktop"
+        "dev.zed.Zed.desktop"
         "brave-browser.desktop"
       ];
     };

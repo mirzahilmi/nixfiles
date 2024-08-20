@@ -36,13 +36,13 @@ type = 'text'
 style = 'plain'
 foreground_templates = [
     "{{if gt .Code 0}}red{{end}}",
-    "{{if eq .Code 0}}magenta{{end}}",
+    "{{if eq .Code 0}}green{{end}}",
 ]
 background = 'transparent'
 template = ''
 
 [secondary_prompt]
-foreground = 'magenta'
+foreground = 'green'
 background = 'transparent'
 template = ' '
 

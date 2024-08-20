@@ -7,11 +7,11 @@
     ./shared
 
     ../module/home-manager/gnome
-    ../module/home-manager/vscode
 
     ../module/home-manager/obs.nix
     ../module/home-manager/openssh.nix
     ../module/home-manager/spicetify.nix
+    ../module/home-manager/zed.nix
 
     ../module/home-manager/cli/ohmyposh
 
@@ -53,25 +53,19 @@
       discord
       eduvpn-client
       fd
-      ffmpeg-headless
-      gns3-gui
       gnumake
-      gradience
       hurl
       libreoffice
       nmap
       parabolic
       postman
-      shotwell
       slack
       ssh-to-age
-      st-snazzy
-      ubridge
       unzip
       wl-clipboard
       zoom-us
       unstable.nixd
-      unstable.zed-editor
+      unstable.sops
     ];
 
     stateVersion = "23.11";

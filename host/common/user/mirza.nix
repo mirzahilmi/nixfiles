@@ -1,4 +1,8 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  config,
+  ...
+}: let
   userName = "mirza";
 in {
   users = {
@@ -6,7 +10,7 @@ in {
       isNormalUser = true;
       shell = pkgs.zsh;
       description = "Mirza's Avatar";
-      initialPassword = "password";
+      hashedPasswordFile = config.sops.secrets.defaultPassword.path;
       extraGroups = [
         "networkmanager"
         "wheel"
