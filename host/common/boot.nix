@@ -8,7 +8,6 @@
       device = "nodev";
       efiSupport = true;
       useOSProber = true;
-      efiInstallAsRemovable = true;
       theme = pkgs.grubThemes.fallout;
     };
   };

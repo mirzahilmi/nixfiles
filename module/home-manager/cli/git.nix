@@ -22,11 +22,10 @@
       commit.verbose = true;
       pull.rebase = false;
       push.autoSetupRemote = true;
-      credential.helper = "store --file ${config.xdg.configHome}/git/.key";
-      gpg.program = "${pkgs.gnupg}/bin/gpg";
+      gpg.format = "ssh";
       init.defaultBranch = "master";
       push.default = "simple";
-      user.signingkey = "5FD12800DCA4F7B5";
+      user.signingkey = "~/.ssh/id_ed25519.pub";
     };
   };
 }

@@ -46,7 +46,7 @@
           root = {
             size = "100%FREE";
             content = {
-              type = "ext4";
+              type = "btrfs";
               extraArgs = ["-f"];
 
               subvolumes = {
