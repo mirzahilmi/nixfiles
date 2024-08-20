@@ -1,23 +1,26 @@
 {
+  config,
   inputs,
   outputs,
   ...
 }: {
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    optimise.automatic = true;
     settings = {
       experimental-features = "nix-command flakes";
       trusted-users = ["root" "@wheel"];
       auto-optimise-store = true;
       warn-dirty = false;
-      "use-xdg-base-directories" = true;
     };
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 1w";
     };
-    optimise.automatic = true;
+    extraOptions = ''
+      !include ${config.sops.secrets.nixAccessTokens.path}
+    '';
   };
   nixpkgs = {
     overlays = [
