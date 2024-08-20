@@ -1,30 +1,15 @@
 # Bootloader (GRUB) configuration
 {pkgs, ...}: {
-  boot = {
-    initrd.verbose = false;
-    consoleLogLevel = 0;
-    kernelParams = [
-      "quiet"
-      "udev.log_level=3"
-    ];
-    plymouth = {
+  boot.loader = {
+    timeout = 10;
+    efi = {canTouchEfiVariables = true;};
+    grub = {
       enable = true;
-      theme = "bgrt";
-    };
-    loader = {
-      timeout = 10;
-      efi = {
-        canTouchEfiVariables = true;
-        efiSysMountPoint = "/boot/EFI";
-      };
-      grub = {
-        enable = true;
-        devices = ["nodev"];
-        efiSupport = true;
-        useOSProber = true;
-        configurationLimit = 20;
-        theme = pkgs.grubThemes.fallout;
-      };
+      device = "nodev";
+      efiSupport = true;
+      useOSProber = true;
+      efiInstallAsRemovable = true;
+      theme = pkgs.grubThemes.fallout;
     };
   };
 }

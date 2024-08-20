@@ -47,6 +47,7 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
+      asciiquarium
       biome
       brave
       dig
