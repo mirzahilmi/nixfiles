@@ -41,8 +41,8 @@
         specialArgs = {inherit inputs outputs;};
       };
 
-      "dummy" = nixpkgs.lib.nixosSystem {
-        modules = [./host/dummy];
+      "test" = nixpkgs.lib.nixosSystem {
+        modules = [./host/test];
         specialArgs = {inherit inputs outputs;};
       };
     };

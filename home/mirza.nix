@@ -58,8 +58,6 @@
       libreoffice
       nmap
       parabolic
-      postman
-      slack
       ssh-to-age
       unzip
       wl-clipboard

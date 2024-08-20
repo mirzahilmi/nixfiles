@@ -9,7 +9,7 @@
     ../common/users/mirza
   ];
   networking = {
-    hostName = "dummy";
+    hostName = "test";
     networkmanager.enable = true;
   };
 }

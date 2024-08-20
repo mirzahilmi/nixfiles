@@ -11,6 +11,12 @@
       NormalFloat = {link = "@none";};
       FloatBorder = {link = "@none";};
       Directory = {link = "Yellow";};
+      MiniStatuslineModeNormal = {link = "OctoBubbleBlue";};
+      MiniStatuslineModeInsert = {link = "OctoBubblePurple";};
+      MiniStatuslineModeVisual = {link = "OctoBubbleRed";};
+      MiniStatuslineModeReplace = {link = "OctoBubbleYellow";};
+      MiniStatuslineModeCommand = {link = "OctoBubbleGreen";};
+      MiniStatuslineModeOther = {link = "OctoBubbleGrey";};
     };
   };
 }
