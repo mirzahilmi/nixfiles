@@ -6,6 +6,7 @@
         default_file_explorer = true;
         delete_to_trash = true;
         skip_confirm_for_simple_edits = true;
+        float = {padding = 5;};
         view_options = {
           show_hidden = true;
           natural_order = true;
@@ -24,7 +25,7 @@
       {
         mode = "n";
         key = "-";
-        action = "<CMD>Oil<CR>";
+        action = "<CMD>Oil --float<CR>";
         options = {
           desc = "Open parent directory";
         };

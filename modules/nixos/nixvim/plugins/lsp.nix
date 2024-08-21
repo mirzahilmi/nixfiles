@@ -25,6 +25,12 @@
       neodev-nvim
     ];
 
+    extraConfigLua = ''
+      local lspconfig = require("lspconfig")
+      lspconfig.gopls.setup { cmd = { "${pkgs.gopls}/bin/gopls" } }
+      lspconfig.phpactor.setup { cmd = { "${pkgs.phpactor}/bin/phpactor", "language-server" } }
+    '';
+
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraconfigluapre
     extraConfigLuaPre = ''
       require('neodev').setup {}
@@ -81,42 +87,35 @@
       #  - capabilities: Override fields in capabilities. Can be used to disable certain LSP features.
       #  - settings: Override the default settings passed when initializing the server.
       #        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
-      servers = {
-        # clangd = {
-        #  enable = true;
-        #}
-        gopls = {
-          enable = true;
-          package = null;
-          cmd = ["${pkgs.gopls}/bin/gopls"];
-        };
-        nixd = {
-          enable = true;
-          package = null;
-          cmd = ["${pkgs.nixd}/bin/nixd"];
-          settings.formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
-        };
-        yamlls = {
-          enable = true;
-        };
-        lua-ls = {
-          enable = true;
-
-          # cmd = {
-          #};
-          # filetypes = {
-          #};
-          settings = {
-            completion = {
-              callSnippet = "Replace";
-            };
-            #diagnostics = {
-            #  disable = {
-            #    "missing-fields";
-            #};
-          };
-        };
-      };
+      # servers = {
+      #   phpactor = {
+      #     enable = true;
+      #     package = null;
+      #     cmd = ["${pkgs.phpactor}/bin/phpactor"];
+      #   };
+      #   gopls = {
+      #     enable = true;
+      #     package = null;
+      #     # cmd = ["${pkgs.gopls}/bin/gopls"];
+      #   };
+      #   nixd = {
+      #     enable = true;
+      #     package = null;
+      #     cmd = ["${pkgs.nixd}/bin/nixd"];
+      #     settings.formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
+      #   };
+      #   yamlls = {
+      #     enable = true;
+      #   };
+      #   lua-ls = {
+      #     enable = true;
+      #     settings = {
+      #       completion = {
+      #         callSnippet = "Replace";
+      #       };
+      #     };
+      #   };
+      # };
 
       keymaps = {
         # Diagnostic keymaps

@@ -13,8 +13,9 @@
 
     ../common/user/mirza.nix
 
-    ../../module/nixos/nixvim
-    ../../module/nixos/sops.nix
+    ../../modules/nixos/nixvim
+    ../../modules/nixos/sops.nix
+    ../../modules/nixos/networkmanager.nix
 
     ../common/extra/docker.nix
     ../common/extra/gns3.nix
@@ -23,21 +24,6 @@
     ../common/extra/v4l2loopback.nix
     ../common/extra/virt-manager.nix
     ../common/extra/zsh.nix
-
-    ../../module/nixos/ssh.nix
   ];
-
-  networking = {
-    hostName = "nixsina";
-    networkmanager = {
-      enable = true;
-      enableStrongSwan = true;
-    };
-  };
-
-  services.xl2tpd.enable = true;
-  services.strongswan = {
-    enable = true;
-    secrets = ["ipsec.d/ipsec.nm-l2tp.secrets"];
-  };
+  networking.hostName = "nixsina";
 }

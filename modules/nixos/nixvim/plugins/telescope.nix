@@ -40,6 +40,12 @@
           };
           sorting_strategy = "ascending";
         };
+        pickers = {
+          buffers = {
+            ignore_current_buffer = true;
+            sort_lastused = true;
+          };
+        };
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
       };
 

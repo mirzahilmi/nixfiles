@@ -6,29 +6,29 @@
   imports = [
     ./shared
 
-    ../module/home-manager/gnome
+    ../modules/home-manager/gnome
 
-    ../module/home-manager/obs.nix
-    ../module/home-manager/openssh.nix
-    ../module/home-manager/spicetify.nix
-    ../module/home-manager/zed.nix
+    ../modules/home-manager/obs.nix
+    ../modules/home-manager/ssh.nix
+    ../modules/home-manager/spicetify.nix
+    ../modules/home-manager/zed.nix
 
-    ../module/home-manager/cli/ohmyposh
+    ../modules/home-manager/cli/ohmyposh
 
-    ../module/home-manager/cli/bat.nix
-    ../module/home-manager/cli/btop.nix
-    ../module/home-manager/cli/direnv.nix
-    ../module/home-manager/cli/fastfetch.nix
-    ../module/home-manager/cli/fzf.nix
-    ../module/home-manager/cli/gpg.nix
-    ../module/home-manager/cli/git.nix
-    ../module/home-manager/cli/jq.nix
-    ../module/home-manager/cli/lsd.nix
-    ../module/home-manager/cli/ripgrep.nix
-    ../module/home-manager/cli/tmux.nix
-    ../module/home-manager/cli/zsh.nix
+    ../modules/home-manager/cli/bat.nix
+    ../modules/home-manager/cli/btop.nix
+    ../modules/home-manager/cli/direnv.nix
+    ../modules/home-manager/cli/fastfetch.nix
+    ../modules/home-manager/cli/fzf.nix
+    ../modules/home-manager/cli/gpg.nix
+    ../modules/home-manager/cli/git.nix
+    ../modules/home-manager/cli/jq.nix
+    ../modules/home-manager/cli/lsd.nix
+    ../modules/home-manager/cli/ripgrep.nix
+    ../modules/home-manager/cli/tmux.nix
+    ../modules/home-manager/cli/zsh.nix
 
-    ../module/home-manager/wezterm.nix
+    ../modules/home-manager/wezterm.nix
   ];
 
   nixpkgs = {

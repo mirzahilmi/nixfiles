@@ -1,7 +1,7 @@
 {inputs, ...}: {
   # This one brings custom packages from the 'pkg' directory
   extra = final: prev:
-    import ../pkg {
+    import ../pkgs {
       pkgs = final;
       inherit inputs prev;
     };

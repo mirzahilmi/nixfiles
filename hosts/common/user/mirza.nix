@@ -18,10 +18,6 @@ in {
         "audio"
         "docker"
       ];
-      openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILfBDFCdhrf2o3vuNKovPs+NqBMkCALqaeLwsAV3N7Lq mirza@nixsina"
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPB4xBL5wKhqusJipjrsV+Peq1D7ge1G2EHJtaSLL5p2 dev@mrz.my.id"
-      ];
     };
   };
 
@@ -29,7 +25,7 @@ in {
     if [[ ! -e /var/lib/AccountsService/users/${userName} ]]; then
       echo '[User]
       Session=
-      Icon=${../../../img/otter.png}
+      Icon=${../../../imgs/otter.png}
       SystemAccount=false' > /var/lib/AccountsService/users/${userName}
     fi
   '';
