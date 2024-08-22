@@ -31,17 +31,6 @@
     ../modules/home-manager/wezterm.nix
   ];
 
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.extra
-      outputs.overlays.unstable-package
-    ];
-    config = {
-      allowUnfree = true;
-      allowUnfreePredicate = _: true;
-    };
-  };
-
   home = {
     username = "mirza";
     homeDirectory = "/home/mirza";

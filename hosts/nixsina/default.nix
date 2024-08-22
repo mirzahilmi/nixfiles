@@ -9,6 +9,7 @@
     ./hardware-configuration.nix
 
     ../common
+    ../shared
     ../common/de/gnome
 
     ../common/user/mirza.nix

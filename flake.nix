@@ -25,7 +25,7 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
-  in {
+  in rec {
     overlays = import ./overlays {inherit inputs;};
 
     nixosConfigurations = {

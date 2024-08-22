@@ -10,7 +10,7 @@ in {
       isNormalUser = true;
       shell = pkgs.zsh;
       description = "Mirza's Avatar";
-      hashedPasswordFile = "password";
+      initialHashedPassword = "$y$j9T$UCjJGShH7mrXJaboQNwTZ1$1pL9WizElBvl/FagbPKmus902iujrDMxcFJuFOFRCEC";
       extraGroups = [
         "networkmanager"
         "wheel"

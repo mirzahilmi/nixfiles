@@ -27,6 +27,5 @@
       outputs.overlays.extra
       outputs.overlays.unstable-package
     ];
-    config.allowUnfree = true;
   };
 }
