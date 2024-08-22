@@ -17,7 +17,7 @@
           "<C-j>" = false;
           "<C-k>" = false;
           "<C-l>" = false;
-          "q" = "actions.close";
+          "<Esc>" = "actions.close";
         };
       };
     };

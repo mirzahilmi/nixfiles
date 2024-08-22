@@ -26,8 +26,6 @@
   } @ inputs: let
     inherit (self) outputs;
   in {
-    homeManagerModules = import ./modules/home-manager;
-
     overlays = import ./overlays {inherit inputs;};
 
     nixosConfigurations = {
@@ -35,7 +33,6 @@
         modules = [./hosts/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
-
       "test" = nixpkgs.lib.nixosSystem {
         modules = [./hosts/test];
         specialArgs = {inherit inputs outputs;};
