@@ -22,10 +22,4 @@
       !include ${config.sops.secrets.nixAccessTokens.path}
     '';
   };
-  nixpkgs = {
-    overlays = [
-      outputs.overlays.extra
-      outputs.overlays.unstable-package
-    ];
-  };
 }

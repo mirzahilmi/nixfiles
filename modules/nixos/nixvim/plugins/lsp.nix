@@ -29,6 +29,7 @@
       local lspconfig = require("lspconfig")
       lspconfig.gopls.setup { cmd = { "${pkgs.gopls}/bin/gopls" } }
       lspconfig.phpactor.setup { cmd = { "${pkgs.phpactor}/bin/phpactor", "language-server" } }
+      lspconfig.nixd.setup { cmd = { "${pkgs.nixd}/bin/nixd" } }
     '';
 
     # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extraplugi#extraconfigluapre
