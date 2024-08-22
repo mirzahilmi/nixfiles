@@ -1,4 +1,3 @@
-defaultPassword: ENC[AES256_GCM,data:viLhF6AQORMSsIm4ifxxKvoYQ4f36fl0keCmHgOmtuf9kpsP8hWxEk68HWapkAlA3mSEXwdoDK9yCZT5v1xXNu4OJ1Jw/REJAw==,iv:UiL/0lC2mvns4BwjBDYaS/xGufRhZ+SCoNI7E5Hgolg=,tag:a6E+83HoBJBhQbExdjutZg==,type:str]
 nixAccessTokens: ENC[AES256_GCM,data:S8LfEQ8p6bnrgaLLKpT6u4xzq45+02RpV/aCHdC5izCpuPZE9Xnlmryt32ZyXntuxXW07GjFo9CDqEYAUoaUNLrkXw==,iv:Q2kShFBH+G9RhOWd3712Aq/oRv9KE4fXY+qdgJUSHYc=,tag:oAOzU2C4KQ4dvATYS4WNGw==,type:str]
 sops:
     kms: []
@@ -15,8 +14,8 @@ sops:
             aEViUnpuaThMYXRWaWFHWHg5S044VlUKPijcVMwQVGejIOCwRStwimv55Qg5wb+U
             QFfb2BBk0BuQHG0MKPtfBtKYGZjZWDkU66qVhTQD7NSkVBjXkM1KNw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2024-08-20T15:06:07Z"
-    mac: ENC[AES256_GCM,data:bv3wtOXNqQfifVzaH6RGADtQSx8Vias+qxycc8EBo1izeoQN996LWeApAxzZv/4ZO79amZfe/jX9Ip5l2eIVSkQ2v3c5dB8hCH7q2CjSQW4y8xCs8cO286pEdpMFdWiz+30FG/k+IqF+7NhDsK/PgVKRfgJ1zKHwPpvN3vHFT6w=,iv:Udn3ivx/BVplNFG56rJSgPTgz2AY+eT0Yt/s/qx++4I=,tag:bMjidHL3ru6s+C2xLkowQA==,type:str]
+    lastmodified: "2024-08-22T04:40:59Z"
+    mac: ENC[AES256_GCM,data:3beFveD3cZfvxFj/ByNUYSZYNWM+D5/0nAB2Df4PyIUbWSx/jrlKXfi/O1IFv0ItRXrdPLhNqjEG/XP1r+1t2mHKyk81hj+2qiYrPLJ+u5ZyU4Iqtpe2CHUOf6eBkXHxoyPwQEPykgbbVkwboU4qZX6k8Fqlsa9SLMK0krEfHg4=,iv:b4Au76altmZuXkrWiD4IY4abuRQlN9PI28OhET5cchw=,tag:ZF6mmcygaUPiPb1CTe6WLQ==,type:str]
     pgp: []
     unencrypted_suffix: _unencrypted
     version: 3.9.0

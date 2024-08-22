@@ -10,7 +10,7 @@ in {
       isNormalUser = true;
       shell = pkgs.zsh;
       description = "Mirza's Avatar";
-      hashedPasswordFile = config.sops.secrets.defaultPassword.path;
+      hashedPasswordFile = "password";
       extraGroups = [
         "networkmanager"
         "wheel"

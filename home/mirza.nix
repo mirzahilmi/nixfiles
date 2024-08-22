@@ -50,6 +50,7 @@
       asciiquarium
       biome
       brave
+      cloudflare-warp
       dig
       discord
       eduvpn-client
