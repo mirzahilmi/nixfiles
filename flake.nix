@@ -25,22 +25,23 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    lib = nixpkgs.lib // home-manager.lib;
   in {
     overlays = import ./overlays {inherit inputs;};
 
     nixosConfigurations = {
-      "nixsina" = nixpkgs.lib.nixosSystem {
+      "nixsina" = lib.nixosSystem {
         modules = [./hosts/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
-      "test" = nixpkgs.lib.nixosSystem {
+      "test" = lib.nixosSystem {
         modules = [./hosts/test];
         specialArgs = {inherit inputs outputs;};
       };
     };
 
     homeConfigurations = {
-      "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {
+      "mirza@nixsina" = lib.homeManagerConfiguration {
         modules = [./home/mirza.nix];
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};

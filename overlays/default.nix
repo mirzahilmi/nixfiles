@@ -16,4 +16,8 @@
       };
     };
   };
+
+  lib = final: prev: {
+    final.lib.extend = self: _: (import ../lib self);
+  };
 }

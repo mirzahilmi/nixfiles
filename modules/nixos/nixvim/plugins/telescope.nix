@@ -43,7 +43,9 @@
         pickers = {
           buffers = {
             ignore_current_buffer = true;
+            sort_mru = true;
             sort_lastused = true;
+            theme = "dropdown";
           };
         };
         extensions.__raw = "{ ['ui-select'] = { require('telescope.themes').get_dropdown() } }";
