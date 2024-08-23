@@ -1,49 +1,27 @@
 {
   programs.nixvim = {
-    # Dependencies
-    #
-    # Snippet Engine & its associated nvim-cmp source
-    # https://nix-community.github.io/nixvim/plugins/luasnip/index.html
     plugins.luasnip = {
       enable = true;
     };
-
-    # https://nix-community.github.io/nixvim/plugins/cmp-nvim-lsp.html
     plugins.cmp-nvim-lsp = {
       enable = true;
     };
-
-    # https://nix-community.github.io/nixvim/plugins/cmp-path.html
     plugins.cmp-path = {
       enable = true;
     };
-
-    # `friendly-snippets` contains a variety of premade snippets
-    #    See the README about individual language/framework/plugin snippets:
-    #    https://github.com/rafamadriz/friendly-snippets
-    # https://nix-community.github.io/nixvim/plugins/friendly-snippets.html
     plugins.friendly-snippets = {
       enable = true;
     };
-
-    # TODO: Waiting on this bug to be fixed https://github.com/NixOS/nixpkgs/issues/306367
-    # https://nix-community.github.io/nixvim/NeovimOptions/index.html?highlight=extralua#extraluapackages
     extraLuaPackages = ps: [
       # Required by luasnip
       ps.jsregexp
     ];
-
-    # Autocompletion
-    # See `:help cmp`
-    # https://nix-community.github.io/nixvim/plugins/cmp/index.html
     plugins.cmp = {
       enable = true;
-
       settings = {
         window = {
           __raw = ''
             {
-              completion = cmp.config.window.bordered(),
               documentation = cmp.config.window.bordered(),
             }
           '';
@@ -132,6 +110,14 @@
             name = "path";
           }
         ];
+      };
+      filetype = {
+        sql = {
+          sources = [
+            {name = "vim-dadbod-completion";}
+            {name = "buffer";}
+          ];
+        };
       };
     };
   };

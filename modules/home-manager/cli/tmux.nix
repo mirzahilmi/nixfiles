@@ -15,15 +15,16 @@
       set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
       set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
 
+      # statusbar
       set -g status-style bg=default
       set-option -g set-titles on
       set-option -g set-titles-string '#W'
       set-option -g focus-events on
-
-      # statusbar
       setw -g window-status-current-style 'fg=#1b1b1b bg=green bold'
       setw -g window-status-current-format ' #I #W #F '
       setw -g window-status-format ' #[fg=green]#I #[fg=default]#W #[fg=green]#F '
+
+      set-option -g renumber-windows on
     '';
   };
 }
