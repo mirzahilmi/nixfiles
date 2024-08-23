@@ -1,9 +1,11 @@
 {
   config,
+  pkgs,
   inputs,
   ...
 }: {
   imports = [inputs.sops-nix.nixosModules.sops];
+  environment.systemPackages = [pkgs.unstable.sops];
   sops = {
     defaultSopsFile = ../../globals.yaml;
     defaultSopsFormat = "yaml";

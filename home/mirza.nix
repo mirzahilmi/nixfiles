@@ -1,8 +1,4 @@
-{
-  pkgs,
-  outputs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./shared
 
@@ -54,7 +50,6 @@
       wl-clipboard
       zoom-us
       unstable.nixd
-      unstable.sops
     ];
 
     stateVersion = "23.11";
