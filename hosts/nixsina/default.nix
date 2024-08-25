@@ -12,18 +12,12 @@
     ../shared
     ../shared/locales
     ../shared/users/mirza.nix
-    ../common/de/gnome
 
-    ../../modules/nixos/sops.nix
+    ../../modules/nixos/gnome
+    ../../modules/nixos/docker.nix
     ../../modules/nixos/networkmanager.nix
-
-    ../common/extra/docker.nix
-    ../common/extra/gns3.nix
-    ../common/extra/nh.nix
-    ../common/extra/pipewire.nix
-    ../common/extra/v4l2loopback.nix
-    ../common/extra/virt-manager.nix
-    ../common/extra/zsh.nix
+    ../../modules/nixos/pipewire.nix
+    ../../modules/nixos/sops.nix
   ];
   networking.hostName = "nixsina";
 }
