@@ -10,7 +10,7 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     sops-nix.url = "github:Mic92/sops-nix";
-    nixvim.url = "github:nix-community/nixvim/nixos-24.05";
+    default-nvim.url = "github:mirzahilmi/default.nvim";
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";

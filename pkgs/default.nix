@@ -1,19 +1,10 @@
 {
-  pkgs ? import <nixpkgs> {},
+  pkgs,
   prev,
   inputs,
 }: {
   draw-on-your-screen = pkgs.callPackage ./draw-on-your-screen.nix {};
-  tableplus-linux = pkgs.callPackage ./tableplus.nix {};
-  st-snazzy = import ./st-snazzy {
-    inherit inputs;
-    final = pkgs;
-  };
   grubThemes = {fallout = inputs.grub-themes.packages.${pkgs.system}.fallout;};
-  vimPlugins =
-    prev.vimPlugins
-    // {
-      bg-nvim = pkgs.callPackage ./bg-nvim.nix {};
-      oil-git-status-nvim = pkgs.callPackage ./oil-git-status-nvim.nix {};
-    };
+  neovim = inputs.default-nvim.packages.${pkgs.system}.default;
+  st-snazzy = import ./st-snazzy {inherit inputs pkgs;};
 }

@@ -47,6 +47,7 @@
       parabolic
       ssh-to-age
       unzip
+      vlc
       wl-clipboard
       zoom-us
       unstable.nixd

@@ -14,7 +14,6 @@
 
     ../common/user/mirza.nix
 
-    ../../modules/nixos/nixvim
     ../../modules/nixos/sops.nix
     ../../modules/nixos/networkmanager.nix
 
