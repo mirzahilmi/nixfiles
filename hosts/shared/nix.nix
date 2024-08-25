@@ -1,11 +1,5 @@
-{
-  config,
-  inputs,
-  outputs,
-  ...
-}: {
+{config, ...}: {
   nix = {
-    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     optimise.automatic = true;
     settings = {
       experimental-features = "nix-command flakes";

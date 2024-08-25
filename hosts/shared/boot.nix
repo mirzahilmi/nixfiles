@@ -1,4 +1,3 @@
-# Bootloader (GRUB) configuration
 {pkgs, ...}: {
   boot.loader = {
     timeout = 10;

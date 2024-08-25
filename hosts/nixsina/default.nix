@@ -7,12 +7,12 @@
 
     (import ./disko.nix {device = "/dev/sda";})
     ./hardware-configuration.nix
+    ./font.nix
 
-    ../common
     ../shared
+    ../shared/locales
+    ../shared/users/mirza.nix
     ../common/de/gnome
-
-    ../common/user/mirza.nix
 
     ../../modules/nixos/sops.nix
     ../../modules/nixos/networkmanager.nix
