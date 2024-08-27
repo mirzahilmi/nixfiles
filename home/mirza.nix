@@ -43,6 +43,7 @@
       hurl
       libreoffice
       nmap
+      obsidian
       parabolic
       ssh-to-age
       unzip
