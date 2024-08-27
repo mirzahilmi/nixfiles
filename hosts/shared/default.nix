@@ -7,6 +7,7 @@
     ./boot.nix
     ./nh.nix
     ./nix.nix
+    ./ssh.nix
     ./xdg.nix
     ./zsh.nix
   ];
