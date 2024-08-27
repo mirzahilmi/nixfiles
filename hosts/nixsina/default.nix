@@ -13,11 +13,12 @@
     ../shared/locales
     ../shared/users/mirza.nix
 
-    ../../modules/nixos/gnome
     ../../modules/nixos/docker.nix
+    ../../modules/nixos/gnome
     ../../modules/nixos/networkmanager.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/sops.nix
+    ../../modules/nixos/spicetify.nix
   ];
   networking.hostName = "nixsina";
 }
