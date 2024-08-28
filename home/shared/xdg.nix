@@ -1,8 +1,5 @@
 {config, ...}: {
-  xdg = {
-    enable = true;
-  };
-
+  xdg.enable = true;
   home.sessionVariables = {
     # Docker : ~/.docker
     DOCKER_CONFIG = "${config.xdg.configHome}/docker";
