@@ -45,6 +45,7 @@
       nmap
       obsidian
       parabolic
+      signal-desktop
       ssh-to-age
       unzip
       wl-clipboard
