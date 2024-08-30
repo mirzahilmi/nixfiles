@@ -18,7 +18,6 @@
     ../../modules/nixos/networkmanager.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/sops.nix
-    ../../modules/nixos/spicetify.nix
   ];
   networking.hostName = "nixsina";
 }

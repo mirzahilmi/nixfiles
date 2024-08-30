@@ -5,6 +5,7 @@
     ../modules/home-manager/gnome
 
     ../modules/home-manager/obs.nix
+    ../modules/home-manager/spicetify.nix
     ../modules/home-manager/ssh.nix
     ../modules/home-manager/zed.nix
 
