@@ -15,7 +15,7 @@
     overlays = builtins.attrValues outputs.overlays;
     config.allowUnfree = true;
   };
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
   environment = {
     systemPackages = [pkgs.neovim];
     variables.EDITOR = "nvim";
