@@ -35,6 +35,7 @@
       asciiquarium
       biome
       brave
+      ciscoPacketTracer8
       cloudflare-warp
       dig
       discord
