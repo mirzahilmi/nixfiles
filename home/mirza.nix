@@ -4,6 +4,7 @@
 
     ../modules/home-manager/gnome
 
+    ../modules/home-manager/mpv.nix
     ../modules/home-manager/obs.nix
     ../modules/home-manager/spicetify.nix
     ../modules/home-manager/ssh.nix
@@ -45,6 +46,7 @@
       hurl
       libreoffice
       nmap
+      nvtop
       obsidian
       parabolic
       signal-desktop
