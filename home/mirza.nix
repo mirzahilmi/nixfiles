@@ -42,6 +42,7 @@
       discord
       eduvpn-client
       fd
+      floorp
       gnumake
       hurl
       libreoffice

@@ -18,7 +18,7 @@ in {
       nameThatTune
     ];
     enabledExtensions = with spicetifyPkgs.extensions; [
-      # adblock
+      adblock
       beautifulLyrics
       hidePodcasts
       history

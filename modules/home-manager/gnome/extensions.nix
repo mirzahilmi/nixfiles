@@ -40,7 +40,7 @@ in {
         "org.gnome.Nautilus.desktop"
         "org.wezfurlong.wezterm.desktop"
         "dev.zed.Zed.desktop"
-        "brave-browser.desktop"
+        "floorp.desktop"
       ];
     };
 
