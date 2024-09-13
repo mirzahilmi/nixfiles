@@ -8,6 +8,7 @@
     ../modules/home-manager/obs.nix
     ../modules/home-manager/spicetify.nix
     ../modules/home-manager/ssh.nix
+    ../modules/home-manager/tealdeer.nix
     ../modules/home-manager/zed.nix
 
     ../modules/home-manager/cli/ohmyposh
@@ -39,7 +40,6 @@
       ciscoPacketTracer8
       cloudflare-warp
       dig
-      discord
       eduvpn-client
       fd
       floorp
@@ -51,8 +51,17 @@
       obsidian
       parabolic
       signal-desktop
+      slack
       ssh-to-age
       unzip
+      (vesktop.overrideAttrs (_prev: {
+        desktopItems = [
+          ((builtins.elemAt _prev.desktopItems 0).override {
+            icon = "${../imgs/discord.svg}";
+            desktopName = "Discord";
+          })
+        ];
+      }))
       wl-clipboard
       zoom-us
       unstable.nixd
