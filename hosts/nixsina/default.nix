@@ -19,6 +19,7 @@
     ../../modules/nixos/networkmanager.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/sops.nix
+    ../../modules/nixos/virtmanager.nix
   ];
   networking.hostName = "nixsina";
 }

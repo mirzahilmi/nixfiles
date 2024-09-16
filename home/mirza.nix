@@ -50,6 +50,7 @@
       nvtop
       obsidian
       parabolic
+      powertop
       signal-desktop
       slack
       ssh-to-age
