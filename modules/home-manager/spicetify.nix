@@ -9,7 +9,8 @@ in {
   imports = [spicetify-nix.homeManagerModules.default];
   programs.spicetify = {
     enable = true;
-    spotifyPackage = pkgs.unstable.spotify;
+    spicetifyPackage = pkgs.unstable.spicetify-cli;
+    theme = spicetifyPkgs.themes.lucid;
     enabledCustomApps = with spicetifyPkgs.apps; [
       betterLibrary
       historyInSidebar

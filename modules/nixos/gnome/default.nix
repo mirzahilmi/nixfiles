@@ -1,10 +1,7 @@
 # GNOME Desktop Environtment/Manager Setup
 # Runned under Wayland
-{outputs, ...}: {
-  imports = [
-    ./pkgs.nix
-  ];
-
+{
+  imports = [./pkgs.nix];
   nixpkgs.overlays = [
     (final: prev: {
       gnome = prev.gnome.overrideScope (gnomeFinal: gnomePrev: {
@@ -20,7 +17,7 @@
       });
     })
   ];
-
+  programs.xwayland.enable = true;
   services.xserver = {
     enable = true;
     desktopManager.gnome.enable = true;
@@ -29,6 +26,4 @@
       wayland = true;
     };
   };
-
-  programs.xwayland.enable = true;
 }

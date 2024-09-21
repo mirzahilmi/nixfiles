@@ -34,6 +34,7 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
+      ansible
       asciiquarium
       biome
       brave
@@ -54,6 +55,7 @@
       signal-desktop
       slack
       ssh-to-age
+      teams-for-linux
       unzip
       (vesktop.overrideAttrs (_prev: {
         desktopItems = [
