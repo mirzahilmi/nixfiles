@@ -17,6 +17,8 @@
     GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
     # !/.bash_history
     HISTFILE = "${config.xdg.stateHome}/bash/history";
+    # Ansible
+    ANSIBLE_HOME = "${config.xdg.dataHome}/ansible";
   };
 
   # NPM : ~/.npm

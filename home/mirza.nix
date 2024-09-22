@@ -56,6 +56,7 @@
       slack
       ssh-to-age
       teams-for-linux
+      terraform
       unzip
       (vesktop.overrideAttrs (_prev: {
         desktopItems = [
