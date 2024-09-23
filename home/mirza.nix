@@ -46,6 +46,7 @@
       floorp
       gnumake
       hurl
+      lazysql
       libreoffice
       nmap
       nvtop
