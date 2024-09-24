@@ -68,6 +68,7 @@
         ];
       }))
       wl-clipboard
+      zen-browser
       zoom-us
       unstable.nixd
     ];
