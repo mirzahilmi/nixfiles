@@ -10,6 +10,7 @@ in {
     draw-on-your-screen
     gnome.gnome-tweaks
     gnome.dconf-editor
+    gnome.networkmanager-openvpn
     gnomeExtensions.appindicator
     gnomeExtensions.app-menu-is-back
     gnomeExtensions.blur-my-shell

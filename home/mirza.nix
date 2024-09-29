@@ -4,6 +4,7 @@
 
     ../modules/home-manager/gnome
 
+    ../modules/home-manager/foot.nix
     ../modules/home-manager/mpv.nix
     ../modules/home-manager/obs.nix
     ../modules/home-manager/spicetify.nix
@@ -37,13 +38,11 @@
       ansible
       asciiquarium
       biome
-      brave
       ciscoPacketTracer8
       cloudflare-warp
       dig
       eduvpn-client
       fd
-      floorp
       gnumake
       hurl
       lazysql

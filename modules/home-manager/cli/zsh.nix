@@ -18,7 +18,6 @@
         "belak/zsh-utils path:editor"
         "zsh-users/zsh-autosuggestions kind:defer"
         "zdharma-continuum/fast-syntax-highlighting kind:defer"
-        "Aloxaf/fzf-tab kind:defer"
       ];
     };
     completionInit = ''

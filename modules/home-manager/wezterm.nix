@@ -13,11 +13,11 @@
           fi
         ]]
       }
+
       config.font = wezterm.font("JetBrainsMono Nerd Font", {weight = "Regular"})
       config.font_size = 13
-      config.scrollback_lines = 1024
-      config.color_scheme = "Default Dark (base16)"
       config.window_decorations = "RESIZE"
+      config.color_scheme = "Vs Code Dark+ (Gogh)"
       config.enable_wayland = true
       config.enable_tab_bar = false
       config.use_fancy_tab_bar = false
