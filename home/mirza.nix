@@ -42,6 +42,7 @@
       ciscoPacketTracer8
       cloudflare-warp
       dig
+      distrobox
       eduvpn-client
       fd
       gnumake
