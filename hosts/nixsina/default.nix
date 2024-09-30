@@ -13,11 +13,11 @@
     ../shared/locales
     ../shared/users/mirza.nix
 
-    ../../modules/nixos/docker.nix
     ../../modules/nixos/gnome
     ../../modules/nixos/libvirt.nix
     ../../modules/nixos/networkmanager.nix
     ../../modules/nixos/pipewire.nix
+    ../../modules/nixos/podman.nix
     ../../modules/nixos/sops.nix
     ../../modules/nixos/virtmanager.nix
   ];
