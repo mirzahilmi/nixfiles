@@ -30,14 +30,7 @@
       [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
     '';
     initExtra = ''
-      # if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
-      #     exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
-      # fi
       bindkey -e
-      autoload -z edit-command-line
-      zle -N edit-command-line
-      bindkey "^X^E" edit-command-line
-
       [[ -n "''${ZSH_DEBUGRC+1}" ]] && zprof
     '';
   };
