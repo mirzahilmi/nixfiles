@@ -35,7 +35,6 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       alejandra
-      ansible
       asciiquarium
       biome
       bccli
@@ -69,8 +68,10 @@
         ];
       }))
       wl-clipboard
+      yaml-language-server
       zen-browser
       zoom-us
+      unstable.ansible
       unstable.nixd
     ];
 
