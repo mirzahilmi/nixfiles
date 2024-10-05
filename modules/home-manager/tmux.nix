@@ -14,7 +14,7 @@
       set -ag terminal-overrides ',*:RGB'
       set -as terminal-overrides ',*:Smulx=\E[4::%p1%dm'
       set -as terminal-overrides ',*:Setulc=\E[58::2::%p1%{65536}%/%d::%p1%{256}%/%{255}%&%d::%p1%{255}%&%d%;m'
-
+      set-option -g status-position top
       set -g status-style bg=default
       set-option -g renumber-windows on
 
