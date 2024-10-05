@@ -18,6 +18,7 @@
     ../../modules/nixos/networkmanager.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/podman.nix
+    ../../modules/nixos/printer.nix
     ../../modules/nixos/sops.nix
     ../../modules/nixos/virtmanager.nix
   ];

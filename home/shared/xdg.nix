@@ -19,6 +19,7 @@
     HISTFILE = "${config.xdg.stateHome}/bash/history";
     # Ansible
     ANSIBLE_HOME = "${config.xdg.dataHome}/ansible";
+    MOZ_ENABLE_WAYLAND = 1;
   };
 
   # NPM : ~/.npm
