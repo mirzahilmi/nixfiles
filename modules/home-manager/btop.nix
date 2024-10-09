@@ -2,6 +2,6 @@
   programs.btop = {
     enable = true;
     package = pkgs.btop.override {cudaSupport = true;};
-    settings = {color_theme = "tomorrow-night";};
+    settings = {color_theme = "gruvbox_material_dark";};
   };
 }

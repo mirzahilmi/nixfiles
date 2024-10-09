@@ -21,6 +21,7 @@
     ../../modules/nixos/printer.nix
     ../../modules/nixos/sops.nix
     ../../modules/nixos/virtmanager.nix
+    ../../modules/nixos/wireshark.nix
   ];
   networking.hostName = "nixsina";
 }

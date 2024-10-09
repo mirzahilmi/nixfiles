@@ -35,7 +35,7 @@
       asciiquarium
       biome
       bccli
-      # ciscoPacketTracer8
+      ciscoPacketTracer8
       cloudflare-warp
       dig
       distrobox
