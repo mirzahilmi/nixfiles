@@ -15,6 +15,7 @@
 
     ../../modules/nixos/gnome
     ../../modules/nixos/libvirt.nix
+    ../../modules/nixos/mtr.nix
     ../../modules/nixos/networkmanager.nix
     ../../modules/nixos/pipewire.nix
     ../../modules/nixos/podman.nix
