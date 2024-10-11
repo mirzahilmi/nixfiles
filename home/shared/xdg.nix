@@ -20,6 +20,8 @@
     # Ansible
     ANSIBLE_HOME = "${config.xdg.dataHome}/ansible";
     MOZ_ENABLE_WAYLAND = 1;
+    DOTNET_CLI_HOME = "${config.xdg.dataHome}/dotnet";
+    NUGET_PACKAGES = "${config.xdg.cacheHome}/NuGetPackages";
   };
 
   # NPM : ~/.npm
