@@ -7,9 +7,9 @@
     ignores = ["*.env" "*.env.json" "*.env.yaml"];
     aliases = {
       a = "add -A";
-      ac = "!git a && git commit --message";
+      ac = "!git add -A && git commit --message";
+      acp = "!acp() { git add -A && git commit --message \"$1\" && git push; }; acp";
       am = "!git a && git commit --ammend";
-      # dif = "!git diff --name-only --relative --diff-filter=d | xargs bat --diff";
       graph = "log --decorate --oneline --graph";
     };
     delta = {
