@@ -12,7 +12,12 @@
       # dif = "!git diff --name-only --relative --diff-filter=d | xargs bat --diff";
       graph = "log --decorate --oneline --graph";
     };
-    delta.enable = true;
+    delta = {
+      enable = true;
+      options = {
+        line-numbers = true;
+      };
+    };
     extraConfig = {
       branch.sort = "committerdate";
       column.ui = "auto";
