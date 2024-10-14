@@ -18,8 +18,6 @@
       yelp
       epiphany
       geary
-      evince
-      totem
       tali
       iagno
       hitori
