@@ -5,7 +5,6 @@
 }: {
   gtk = {
     enable = true;
-    theme.name = "Adwaita-dark";
     cursorTheme = {
       name = "Bibata-Original-Classic";
       package = pkgs.bibata-cursors;

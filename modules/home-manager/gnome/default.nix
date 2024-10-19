@@ -7,6 +7,13 @@ in {
     (import ./extensions.nix {inherit pkgs gnomeSchema;})
     ./gtk.nix
   ];
+  home.packages = with pkgs; [
+    adw-gtk3
+    qadwaitadecorations
+    qadwaitadecorations-qt6
+    qgnomeplatform
+    qgnomeplatform-qt6
+  ];
 
   dconf = {
     enable = true;
@@ -20,6 +27,7 @@ in {
         font-name = "IBM Plex Sans 11";
         monospace-font-name = "IBM Plex Mono 11";
         show-battery-percentage = true;
+        gtk-theme = "adw-gtk3-dark";
       };
 
       "${gnomeSchema}/mutter" = {
