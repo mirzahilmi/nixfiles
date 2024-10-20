@@ -30,6 +30,12 @@
         config.xcursor_theme = "Bibata-Original-Classic"
         config.hide_mouse_cursor_when_typing = true
         config.adjust_window_size_when_changing_font_size = false
+        config.keys = {
+            {
+                key = 'F11',
+                action = wezterm.action.ToggleFullScreen,
+            }
+        }
 
         return config
       '';

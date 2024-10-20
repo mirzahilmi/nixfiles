@@ -11,7 +11,7 @@
 						"home_icon": "~"
 					},
 					"style": "plain",
-					"template": "{{ .Path }} ",
+					"template": ":{{ .Path }} ",
 					"type": "path"
 				},
 				{
@@ -25,12 +25,9 @@
 					"type": "git"
 				},
 				{
-					"foreground_templates": [
-						"{{if gt .Code 0}}red{{end}}",
-						"{{if eq .Code 0}}lightGreen{{end}}"
-					],
 					"style": "plain",
-					"template": "\uf105 ",
+					"foreground": "lightGreen",
+					"template": "$ ",
 					"type": "text"
 				}
 			],
@@ -40,10 +37,10 @@
 	"transient_prompt": {
 		"background": "transparent",
 		"foreground_templates": [
-			"{{if gt .Code 0}}red{{end}}",
-			"{{if eq .Code 0}}lightGreen{{end}}"
+			"{{ if gt .Code 0 }}red{{ end }}",
+			"{{ if eq .Code 0 }}lightGreen{{ end }}"
 		],
-		"template": "\uf105 "
+		"template": "{{ now | date \"15:04:05\" }} $ "
 	},
 	"version": 2
 }
