@@ -17,9 +17,10 @@
     GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
     # !/.bash_history
     HISTFILE = "${config.xdg.stateHome}/bash/history";
-    # Ansible
+    # ~/.ansible
     ANSIBLE_HOME = "${config.xdg.dataHome}/ansible";
-    MOZ_ENABLE_WAYLAND = 1;
+    # ~/.dotnet
+    # ~/.templateengine
     DOTNET_CLI_HOME = "${config.xdg.dataHome}/dotnet";
     NUGET_PACKAGES = "${config.xdg.cacheHome}/NuGetPackages";
   };

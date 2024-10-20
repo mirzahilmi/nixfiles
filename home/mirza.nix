@@ -71,6 +71,9 @@
       unstable.ansible
       unstable.nixd
     ];
+    sessionVariables = {
+      MOZ_ENABLE_WAYLAND = 1;
+    };
 
     stateVersion = "23.11";
   };

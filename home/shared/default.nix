@@ -1,7 +1,5 @@
 {outputs, ...}: {
-  imports = [
-    ./xdg.nix
-  ];
+  imports = [./xdgify.nix];
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
