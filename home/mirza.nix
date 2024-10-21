@@ -55,6 +55,7 @@
       ssh-to-age
       teams-for-linux
       terraform
+      tio
       unzip
       (vesktop.overrideAttrs (_prev: {
         desktopItems = [
