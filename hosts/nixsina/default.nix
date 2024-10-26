@@ -14,6 +14,7 @@
     ../shared/users/mirza.nix
 
     ../../modules/nixos/gnome
+    # ../../modules/nixos/docker.nix
     ../../modules/nixos/libvirt.nix
     ../../modules/nixos/mtr.nix
     ../../modules/nixos/networkmanager.nix
@@ -21,7 +22,7 @@
     ../../modules/nixos/podman.nix
     ../../modules/nixos/printer.nix
     ../../modules/nixos/sops.nix
-    ../../modules/nixos/virtmanager.nix
+    # ../../modules/nixos/virtualbox.nix
     ../../modules/nixos/wireshark.nix
   ];
   networking.hostName = "nixsina";

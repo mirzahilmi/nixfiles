@@ -8,6 +8,7 @@
       efiSupport = true;
       useOSProber = true;
       theme = pkgs.grubThemes.fallout;
+      backgroundColor = "#000000";
     };
   };
 }

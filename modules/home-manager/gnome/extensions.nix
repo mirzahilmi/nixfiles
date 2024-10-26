@@ -6,20 +6,22 @@
   gnomeShellSchema = "${gnomeSchema}/shell";
   extensionsSchema = "${gnomeShellSchema}/extensions";
 in {
-  home.packages = with pkgs; [
-    draw-on-your-screen
-    gnome.gnome-tweaks
-    gnome.dconf-editor
-    gnome.networkmanager-openvpn
-    gnomeExtensions.appindicator
-    gnomeExtensions.app-menu-is-back
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.clipboard-indicator
-    gnomeExtensions.dash-to-dock
-    gnomeExtensions.hide-minimized
-    gnomeExtensions.pano
-    gnomeExtensions.vitals
-  ];
+  home.packages = with pkgs;
+    [draw-on-your-screen]
+    ++ (with gnome; [
+      networkmanager-openvpn
+      gnome-tweaks
+      dconf-editor
+    ])
+    ++ (with gnomeExtensions; [
+      app-menu-is-back
+      appindicator
+      blur-my-shell
+      clipboard-indicator
+      dash-to-dock
+      hide-minimized
+      vitals
+    ]);
 
   dconf.settings = {
     "${gnomeShellSchema}" = {

@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  imports = [./virtmanager.nix];
   virtualisation.libvirtd = {
     enable = true;
     qemu = {

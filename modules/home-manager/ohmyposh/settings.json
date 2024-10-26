@@ -36,10 +36,7 @@
 	],
 	"transient_prompt": {
 		"background": "transparent",
-		"foreground_templates": [
-			"{{ if gt .Code 0 }}red{{ end }}",
-			"{{ if eq .Code 0 }}lightGreen{{ end }}"
-		],
+		"foreground": "yellow",
 		"template": "{{ now | date \"15:04:05\" }} $ "
 	},
 	"version": 2
