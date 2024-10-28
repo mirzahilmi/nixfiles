@@ -14,7 +14,6 @@
       gnome-contacts
       gnome-maps
       geary
-      simple-scan
       yelp
       epiphany
       geary

@@ -26,7 +26,10 @@
 				},
 				{
 					"style": "plain",
-					"foreground": "lightGreen",
+					"foreground_templates": [
+						"{{ if gt .Code 0 }}red{{ end }}",
+						"{{ if eq .Code 0 }}lightGreen{{ end }}"
+					],
 					"template": "$ ",
 					"type": "text"
 				}

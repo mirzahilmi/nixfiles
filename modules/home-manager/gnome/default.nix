@@ -33,6 +33,7 @@ in {
       "${gnomeSchema}/mutter" = {
         dynamic-workspaces = true;
         edge-tiling = true;
+        workspaces-only-on-primary = true;
       };
 
       "${gnomeSchema}/nautilus/desktop".font = "IBM Plex Sans 11";
