@@ -14,6 +14,7 @@
     ../shared/users/mirza.nix
 
     ../../modules/nixos/gnome
+    ../../modules/nixos/cloudflare-warp.nix
     # ../../modules/nixos/docker.nix
     ../../modules/nixos/libvirt.nix
     ../../modules/nixos/mtr.nix

@@ -36,7 +36,6 @@
       biome
       bccli
       ciscoPacketTracer8
-      cloudflare-warp
       dig
       distrobox
       eduvpn-client
