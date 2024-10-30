@@ -51,6 +51,7 @@
       signal-desktop
       slack
       ssh-to-age
+      sqlfluff
       teams-for-linux
       terraform
       tio
