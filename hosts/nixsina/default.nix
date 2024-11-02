@@ -16,6 +16,7 @@
     ../../modules/nixos/gnome
     ../../modules/nixos/cloudflare-warp.nix
     # ../../modules/nixos/docker.nix
+    # ../../modules/nixos/gns3.nix
     ../../modules/nixos/libvirt.nix
     ../../modules/nixos/mtr.nix
     ../../modules/nixos/networkmanager.nix

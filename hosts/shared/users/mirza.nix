@@ -12,12 +12,12 @@ in {
       description = "Mirza's Avatar";
       initialHashedPassword = "$y$j9T$UCjJGShH7mrXJaboQNwTZ1$1pL9WizElBvl/FagbPKmus902iujrDMxcFJuFOFRCEC";
       extraGroups = [
+        "wheel"
         "audio"
         "docker"
         "libvirtd"
         "networkmanager"
         "video"
-        "wheel"
       ];
     };
   };

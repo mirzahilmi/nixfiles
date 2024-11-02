@@ -40,6 +40,7 @@
       distrobox
       eduvpn-client
       fd
+      # gns3-gui
       gnumake
       hurl
       libreoffice
