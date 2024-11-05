@@ -5,29 +5,14 @@
 }: {
   imports = [
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
-    inputs.disko.nixosModules.disko
-
     (import ./disko.nix {device = "/dev/sda";})
     ./hardware-configuration.nix
     ./font.nix
+    ./sops.nix
 
     ../shared
     ../shared/locales
     ../shared/users/mirza.nix
-
-    ../../modules/nixos/cloudflare-warp.nix
-    # ../../modules/nixos/docker.nix
-    # ../../modules/nixos/gns3.nix
-    ../../modules/nixos/libvirt.nix
-    ../../modules/nixos/mtr.nix
-    ../../modules/nixos/networkmanager.nix
-    ../../modules/nixos/pipewire.nix
-    ../../modules/nixos/podman.nix
-    ../../modules/nixos/printer.nix
-    ../../modules/nixos/sops.nix
-    # ../../modules/nixos/virtualbox.nix
-    ../../modules/nixos/wireshark.nix
-    ../../modules/nixos/gnome-de.nix
   ];
   networking.hostName = "nixsina";
   de.gnome = {
@@ -57,4 +42,27 @@
         atomix
       ]);
   };
+
+  sound.enable = true;
+  hardware.pulseaudio.enable = false;
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    jack.enable = true;
+  };
+  _services = {
+    warp-svc.enable = true;
+    printer.enable = true;
+    gns3-server.enable = true;
+  };
+  programs = {
+    wireshark.enable = true;
+  };
+  _programs = {
+    virt-manager.enable = true;
+  };
+  virtualization.podman.enable = true;
 }

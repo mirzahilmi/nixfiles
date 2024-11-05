@@ -1,21 +1,36 @@
-{pkgs, ...}: {
-  # Enable common container config files in /etc/containers
-  virtualisation.containers.enable = true;
-  virtualisation = {
-    podman = {
-      enable = true;
-
-      # Create a `docker` alias for podman, to use it as a drop-in replacement
-      dockerCompat = true;
-
-      # Required for containers under podman-compose to be able to talk to each other.
-      defaultNetwork.settings.dns_enabled = true;
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: let
+  cfg = config.virtualization.podman;
+in {
+  options.virtualization.podman = {
+    enable = lib.mkEnableOption "Podman";
+    compose = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Enable compose support";
+    };
+    dockerAlias = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Alias docker with podman through binary substitution";
     };
   };
 
-  # Useful other development tools
-  environment.systemPackages = with pkgs; [
-    podman-tui # status of containers in the terminal
-    podman-compose # start group of containers for dev
-  ];
+  config = lib.mkIf cfg.enable {
+    virtualisation = {
+      containers.enable = true;
+      podman = {
+        enable = true;
+        dockerCompat = cfg.dockerAlias;
+        defaultNetwork.settings.dns_enabled = true;
+      };
+    };
+    environment.systemPackages = lib.mkIf cfg.compose [pkgs.podman-compose];
+  };
 }

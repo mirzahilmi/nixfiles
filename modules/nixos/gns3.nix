@@ -1,11 +1,28 @@
-{inputs, ...}: {
-  disabledModules = ["services/networking/gns3-server.nix"];
-  imports = ["${inputs.nixpkgs-unstable}/nixos/modules/services/networking/gns3-server.nix"];
-  services.gns3-server = {
-    enable = true;
-    vpcs.enable = true;
-    ubridge.enable = true;
-    dynamips.enable = true;
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
+  cfg = config._services.gns3-server;
+in {
+  options._services.gns3-server = {
+    enable = lib.mkEnableOption "GNS3 Server";
+    gui = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Enable GNS3 GUI";
+    };
   };
-  virtualisation.libvirtd.enable = true;
+
+  config = lib.mkIf cfg.enable {
+    services.gns3-server = {
+      enable = true;
+      vpcs.enable = true;
+      ubridge.enable = true;
+      dynamips.enable = true;
+    };
+    environment.systemPackages = lib.mkIf cfg.gui [pkgs.gns3-gui];
+  };
 }

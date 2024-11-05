@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   outputs,
   ...
 }: {
@@ -10,6 +11,8 @@
     ./ssh.nix
     ./xdg.nix
     ./zsh.nix
+    ../../modules/nixos
+    inputs.disko.nixosModules.disko
   ];
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;
