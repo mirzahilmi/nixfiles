@@ -2,11 +2,15 @@
   lib,
   config,
   pkgs,
+  inputs,
   ...
 }: let
-  cfg = config._services.gns3-server;
+  cfg = config._programs.gns3;
 in {
-  options._services.gns3-server = {
+  disabledModules = ["services/networking/gns3-server.nix"];
+  imports = [(inputs.nixpkgs-unstable + "/nixos/modules/services/networking/gns3-server.nix")];
+
+  options._programs.gns3 = {
     enable = lib.mkEnableOption "GNS3 Server";
     gui = lib.mkOption {
       type = lib.types.bool;
@@ -23,6 +27,11 @@ in {
       ubridge.enable = true;
       dynamips.enable = true;
     };
-    environment.systemPackages = lib.mkIf cfg.gui [pkgs.gns3-gui];
+    environment.systemPackages = lib.mkIf cfg.gui [
+      pkgs.gns3-gui
+      pkgs.inetutils
+      pkgs.tigervnc
+      pkgs.wireshark
+    ];
   };
 }

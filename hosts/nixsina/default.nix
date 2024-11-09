@@ -56,13 +56,13 @@
   _services = {
     warp-svc.enable = true;
     printer.enable = true;
-    gns3-server.enable = true;
   };
   programs = {
     wireshark.enable = true;
   };
   _programs = {
     virt-manager.enable = true;
+    gns3.enable = true;
   };
-  virtualization.podman.enable = true;
+  virtualization.docker.enable = true;
 }
