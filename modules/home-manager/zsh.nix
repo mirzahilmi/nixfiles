@@ -5,8 +5,6 @@
     enableCompletion = false;
     history = {
       path = "${config.xdg.configHome}/zsh/history";
-      expireDuplicatesFirst = true;
-      ignoreAllDups = true;
       ignoreDups = true;
       share = true;
     };

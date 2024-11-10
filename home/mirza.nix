@@ -45,7 +45,7 @@
       hurl
       libreoffice
       nmap
-      nvtop
+      nvtopPackages.full
       obsidian
       parabolic
       powertop
