@@ -10,7 +10,7 @@
     ./nix.nix
     ./ssh.nix
     ./xdg.nix
-    ./zsh.nix
+    ./shell.nix
     ../../modules/nixos
     inputs.disko.nixosModules.disko
   ];
