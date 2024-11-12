@@ -40,7 +40,6 @@
       distrobox
       eduvpn-client
       fd
-      # gns3-gui
       gnumake
       hurl
       libreoffice
@@ -66,6 +65,7 @@
         ];
       }))
       wl-clipboard
+      wl-clip-persist
       yaml-language-server
       zen-browser
       zoom-us
