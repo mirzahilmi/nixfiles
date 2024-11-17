@@ -22,7 +22,6 @@
     ../modules/home-manager/ssh.nix
     ../modules/home-manager/tealdeer.nix
     ../modules/home-manager/tmux.nix
-    ../modules/home-manager/wezterm.nix
     ../modules/home-manager/zed.nix
     ../modules/home-manager/zsh.nix
   ];
