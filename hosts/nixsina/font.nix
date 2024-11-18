@@ -3,7 +3,7 @@
     (nerdfonts.override {
       fonts = [
         "IBMPlexMono"
-        "JetBrainsMono"
+        "Iosevka"
       ];
     })
     ibm-plex
