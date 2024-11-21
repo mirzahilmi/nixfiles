@@ -34,6 +34,7 @@
       asciiquarium
       biome
       bccli
+      burpsuite
       ciscoPacketTracer8
       dig
       distrobox
@@ -66,6 +67,7 @@
       wl-clipboard
       wl-clip-persist
       yaml-language-server
+      zap
       zen-browser
       zoom-us
       unstable.ansible

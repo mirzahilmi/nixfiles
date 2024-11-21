@@ -15,6 +15,7 @@
     ../shared/users/mirza.nix
   ];
   networking.hostName = "nixsina";
+
   de.gnome = {
     enable = true;
     tripleBuffering = true;
@@ -42,7 +43,6 @@
         atomix
       ]);
   };
-
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
