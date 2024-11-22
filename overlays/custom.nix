@@ -1,16 +1,7 @@
-{
-  inputs,
-  prevPkgs,
-}: let
-  # pkgs = import inputs.nixpkgs {
-  #   inherit (finalPkgs) system;
-  #   config = {
-  #     allowUnfree = true;
-  #     allowUnfreePredicate = _: true;
-  #   };
-  # };
+{prevPkgs}: let
   overrideArg = pkg: args: pkg.override args;
 in {
+  brop = prevPkgs.btop.override {cudaSupport = true;};
   vesktop =
     prevPkgs.vesktop.overrideAttrs (_: prev: {
         desktopItems = (builtins.elemAt prev.desktopItems 0 |> overrideArg) {
