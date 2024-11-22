@@ -57,14 +57,7 @@
       terraform
       tio
       unzip
-      (vesktop.overrideAttrs (_prev: {
-        desktopItems = [
-          ((builtins.elemAt _prev.desktopItems 0).override {
-            icon = "${../imgs/discord.svg}";
-            desktopName = "Discord";
-          })
-        ];
-      }))
+      vesktop
       wl-clipboard
       wl-clip-persist
       yaml-language-server

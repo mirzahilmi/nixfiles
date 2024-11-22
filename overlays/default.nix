@@ -1,8 +1,9 @@
 {inputs, ...}: {
-  extra = pkgs: prev: import ../pkgs {inherit pkgs prev inputs;};
-  unstable-package = final: prev: {
+  extra = finalPkgs: _: import ../pkgs {inherit inputs finalPkgs;};
+  custom = _: prevPkgs: import ./custom.nix {inherit inputs prevPkgs;};
+  unstablePackage = finalPkgs: _: {
     unstable = import inputs.nixpkgs-unstable {
-      system = final.system;
+      inherit (finalPkgs) system;
       config = {
         allowUnfree = true;
         allowUnfreePredicate = _: true;

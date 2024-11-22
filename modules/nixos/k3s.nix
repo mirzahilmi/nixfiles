@@ -33,12 +33,12 @@ in {
       role = "server";
       extraFlags = [
         (lib.optional cfg.docker "--docker")
-        (lib.optional cfg.permitSudoers (toString [
+        (lib.optional cfg.permitSudoers <| toString [
           "--write-kubeconfig-group"
           "wheel"
           "--write-kubeconfig-mode"
           "660"
-        ]))
+        ])
       ] |> toString;
     };
     environment.sessionVariables = lib.mkIf cfg.permitSudoers {
