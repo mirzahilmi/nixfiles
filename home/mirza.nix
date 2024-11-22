@@ -52,6 +52,7 @@
       slack
       ssh-to-age
       sqlfluff
+      tcpdump
       teams-for-linux
       terraform
       tio

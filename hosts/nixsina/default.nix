@@ -59,6 +59,7 @@
   };
   programs = {
     wireshark.enable = true;
+    mtr.enable = true;
   };
   _programs = {
     virt-manager.enable = true;

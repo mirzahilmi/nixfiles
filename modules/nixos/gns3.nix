@@ -31,7 +31,6 @@ in {
       pkgs.gns3-gui
       pkgs.inetutils
       pkgs.tigervnc
-      pkgs.wireshark
     ];
   };
 }
