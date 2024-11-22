@@ -13,6 +13,12 @@ in {
       example = false;
       description = "Docker as container runtime";
     };
+    permitSudoers = lib.mkOption {
+      type = lib.types.bool;
+      default = true;
+      example = false;
+      description = "Allow user in wheel group to use kubectl command";
+    };
     multiNode = lib.mkOption {
       type = lib.types.bool;
       default = false;
@@ -25,7 +31,21 @@ in {
     services.k3s = {
       enable = true;
       role = "server";
-      extraFlags = lib.mkIf cfg.docker (toString ["--docker"]);
+      extraFlags = lib.mkIf cfg.docker (
+        toString (
+          ["--docker"]
+          ++ lib.optional cfg.permitSudoers (toString [
+            "--write-kubeconfig-group"
+            "wheel"
+            "--write-kubeconfig-mode"
+            "660"
+          ])
+        )
+      );
+    };
+    environment.sessionVariables = lib.mkIf cfg.permitSudoers {
+      K3S_KUBECONFIG_GROUP = "wheel";
+      K3S_KUBECONFIG_MODE = 660;
     };
     networking.firewall.allowedTCPPorts = [6443];
     networking.firewall.allowedUDPPorts = lib.mkIf cfg.multiNode [8472];

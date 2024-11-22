@@ -1,8 +1,13 @@
-{config, ...}: {
+{pkgs, ...}: {
   nix = {
+    package = pkgs.nixVersions.latest;
     optimise.automatic = true;
     settings = {
-      experimental-features = "nix-command flakes";
+      experimental-features = toString [
+        "nix-command"
+        "flakes"
+        "pipe-operators"
+      ];
       trusted-users = ["root" "@wheel"];
       auto-optimise-store = true;
       warn-dirty = false;
@@ -12,8 +17,8 @@
       dates = "weekly";
       options = "--delete-older-than 1w";
     };
-    extraOptions = ''
-      !include ${config.sops.secrets.nixAccessTokens.path}
-    '';
+    # extraOptions = ''
+    #   !include ${config.sops.secrets.nixAccessTokens.path}
+    # '';
   };
 }
