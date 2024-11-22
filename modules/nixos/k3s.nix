@@ -31,17 +31,15 @@ in {
     services.k3s = {
       enable = true;
       role = "server";
-      extraFlags = lib.mkIf cfg.docker (
-        toString (
-          ["--docker"]
-          ++ lib.optional cfg.permitSudoers (toString [
-            "--write-kubeconfig-group"
-            "wheel"
-            "--write-kubeconfig-mode"
-            "660"
-          ])
-        )
-      );
+      extraFlags = [
+        (lib.optional cfg.docker "--docker")
+        (lib.optional cfg.permitSudoers (toString [
+          "--write-kubeconfig-group"
+          "wheel"
+          "--write-kubeconfig-mode"
+          "660"
+        ]))
+      ] |> toString;
     };
     environment.sessionVariables = lib.mkIf cfg.permitSudoers {
       K3S_KUBECONFIG_GROUP = "wheel";

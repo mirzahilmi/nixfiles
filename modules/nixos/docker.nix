@@ -8,7 +8,7 @@ in {
   options.virtualization.docker = {
     enable = lib.mkEnableOption "Docker";
     storageDriver = lib.mkOption {
-      type = lib.types.nullOr (lib.types.enum ["aufs" "btrfs" "devicemapper" "overlay" "overlay2" "zfs"]);
+      type = lib.types.nullOr <| lib.types.enum ["aufs" "btrfs" "devicemapper" "overlay" "overlay2" "zfs"];
       default = null;
     };
   };
