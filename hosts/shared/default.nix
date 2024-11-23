@@ -5,14 +5,15 @@
   ...
 }: {
   imports = [
+    inputs.disko.nixosModules.disko
+    ../../modules/nixos
     ./boot.nix
+    ./locale.nix
     ./nh.nix
     ./nix.nix
     ./ssh.nix
     ./xdg.nix
     ./shell.nix
-    ../../modules/nixos
-    inputs.disko.nixosModules.disko
   ];
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;

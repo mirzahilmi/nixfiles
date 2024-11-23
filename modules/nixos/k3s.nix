@@ -41,11 +41,9 @@ in {
         ])
       ] |> toString;
     };
-    environment.sessionVariables = lib.mkIf cfg.permitSudoers {
-      K3S_KUBECONFIG_GROUP = "wheel";
-      K3S_KUBECONFIG_MODE = 660;
+    networking.firewall = {
+      allowedTCPPorts = [6443];
+      allowedUDPPorts = lib.mkIf cfg.multiNode [8472];
     };
-    networking.firewall.allowedTCPPorts = [6443];
-    networking.firewall.allowedUDPPorts = lib.mkIf cfg.multiNode [8472];
   };
 }
