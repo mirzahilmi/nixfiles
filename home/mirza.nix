@@ -73,6 +73,7 @@
 
     stateVersion = "23.11";
   };
+  orchestration.kubernetes.enable = true;
 
   xdg.userDirs = {
     publicShare = null;

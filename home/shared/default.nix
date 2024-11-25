@@ -1,5 +1,8 @@
 {outputs, ...}: {
-  imports = [./xdgify.nix];
+  imports = [
+    ../../modules/home-manager
+    ./xdgify.nix
+  ];
 
   nixpkgs = {
     overlays = builtins.attrValues outputs.overlays;

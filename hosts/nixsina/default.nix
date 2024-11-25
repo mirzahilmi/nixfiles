@@ -35,7 +35,7 @@
     gns3.enable = true;
   };
   virtualization.docker.enable = true;
-  orchestration.k3s.enable = true;
+  # orchestration.k3s.enable = true;
   fonts.packages = builtins.attrValues {
     inherit
       (pkgs)
