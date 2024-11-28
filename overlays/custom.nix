@@ -1,7 +1,10 @@
-{prevPkgs}: let
+{
+  finalPkgs,
+  prevPkgs,
+}: let
   overrideArg = pkg: args: pkg.override args;
 in {
-  brop = prevPkgs.btop.override {cudaSupport = true;};
+  btop = prevPkgs.btop.override {cudaSupport = true;};
   vesktop =
     prevPkgs.vesktop.overrideAttrs (_: prev: {
         desktopItems = (builtins.elemAt prev.desktopItems 0 |> overrideArg) {

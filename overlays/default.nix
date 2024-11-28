@@ -1,6 +1,6 @@
 {inputs, ...}: {
-  extra = finalPkgs: _: import ../pkgs {inherit inputs finalPkgs;};
-  custom = _: prevPkgs: import ./custom.nix {inherit prevPkgs;};
+  extra = finalPkgs: prevPkgs: import ../pkgs {inherit inputs finalPkgs prevPkgs;};
+  custom = finalPkgs: prevPkgs: import ./custom.nix {inherit finalPkgs prevPkgs;};
   unstablePackage = finalPkgs: _: {
     unstable = import inputs.nixpkgs-unstable {
       inherit (finalPkgs) system;

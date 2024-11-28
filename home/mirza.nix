@@ -64,7 +64,6 @@
       zap
       zen-browser
       zoom-us
-      unstable.ansible
       unstable.nixd
     ];
     sessionVariables = {

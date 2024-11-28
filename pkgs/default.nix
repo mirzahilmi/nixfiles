@@ -1,5 +1,6 @@
 {
   finalPkgs,
+  prevPkgs,
   inputs,
 }: {
   bccli = finalPkgs.callPackage ./bccli.nix {};
