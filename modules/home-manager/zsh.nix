@@ -5,7 +5,11 @@
     enableCompletion = false;
     history = {
       path = "${config.xdg.configHome}/zsh/history";
+      extended = true;
+      expireDuplicatesFirst = true;
       ignoreDups = true;
+      ignoreAllDups = true;
+      ignoreSpace = true;
       share = true;
     };
     antidote = {
@@ -28,10 +32,17 @@
       [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
     '';
     initExtra = ''
-      bindkey -e
       if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ]; then
         exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
       fi
+      bindkey -e
+      # ref: https://github.com/rothgar/mastering-zsh/blob/master/docs/config/history.md#configuration
+      setopt INC_APPEND_HISTORY
+      setopt HIST_FIND_NO_DUPS
+      setopt HIST_SAVE_NO_DUPS
+      setopt HIST_VERIFY
+      setopt APPEND_HISTORY
+      setopt HIST_NO_STORE
       [[ -n "''${ZSH_DEBUGRC+1}" ]] && zprof
     '';
   };
