@@ -40,6 +40,7 @@
       distrobox
       eduvpn-client
       fd
+      ffmpeg-headless
       gnumake
       hurl
       libreoffice
