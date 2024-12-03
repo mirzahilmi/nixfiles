@@ -34,6 +34,7 @@
       asciiquarium
       biome
       bccli
+      bruno
       burpsuite
       ciscoPacketTracer8
       dig
@@ -48,6 +49,7 @@
       nvtopPackages.full
       obsidian
       parabolic
+      postman
       powertop
       signal-desktop
       slack

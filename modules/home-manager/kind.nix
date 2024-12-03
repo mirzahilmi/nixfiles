@@ -10,7 +10,9 @@ in {
     enable = lib.mkEnableOption "Local Kubernetes";
   };
   config = lib.mkIf cfg.enable {
-    home.packages = builtins.attrValues {inherit (pkgs.unstable) kind kubectl;};
+    home.packages = builtins.attrValues {
+      inherit (pkgs.unstable) kind kubectl kubernetes-helm;
+    };
     home.sessionVariables.KUBECONFIG = "${config.xdg.configHome}/kube/config";
   };
 }
