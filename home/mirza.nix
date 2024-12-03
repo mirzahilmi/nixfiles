@@ -37,6 +37,7 @@
       bruno
       burpsuite
       ciscoPacketTracer8
+      chafa
       dig
       distrobox
       eduvpn-client
