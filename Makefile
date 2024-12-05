@@ -6,4 +6,8 @@ os:
 	@git a
 	@nh os switch
 
-.PHONY: home os
+upgrade:
+	@git a
+	@sudo nixos-rebuild switch --flake . --upgrade
+
+.PHONY: home os upgrade

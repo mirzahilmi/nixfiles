@@ -34,9 +34,7 @@
       asciiquarium
       biome
       bccli
-      bruno
       burpsuite
-      ciscoPacketTracer8
       chafa
       dig
       distrobox
@@ -53,6 +51,7 @@
       postman
       powertop
       signal-desktop
+      simple-http-server
       slack
       ssh-to-age
       sqlfluff

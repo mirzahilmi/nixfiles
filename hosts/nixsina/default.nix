@@ -9,10 +9,8 @@
     ../shared/users/mirza.nix
     ../shared
     ./hardware-configuration.nix
-    ./sops.nix
   ];
   networking.hostName = "nixsina";
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -48,7 +46,6 @@
   };
   de.gnome = {
     enable = true;
-    tripleBuffering = true;
     excludePackages = builtins.attrValues {
       inherit
         (pkgs)
@@ -57,20 +54,17 @@
         epiphany
         xterm
         gedit
-        ;
-      inherit
-        (pkgs.gnome)
+        atomix
         cheese
-        gnome-music
-        gnome-terminal
+        geary
         gnome-contacts
         gnome-maps
+        gnome-music
+        gnome-terminal
+        hitori
         yelp
-        geary
         tali
         iagno
-        hitori
-        atomix
         ;
     };
   };
