@@ -59,6 +59,7 @@
       teams-for-linux
       terraform
       tio
+      ungoogled-chromium
       unzip
       vesktop
       wl-clipboard
@@ -76,6 +77,9 @@
     stateVersion = "23.11";
   };
   orchestration.kubernetes.enable = true;
+  _programs = {
+    k9s.enable = true;
+  };
 
   xdg.userDirs = {
     publicShare = null;

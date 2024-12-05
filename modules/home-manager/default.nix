@@ -1,3 +1,6 @@
 {
-  imports = [./kind.nix];
+  imports = [
+    ./kind.nix
+    ./k9s.nix
+  ];
 }

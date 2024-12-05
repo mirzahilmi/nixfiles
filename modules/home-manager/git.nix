@@ -10,7 +10,7 @@
       a = "add -A";
       ac = "!git add -A && git commit --message";
       acp = "!acp() { git add -A && git commit --message \"$1\" && git push; }; acp";
-      am = "!git a && git commit --ammend";
+      ammend = "!git commit --ammend && git push --force-with-lease";
       graph = "log --decorate --oneline --graph";
     };
     delta = {
