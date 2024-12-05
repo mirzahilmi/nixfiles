@@ -27,16 +27,19 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
-  # hardware.nvidia = {
-  #   package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
-  #     version = "560.35.03";
-  #     sha256_64bit = "sha256-8pMskvrdQ8WyNBvkU/xPc/CtcYXCa7ekP73oGuKfH+M=";
-  #     sha256_aarch64 = "sha256-/32Zf0dKrofTmPZ3Ratw4vDM7B+OgpC4p7s+RHUjCrg=";
-  #     openSha256 = "sha256-/32Zf0dKrofTmPZ3Ratw4vDM7B+OgpC4p7s+RHUjCrg=";
-  #     settingsSha256 = "sha256-kQsvDgnxis9ANFmwIwB7HX5MkIAcpEEAHc8IBOLdXvk=";
-  #     persistencedSha256 = "sha256-E2J2wYYyRu7Kc3MMZz/8ZIemcZg68rkzvqEwFAL3fFs=";
-  #   };
-  #   nvidiaSettings = false;
-  #   open = true;
-  # };
+  hardware.nvidia = {
+    # See https://github.com/TLATER/dotfiles/blob/master/nixos-config/hosts/yui/nvidia/default.nix
+    nvidiaSettings = false;
+    open = true;
+    modesetting.enable = true;
+    powerManagement.enable = true;
+    package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+      version = "565.57.01";
+      sha256_64bit = "sha256-buvpTlheOF6IBPWnQVLfQUiHv4GcwhvZW3Ks0PsYLHo=";
+      sha256_aarch64 = lib.fakeHash;
+      openSha256 = "sha256-/tM3n9huz1MTE6KKtTCBglBMBGGL/GOHi5ZSUag4zXA=";
+      settingsSha256 = lib.fakeHash;
+      persistencedSha256 = lib.fakeHash;
+    };
+  };
 }

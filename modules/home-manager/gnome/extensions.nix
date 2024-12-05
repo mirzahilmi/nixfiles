@@ -6,14 +6,16 @@
   gnomeShellSchema = "${gnomeSchema}/shell";
   extensionsSchema = "${gnomeShellSchema}/extensions";
 in {
-  home.packages = with pkgs;
-    [draw-on-your-screen]
-    ++ (with gnome; [
+  home.packages = builtins.attrValues {
+    inherit
+      (pkgs)
+      draw-on-your-screen
       networkmanager-openvpn
       gnome-tweaks
       dconf-editor
-    ])
-    ++ (with gnomeExtensions; [
+      ;
+    inherit
+      (pkgs.gnomeExtensions)
       app-menu-is-back
       appindicator
       blur-my-shell
@@ -21,7 +23,8 @@ in {
       dash-to-dock
       hide-minimized
       vitals
-    ]);
+      ;
+  };
 
   dconf.settings = {
     "${gnomeShellSchema}" = {
