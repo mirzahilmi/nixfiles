@@ -30,7 +30,6 @@
     username = "mirza";
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
-      alejandra
       asciiquarium
       biome
       bccli
@@ -40,6 +39,7 @@
       distrobox
       eduvpn-client
       fd
+      ferdium
       ffmpeg-headless
       gnumake
       hurl
@@ -50,25 +50,21 @@
       parabolic
       postman
       powertop
-      signal-desktop
       simple-http-server
       slack
       ssh-to-age
       sqlfluff
       tcpdump
       teams-for-linux
-      terraform
       tio
       ungoogled-chromium
       unzip
       vesktop
       wl-clipboard
       wl-clip-persist
-      yaml-language-server
       zap
       zen-browser
       zoom-us
-      unstable.nixd
     ];
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;
@@ -76,7 +72,10 @@
 
     stateVersion = "23.11";
   };
-  orchestration.kubernetes.enable = true;
+  orchestration.kubernetes = {
+    enable = true;
+    aliasKubectl = "kube";
+  };
   _programs = {
     k9s.enable = true;
   };
