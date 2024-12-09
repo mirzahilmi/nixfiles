@@ -21,4 +21,5 @@
       '';
     };
   };
+  home.sessionVariables.XCURSOR_THEME = "Bibata-Original-Classic";
 }
