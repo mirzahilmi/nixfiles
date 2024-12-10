@@ -39,7 +39,6 @@
       distrobox
       eduvpn-client
       fd
-      ferdium
       ffmpeg-headless
       gnumake
       hurl
