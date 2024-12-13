@@ -37,6 +37,7 @@
       chafa
       dig
       distrobox
+      easyeffects
       eduvpn-client
       fd
       ffmpeg-headless

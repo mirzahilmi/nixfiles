@@ -22,6 +22,7 @@ in {
       clipboard-indicator
       dash-to-dock
       hide-minimized
+      hide-top-bar
       vitals
       ;
   };
@@ -34,7 +35,6 @@ in {
         "blur-my-shell@aunetx"
         "clipboard-indicator@tudmotu.com"
         "dash-to-dock@micxgx.gmail.com"
-        "draw-on-your-screen2@zhrexl.github.com"
         "drive-menu@gnome-shell-extensions.gcampax.github.com"
         "hide-minimized@danigm.net"
         "user-theme@gnome-shell-extensions.gcampax.github.com"
