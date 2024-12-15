@@ -8,6 +8,7 @@
       };
       mouse.hide-when-typing = "yes";
       key-bindings.fullscreen = "F11";
+      colors.alpha = 0.95;
       csd = {
         preferred = "client";
         size = 0;

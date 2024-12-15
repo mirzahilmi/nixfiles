@@ -9,7 +9,7 @@ in {
   options.orchestration.kubernetes = {
     enable = lib.mkEnableOption "Local Kubernetes";
     aliasKubectl = lib.mkOption {
-      type = lib.types.string;
+      type = lib.types.str;
       default = "";
       example = "kube";
       description = "Alias for kubectl";
