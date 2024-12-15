@@ -7,11 +7,18 @@
     userEmail = "dev@mrz.my.id";
     ignores = ["*.env" "*.env.json" "*.env.yaml"];
     aliases = {
-      a = "add -A";
-      ac = "!git add -A && git commit --message";
-      acp = "!acp() { git add -A && git commit --message \"$1\" && git push; }; acp";
-      ammend = "!git commit --ammend && git push --force-with-lease";
+      a = "add --all";
+      acp = builtins.replaceStrings ["\n"] [""] ''
+        !f() {
+          git add --all &&
+          git commit --message "$1" &&
+          git push;
+        }; f
+      '';
       graph = "log --decorate --oneline --graph";
+      caa = "commit --all --amend --reuse-message HEAD";
+      pusf = "push --force-with-lease";
+      st = "status";
     };
     delta = {
       enable = true;
