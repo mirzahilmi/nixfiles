@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: let
+{pkgs, ...}: let
   userName = "mirza";
 in {
   users = {
@@ -15,9 +11,9 @@ in {
         "wheel"
         "audio"
         "docker"
-        "libvirtd"
         "networkmanager"
         "video"
+        "wireshark"
       ];
     };
   };

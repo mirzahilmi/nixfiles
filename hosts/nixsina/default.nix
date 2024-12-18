@@ -25,17 +25,18 @@
     printer.enable = true;
   };
   programs = {
-    wireshark.enable = true;
+    wireshark = {
+      enable = true;
+      package = pkgs.wireshark;
+    };
     mtr.enable = true;
   };
   _programs = {
     virt-manager.enable = true;
-    gns3.enable = true;
   };
   virtualization.docker = {
     enable = true;
   };
-  # orchestration.k3s.enable = true;
   fonts.packages = builtins.attrValues {
     inherit
       (pkgs)
