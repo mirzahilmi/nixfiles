@@ -3,9 +3,9 @@
   config,
   ...
 }: let
-  cfg = config.orchestration.k3s;
+  cfg = config.custom.services.k3s;
 in {
-  options.orchestration.k3s = {
+  options.custom.services.k3s = {
     enable = lib.mkEnableOption "k3s";
     docker = lib.mkOption {
       type = lib.types.bool;

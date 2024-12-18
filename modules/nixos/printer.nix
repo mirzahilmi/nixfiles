@@ -3,10 +3,10 @@
   config,
   ...
 }: let
-  cfg = config._services.printer;
+  cfg = config.custom.services.printer;
 in {
-  options._services.printer = {
-    enable = lib.mkEnableOption "Printing capability";
+  options.custom.services.printer = {
+    enable = lib.mkEnableOption "Printing";
     autodiscover = lib.mkOption {
       type = lib.types.bool;
       default = true;

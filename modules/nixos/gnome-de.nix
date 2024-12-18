@@ -4,9 +4,9 @@
   config,
   ...
 }: let
-  cfg = config.de.gnome;
+  cfg = config.desktop.gnome;
 in {
-  options.de.gnome = {
+  options.desktop.gnome = {
     enable = lib.mkEnableOption "GNOME Desktop Environment";
     wayland = lib.mkOption {
       type = lib.types.bool;

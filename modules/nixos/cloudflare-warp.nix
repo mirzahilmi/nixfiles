@@ -3,9 +3,9 @@
   lib,
   ...
 }: let
-  cfg = config._services.warp-svc;
+  cfg = config.custom.programs.cloudflare-warp;
 in {
-  options._services.warp-svc = {
+  options.custom.programs.cloudflare-warp = {
     enable = lib.mkEnableOption "Cloudflare Zero Trust client daemon";
   };
 

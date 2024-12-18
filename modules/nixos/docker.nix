@@ -3,12 +3,19 @@
   config,
   ...
 }: let
-  cfg = config.virtualization.docker;
+  cfg = config.custom.services.docker;
 in {
-  options.virtualization.docker = {
+  options.custom.services.docker = {
     enable = lib.mkEnableOption "Docker";
     storageDriver = lib.mkOption {
-      type = lib.types.nullOr <| lib.types.enum ["aufs" "btrfs" "devicemapper" "overlay" "overlay2" "zfs"];
+      type = lib.types.nullOr <| lib.types.enum [
+        "aufs"
+        "btrfs"
+        "devicemapper"
+        "overlay"
+        "overlay2"
+        "zfs"
+      ];
       default = null;
     };
   };

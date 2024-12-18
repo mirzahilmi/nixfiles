@@ -5,12 +5,12 @@
   inputs,
   ...
 }: let
-  cfg = config._programs.gns3;
+  cfg = config.custom.programs.gns3;
 in {
   disabledModules = ["services/networking/gns3-server.nix"];
   imports = [(inputs.nixpkgs-unstable + "/nixos/modules/services/networking/gns3-server.nix")];
 
-  options._programs.gns3 = {
+  options.custom.programs.gns3 = {
     enable = lib.mkEnableOption "GNS3 Server";
     gui = lib.mkOption {
       type = lib.types.bool;
