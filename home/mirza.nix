@@ -15,7 +15,6 @@
     ../modules/home-manager/gpg.nix
     ../modules/home-manager/jq.nix
     ../modules/home-manager/lsd.nix
-    ../modules/home-manager/mpv.nix
     ../modules/home-manager/obs.nix
     ../modules/home-manager/ripgrep.nix
     ../modules/home-manager/spicetify.nix
