@@ -9,7 +9,6 @@
     ../modules/home-manager/btop.nix
     ../modules/home-manager/direnv.nix
     ../modules/home-manager/fastfetch.nix
-    ../modules/home-manager/foot.nix
     ../modules/home-manager/fzf.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gpg.nix
@@ -40,6 +39,7 @@
       eduvpn-client
       fd
       ffmpeg-headless
+      ghostty
       gnumake
       hurl
       libreoffice
@@ -83,6 +83,21 @@
     publicShare = null;
     templates = null;
   };
+
+  xdg.configFile."ghostty/config".text = ''
+    auto-update = off
+    cursor-invert-fg-bg = true
+    cursor-style-blink = false
+    font-family = Iosevka NF
+    font-size = 16
+    mouse-hide-while-typing = true
+    theme = Dark+
+    window-decoration = false
+    window-padding-color = extend
+
+    keybind = ctrl+shift+o=unbind
+    keybind = f11=toggle_fullscreen
+  '';
 
   programs.vscode = {
     enable = true;

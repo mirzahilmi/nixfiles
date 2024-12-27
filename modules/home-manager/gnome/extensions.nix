@@ -44,7 +44,7 @@ in {
 
       favorite-apps = [
         "org.gnome.Nautilus.desktop"
-        "foot.desktop"
+        "com.mitchellh.ghostty.desktop"
         "dev.zed.Zed.desktop"
         "zen.desktop"
       ];

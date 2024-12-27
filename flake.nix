@@ -16,6 +16,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.url = "github:MarceColl/zen-browser-flake";
+    ghostty.url = "github:ghostty-org/ghostty";
   };
 
   outputs = {
