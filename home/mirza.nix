@@ -42,6 +42,8 @@
       ghostty
       gnumake
       hurl
+      lazygit
+      unstable.lazysql
       libreoffice
       nmap
       nvtopPackages.full
