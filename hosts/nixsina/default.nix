@@ -65,9 +65,9 @@
   custom = {
     programs = {
       virt-manager.enable = true;
+      cloudflare-warp.enable = true;
     };
     services = {
-      cloudflare-warp.enable = true;
       docker.enable = true;
       printer.enable = true;
     };
