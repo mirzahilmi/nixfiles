@@ -96,6 +96,7 @@
     theme = Dark+
     window-decoration = false
     window-padding-color = extend
+    mouse-scroll-multiplier = 0.125
 
     keybind = ctrl+shift+o=unbind
     keybind = f11=toggle_fullscreen
