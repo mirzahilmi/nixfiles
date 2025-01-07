@@ -80,6 +80,9 @@
   _programs = {
     k9s.enable = true;
   };
+  custom.programs = {
+    tmux.enable = true;
+  };
 
   xdg.userDirs = {
     publicShare = null;
