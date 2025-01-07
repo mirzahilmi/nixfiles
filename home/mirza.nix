@@ -101,4 +101,8 @@
     keybind = ctrl+shift+o=unbind
     keybind = f11=toggle_fullscreen
   '';
+
+  programs.vscode = {
+    enable = true;
+  };
 }
