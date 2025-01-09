@@ -32,7 +32,6 @@ in {
           qgnomeplatform
           qgnomeplatform-qt6
           # Extensions
-          draw-on-your-screen
           networkmanager-openvpn
           gnome-tweaks
           dconf-editor
@@ -43,9 +42,7 @@ in {
           appindicator
           blur-my-shell
           clipboard-indicator
-          dash-to-dock
           hide-minimized
-          hide-top-bar
           vitals
           ;
       });
@@ -125,11 +122,8 @@ in {
             "appmenu-is-back@fthx"
             "blur-my-shell@aunetx"
             "clipboard-indicator@tudmotu.com"
-            "dash-to-dock@micxgx.gmail.com"
             "drive-menu@gnome-shell-extensions.gcampax.github.com"
             "hide-minimized@danigm.net"
-            "user-theme@gnome-shell-extensions.gcampax.github.com"
-            "unlockDialogBackground@sun.wxg@gmail.com"
             "Vitals@CoreCoding.com"
           ];
 
@@ -146,12 +140,6 @@ in {
           disable-down-arrow = true;
           move-item-first = true;
           paste-button = true;
-        };
-
-        "org/gnome/shell/extensions/dash-to-dock" = {
-          apply-custom-theme = true;
-          running-indicator-style = "DOTS";
-          hot-keys = false;
         };
 
         "org/gnome/shell/extensions/vitals" = {
