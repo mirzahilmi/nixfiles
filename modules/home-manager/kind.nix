@@ -4,13 +4,13 @@
   config,
   ...
 }: let
-  cfg = config.orchestration.kubernetes;
+  cfg = config.custom.programs.kind;
 in {
-  options.orchestration.kubernetes = {
+  options.custom.programs.kind = {
     enable = lib.mkEnableOption "Local Kubernetes";
     aliasKubectl = lib.mkOption {
       type = lib.types.str;
-      default = "";
+      default = "kube";
       example = "kube";
       description = "Alias for kubectl";
     };

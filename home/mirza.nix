@@ -1,24 +1,5 @@
 {pkgs, ...}: {
-  imports = [
-    ./shared
-
-    ../modules/home-manager/ohmyposh
-
-    ../modules/home-manager/bat.nix
-    ../modules/home-manager/btop.nix
-    ../modules/home-manager/direnv.nix
-    ../modules/home-manager/fzf.nix
-    ../modules/home-manager/git.nix
-    ../modules/home-manager/gpg.nix
-    ../modules/home-manager/lsd.nix
-    ../modules/home-manager/obs.nix
-    ../modules/home-manager/spicetify.nix
-    ../modules/home-manager/ssh.nix
-    ../modules/home-manager/tealdeer.nix
-    ../modules/home-manager/tmux.nix
-    ../modules/home-manager/zed.nix
-    ../modules/home-manager/zsh.nix
-  ];
+  imports = [./shared];
 
   home = {
     username = "mirza";
@@ -60,6 +41,7 @@
       wl-clipboard
       wl-clip-persist
       zap
+      unstable.zed-editor
       zen-browser
       zoom-us
     ];
@@ -69,20 +51,31 @@
 
     stateVersion = "23.11";
   };
-  orchestration.kubernetes = {
-    enable = true;
-    aliasKubectl = "kube";
-  };
-  custom.programs = {
-    tmux.enable = true;
-    gtk.enable = true;
-  };
+
   programs = {
     vscode.enable = true;
     fastfetch.enable = true;
     jq.enable = true;
     k9s.enable = true;
     ripgrep.enable = true;
+  };
+  custom.programs = {
+    bat.enable = true;
+    btop.enable = true;
+    direnv.enable = true;
+    fzf.enable = true;
+    git.enable = true;
+    gpg.enable = true;
+    gtk.enable = true;
+    kind.enable = true;
+    lsd.enable = true;
+    obs.enable = true;
+    ohmyposh.enable = true;
+    spicetify.enable = true;
+    ssh.enable = true;
+    tldr.enable = true;
+    tmux.enable = true;
+    zsh.enable = true;
   };
 
   xdg.userDirs = {

@@ -1,6 +1,22 @@
 {
   imports = [
+    ./bat.nix
+    ./btop.nix
+    ./direnv.nix
+    ./foot.nix
+    ./fzf.nix
+    ./git.nix
+    ./gpg.nix
     ./gtk.nix
     ./kind.nix
+    ./lsd.nix
+    ./obs.nix
+    ./ohmyposh.nix
+    ./spicetify.nix
+    ./ssh.nix
+    ./tealdeer.nix
+    ./tmux.nix
+    ./wezterm.nix
+    ./zsh.nix
   ];
 }
