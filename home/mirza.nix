@@ -7,14 +7,11 @@
     ../modules/home-manager/bat.nix
     ../modules/home-manager/btop.nix
     ../modules/home-manager/direnv.nix
-    ../modules/home-manager/fastfetch.nix
     ../modules/home-manager/fzf.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gpg.nix
-    ../modules/home-manager/jq.nix
     ../modules/home-manager/lsd.nix
     ../modules/home-manager/obs.nix
-    ../modules/home-manager/ripgrep.nix
     ../modules/home-manager/spicetify.nix
     ../modules/home-manager/ssh.nix
     ../modules/home-manager/tealdeer.nix
@@ -76,12 +73,16 @@
     enable = true;
     aliasKubectl = "kube";
   };
-  _programs = {
-    k9s.enable = true;
-  };
   custom.programs = {
     tmux.enable = true;
     gtk.enable = true;
+  };
+  programs = {
+    vscode.enable = true;
+    fastfetch.enable = true;
+    jq.enable = true;
+    k9s.enable = true;
+    ripgrep.enable = true;
   };
 
   xdg.userDirs = {
@@ -105,8 +106,4 @@
     keybind = ctrl+enter=unbind
     keybind = f11=toggle_fullscreen
   '';
-
-  programs.vscode = {
-    enable = true;
-  };
 }
