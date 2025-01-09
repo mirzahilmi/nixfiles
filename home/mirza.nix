@@ -102,6 +102,7 @@
     mouse-scroll-multiplier = 0.125
 
     keybind = ctrl+shift+o=unbind
+    keybind = ctrl+enter=unbind
     keybind = f11=toggle_fullscreen
   '';
 
