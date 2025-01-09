@@ -2,7 +2,6 @@
   imports = [
     ./shared
 
-    ../modules/home-manager/gnome
     ../modules/home-manager/ohmyposh
 
     ../modules/home-manager/bat.nix
@@ -82,6 +81,7 @@
   };
   custom.programs = {
     tmux.enable = true;
+    gtk.enable = true;
   };
 
   xdg.userDirs = {
