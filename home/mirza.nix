@@ -16,7 +16,7 @@
       eduvpn-client
       fd
       ffmpeg-headless
-      ghostty
+      unstable.ghostty
       gnumake
       hurl
       lazygit
