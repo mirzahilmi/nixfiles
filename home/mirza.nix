@@ -18,6 +18,7 @@
       ffmpeg-headless
       unstable.ghostty
       gnumake
+      gthumb
       hurl
       lazygit
       unstable.lazysql
