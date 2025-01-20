@@ -5,10 +5,7 @@
     username = "mirza";
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
-      asciiquarium
-      biome
       bccli
-      burpsuite
       chafa
       dig
       distrobox
@@ -21,7 +18,6 @@
       gthumb
       hurl
       lazygit
-      unstable.lazysql
       libreoffice
       nmap
       nvtopPackages.full
@@ -31,8 +27,6 @@
       powertop
       simple-http-server
       slack
-      ssh-to-age
-      sqlfluff
       tcpdump
       teams-for-linux
       tio
