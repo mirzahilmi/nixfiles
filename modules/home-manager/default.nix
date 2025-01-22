@@ -6,6 +6,7 @@
     ./foot.nix
     ./fzf.nix
     ./git.nix
+    ./ghostty.nix
     ./gpg.nix
     ./gtk.nix
     ./kind.nix

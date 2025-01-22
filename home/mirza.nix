@@ -13,7 +13,6 @@
       eduvpn-client
       fd
       ffmpeg-headless
-      ghostty-nightly
       gnumake
       gthumb
       hurl
@@ -59,6 +58,7 @@
     btop.enable = true;
     direnv.enable = true;
     fzf.enable = true;
+    ghostty.enable = true;
     git.enable = true;
     gpg.enable = true;
     gtk.enable = true;
@@ -77,21 +77,4 @@
     publicShare = null;
     templates = null;
   };
-
-  xdg.configFile."ghostty/config".text = ''
-    auto-update = off
-    cursor-invert-fg-bg = true
-    cursor-style-blink = false
-    font-family = Iosevka NF
-    font-size = 16
-    mouse-hide-while-typing = true
-    theme = Dark+
-    gtk-titlebar-hide-when-maximized = true
-    window-padding-color = extend
-    mouse-scroll-multiplier = 0.125
-
-    keybind = ctrl+shift+o=unbind
-    keybind = ctrl+enter=unbind
-    keybind = f11=toggle_fullscreen
-  '';
 }
