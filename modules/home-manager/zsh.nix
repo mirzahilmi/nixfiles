@@ -35,6 +35,7 @@ in {
           "belak/zsh-utils path:editor"
           "zsh-users/zsh-autosuggestions kind:defer"
           "zdharma-continuum/fast-syntax-highlighting kind:defer"
+          "Aloxaf/fzf-tab kind:defer"
         ];
       };
       completionInit = ''
@@ -58,6 +59,7 @@ in {
         setopt HIST_VERIFY
         setopt APPEND_HISTORY
         setopt HIST_NO_STORE
+        zstyle ':completion:*' menu no
         [[ -n "''${ZSH_DEBUGRC+1}" ]] && zprof
       '';
     };
