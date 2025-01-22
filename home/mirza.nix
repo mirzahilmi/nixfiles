@@ -8,6 +8,7 @@
       bccli
       chafa
       dig
+      discord
       distrobox
       easyeffects
       eduvpn-client
@@ -31,7 +32,6 @@
       tio
       ungoogled-chromium
       unzip
-      vesktop
       wl-clipboard
       wl-clip-persist
       zap
