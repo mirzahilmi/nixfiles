@@ -7,14 +7,14 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
-    sops-nix.url = "github:Mic92/sops-nix";
-    nvim.url = "github:mirzahilmi/nvim";
+    disko.url = "github:nix-community/disko";
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    nvim.url = "github:mirzahilmi/nvim";
+    sops-nix.url = "github:Mic92/sops-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     zen-browser.url = "github:MarceColl/zen-browser-flake";
   };
 

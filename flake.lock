@@ -224,19 +224,36 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_3",
+        "plugins-pretty_hover": "plugins-pretty_hover",
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1737389547,
-        "narHash": "sha256-Vquz/hSee7tJuPYgXnOzOlG1QuQJIKLckEn/CUGYwPo=",
+        "lastModified": 1737394366,
+        "narHash": "sha256-EXX37rSUl6ageS5q2uw2GbZBSfdfuVY4dy4VPYMaStk=",
         "owner": "mirzahilmi",
         "repo": "nvim",
-        "rev": "0a1bf40a7fb0327f062d4ccfd84dede6f5009677",
+        "rev": "e0ce2c3930d62bb646c1ccc4eabfbb9691a2d01e",
         "type": "github"
       },
       "original": {
         "owner": "mirzahilmi",
         "repo": "nvim",
+        "type": "github"
+      }
+    },
+    "plugins-pretty_hover": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1736281484,
+        "narHash": "sha256-Un0OUkYM73wgNd2GfDp128lIG3ugsZBIj2Psld1N6jI=",
+        "owner": "Fildo7525",
+        "repo": "pretty_hover",
+        "rev": "d55017dd7cf2470c9f44401b31def2dd565b43a3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Fildo7525",
+        "repo": "pretty_hover",
         "type": "github"
       }
     },
