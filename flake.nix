@@ -9,6 +9,7 @@
 
     disko.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
+    ghostty.url = "github:ghostty-org/ghostty";
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
     nvim.url = "github:mirzahilmi/nvim";

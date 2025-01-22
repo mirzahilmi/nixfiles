@@ -13,7 +13,7 @@
       eduvpn-client
       fd
       ffmpeg-headless
-      unstable.ghostty
+      ghostty-nightly
       gnumake
       gthumb
       hurl
@@ -86,7 +86,7 @@
     font-size = 16
     mouse-hide-while-typing = true
     theme = Dark+
-    window-decoration = false
+    gtk-titlebar-hide-when-maximized = true
     window-padding-color = extend
     mouse-scroll-multiplier = 0.125
 
