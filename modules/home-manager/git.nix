@@ -13,10 +13,9 @@ in {
     programs.git = {
       enable = true;
       lfs.enable = true;
-      package = pkgs.unstable.git;
       userName = "Mirza Hilmi";
       userEmail = "dev@mrz.my.id";
-      ignores = ["*.env" "*.env.json" "*.env.yaml"];
+      ignores = ["*.env" "*.env.json" "*.env.yaml" ".envrc"];
       aliases = {
         a = "add --all";
         acp = builtins.replaceStrings ["\n"] [""] ''
