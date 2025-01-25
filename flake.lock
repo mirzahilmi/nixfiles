@@ -315,17 +315,19 @@
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1737394366,
-        "narHash": "sha256-EXX37rSUl6ageS5q2uw2GbZBSfdfuVY4dy4VPYMaStk=",
-        "owner": "mirzahilmi",
-        "repo": "nvim",
-        "rev": "e0ce2c3930d62bb646c1ccc4eabfbb9691a2d01e",
-        "type": "github"
+        "lastModified": 1737646827,
+        "narHash": "sha256-oPsTzvOXqCfGrP/ZVI407uT8yVUG5xNevIMLiLDVf2g=",
+        "ref": "refs/heads/master",
+        "rev": "fba14a363a052c9dd02f7ba2fc9af2fa92d33ce6",
+        "revCount": 34,
+        "shallow": true,
+        "type": "git",
+        "url": "file:/home/mirza/.config/nvim"
       },
       "original": {
-        "owner": "mirzahilmi",
-        "repo": "nvim",
-        "type": "github"
+        "shallow": true,
+        "type": "git",
+        "url": "file:/home/mirza/.config/nvim"
       }
     },
     "plugins-pretty_hover": {

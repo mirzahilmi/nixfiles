@@ -12,7 +12,6 @@
     NPM_CONFIG_USERCONFIG = "${config.xdg.configHome}/npm/npmrc";
     # # Kubernetes : ~/.kube
     KUBECACHEDIR = "${config.xdg.cacheHome}/kube";
-    "_JAVA_OPTIONS=-Djava.util.prefs.userRoot" = "${config.xdg.configHome}/java";
     GRADLE_USER_HOME = "${config.xdg.dataHome}/gradle";
     # !/.bash_history
     HISTFILE = "${config.xdg.stateHome}/bash/history";

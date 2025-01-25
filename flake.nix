@@ -12,7 +12,7 @@
     ghostty.url = "github:ghostty-org/ghostty";
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
-    nvim.url = "github:mirzahilmi/nvim";
+    nvim.url = "git+file:/home/mirza/.config/nvim?shallow=1";
     sops-nix.url = "github:Mic92/sops-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
