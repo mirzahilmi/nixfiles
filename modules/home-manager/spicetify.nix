@@ -16,7 +16,6 @@ in {
   config = lib.mkIf cfg.enable {
     programs.spicetify = {
       enable = true;
-      spicetifyPackage = pkgs.unstable.spicetify-cli;
       enabledCustomApps = with spicetifyPkgs.apps; [
         betterLibrary
         historyInSidebar
