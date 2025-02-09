@@ -19,6 +19,7 @@
       hurl
       lazygit
       libreoffice
+      monaspace
       nmap
       nvtopPackages.full
       obsidian
