@@ -17,7 +17,6 @@
       gnumake
       gthumb
       hurl
-      lazygit
       libreoffice
       monaspace
       nmap
@@ -64,6 +63,7 @@
     gpg.enable = true;
     gtk.enable = true;
     kind.enable = true;
+    lazygit.enable = true;
     lsd.enable = true;
     obs.enable = true;
     ohmyposh.enable = true;

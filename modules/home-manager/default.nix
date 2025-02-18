@@ -10,6 +10,7 @@
     ./gpg.nix
     ./gtk.nix
     ./kind.nix
+    ./lazygit.nix
     ./lsd.nix
     ./obs.nix
     ./ohmyposh.nix
