@@ -311,14 +311,15 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_3",
-        "plugins-showkeys": "plugins-showkeys"
+        "plugins-showkeys": "plugins-showkeys",
+        "plugins-spring-boot-nvim": "plugins-spring-boot-nvim"
       },
       "locked": {
-        "lastModified": 1738858126,
-        "narHash": "sha256-lbp8IjxeQ7vTc1f9uVBnu3zVnuwCRTLAu2lFigs0TtA=",
+        "lastModified": 1739871452,
+        "narHash": "sha256-ppYy5PxAbQ1vHfQXzBR5JrzDtfO3oQgO+iw979MrZUY=",
         "ref": "refs/heads/master",
-        "rev": "2b3e3e491ddcd3b9cf4a4166a9ed74d96824be99",
-        "revCount": 55,
+        "rev": "0fc7c3e33fb933bbb1a5dd3b3b4bad66a3c34123",
+        "revCount": 66,
         "shallow": true,
         "type": "git",
         "url": "file:/home/mirza/.config/nvim"
@@ -342,6 +343,22 @@
       "original": {
         "owner": "nvzone",
         "repo": "showkeys",
+        "type": "github"
+      }
+    },
+    "plugins-spring-boot-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1736818476,
+        "narHash": "sha256-JYI/7VSafU4YD9VkZ7swgrJqRZbS56VSGNuUNIG6bZs=",
+        "owner": "JavaHello",
+        "repo": "spring-boot.nvim",
+        "rev": "fc474dfd4bbe78188fdd5b2984e7013e124c46fe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JavaHello",
+        "repo": "spring-boot.nvim",
         "type": "github"
       }
     },
