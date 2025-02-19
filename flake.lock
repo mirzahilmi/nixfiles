@@ -315,11 +315,11 @@
         "plugins-spring-boot-nvim": "plugins-spring-boot-nvim"
       },
       "locked": {
-        "lastModified": 1739871452,
-        "narHash": "sha256-ppYy5PxAbQ1vHfQXzBR5JrzDtfO3oQgO+iw979MrZUY=",
+        "lastModified": 1739978478,
+        "narHash": "sha256-nJt6/KrvHVPBa9SBG2aP5u5kshq+mhpeWxJE1SOk1Xs=",
         "ref": "refs/heads/master",
-        "rev": "0fc7c3e33fb933bbb1a5dd3b3b4bad66a3c34123",
-        "revCount": 66,
+        "rev": "09e0e4eeb8076c46729a2b0712d1d1fe2fc22d9e",
+        "revCount": 68,
         "shallow": true,
         "type": "git",
         "url": "file:/home/mirza/.config/nvim"
@@ -467,15 +467,15 @@
         "nixpkgs": "nixpkgs_5"
       },
       "locked": {
-        "lastModified": 1727721329,
-        "narHash": "sha256-QYlWZwUSwrM7BuO+dXclZIwoPvBIuJr6GpFKv9XKFPI=",
-        "owner": "MarceColl",
+        "lastModified": 1739667343,
+        "narHash": "sha256-fNEz+Yd0t9jXz27qKRMAEBradTwYBeBLOECx+ydG25s=",
+        "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "e6ab73f405e9a2896cce5956c549a9cc359e5fcc",
+        "rev": "8c7f6ca49f87b4e114f775a4dad956ceb6df4220",
         "type": "github"
       },
       "original": {
-        "owner": "MarceColl",
+        "owner": "0xc000022070",
         "repo": "zen-browser-flake",
         "type": "github"
       }
