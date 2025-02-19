@@ -43,6 +43,7 @@ in {
           blur-my-shell
           clipboard-indicator
           hide-minimized
+          pano
           vitals
           ;
       });
@@ -119,12 +120,12 @@ in {
         "org/gnome/shell" = {
           disable-user-extensions = false;
           enabled-extensions = [
+            "Vitals@CoreCoding.com"
             "appmenu-is-back@fthx"
             "blur-my-shell@aunetx"
-            "clipboard-indicator@tudmotu.com"
             "drive-menu@gnome-shell-extensions.gcampax.github.com"
             "hide-minimized@danigm.net"
-            "Vitals@CoreCoding.com"
+            "pano@elhan.io"
           ];
 
           favorite-apps = [
