@@ -94,8 +94,8 @@ in {
         "org/gnome/desktop/background" = {
           color-shading-type = "solid";
           picture-options = "zoom";
-          picture-uri = "file://${../../imgs/postsoviet2.jpg}";
-          picture-uri-dark = "file://${../../imgs/postsoviet2.jpg}";
+          picture-uri = "file://${../../imgs/switzerland.jpeg}";
+          picture-uri-dark = "file://${../../imgs/switzerland.jpeg}";
         };
 
         "org/gnome/desktop/wm/preferences" = {
@@ -126,6 +126,7 @@ in {
             "drive-menu@gnome-shell-extensions.gcampax.github.com"
             "hide-minimized@danigm.net"
             "pano@elhan.io"
+            "draw-on-your-screen3@daveprowse.github.io"
           ];
 
           favorite-apps = [
