@@ -43,6 +43,7 @@ in {
           blur-my-shell
           clipboard-indicator
           hide-minimized
+          notification-timeout
           pano
           vitals
           ;
@@ -123,10 +124,11 @@ in {
             "Vitals@CoreCoding.com"
             "appmenu-is-back@fthx"
             "blur-my-shell@aunetx"
+            "draw-on-your-screen3@daveprowse.github.io"
             "drive-menu@gnome-shell-extensions.gcampax.github.com"
             "hide-minimized@danigm.net"
+            "notification-timeout@chlumskyvaclav.gmail.com"
             "pano@elhan.io"
-            "draw-on-your-screen3@daveprowse.github.io"
           ];
 
           favorite-apps = [
