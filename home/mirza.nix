@@ -8,7 +8,6 @@
       bccli
       chafa
       dig
-      discord
       distrobox
       easyeffects
       eduvpn-client
@@ -31,11 +30,12 @@
       teams-for-linux
       tio
       ungoogled-chromium
-      unzip
-      wl-clipboard
-      wl-clip-persist
-      zap
       unstable.zed-editor
+      unzip
+      vesktop
+      wl-clip-persist
+      wl-clipboard
+      zap
       zen-browser
       zoom-us
     ];

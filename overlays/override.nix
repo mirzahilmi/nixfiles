@@ -11,4 +11,10 @@
       hash = "sha256-j1xQYVxfTNDVuzCKvT5FbU29t8XsH4XqcZ477sjydts=";
     };
   });
+  vesktop = prevPkgs.vesktop.overrideAttrs (_: prev: {
+    desktopItems = (builtins.elemAt prev.desktopItems 0).override {
+      icon = "${../imgs/discord.svg}";
+      desktopName = "Discord";
+    };
+  });
 }
