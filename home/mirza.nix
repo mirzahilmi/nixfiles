@@ -8,6 +8,7 @@
       bccli
       chafa
       dig
+      discord
       distrobox
       easyeffects
       eduvpn-client
@@ -27,12 +28,10 @@
       simple-http-server
       slack
       tcpdump
-      teams-for-linux
       tio
       ungoogled-chromium
       unstable.zed-editor
       unzip
-      vesktop
       wl-clip-persist
       wl-clipboard
       zap

@@ -311,15 +311,15 @@
       "inputs": {
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_3",
-        "plugins-showkeys": "plugins-showkeys",
-        "plugins-spring-boot-nvim": "plugins-spring-boot-nvim"
+        "plugins-cord-nvim": "plugins-cord-nvim",
+        "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1739978478,
-        "narHash": "sha256-nJt6/KrvHVPBa9SBG2aP5u5kshq+mhpeWxJE1SOk1Xs=",
+        "lastModified": 1740536785,
+        "narHash": "sha256-3gcPrOEfZaSdfdggOaqUTLBAdu4GShAKW4gpq4+FaMk=",
         "ref": "refs/heads/master",
-        "rev": "09e0e4eeb8076c46729a2b0712d1d1fe2fc22d9e",
-        "revCount": 68,
+        "rev": "5bb90e3a52082c928fbd94a7645d0b70da948037",
+        "revCount": 74,
         "shallow": true,
         "type": "git",
         "url": "file:/home/mirza/.config/nvim"
@@ -328,6 +328,22 @@
         "shallow": true,
         "type": "git",
         "url": "file:/home/mirza/.config/nvim"
+      }
+    },
+    "plugins-cord-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740500675,
+        "narHash": "sha256-VgPeJYoyy9lvRIIm9GbZN6NLtzAdTPETkqFTU9+7YGc=",
+        "owner": "vyfor",
+        "repo": "cord.nvim",
+        "rev": "50d61d477f1b5a16b81a25942ce9640c472b3ecb",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vyfor",
+        "repo": "cord.nvim",
+        "type": "github"
       }
     },
     "plugins-showkeys": {
@@ -343,22 +359,6 @@
       "original": {
         "owner": "nvzone",
         "repo": "showkeys",
-        "type": "github"
-      }
-    },
-    "plugins-spring-boot-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1736818476,
-        "narHash": "sha256-JYI/7VSafU4YD9VkZ7swgrJqRZbS56VSGNuUNIG6bZs=",
-        "owner": "JavaHello",
-        "repo": "spring-boot.nvim",
-        "rev": "fc474dfd4bbe78188fdd5b2984e7013e124c46fe",
-        "type": "github"
-      },
-      "original": {
-        "owner": "JavaHello",
-        "repo": "spring-boot.nvim",
         "type": "github"
       }
     },
