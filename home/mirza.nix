@@ -17,6 +17,7 @@
       gnumake
       gthumb
       hurl
+      jetbrains.idea-community
       libreoffice
       monaspace
       nmap
