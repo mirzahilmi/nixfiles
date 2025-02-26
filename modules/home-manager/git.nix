@@ -4,6 +4,7 @@
   ...
 }: let
   cfg = config.custom.programs.git;
+  stripNewline = str: builtins.replaceStrings ["\n"] [""] str;
 in {
   options.custom.programs.git = {
     enable = lib.mkEnableOption "git";
@@ -17,7 +18,7 @@ in {
       ignores = ["*.env" "*.env.json" "*.env.yaml" ".envrc"];
       aliases = {
         a = "add --all";
-        acp = builtins.replaceStrings ["\n"] [""] ''
+        acp = stripNewline ''
           !f() {
             git add --all &&
             git commit --message "$1" &&
