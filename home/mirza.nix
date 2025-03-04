@@ -6,10 +6,8 @@
     homeDirectory = "/home/mirza";
     packages = with pkgs; [
       bccli
-      chafa
       dig
       discord
-      distrobox
       easyeffects
       eduvpn-client
       fd
@@ -17,9 +15,7 @@
       gnumake
       gthumb
       hurl
-      jetbrains.idea-community
       libreoffice
-      monaspace
       nmap
       nvtopPackages.full
       obsidian
@@ -50,7 +46,6 @@
     vscode.enable = true;
     fastfetch.enable = true;
     jq.enable = true;
-    k9s.enable = true;
     ripgrep.enable = true;
   };
   custom.programs = {
@@ -60,7 +55,6 @@
     fzf.enable = true;
     ghostty.enable = true;
     git.enable = true;
-    gpg.enable = true;
     gtk.enable = true;
     kind.enable = true;
     lazygit.enable = true;
