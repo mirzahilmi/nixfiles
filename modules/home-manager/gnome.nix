@@ -134,6 +134,7 @@ in {
             "com.mitchellh.ghostty.desktop"
             "dev.zed.Zed.desktop"
             "zen.desktop"
+            "obsidian.desktop"
           ];
         };
 
