@@ -27,13 +27,14 @@
       tcpdump
       tio
       ungoogled-chromium
-      unstable.zed-editor
       unzip
       wl-clip-persist
       wl-clipboard
       zap
       zen-browser
       zoom-us
+
+      unstable.zed-editor
     ];
     sessionVariables = {
       MOZ_ENABLE_WAYLAND = 1;

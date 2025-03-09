@@ -8,7 +8,7 @@
     ./git.nix
     ./ghostty.nix
     ./gpg.nix
-    ./gtk.nix
+    ./gnome.nix
     ./kind.nix
     ./lazygit.nix
     ./lsd.nix
