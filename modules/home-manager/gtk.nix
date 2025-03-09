@@ -43,7 +43,6 @@ in {
           blur-my-shell
           clipboard-indicator
           hide-minimized
-          notification-timeout
           pano
           vitals
           ;
@@ -127,7 +126,6 @@ in {
             "draw-on-your-screen3@daveprowse.github.io"
             "drive-menu@gnome-shell-extensions.gcampax.github.com"
             "hide-minimized@danigm.net"
-            "notification-timeout@chlumskyvaclav.gmail.com"
             "pano@elhan.io"
           ];
 
