@@ -3,7 +3,7 @@
   fetchFromGitHub,
   buildGoModule,
 }: let
-  version = "1.1.1";
+  version = "1.2.1";
 in
   buildGoModule {
     pname = "bccli";
@@ -13,7 +13,7 @@ in
       owner = "bccfilkom-be";
       repo = "bccli";
       rev = "v${version}";
-      hash = "sha256-GUhOs6jYfihy1IKQES5rtKvnhRQjnu4gAniurJxOX3Y=";
+      hash = "sha256-sSEK5Sub5Nnuy17HI5xaqPTxLmtcUvZhPTOXS+KiZ6E=";
     };
 
     vendorHash = "sha256-jxmmuXIvQfo9ZYhOowZMPYcjj0yPIZRkhKSF6pMqudc=";
