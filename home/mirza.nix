@@ -15,6 +15,7 @@
       gnumake
       gthumb
       hurl
+      jetbrains.idea-community
       libreoffice
       nmap
       nvtopPackages.full
