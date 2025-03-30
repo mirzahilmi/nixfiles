@@ -15,6 +15,7 @@
       gnumake
       gthumb
       hurl
+      jetbrains.datagrip
       jetbrains.idea-community
       libreoffice
       nmap
@@ -33,6 +34,7 @@
       wl-clipboard
       zap
       zen-browser
+      zip
       zoom-us
 
       unstable.zed-editor
@@ -59,6 +61,7 @@
     git.enable = true;
     gtk.enable = true;
     kind.enable = true;
+    lazydocker.enable = true;
     lazygit.enable = true;
     lsd.enable = true;
     obs.enable = true;

@@ -10,6 +10,7 @@
     ./gpg.nix
     ./gnome.nix
     ./kind.nix
+    ./lazydocker.nix
     ./lazygit.nix
     ./lsd.nix
     ./obs.nix
