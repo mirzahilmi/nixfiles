@@ -19,23 +19,20 @@
       jetbrains.idea-community
       libreoffice
       nmap
-      nvtopPackages.full
       obsidian
       parabolic
       postman
       powertop
-      simple-http-server
-      slack
       tcpdump
       tio
       ungoogled-chromium
       unzip
       wl-clip-persist
       wl-clipboard
+      yazi
       zap
       zen-browser
       zip
-      zoom-us
 
       unstable.zed-editor
     ];

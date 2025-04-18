@@ -9,5 +9,5 @@
   grubThemes = {fallout = inputs.grub-themes.packages.${finalPkgs.system}.fallout;};
   neovim = inputs.nvim.packages.${finalPkgs.system}.default;
   st-snazzy = import ./st-snazzy {inherit inputs finalPkgs;};
-  zen-browser = inputs.zen-browser.packages."${finalPkgs.system}".beta;
+  zen-browser = inputs.zen-browser.packages."${finalPkgs.system}".default;
 }
