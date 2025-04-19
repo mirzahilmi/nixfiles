@@ -18,6 +18,7 @@
   environment.systemPackages = with pkgs; [
     git
     lazygit
+    tmux
     inputs.nvim.packages.${pkgs.system}.default
   ];
   nix = {

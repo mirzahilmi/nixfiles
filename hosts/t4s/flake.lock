@@ -198,11 +198,11 @@
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1744394367,
-        "narHash": "sha256-3yE8/WAqjw+8wnv6Z7TAi+urMJC8Tly1bLorB797NtQ=",
+        "lastModified": 1745065168,
+        "narHash": "sha256-c2r2mQzZZRJ9V4aMHuDZxlx9/VSSzwn8cV+DAw57qGk=",
         "ref": "refs/heads/master",
-        "rev": "255f72bbef3db2d368aeb9014cf95197d72015f0",
-        "revCount": 131,
+        "rev": "bae83e18d0b9192927e20975c61fa764c2909be3",
+        "revCount": 137,
         "shallow": true,
         "type": "git",
         "url": "file:/home/nixos/.config/nvim"
