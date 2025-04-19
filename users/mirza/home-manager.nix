@@ -1,6 +1,7 @@
 {
   pkgs,
   outputs,
+  config,
   ...
 }: {
   imports = [
@@ -18,7 +19,7 @@
 
   home = {
     username = "mirza";
-    homeDirectory = "/home/mirza";
+    homeDirectory = "/home/${config.home.username}";
     packages = with pkgs; [
       bccli
       dig
@@ -71,7 +72,6 @@
     fzf.enable = true;
     ghostty.enable = true;
     git.enable = true;
-    gtk.enable = true;
     kind.enable = true;
     lazydocker.enable = true;
     lazygit.enable = true;
