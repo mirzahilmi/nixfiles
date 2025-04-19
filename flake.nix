@@ -32,11 +32,11 @@
 
     nixosConfigurations = {
       "nixsina" = nixpkgs.lib.nixosSystem {
-        modules = [./hosts/nixsina];
+        modules = [./machines/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
       "t4s" = nixpkgs.lib.nixosSystem {
-        modules = [./hosts/nixsina];
+        modules = [./machines/t4s];
         specialArgs = {inherit inputs outputs;};
       };
     };
