@@ -1,5 +1,20 @@
-{pkgs, ...}: {
-  imports = [./shared];
+{
+  pkgs,
+  outputs,
+  ...
+}: {
+  imports = [
+    ./xdgify.nix
+    ../../modules/home-manager
+  ];
+
+  nixpkgs = {
+    overlays = builtins.attrValues outputs.overlays;
+    config = {
+      allowUnfree = true;
+      allowUnfreePredicate = _: true;
+    };
+  };
 
   home = {
     username = "mirza";

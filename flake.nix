@@ -34,15 +34,11 @@
         modules = [./hosts/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
-      "test" = nixpkgs.lib.nixosSystem {
-        modules = [./hosts/test];
-        specialArgs = {inherit inputs outputs;};
-      };
     };
 
     homeConfigurations = {
       "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {
-        modules = [./home/mirza.nix];
+        modules = [./users/mirza/home-manager.nix];
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
       };

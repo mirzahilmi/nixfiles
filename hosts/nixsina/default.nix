@@ -6,9 +6,9 @@
   imports = [
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
     (import ./disko.nix {device = "/dev/sda";})
-    ../shared/users/mirza.nix
     ../shared
     ./hardware-configuration.nix
+    ../../users/mirza/nixos.nix
   ];
 
   networking.hostName = "nixsina";
