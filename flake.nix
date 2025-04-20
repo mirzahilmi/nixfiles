@@ -27,6 +27,24 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+
+    mkHome = {
+      username,
+      hostname,
+      system,
+    }:
+      home-manager.lib.homeManagerConfiguration {
+        modules = [
+          ./users/${username}
+          ./users/${username}/${hostname}.nix
+        ];
+        pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          current = {inherit username hostname;};
+          osConfig = outputs.nixosConfigurations.${hostname}.config;
+        };
+      };
   in {
     overlays = import ./overlays {inherit inputs;};
 
@@ -42,10 +60,10 @@
     };
 
     homeConfigurations = {
-      "mirza@nixsina" = home-manager.lib.homeManagerConfiguration {
-        modules = [./users/mirza/home-manager.nix];
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
+      "mirza@nixsina" = mkHome {
+        username = "mirza";
+        hostname = "nixsina";
+        system = "x86_64-linux";
       };
     };
   };

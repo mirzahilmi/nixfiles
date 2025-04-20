@@ -1,35 +1,7 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
-  imports = [];
-
+{pkgs, ...}: {
   wsl.enable = true;
-  wsl.defaultUser = "nixos";
+  wsl.defaultUser = "mirza";
 
-  environment.systemPackages = with pkgs; [
-    git
-    lazygit
-    tmux
-    inputs.nvim.packages.${pkgs.system}.default
-  ];
-  nix = {
-    optimise.automatic = true;
-    settings = {
-      experimental-features = toString [
-        "nix-command"
-        "flakes"
-      ];
-    };
-  };
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
-  virtualisation.docker = {
-    enable = true;
-    autoPrune.enable = true;
-  };
+  environment.systemPackages = [pkgs.neovim];
   system.stateVersion = "24.11";
 }

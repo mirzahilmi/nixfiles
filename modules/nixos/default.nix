@@ -2,7 +2,7 @@
   imports = [
     ./cloudflare-warp.nix
     ./docker.nix
-    ./gnome-de.nix
+    ./gnome.nix
     ./gns3.nix
     ./k3s.nix
     ./podman.nix

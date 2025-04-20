@@ -4,10 +4,10 @@
   pkgs,
   ...
 }: let
-  cfg = config.custom.programs.gtk;
+  cfg = config.custom.programs.gsettings;
 in {
-  options.custom.programs.gtk = {
-    enable = lib.mkEnableOption "gtk customization";
+  options.custom.programs.gsettings = {
+    enable = lib.mkEnableOption "GSettings";
     darkMode = lib.mkOption {
       type = lib.types.bool;
       default = true;
