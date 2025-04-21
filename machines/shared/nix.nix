@@ -23,8 +23,5 @@
       dates = "weekly";
       options = "--delete-older-than 1w";
     };
-    # extraOptions = ''
-    #   !include ${config.sops.secrets.nixAccessTokens.path}
-    # '';
   };
 }

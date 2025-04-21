@@ -14,7 +14,6 @@
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
     nvim.url = "git+file:///home/mirza/.config/nvim";
-    sops-nix.url = "github:Mic92/sops-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     # pin this specific rev because the latest throws segfault in my machine :)

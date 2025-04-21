@@ -1,7 +1,0 @@
-keys:
-  - &primary age1qtfaaajkup6twn7x88gy2mw6aed8gatgwf2kdg04cy9s6ytqvu3qsxhwlc
-creation_rules:
-  - path_regex: ^globals\.yaml$
-    key_groups:
-    - age:
-      - *primary
