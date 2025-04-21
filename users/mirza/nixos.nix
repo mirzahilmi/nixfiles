@@ -12,11 +12,4 @@
       "wireshark"
     ];
   };
-  boot.postBootCommands = ''
-    if [[ ! -e /var/lib/AccountsService/users/mirza ]]; then
-      echo '[User]
-      Icon=${../../imgs/otter.png}
-      SystemAccount=false' > /var/lib/AccountsService/users/mirza
-    fi
-  '';
 }

@@ -54,7 +54,11 @@
         specialArgs = {inherit inputs outputs;};
       };
       "t4s" = nixpkgs.lib.nixosSystem {
-        modules = [./machines/t4s];
+        system = "x86_64-linux";
+        modules = [
+          inputs.nixos-wsl.nixosModules.default
+          ./machines/t4s
+        ];
         specialArgs = {inherit inputs outputs;};
       };
     };
@@ -63,6 +67,11 @@
       "mirza@nixsina" = mkHome {
         username = "mirza";
         hostname = "nixsina";
+        system = "x86_64-linux";
+      };
+      "mirza@t4s" = mkHome {
+        username = "mirza";
+        hostname = "t4s";
         system = "x86_64-linux";
       };
     };

@@ -1,7 +1,9 @@
 {pkgs, ...}: {
+  imports = [
+    ../shared
+    ../../users/mirza/nixos.nix
+  ];
   wsl.enable = true;
   wsl.defaultUser = "mirza";
-
-  environment.systemPackages = [pkgs.neovim];
-  system.stateVersion = "24.11";
+  networking.hostName = "t4s";
 }
