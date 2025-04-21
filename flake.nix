@@ -17,6 +17,7 @@
     sops-nix.url = "github:Mic92/sops-nix";
     spicetify-nix.inputs.nixpkgs.follows = "nixpkgs";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    # pin this specific rev because the latest throws segfault in my machine :)
     zen-browser.url = "github:0xc000022070/zen-browser-flake/85596d964350861825f642de9fc2154ac06bfc05";
   };
 
@@ -73,6 +74,18 @@
         username = "mirza";
         hostname = "t4s";
         system = "x86_64-linux";
+      };
+    };
+
+    templates = {
+      java = {
+        path = ./templates/java;
+        description = "A Nix-flake-based Java development environment";
+        welcomeText = ''
+          A Nix-flake-based Java development environment.
+
+          More info check github.com/mirzahilmi/nixfiles
+        '';
       };
     };
   };
