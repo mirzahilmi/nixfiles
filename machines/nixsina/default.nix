@@ -65,6 +65,8 @@
   };
   custom = {
     programs = {
+      bootloader.enable = true;
+      locale.enable = true;
       virt-manager.enable = true;
       cloudflare-warp.enable = true;
     };

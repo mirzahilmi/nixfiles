@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   outputs,
   ...
 }: {
@@ -8,8 +7,6 @@
     ../../modules/nixos
     ./nh.nix
     ./nix.nix
-    ./ssh.nix
-    ./shell.nix
     ./xdg.nix
   ];
   nixpkgs = {

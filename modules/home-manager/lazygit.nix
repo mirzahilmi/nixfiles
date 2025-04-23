@@ -13,7 +13,6 @@ in {
       enable = true;
       settings = {
         git = {
-          overrideGpg = true;
           paging = {
             colorArg = "always";
             pager = "delta --dark --paging=never";
