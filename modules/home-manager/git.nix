@@ -44,7 +44,7 @@ in {
         gpg.format = "ssh";
         init.defaultBranch = "master";
         merge.conflictStyle = "zdiff3";
-        pull.rebase = false;
+        pull.rebase = true;
         push.autoSetupRemote = true;
         push.default = "simple";
         rerere.enabled = true;
