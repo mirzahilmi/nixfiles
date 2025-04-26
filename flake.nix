@@ -4,10 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
-
     disko.inputs.nixpkgs.follows = "nixpkgs";
     disko.url = "github:nix-community/disko";
     ghostty.url = "github:ghostty-org/ghostty";
@@ -27,6 +27,9 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    overlays = import ./overlays {inherit inputs;};
+
+    x86 = "x86_64-linux";
 
     mkHome = {
       username,
@@ -46,33 +49,31 @@
         };
       };
   in {
-    overlays = import ./overlays {inherit inputs;};
+    inherit overlays;
 
     nixosConfigurations = {
-      "nixsina" = nixpkgs.lib.nixosSystem {
+      nixsina = nixpkgs.lib.nixosSystem {
+        system = x86;
         modules = [./machines/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
-      "t4s" = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          inputs.nixos-wsl.nixosModules.default
-          ./machines/t4s
-        ];
+      t4s = nixpkgs.lib.nixosSystem {
+        system = x86;
+        modules = [./machines/t4s];
         specialArgs = {inherit inputs outputs;};
       };
     };
 
     homeConfigurations = {
       "mirza@nixsina" = mkHome {
+        system = x86;
         username = "mirza";
         hostname = "nixsina";
-        system = "x86_64-linux";
       };
       "mirza@t4s" = mkHome {
+        system = x86;
         username = "mirza";
         hostname = "t4s";
-        system = "x86_64-linux";
       };
     };
 

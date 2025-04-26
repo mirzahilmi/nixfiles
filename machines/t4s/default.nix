@@ -1,10 +1,12 @@
-{
+{inputs, ...}: {
   imports = [
+    inputs.nixos-wsl.nixosModules.default
     ../shared
     ../../users/mirza/nixos.nix
   ];
 
   networking.hostName = "t4s";
+
   wsl = {
     enable = true;
     defaultUser = "mirza";
@@ -18,4 +20,6 @@
       {src = "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe";}
     ];
   };
+
+  custom.services.docker.enable = true;
 }

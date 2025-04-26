@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  current,
   ...
 }: let
   cfg = config.custom.programs.git;
@@ -13,7 +14,7 @@ in {
     programs.git = {
       enable = true;
       lfs.enable = true;
-      userName = "Mirza Hilmi";
+      userName = "${current.username}@${current.hostname}";
       userEmail = "dev@mrz.my.id";
       ignores = ["*.env" "*.env.json" "*.env.yaml" ".envrc"];
       aliases = {
