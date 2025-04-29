@@ -87,6 +87,15 @@
           More info check github.com/mirzahilmi/nixfiles
         '';
       };
+      go = {
+        path = ./templates/go;
+        description = "A Nix-flake-based Go development environment";
+        welcomeText = ''
+          A Nix-flake-based Go development environment.
+
+          More info check github.com/mirzahilmi/nixfiles
+        '';
+      };
     };
   };
 }
