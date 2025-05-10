@@ -6,6 +6,7 @@
 }: {
   imports = [
     inputs.hardware.nixosModules.lenovo-legion-15arh05h
+    inputs.disko.nixosModules.disko
     (import ./disko.nix {device = "/dev/sda";})
     ../shared
     ./hardware-configuration.nix
