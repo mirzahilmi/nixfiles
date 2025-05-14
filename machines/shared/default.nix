@@ -17,7 +17,10 @@
   };
   environment = {
     systemPackages = [pkgs.neovim];
-    variables.EDITOR = "nvim";
+    variables = {
+      EDITOR = "nvim";
+      MANPAGER = "nvim +Man!";
+    };
   };
   system.stateVersion = "23.11";
 }
