@@ -76,4 +76,21 @@
       printer.enable = true;
     };
   };
+
+  services.openssh.enable = true;
+  networking = {
+    defaultGateway = "10.34.238.1";
+    nameservers = [
+      "10.34.0.53"
+      "175.45.184.73"
+      "175.45.184.165"
+    ];
+    interfaces.eno1.ipv4.addresses = [
+      {
+        address = "10.34.239.56";
+        prefixLength = 23;
+      }
+    ];
+  };
+  services.logind.lidSwitch = "ignore";
 }
