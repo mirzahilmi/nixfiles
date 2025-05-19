@@ -7,7 +7,7 @@
     self,
     nixpkgs,
   }: let
-    goVersion = 22;
+    goVersion = 24;
 
     supportedSystems = ["x86_64-linux" "aarch64-linux" "x86_64-darwin" "aarch64-darwin"];
     forEachSupportedSystem = f:
@@ -26,9 +26,12 @@
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
         packages = with pkgs; [
+          air
           go
+          gopls
           gotools
           golangci-lint
+          sqlc
         ];
       };
     });
