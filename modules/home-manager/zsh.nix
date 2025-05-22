@@ -41,6 +41,9 @@ in {
           "Aloxaf/fzf-tab kind:defer"
         ];
       };
+      shellAliases = {
+        v = "nvim";
+      };
       initExtraFirst = ''
         ## Profiling zsh startup
         [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
