@@ -5,10 +5,11 @@
     ./direnv.nix
     ./foot.nix
     ./fzf.nix
-    ./git.nix
     ./ghostty.nix
+    ./git.nix
     ./gpg.nix
     ./gsettings.nix
+    ./k9s.nix
     ./kind.nix
     ./lazydocker.nix
     ./lazygit.nix
