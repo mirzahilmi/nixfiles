@@ -11,7 +11,6 @@ in {
   config = lib.mkIf cfg.enable {
     programs.lsd = {
       enable = true;
-      enableAliases = true;
     };
   };
 }
