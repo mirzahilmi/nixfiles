@@ -15,6 +15,7 @@
       gnumake
       hurl
       nmap
+      scc
       tcpdump
       unzip
       zip
