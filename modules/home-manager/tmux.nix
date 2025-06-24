@@ -19,13 +19,11 @@ in {
   config = lib.mkIf cfg.enable {
     programs.tmux = {
       enable = true;
-
       baseIndex = 1;
       disableConfirmationPrompt = true;
       escapeTime = 0;
       historyLimit = 10000;
       mouse = true;
-      prefix = "C-s";
       secureSocket = true;
       sensibleOnTop = false;
       shell = "${pkgs.zsh}/bin/zsh";
