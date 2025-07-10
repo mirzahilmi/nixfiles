@@ -428,11 +428,11 @@
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1749656608,
-        "narHash": "sha256-+bxjnSfS/aqOMdlJ3awiHVn1FrozV/eBuDM21sLHA+E=",
+        "lastModified": 1751785869,
+        "narHash": "sha256-J6VQd+1OGD4hyFIDRjdPM2VRciJ89Lei4zCHHLVUI6k=",
         "ref": "refs/heads/master",
-        "rev": "db9bc84c8138b6b0d5ad1a817b328dbfe8995364",
-        "revCount": 148,
+        "rev": "cd56b77e8562c79730dd81d0c21858755a9a81e5",
+        "revCount": 150,
         "type": "git",
         "url": "file:///home/mirza/.config/nvim"
       },
