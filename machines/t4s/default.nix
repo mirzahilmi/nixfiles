@@ -15,9 +15,10 @@
       interop.includePath = false;
     };
     extraBin = [
-      # I need this for vim yank pass-through WSL
+      # vim yank pass-through WSL
       {src = "/mnt/c/Windows/System32/clip.exe";}
       {src = "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe";}
+      {src = "/mnt/c/Users/mirza/AppData/Local/SumatraPDF/SumatraPDF.exe";}
     ];
   };
 
