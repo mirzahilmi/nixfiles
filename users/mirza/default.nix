@@ -9,14 +9,10 @@
     username = "mirza";
     homeDirectory = "/home/${config.home.username}";
     packages = with pkgs; [
-      bccli
       dig
       fd
       gnumake
-      hurl
       nmap
-      scc
-      tcpdump
       unzip
       zip
     ];

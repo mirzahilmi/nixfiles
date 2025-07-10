@@ -5,6 +5,7 @@
   };
 
   home.packages = with pkgs; [
+    kubectx
     sumatrapdf-wrapper
     texliveMedium
   ];

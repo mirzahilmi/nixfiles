@@ -5,10 +5,12 @@
   ...
 }: {
   home.packages = with pkgs; [
+    bccli
     discord
     easyeffects
     eduvpn-client
     gthumb
+    hurl
     jetbrains.datagrip
     jetbrains.idea-community
     libreoffice
@@ -16,6 +18,7 @@
     parabolic
     postman
     powertop
+    tcpdump
     tio
     ungoogled-chromium
     wl-clip-persist
