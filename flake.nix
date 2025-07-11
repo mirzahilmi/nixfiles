@@ -77,6 +77,7 @@
       };
     };
 
+    # modified from https://github.com/the-nix-way/dev-templates
     templates = {
       java = {
         path = ./templates/java;
@@ -92,6 +93,15 @@
         description = "A Nix-flake-based Go development environment";
         welcomeText = ''
           A Nix-flake-based Go development environment.
+
+          More info check github.com/mirzahilmi/nixfiles
+        '';
+      };
+      rust = {
+        path = ./templates/rust;
+        description = "A Nix-flake-based Rust development environment";
+        welcomeText = ''
+          A Nix-flake-based Rust development environment.
 
           More info check github.com/mirzahilmi/nixfiles
         '';
