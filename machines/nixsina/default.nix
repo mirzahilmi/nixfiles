@@ -14,7 +14,7 @@
   ];
 
   networking.hostName = "nixsina";
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   programs = {
     wireshark = {
@@ -30,15 +30,18 @@
     pulse.enable = true;
     jack.enable = true;
   };
-  fonts.packages =
-    builtins.attrValues {
-      inherit
-        (pkgs)
-        ibm-plex
-        times-newer-roman
-        ;
-    }
-    ++ [(pkgs.nerdfonts.override {fonts = ["IBMPlexMono" "Iosevka"];})];
+  fonts.packages = builtins.attrValues {
+    inherit
+      (pkgs)
+      ibm-plex
+      times-newer-roman
+      ;
+    inherit
+      (pkgs.nerd-fonts)
+      blex-mono
+      iosevka
+      ;
+  };
 
   desktop.gnome = {
     enable = true;
