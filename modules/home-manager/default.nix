@@ -16,8 +16,10 @@
     ./lsd.nix
     ./obs.nix
     ./ohmyposh.nix
+    ./rofi.nix
     ./spicetify.nix
     ./ssh.nix
+    ./sway.nix
     ./tealdeer.nix
     ./tmux.nix
     ./wezterm.nix

@@ -9,6 +9,7 @@
     ./locale.nix
     ./podman.nix
     ./printer.nix
+    ./sway.nix
     ./virtmanager.nix
     ./zsh.nix
   ];

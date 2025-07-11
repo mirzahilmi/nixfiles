@@ -62,6 +62,11 @@
         modules = [./machines/t4s];
         specialArgs = {inherit inputs outputs;};
       };
+      t4nix = nixpkgs.lib.nixosSystem {
+        system = x86;
+        modules = [./machines/t4nix];
+        specialArgs = {inherit inputs outputs;};
+      };
     };
 
     homeConfigurations = {
@@ -74,6 +79,11 @@
         system = x86;
         username = "mirza";
         hostname = "t4s";
+      };
+      "mirza@t4nix" = mkHome {
+        system = x86;
+        username = "mirza";
+        hostname = "t4nix";
       };
     };
 
