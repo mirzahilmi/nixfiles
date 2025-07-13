@@ -14,9 +14,8 @@
   ];
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "t4nix"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -26,9 +25,7 @@
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
-  networking.networkmanager = {
-    enable = true;
-  };
+  networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
@@ -48,12 +45,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    #  wget
-    vim
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
-    gnumake
   ];
+
+  services.displayManager.ly = {
+    enable = true;
+  };
 
   fonts.packages = builtins.attrValues {
     inherit
@@ -69,7 +67,8 @@
     font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
   };
 
-  custom.programs = {
-    sway.enable = true;
-  };
+  custom.programs.sway.enable = true;
+
+  services.libinput.enable = true;
+  services.libinput.touchpad.naturalScrolling = true;
 }

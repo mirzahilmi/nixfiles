@@ -3,12 +3,15 @@
     ./bat.nix
     ./btop.nix
     ./direnv.nix
+    ./flameshot.nix
     ./foot.nix
     ./fzf.nix
     ./ghostty.nix
     ./git.nix
     ./gpg.nix
     ./gsettings.nix
+    ./gtk.nix
+    ./hyprcursor.nix
     ./k9s.nix
     ./kind.nix
     ./lazydocker.nix
@@ -22,7 +25,9 @@
     ./sway.nix
     ./tealdeer.nix
     ./tmux.nix
+    ./waybar.nix
     ./wezterm.nix
+    ./zathura.nix
     ./zsh.nix
   ];
 }
