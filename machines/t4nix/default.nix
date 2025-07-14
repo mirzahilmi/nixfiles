@@ -1,13 +1,5 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../shared
     ../../users/mirza/nixos.nix
@@ -18,11 +10,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "t4nix"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -65,10 +52,11 @@
     packages = [pkgs.terminus_font];
     earlySetup = true;
     font = "${pkgs.terminus_font}/share/consolefonts/ter-132n.psf.gz";
+    keyMap = "us";
   };
 
-  custom.programs.sway.enable = true;
-
-  services.libinput.enable = true;
-  services.libinput.touchpad.naturalScrolling = true;
+  custom.programs = {
+    sway.enable = true;
+    docker.enable = true;
+  };
 }
