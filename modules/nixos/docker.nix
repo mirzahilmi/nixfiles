@@ -3,9 +3,9 @@
   config,
   ...
 }: let
-  cfg = config.custom.services.docker;
+  cfg = config.custom.programs.docker;
 in {
-  options.custom.services.docker = {
+  options.custom.programs.docker = {
     enable = lib.mkEnableOption "Docker";
     storageDriver = lib.mkOption {
       type = lib.types.nullOr <| lib.types.enum [
