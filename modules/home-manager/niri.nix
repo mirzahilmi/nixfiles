@@ -17,18 +17,9 @@ in {
     programs.niri = {
       enable = true;
       package = pkgs.unstable.niri;
-      settings.environment = {
-        CLUTTER_BACKEND = "wayland";
-        DISPLAY = null;
-        GDK_BACKEND = "wayland,x11";
-        MOZ_ENABLE_WAYLAND = "1";
-        NIXOS_OZONE_WL = "1";
-        QT_QPA_PLATFORM = "wayland;xcb";
-        QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
-        SDL_VIDEODRIVER = "wayland";
-        # see https://www.electronjs.org/docs/latest/api/environment-variables#electron_ozone_platform_hint-linux
-        ELECTRON_OZONE_PLATFORM_HINT = "auto";
-      };
     };
+    xdg.configFile."niri/config.kdl".source =
+      config.lib.file.mkOutOfStoreSymlink
+      "/home/mirza/.config/nixfiles/modules/home-manager/niri.kdl";
   };
 }
