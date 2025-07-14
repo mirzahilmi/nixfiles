@@ -10,4 +10,5 @@
       };
     };
   };
+  niri = inputs.niri.overlays.niri;
 }

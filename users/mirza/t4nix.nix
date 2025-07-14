@@ -14,6 +14,8 @@
     jetbrains.datagrip
     discord
     texliveFull
+    kubectx
+    mermaid-cli
   ];
 
   custom.programs = {
@@ -25,6 +27,10 @@
     flameshot.enable = true;
     waybar.enable = true;
     gtk.enable = true;
+    niri.enable = true;
+    anyrun.enable = true;
+    # k9s.enable = true;
+    # kind.enable = true;
   };
   services = {
     swww.enable = true;

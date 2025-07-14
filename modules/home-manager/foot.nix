@@ -15,7 +15,7 @@ in {
       package = pkgs.unstable.foot;
       settings = {
         main = {
-          font = "Iosevka NF:size=16";
+          font = "Iosevka NF:size=14";
         };
         mouse.hide-when-typing = "yes";
         key-bindings.fullscreen = "F11";

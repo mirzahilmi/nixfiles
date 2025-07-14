@@ -19,6 +19,11 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     # pin this specific rev because the latest throws segfault in my machine :)
     zen-browser.url = "github:0xc000022070/zen-browser-flake/85596d964350861825f642de9fc2154ac06bfc05";
+    niri.url = "github:sodiboo/niri-flake";
+    anyrun = {
+      url = "github:anyrun-org/anyrun";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {

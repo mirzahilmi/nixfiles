@@ -1,5 +1,6 @@
 {
   imports = [
+    ./anyrun.nix
     ./bat.nix
     ./btop.nix
     ./direnv.nix
@@ -17,6 +18,7 @@
     ./lazydocker.nix
     ./lazygit.nix
     ./lsd.nix
+    ./niri.nix
     ./obs.nix
     ./ohmyposh.nix
     ./rofi.nix

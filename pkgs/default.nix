@@ -11,4 +11,5 @@
   st-snazzy = import ./st-snazzy {inherit inputs finalPkgs;};
   zen-browser = inputs.zen-browser.packages."${finalPkgs.system}".default;
   sumatrapdf-wrapper = finalPkgs.writeShellScriptBin "sumatrapdf-wrapper" (builtins.readFile ./sumatrapdf-wrapper.sh);
+  anyrun-plugins = inputs.anyrun.packages.${finalPkgs.system};
 }
