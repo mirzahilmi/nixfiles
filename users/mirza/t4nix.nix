@@ -29,9 +29,10 @@
     gtk.enable = true;
     niri.enable = true;
     anyrun.enable = true;
-    # k9s.enable = true;
-    # kind.enable = true;
+    k9s.enable = true;
+    kind.enable = true;
   };
+
   services = {
     swww.enable = true;
   };
