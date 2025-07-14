@@ -1,5 +1,10 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [
+    inputs.hardware.nixosModules.lenovo-thinkpad-t480s
     ./hardware-configuration.nix
     ../shared
     ../../users/mirza/nixos.nix
