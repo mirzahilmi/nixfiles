@@ -17,6 +17,7 @@ in {
         plugins = with pkgs.anyrun-plugins; [applications];
         closeOnClick = true;
         width.absolute = 600;
+        y.fraction = 0.3;
         height.absolute = 0;
       };
     };

@@ -43,6 +43,7 @@ in {
       };
       shellAliases = {
         v = "nvim";
+        lg = "lazygit";
       };
       initExtraFirst = ''
         ## Profiling zsh startup
