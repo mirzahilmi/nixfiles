@@ -11,7 +11,6 @@
     packages = with pkgs; [
       dig
       fd
-      gnumake
       nmap
       unzip
       zip

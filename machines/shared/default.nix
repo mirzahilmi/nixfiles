@@ -16,7 +16,11 @@
     };
   };
   environment = {
-    systemPackages = [pkgs.neovim];
+    systemPackages = with pkgs; [
+      neovim
+      gnumake
+      home-manager
+    ];
     variables = {
       EDITOR = "nvim";
       MANPAGER = "nvim +Man!";
