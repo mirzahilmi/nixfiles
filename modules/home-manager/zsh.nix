@@ -45,31 +45,34 @@ in {
         v = "nvim";
         lg = "lazygit";
       };
-      initExtraFirst = ''
-        ## Profiling zsh startup
-        [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
-      '';
-      initExtra = ''
-        if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ]; then
-          exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
-        fi
+      initContent = let
+        zshConfigFirst = lib.mkBefore ''
+          ## Profiling zsh startup
+          [[ -n "''${ZSH_DEBUGRC+1}" ]] && zmodload zsh/zprof
+        '';
+        zshConfig = ''
+          if [ -x "$(command -v tmux)" ] && [ -n "''${DISPLAY}" ] && [ -z "''${TMUX}" ]; then
+            exec tmux new-session -A -s ''${USER} >/dev/null 2>&1
+          fi
 
-        fpath=($XDG_CACHE_HOME/zsh/completions $fpath)
+          fpath=($XDG_CACHE_HOME/zsh/completions $fpath)
 
-        bindkey -e
+          bindkey -e
 
-        # ref: https://github.com/rothgar/mastering-zsh/blob/master/docs/config/history.md#configuration
-        setopt INC_APPEND_HISTORY
-        setopt HIST_FIND_NO_DUPS
-        setopt HIST_SAVE_NO_DUPS
-        setopt HIST_VERIFY
-        setopt APPEND_HISTORY
-        setopt HIST_NO_STORE
+          # ref: https://github.com/rothgar/mastering-zsh/blob/master/docs/config/history.md#configuration
+          setopt INC_APPEND_HISTORY
+          setopt HIST_FIND_NO_DUPS
+          setopt HIST_SAVE_NO_DUPS
+          setopt HIST_VERIFY
+          setopt APPEND_HISTORY
+          setopt HIST_NO_STORE
 
-        zstyle ':completion:*' menu no
+          zstyle ':completion:*' menu no
 
-        [[ -n "''${ZSH_DEBUGRC+1}" ]] && zprof
-      '';
+          [[ -n "''${ZSH_DEBUGRC+1}" ]] && zprof
+        '';
+      in
+        lib.mkMerge [zshConfigFirst zshConfig];
     };
   };
 }
