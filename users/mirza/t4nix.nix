@@ -1,10 +1,4 @@
-{
-  pkgs,
-  lib,
-  config,
-  osConfig,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     wl-clipboard
     zen-browser
@@ -16,6 +10,7 @@
     texliveFull
     kubectx
     mermaid-cli
+    bluetuith
   ];
 
   custom.programs = {
@@ -27,17 +22,12 @@
     flameshot.enable = true;
     waybar.enable = true;
     gtk.enable = true;
-    niri.enable = true;
-    anyrun.enable = true;
     k9s.enable = true;
     kind.enable = true;
+    ghostty.enable = true;
   };
 
   services = {
     swww.enable = true;
   };
-
-  # xdg.configFile."sway/config".source =
-  #   lib.mkIf osConfig.custom.programs.sway.enable
-  #   (config.hm.lib.file.mkOutOfStoreSymlink "/home/mirza/.config/nixfiles/modules/nixos/sway");
 }

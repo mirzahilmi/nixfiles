@@ -12,6 +12,12 @@ in {
   config = lib.mkIf cfg.enable {
     programs.waybar = {
       enable = true;
+      style =
+        config.lib.file.mkOutOfStoreSymlink
+        "/home/mirza/.config/nixfiles/modules/home-manager/waybar.css";
     };
+    xdg.configFile."waybar/config".source =
+      config.lib.file.mkOutOfStoreSymlink
+      "/home/mirza/.config/nixfiles/modules/home-manager/waybar.jsonc";
   };
 }

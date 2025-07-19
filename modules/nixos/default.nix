@@ -7,6 +7,7 @@
     ./gns3.nix
     ./k3s.nix
     ./locale.nix
+    ./niri.nix
     ./podman.nix
     ./printer.nix
     ./sway.nix

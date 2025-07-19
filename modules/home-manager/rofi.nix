@@ -10,16 +10,12 @@ in {
     enable = lib.mkEnableOption "rofi";
   };
 
+  # didn't use the builtin module because it doesnt
+  # allow me specify raw symlinked config, yuck
   config = lib.mkIf cfg.enable {
-    programs.rofi = {
-      enable = true;
-      package = pkgs.rofi-wayland;
-      extraConfig = {
-        display-drun = "Applications:";
-        display-window = "Windows:";
-        drun-display-format = "{icon} {name}";
-        show-icons = true;
-      };
-    };
+    home.packages = [pkgs.rofi-wayland];
+    xdg.configFile."rofi/config.rasi".source =
+      config.lib.file.mkOutOfStoreSymlink
+      "/home/mirza/.config/nixfiles/modules/home-manager/rofi.rasi";
   };
 }

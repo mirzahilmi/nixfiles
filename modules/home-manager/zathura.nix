@@ -14,5 +14,8 @@ in {
     programs.zathura = {
       enable = true;
     };
+    xdg.configFile."zathura/zathurarc".source =
+      config.lib.file.mkOutOfStoreSymlink
+      "/home/mirza/.config/nixfiles/modules/home-manager/zathurarc";
   };
 }

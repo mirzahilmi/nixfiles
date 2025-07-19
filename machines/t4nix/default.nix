@@ -39,10 +39,33 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
+    (where-is-my-sddm-theme.override {
+      variants = ["qt5"];
+      themeConfig.General = {
+        passwordCharacter = "*";
+        passwordMask = true;
+        passwordInputWidth = 0.5;
+        passwordInputCursorVisible = false;
+        passwordFontSize = 96;
+        passwordCursorColor = "random";
+        showSessionsByDefault = true;
+        sessionsFontSize = 24;
+        showUsersByDefault = true;
+        usersFontSize = 48;
+        backgroundFill = "#000000";
+        backgroundFillMode = "aspect";
+        basicTextColor = "#ffffff";
+      };
+    })
   ];
 
-  services.displayManager.ly = {
+  # services.displayManager.ly = {
+  #   enable = true;
+  # };
+  services.displayManager.sddm = {
     enable = true;
+    wayland.enable = true;
+    theme = "where_is_my_sddm_theme_qt5";
   };
 
   fonts.packages = builtins.attrValues {
@@ -63,5 +86,6 @@
   custom.programs = {
     sway.enable = true;
     docker.enable = true;
+    niri.enable = true;
   };
 }

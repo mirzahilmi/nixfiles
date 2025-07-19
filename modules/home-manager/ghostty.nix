@@ -1,5 +1,4 @@
 {
-  pkgs,
   lib,
   config,
   ...
@@ -11,8 +10,10 @@ in {
   };
 
   config = lib.mkIf cfg.enable {
-    home.packages = [pkgs.ghostty-nightly];
-    home.file.".config/ghostty/config".source =
+    programs.ghostty = {
+      enable = true;
+    };
+    xdg.configFile."ghostty/config".source =
       config.lib.file.mkOutOfStoreSymlink
       # must be absolute path, cant use actual nix path type
       # because it'll be evalutead as in the nix store path

@@ -1,10 +1,10 @@
 home:
 	@git a
-	@nh home switch .
+	nh home switch .
 
 os:
 	@git a
-	@nh os switch .
+	nh os switch .
 
 upgrade:
 	@git a
