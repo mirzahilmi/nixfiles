@@ -1,73 +1,74 @@
-* {
-    border: none;
-    border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    min-height: 0;
-}
-
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    color: white;
+	background-color: rgba(14, 14, 16, 0.75);
+	color: #F9F6EE;
+	transition-property: background-color;
+	transition-duration: .5s;
+	border-bottom: 1px solid rgba(144, 140, 170, 0.35);
 }
 
-tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-  color: white;
+* {
+	font-family: "BlexMono Nerd Font";
+	font-size: 10pt;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: white;
-    border-bottom: 3px solid transparent;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color: transparent;
+	border-radius: 100%;
+	border: 6px #f5c2e7;
+	font-weight: 800;
+	color: #a6adc8; 
+}
+
+#workspaces button.urgent {
+	color: #fab387;
+}
+
+#workspaces button:hover {
+	background: rgba(69, 71, 90, 0.65);
+	color: #cdd6f4;
+	border: 12px #f5c2e7;
+	transition: none;
 }
 
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+	color: #ffffff;
+	border: 12px #f5c2e7;
 }
 
-#mode, #pulseaudio, #backlight, #battery, #clock {
-    padding: 0 10px;
+label.module {
+	padding: 0 10px 0 10px;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+box.module button:hover {
+	box-shadow: none;
+	outline: none;
+	font-style: normal;
+	text-shadow: none;
 }
 
-#clock {
-    background-color: #64727D;
+#tray {
+	padding: 0 8 0 8;
 }
 
-#battery {
-    background-color: #ffffff;
-    color: black;
+menu {
+	background-color: #181825;
+	color: #cdd6f4;
+	border: 1px solid #494d64;
+	padding: 6px;
+	border-radius: 12px;
 }
 
-#battery.charging {
-    color: white;
-    background-color: #26A65B;
+#tray menu menuitem:hover {
+	background-color: #1e1e2e;
+	color: #f5c2e7;
+	border-radius: 5px;
 }
 
-@keyframes blink {
-    to {
-        background-color: #ffffff;
-        color: black;
-    }
-}
-
-#battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#window {
+	font-weight: 800;
+	padding: 0px 8px 0px 8px;
 }
