@@ -11,6 +11,7 @@
     kubectx
     mermaid-cli
     bluetuith
+    wev
   ];
 
   custom.programs = {
@@ -20,11 +21,11 @@
     zathura.enable = true;
     spicetify.enable = true;
     flameshot.enable = true;
-    waybar.enable = true;
     gtk.enable = true;
     k9s.enable = true;
     kind.enable = true;
     ghostty.enable = true;
+    eww.enable = true;
   };
 
   services = {
