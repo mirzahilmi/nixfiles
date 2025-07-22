@@ -13,6 +13,7 @@ in {
       enable = true;
       settings = {
         theme_background = false;
+        proc_sorting = "memory";
       };
     };
   };
