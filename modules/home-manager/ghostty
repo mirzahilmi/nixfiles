@@ -7,8 +7,8 @@ mouse-hide-while-typing = true
 theme = Dark+
 gtk-titlebar-hide-when-maximized = true
 window-padding-color = extend
-mouse-scroll-multiplier = 0.125
 window-decoration = none
+confirm-close-surface = false
 
 keybind = ctrl+shift+o=unbind
 keybind = ctrl+enter=unbind
