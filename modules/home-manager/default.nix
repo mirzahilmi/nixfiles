@@ -1,9 +1,10 @@
 {
   imports = [
-    ./anyrun.nix
+    # ./anyrun.nix
     ./bat.nix
     ./btop.nix
     ./direnv.nix
+    ./eww.nix
     ./flameshot.nix
     ./foot.nix
     ./fzf.nix

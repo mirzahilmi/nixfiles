@@ -1,0 +1,18 @@
+(defpoll datetime_poll :interval "1s" "date +%Y-%m-%dT%H:%M:%S")
+
+(defwidget bar_widget []
+  (centerbox :orientation "h"
+    (label :halign "start" :text "󱄅")
+    (label :text datetime_poll)
+    (label :halign "end" :text "󰁿 ${EWW_BATTERY.BAT0.capacity}% ${EWW_BATTERY.BAT0.status}")
+    ))
+
+(defwindow bar
+  :monitor 0
+  :exclusive true
+  :geometry (geometry :x "0%"
+                      :y "0%"
+                      :width "100%"
+                      :height "10px"
+                      :anchor "top center")
+  (bar_widget))
