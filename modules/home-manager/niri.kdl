@@ -17,8 +17,9 @@ layout {
     }
 }
 
-spawn-at-startup "waybar"
 spawn-at-startup "swww-daemon"
+spawn-at-startup "eww" "daemon"
+spawn-at-startup "eww" "open" "bar"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
@@ -53,6 +54,9 @@ binds {
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+
+    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "set" "5%+"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "set" "5%-"; }
 
     Mod+O repeat=false { toggle-overview; }
     Mod+Q { close-window; }
