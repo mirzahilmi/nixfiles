@@ -40,6 +40,24 @@
 
     x86 = "x86_64-linux";
 
+    mkSystem = {
+      hostname,
+      system,
+      modules,
+    }:
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        modules =
+          [
+            ./machines/${hostname}/configuration.nix
+            ./machines/${hostname}/hardware-configuration.nix
+            ./machines/shared
+            ./users/mirza/nixos.nix
+          ]
+          ++ modules;
+        specialArgs = {inherit inputs outputs;};
+      };
+
     mkHome = {
       username,
       hostname,
@@ -47,7 +65,7 @@
     }:
       home-manager.lib.homeManagerConfiguration {
         modules = [
-          ./users/${username}
+          ./users/${username}/home-manager.nix
           ./users/${username}/${hostname}.nix
         ];
         pkgs = nixpkgs.legacyPackages.${system};
@@ -71,10 +89,10 @@
         modules = [./machines/t4s];
         specialArgs = {inherit inputs outputs;};
       };
-      t4nix = nixpkgs.lib.nixosSystem {
+      t4nix = mkSystem {
+        hostname = "t4nix";
         system = x86;
-        modules = [./machines/t4nix];
-        specialArgs = {inherit inputs outputs;};
+        modules = [inputs.hardware.nixosModules.lenovo-thinkpad-t480s];
       };
     };
 
