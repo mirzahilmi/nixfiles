@@ -10,6 +10,7 @@
     ./niri.nix
     ./podman.nix
     ./printer.nix
+    ./sddm.nix
     ./sway.nix
     ./virtmanager.nix
     ./zsh.nix
