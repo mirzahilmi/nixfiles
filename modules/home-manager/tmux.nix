@@ -19,15 +19,10 @@ in {
   config = lib.mkIf cfg.enable {
     programs.tmux = {
       enable = true;
-      baseIndex = 1;
-      disableConfirmationPrompt = true;
-      escapeTime = 0;
-      historyLimit = 10000;
-      mouse = true;
       secureSocket = true;
-      sensibleOnTop = false;
-      shell = "${pkgs.zsh}/bin/zsh";
-      extraConfig = builtins.readFile ./tmux.conf;
     };
+    xdg.configFile."tmux/tmux.conf".source =
+      config.lib.file.mkOutOfStoreSymlink
+      "/home/mirza/.config/nixfiles/modules/home-manager/tmux.conf";
   };
 }
