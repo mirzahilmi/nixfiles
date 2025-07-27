@@ -2,7 +2,11 @@
 
 (defwidget bar_widget []
   (centerbox :orientation "h"
-    (label :halign "start" :text "󱄅")
+    (image 
+      :halign "start" 
+      :path "/home/mirza/Downloads/NixOS.svg"
+      :image-width 16
+      :image-height 16)
     (label :text datetime_poll)
     (label :halign "end" :text "󰁿 ${EWW_BATTERY.BAT0.capacity}% ${EWW_BATTERY.BAT0.status}")
     ))
