@@ -46,7 +46,7 @@ hotkey-overlay {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn "rofi" "-show" "drun"; }
+    Mod+Space { spawn "rofi" "-show" "drun" "-theme" ".config/rofi/config.rasi"; }
     Mod+R { spawn "rofi" "-show" "run"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
 
