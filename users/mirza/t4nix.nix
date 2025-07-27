@@ -12,11 +12,13 @@
     mermaid-cli
     bluetuith
     wev
+    xwayland-satellite
+    eduvpn-client
+    mqttui
   ];
 
   custom.programs = {
     rofi.enable = true;
-    foot.enable = true;
     hyprcursor.enable = true;
     zathura.enable = true;
     spicetify.enable = true;

@@ -1,8 +1,13 @@
 input {
+    focus-follows-mouse
     touchpad {
         natural-scroll
         scroll-factor 0.2
     }
+}
+
+output "eDP-1" {
+    scale 1.25
 }
 
 layout {
@@ -20,6 +25,7 @@ layout {
 spawn-at-startup "swww-daemon"
 spawn-at-startup "eww" "daemon"
 spawn-at-startup "eww" "open" "bar"
+spawn-at-startup "xwayland-satellite"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
@@ -35,7 +41,12 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"thunar$"#
+    match app-id=r#"^thunar$"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^.eduvpn-gui-wrapped$"#
     open-floating true
 }
 
@@ -136,8 +147,9 @@ binds {
 }
 
 environment {
-    "ELECTRON_OZONE_PLATFORM_HINT" "auto"
-    "MOZ_ENABLE_WAYLAND" "1"
-    "NIXOS_OZONE_WL" "1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    MOZ_ENABLE_WAYLAND "1"
+    NIXOS_OZONE_WL "1"
+    DISPLAY ":0"
 }
 
