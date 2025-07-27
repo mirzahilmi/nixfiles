@@ -44,6 +44,7 @@ in {
       shellAliases = {
         v = "nvim";
         lg = "lazygit";
+        mk = "make";
       };
       initContent = let
         zshConfigFirst = lib.mkBefore ''
