@@ -18,6 +18,7 @@
     ./kind.nix
     ./lazydocker.nix
     ./lazygit.nix
+    ./librewolf.nix
     ./lsd.nix
     ./niri.nix
     ./obs.nix
@@ -26,9 +27,11 @@
     ./spicetify.nix
     ./ssh.nix
     ./sway.nix
+    ./swayidle.nix
     ./tealdeer.nix
     ./tmux.nix
     ./waybar.nix
+    ./wbg.nix
     ./wezterm.nix
     ./zathura.nix
     ./zsh.nix
