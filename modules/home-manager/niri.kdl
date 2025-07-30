@@ -45,6 +45,11 @@ window-rule {
     open-floating true
 }
 
+layer-rule {
+    match namespace="^swww-daemon$"
+    place-within-backdrop true
+}
+
 window-rule {
     match app-id=r#"^.eduvpn-gui-wrapped$"#
     open-floating true
