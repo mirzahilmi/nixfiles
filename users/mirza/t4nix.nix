@@ -15,6 +15,7 @@
     xwayland-satellite
     eduvpn-client
     mqttui
+    wl-mirror
   ];
 
   custom.programs = {
@@ -28,6 +29,9 @@
     kind.enable = true;
     ghostty.enable = true;
     eww.enable = true;
+    swayidle.enable = true;
+    librewolf.enable = true;
+    wbg.enable = true;
   };
 
   services = {
