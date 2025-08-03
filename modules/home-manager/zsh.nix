@@ -45,6 +45,7 @@ in {
         v = "nvim";
         lg = "lazygit";
         mk = "make";
+        k9 = "k9s";
       };
       initContent = let
         zshConfigFirst = lib.mkBefore ''
