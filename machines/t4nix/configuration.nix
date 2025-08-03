@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
@@ -38,4 +42,9 @@
     niri.enable = true;
     sddm.enable = true;
   };
+
+  # Suspend the system when battery level drops below 20%
+  services.udev.extraRules = lib.strings.concatMapStringsSep "\n" (pattern: ''
+    SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="${pattern}", RUN+="${pkgs.systemd}/bin/systemctl --check-inhibitors=no poweroff"
+  '') ["[0-9]" "1[0-9]"];
 }
