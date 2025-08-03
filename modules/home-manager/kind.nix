@@ -17,7 +17,7 @@ in {
   };
   config = lib.mkIf cfg.enable {
     home.packages = builtins.attrValues {
-      inherit (pkgs.unstable) kind kubectl kubernetes-helm;
+      inherit (pkgs.unstable) kind kubectl kubernetes-helm kubectl-explore;
     };
     programs.zsh.shellAliases = lib.mkIf (cfg.aliasKubectl != "") {
       "${cfg.aliasKubectl}" = "kubectl";
