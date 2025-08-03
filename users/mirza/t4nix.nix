@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     wl-clipboard
-    zen-browser
     xfce.thunar
     obsidian
     insomnia
@@ -16,6 +15,8 @@
     eduvpn-client
     mqttui
     wl-mirror
+    wl-screenrec
+    usbutils
   ];
 
   custom.programs = {
@@ -36,5 +37,14 @@
 
   services = {
     swww.enable = true;
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+    # see https://mimetype.io/all-types
+    defaultApplications = {
+      "application/pdf" = ["librewolf.desktop"];
+      "text/html" = ["librewolf.desktop"];
+    };
   };
 }
