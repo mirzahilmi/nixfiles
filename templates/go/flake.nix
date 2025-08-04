@@ -29,9 +29,7 @@
           air
           go
           gopls
-          gotools
           golangci-lint
-          sqlc
         ];
       };
     });
