@@ -20,9 +20,10 @@ in {
     programs.tmux = {
       enable = true;
       secureSocket = true;
+      extraConfig = builtins.readFile ./tmux.conf;
+      plugins = builtins.attrValues {
+        inherit (pkgs.tmuxPlugins) fingers;
+      };
     };
-    xdg.configFile."tmux/tmux.conf".source =
-      config.lib.file.mkOutOfStoreSymlink
-      "/home/mirza/.config/nixfiles/modules/home-manager/tmux.conf";
   };
 }
