@@ -28,7 +28,9 @@ in {
       storageDriver = cfg.storageDriver;
       # enable cgroup namespaces
       # see https://docs.cilium.io/en/stable/installation/kind/#install-cilium
-      extraOptions = "--default-cgroupns-mode private";
+      extraOptions = toString [
+        "--default-cgroupns-mode private"
+      ];
     };
   };
 }
