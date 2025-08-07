@@ -1,18 +1,20 @@
 {
-  finalPkgs,
-  prevPkgs,
+  final,
+  prev,
 }: {
-  btop = prevPkgs.btop.override {cudaSupport = true;};
-  monaspace = prevPkgs.monaspace.overrideAttrs (final: previous: {
+  btop = prev.btop.override {cudaSupport = true;};
+
+  monaspace = prev.monaspace.overrideAttrs (finalAttrs: _: {
     version = "1.200";
-    src = finalPkgs.fetchzip {
-      url = "https://github.com/githubnext/monaspace/releases/download/v${final.version}/monaspace-v${final.version}.zip";
+    src = final.fetchzip {
+      url = "https://github.com/githubnext/monaspace/releases/download/v${finalAttrs.version}/monaspace-v${finalAttrs.version}.zip";
       stripRoot = false;
       hash = "sha256-j1xQYVxfTNDVuzCKvT5FbU29t8XsH4XqcZ477sjydts=";
     };
   });
-  vesktop = prevPkgs.vesktop.overrideAttrs (_: prev: {
-    desktopItems = (builtins.elemAt prev.desktopItems 0).override {
+
+  vesktop = prev.vesktop.overrideAttrs (_: prevAttrs: {
+    desktopItems = (builtins.elemAt prevAttrs.desktopItems 0).override {
       icon = "${../imgs/discord.svg}";
       desktopName = "Discord";
     };
