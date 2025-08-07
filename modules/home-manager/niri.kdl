@@ -1,6 +1,7 @@
 input {
     focus-follows-mouse
     touchpad {
+        // tap
         natural-scroll
         scroll-factor 0.2
     }
