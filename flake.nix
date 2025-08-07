@@ -37,48 +37,29 @@
   } @ inputs: let
     inherit (self) outputs;
     overlays = import ./overlays {inherit inputs;};
-
     x86 = "x86_64-linux";
-
-    mkSystem = {
-      hostname,
-      system,
-      modules,
-    }:
-      nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules =
-          [
-            ./machines/${hostname}/configuration.nix
-            ./machines/${hostname}/hardware-configuration.nix
-            ./machines/shared
-            ./users/mirza/nixos.nix
-          ]
-          ++ modules;
-        specialArgs = {inherit inputs outputs;};
-      };
-
-    mkHome = {
-      username,
-      hostname,
-      system,
-    }:
-      home-manager.lib.homeManagerConfiguration {
-        modules = [
-          ./users/${username}/home-manager.nix
-          ./users/${username}/${hostname}.nix
-        ];
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {
-          inherit inputs outputs;
-          current = {inherit username hostname;};
-          osConfig = outputs.nixosConfigurations.${hostname}.config;
-        };
-      };
   in {
     inherit overlays;
 
-    nixosConfigurations = {
+    nixosConfigurations = let
+      mkSystem = {
+        hostname,
+        system,
+        modules,
+      }:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules =
+            [
+              ./machines/${hostname}/configuration.nix
+              ./machines/${hostname}/hardware-configuration.nix
+              ./machines/shared
+              ./users/mirza/nixos.nix
+            ]
+            ++ modules;
+          specialArgs = {inherit inputs outputs;};
+        };
+    in {
       nixsina = nixpkgs.lib.nixosSystem {
         system = x86;
         modules = [./machines/nixsina];
@@ -96,7 +77,25 @@
       };
     };
 
-    homeConfigurations = {
+    homeConfigurations = let
+      mkHome = {
+        username,
+        hostname,
+        system,
+      }:
+        home-manager.lib.homeManagerConfiguration {
+          modules = [
+            ./users/${username}/home-manager.nix
+            ./users/${username}/${hostname}.nix
+          ];
+          pkgs = nixpkgs.legacyPackages.${system};
+          extraSpecialArgs = {
+            inherit inputs outputs;
+            current = {inherit username hostname;};
+            osConfig = outputs.nixosConfigurations.${hostname}.config;
+          };
+        };
+    in {
       "mirza@nixsina" = mkHome {
         system = x86;
         username = "mirza";
@@ -114,7 +113,7 @@
       };
     };
 
-    # modified from https://github.com/the-nix-way/dev-templates
+    # modified version of https://github.com/the-nix-way/dev-templates
     templates = {
       java = {
         path = ./templates/java;
