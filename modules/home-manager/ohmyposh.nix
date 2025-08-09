@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -9,15 +10,12 @@ in {
     enable = lib.mkEnableOption "ohmyposh";
   };
   config = lib.mkIf cfg.enable {
-    programs.oh-my-posh = {
-      enable = true;
-      enableZshIntegration = true;
-      enableBashIntegration = false;
-      enableFishIntegration = false;
-      enableNushellIntegration = false;
-      settings = builtins.fromJSON (builtins.unsafeDiscardStringContext (
-        builtins.readFile ./ohmyposh.json
-      ));
-    };
+    home.packages = [pkgs.oh-my-posh];
+    xdg.configFile."oh-my-posh/config.json".source =
+      config.lib.file.mkOutOfStoreSymlink
+      "/home/mirza/.config/nixfiles/modules/home-manager/ohmyposh.json";
+    programs.zsh.initContent = lib.mkIf config.custom.programs.zsh.enable ''
+      eval "$(${lib.getExe pkgs.oh-my-posh} init zsh --config ${config.xdg.configHome}/oh-my-posh/config.json)"
+    '';
   };
 }
