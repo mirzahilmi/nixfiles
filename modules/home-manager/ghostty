@@ -1,12 +1,11 @@
 auto-update = off
 cursor-invert-fg-bg = true
 cursor-style-blink = false
-font-family = Iosevka NF
+font-family = IosevkaTerm NF
 font-size = 14
 mouse-hide-while-typing = true
 theme = Dark+
 gtk-titlebar-hide-when-maximized = true
-window-padding-color = extend
 window-decoration = none
 confirm-close-surface = false
 

@@ -25,7 +25,7 @@
     inherit
       (pkgs.nerd-fonts)
       blex-mono
-      iosevka
+      iosevka-term
       ;
   };
 
