@@ -7,14 +7,17 @@
 
   overridenPackages = final: prev: import ./override.nix {inherit final prev;};
 
-  unstablePackage = final: _: {
-    unstable = import inputs.nixpkgs-unstable {
-      inherit (final) system;
-      config = {
-        allowUnfree = true;
-        allowUnfreePredicate = _: true;
+  versionedPackages = final: _: let
+    pull = nixpkgs:
+      import nixpkgs {
+        inherit (final) system;
+        config = {
+          allowUnfree = true;
+          allowUnfreePredicate = _: true;
+        };
       };
-    };
+  in {
+    unstable = pull inputs.nixpkgs-unstable;
   };
 
   niri = inputs.niri.overlays.niri;
