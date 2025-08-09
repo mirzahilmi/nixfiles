@@ -9,8 +9,8 @@
     # ghostty.url = "github:ghostty-org/ghostty";
     grub-themes.url = "github:luisnquin/grub-themes";
     hardware.url = "github:nixos/nixos-hardware";
-    # nvim.url = "git+file:///home/mirza/.config/nvim";
-    nvim.url = "github:mirzahilmi/nvim";
+    nvim.url = "/home/mirza/.config/nvim";
+    # nvim.url = "github:mirzahilmi/nvim";
     # pin this specific rev because the latest throws segfault in my machine :)
     zen-browser.url = "github:0xc000022070/zen-browser-flake/85596d964350861825f642de9fc2154ac06bfc05";
     niri.url = "github:sodiboo/niri-flake";
@@ -25,6 +25,10 @@
     };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixos-06cb-009a-fingerprint-sensor = {
+      url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor?ref=25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -73,7 +77,10 @@
       t4nix = mkSystem {
         hostname = "t4nix";
         system = x86;
-        modules = [inputs.hardware.nixosModules.lenovo-thinkpad-t480s];
+        modules = [
+          inputs.hardware.nixosModules.lenovo-thinkpad-t480s
+          inputs.nixos-06cb-009a-fingerprint-sensor.nixosModules."06cb-009a-fingerprint-sensor"
+        ];
       };
     };
 

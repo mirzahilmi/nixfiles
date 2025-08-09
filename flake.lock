@@ -242,6 +242,27 @@
         "type": "github"
       }
     },
+    "nixos-06cb-009a-fingerprint-sensor": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1748793996,
+        "narHash": "sha256-DVOoP3ZH6f1EAg5YyqOvzFnDWbzyYNeYUiZX4Lrmm4g=",
+        "owner": "ahbnr",
+        "repo": "nixos-06cb-009a-fingerprint-sensor",
+        "rev": "86e1f4d73c56464be715007d65ec5063391b433a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ahbnr",
+        "ref": "25.05",
+        "repo": "nixos-06cb-009a-fingerprint-sensor",
+        "type": "github"
+      }
+    },
     "nixos-wsl": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -427,17 +448,14 @@
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1754408125,
-        "narHash": "sha256-CXaG8zmA/kSaDcLZ32HKPAQhNJPwYiv/DMvTx6nVkXE=",
-        "owner": "mirzahilmi",
-        "repo": "nvim",
-        "rev": "1947c85f4464783b7c061c66d229a7a373b0b481",
-        "type": "github"
+        "lastModified": 1754684134,
+        "narHash": "sha256-5SraHS7mcPIyC5iJVbHBizulACs3vT4qiGCFLRkhi40=",
+        "path": "/home/mirza/.config/nvim",
+        "type": "path"
       },
       "original": {
-        "owner": "mirzahilmi",
-        "repo": "nvim",
-        "type": "github"
+        "path": "/home/mirza/.config/nvim",
+        "type": "path"
       }
     },
     "plugins-cord-nvim": {
@@ -479,6 +497,7 @@
         "hardware": "hardware",
         "home-manager": "home-manager",
         "niri": "niri",
+        "nixos-06cb-009a-fingerprint-sensor": "nixos-06cb-009a-fingerprint-sensor",
         "nixos-wsl": "nixos-wsl",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-unstable": "nixpkgs-unstable",
