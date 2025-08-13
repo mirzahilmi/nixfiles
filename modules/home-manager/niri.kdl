@@ -24,9 +24,8 @@ layout {
 }
 
 spawn-at-startup "swww-daemon"
-spawn-at-startup "eww" "daemon"
-spawn-at-startup "eww" "open" "bar"
 spawn-at-startup "xwayland-satellite"
+spawn-at-startup "quickshell" "--daemonize"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"

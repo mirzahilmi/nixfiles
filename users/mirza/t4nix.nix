@@ -33,6 +33,7 @@
     swayidle.enable = true;
     librewolf.enable = true;
     wbg.enable = true;
+    quickshell.enable = true;
   };
 
   services = {

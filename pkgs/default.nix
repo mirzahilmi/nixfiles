@@ -8,6 +8,7 @@
   # ghostty-nightly = inputs.ghostty.packages.${finalPkgs.system}.default;
   grubThemes = {fallout = inputs.grub-themes.packages.${final.system}.fallout;};
   neovim = inputs.nvim.packages.${final.system}.default;
-  zen-browser = inputs.zen-browser.packages."${final.system}".default;
+  zen-browser = inputs.zen-browser.packages.${final.system}.default;
   sumatrapdf-wrapper = final.writeShellScriptBin "sumatrapdf-wrapper" (builtins.readFile ./sumatrapdf-wrapper.sh);
+  quickshell-git = inputs.quickshell.packages.${final.system}.default;
 }

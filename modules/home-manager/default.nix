@@ -23,6 +23,7 @@
     ./niri.nix
     ./obs.nix
     ./ohmyposh.nix
+    ./quickshell.nix
     ./rofi.nix
     ./spicetify.nix
     ./ssh.nix

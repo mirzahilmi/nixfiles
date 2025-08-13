@@ -31,6 +31,10 @@
       url = "github:ahbnr/nixos-06cb-009a-fingerprint-sensor?ref=25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -49,7 +53,7 @@
       mkSystem = {
         hostname,
         system,
-        modules,
+        modules ? [],
       }:
         nixpkgs.lib.nixosSystem {
           inherit system;
@@ -69,10 +73,10 @@
         modules = [./machines/nixsina];
         specialArgs = {inherit inputs outputs;};
       };
-      t4s = nixpkgs.lib.nixosSystem {
+      t4s = mkSystem {
+        hostname = "t4nix";
         system = x86;
-        modules = [./machines/t4s];
-        specialArgs = {inherit inputs outputs;};
+        modules = [inputs.nixos-wsl.nixosModules.default];
       };
       t4nix = mkSystem {
         hostname = "t4nix";
