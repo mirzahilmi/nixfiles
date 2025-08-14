@@ -11,6 +11,7 @@ Scope {
             screen: modelData
             implicitHeight: 30
             color: "#B30E0E10"
+            aboveWindows: false
 
             anchors {
                 top: true
