@@ -153,6 +153,15 @@
           More info check github.com/mirzahilmi/nixfiles
         '';
       };
+      python = {
+        path = ./templates/python;
+        description = "A Nix-flake-based Python development environment";
+        welcomeText = ''
+          A Nix-flake-based Python development environment.
+
+          More info check github.com/mirzahilmi/nixfiles
+        '';
+      };
     };
   };
 }
