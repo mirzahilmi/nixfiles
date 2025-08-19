@@ -47,4 +47,6 @@
   services.udev.extraRules = lib.strings.concatMapStringsSep "\n" (pattern: ''
     SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="${pattern}", RUN+="${pkgs.systemd}/bin/systemctl --check-inhibitors=no poweroff"
   '') ["[0-9]" "1[0-9]"];
+
+  hardware.bluetooth.enable = true;
 }

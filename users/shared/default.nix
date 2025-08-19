@@ -1,4 +1,8 @@
-{outputs, ...}: {
+{
+  pkgs,
+  outputs,
+  ...
+}: {
   imports = [
     ../../modules/home-manager
     ./xdgify.nix

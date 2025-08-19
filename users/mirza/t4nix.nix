@@ -7,7 +7,6 @@
     jetbrains.datagrip
     discord
     texliveFull
-    kubectx
     mermaid-cli
     bluetuith
     wev
@@ -17,6 +16,8 @@
     wl-mirror
     wl-screenrec
     usbutils
+    zotero
+    unstable.gemini-cli
   ];
 
   custom.programs = {

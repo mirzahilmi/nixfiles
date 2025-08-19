@@ -10,7 +10,7 @@ Scope {
             required property var modelData
             screen: modelData
             implicitHeight: 30
-            color: "#B30E0E10"
+            color: "#0E0E10"
             aboveWindows: false
 
             anchors {

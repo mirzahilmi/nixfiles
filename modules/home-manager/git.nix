@@ -1,11 +1,11 @@
 {
+  pkgs,
   lib,
   config,
   current,
   ...
 }: let
   cfg = config.custom.programs.git;
-  stripNewline = str: builtins.replaceStrings ["\n"] [""] str;
 in {
   options.custom.programs.git = {
     enable = lib.mkEnableOption "git";
@@ -19,7 +19,7 @@ in {
       ignores = ["*.env" "*.env.json" "*.env.yaml" ".envrc"];
       aliases = {
         a = "add --all";
-        acp = stripNewline ''
+        acp = pkgs.libx.stripNewline ''
           !f() {
             git add --all &&
             git commit --message "$1" &&
@@ -40,15 +40,15 @@ in {
       extraConfig = {
         branch.sort = "committerdate";
         column.ui = "auto";
-        commit.gpgSign = true;
         commit.verbose = true;
-        gpg.format = "ssh";
         init.defaultBranch = "master";
         merge.conflictStyle = "zdiff3";
         pull.rebase = true;
         push.autoSetupRemote = true;
         push.default = "simple";
         rerere.enabled = true;
+        gpg.format = "ssh";
+        commit.gpgSign = true;
         user.signingkey = "~/.ssh/id_ed25519.pub";
       };
     };

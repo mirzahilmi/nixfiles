@@ -1,10 +1,4 @@
-{inputs, ...}: {
-  imports = [
-    inputs.nixos-wsl.nixosModules.default
-    ../shared
-    ../../users/mirza/nixos.nix
-  ];
-
+{
   networking.hostName = "t4s";
 
   wsl = {

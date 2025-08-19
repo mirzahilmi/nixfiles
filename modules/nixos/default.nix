@@ -6,6 +6,7 @@
     ./gnome.nix
     ./gns3.nix
     ./k3s.nix
+    ./kanata.nix
     ./locale.nix
     ./niri.nix
     ./podman.nix

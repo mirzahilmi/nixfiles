@@ -65,4 +65,6 @@
         );
   in
     mkTmuxPlugin;
+
+  stripNewline = str: builtins.replaceStrings ["\n"] [""] str;
 }

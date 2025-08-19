@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   config,
   ...
@@ -14,8 +15,8 @@ in {
       enable = true;
       timeouts = [
         {
-          timeout = 60 * 60;
-          command = "systemctl poweroff";
+          timeout = 60 * 30;
+          command = "${pkgs.systemd}/bin/systemctl suspend";
         }
       ];
     };
