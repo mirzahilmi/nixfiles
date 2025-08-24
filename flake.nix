@@ -162,6 +162,15 @@
           More info check github.com/mirzahilmi/nixfiles
         '';
       };
+      csharp = {
+        path = ./templates/csharp;
+        description = "A Nix-flake-based .NET development environment";
+        welcomeText = ''
+          A Nix-flake-based .NET development environment.
+
+          More info check github.com/mirzahilmi/nixfiles
+        '';
+      };
     };
   };
 }
