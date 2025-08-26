@@ -78,7 +78,7 @@
         specialArgs = {inherit inputs outputs;};
       };
       t4s = mkSystem {
-        hostname = "t4nix";
+        hostname = "t4s";
         system = x86;
         modules = [inputs.nixos-wsl.nixosModules.default];
       };

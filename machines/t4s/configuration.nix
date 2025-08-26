@@ -16,5 +16,5 @@
     ];
   };
 
-  custom.services.docker.enable = true;
+  custom.programs.docker.enable = true;
 }
