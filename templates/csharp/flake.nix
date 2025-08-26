@@ -11,7 +11,12 @@
     forEachSupportedSystem = f:
       nixpkgs.lib.genAttrs supportedSystems (system:
         f {
-          pkgs = import nixpkgs {inherit system;};
+          pkgs = import nixpkgs {
+            inherit system;
+            config.permittedInsecurePackages = [
+              "dotnet-sdk-6.0.428"
+            ];
+          };
         });
   in {
     devShells = forEachSupportedSystem ({pkgs}: {
@@ -23,10 +28,12 @@
               combinePackages [
                 sdk_6_0
                 sdk_8_0
+                sdk_9_0
               ]
           )
           roslyn-ls
         ];
+        ROSLYN_BIN = "${pkgs.roslyn-ls}/bin/Microsoft.CodeAnalysis.LanguageServer";
       };
     });
   };

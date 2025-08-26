@@ -18,6 +18,7 @@
     usbutils
     zotero
     unstable.gemini-cli
+    qwen-code
   ];
 
   custom.programs = {
@@ -35,6 +36,7 @@
     librewolf.enable = true;
     wbg.enable = true;
     quickshell.enable = true;
+    winapps.enable = true;
   };
 
   services = {

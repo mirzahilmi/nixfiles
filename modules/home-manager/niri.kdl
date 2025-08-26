@@ -51,8 +51,21 @@ layer-rule {
 }
 
 window-rule {
-    match app-id=r#"^.eduvpn-gui-wrapped$"#
+    match app-id="^(Zotero)$"
+    open-maximized true
+}
+
+window-rule {
+    match app-id=r#"^(com\.mitchellh\.ghostty)$"#
+    open-maximized true
+}
+
+window-rule {
+    // see https://github.com/hyprwm/Hyprland/discussions/1269#discussioncomment-4475726
+    match app-id="^(Zotero)$" title="^(Quick Format Citation|Progress)$"
     open-floating true
+    max-width 400
+    max-height 100
 }
 
 hotkey-overlay {

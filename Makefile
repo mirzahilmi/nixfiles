@@ -12,6 +12,7 @@ help:
 home:
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Checkout unstaged files"
 	git add --all
+	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Evaluating flake ouputs"
 	nh home switch .
 
 .PHONY: os
@@ -20,4 +21,21 @@ os:
 	git add --all
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Checking for neovim config updates"
 	nix flake update nvim
+	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Evaluating flake ouputs"
 	nh os switch .
+
+.PHONY: nvim
+nvim:
+	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Updating flake inputs of nvim"
+	nix flake update nvim
+	make os
+
+.PHONY: winapps
+winapps:
+	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Running windows container"
+	docker compose --file ./modules/home-manager/winapps.yaml up --detach
+
+.PHONY: winapps.rm
+winapps.rm:
+	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Removing windows container"
+	docker compose --file ./modules/home-manager/winapps.yaml down --rmi=all --volumes

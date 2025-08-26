@@ -34,6 +34,7 @@
     ./waybar.nix
     ./wbg.nix
     ./wezterm.nix
+    ./winapps.nix
     ./zathura.nix
     ./zsh.nix
   ];
