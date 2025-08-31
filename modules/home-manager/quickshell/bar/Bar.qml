@@ -10,7 +10,7 @@ Scope {
             required property var modelData
             screen: modelData
             implicitHeight: 30
-            color: "#0E0E10"
+            color: "#993B3C36"
             aboveWindows: false
 
             anchors {
@@ -22,18 +22,17 @@ Scope {
             RowLayout {
                 anchors.fill: parent
                 anchors.margins: 6
-                spacing: 0
 
-                Item {
-                    Layout.preferredWidth: parent.width / parent.children.length
+                Time {
+                    anchors.centerIn: parent
                 }
 
-                TimeWidget {
-                    Layout.preferredWidth: parent.width / parent.children.length
-                }
-
-                BatteryWidget {
-                    Layout.preferredWidth: parent.width / parent.children.length
+                RowLayout {
+                    Layout.alignment: Qt.AlignRight
+                    Layout.fillWidth: true
+                    spacing: 12
+                    Sound {}
+                    Battery {}
                 }
             }
         }
