@@ -5,6 +5,7 @@
     ./docker.nix
     ./gnome.nix
     ./gns3.nix
+    ./hyprland.nix
     ./k3s.nix
     ./kanata.nix
     ./locale.nix
@@ -12,7 +13,6 @@
     ./podman.nix
     ./printer.nix
     ./sddm.nix
-    ./sway.nix
     ./virtmanager.nix
     ./zsh.nix
   ];

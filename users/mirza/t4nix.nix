@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     wl-clipboard
     xfce.thunar
+    xfce.tumbler
     obsidian
     insomnia
     jetbrains.datagrip

@@ -8,14 +8,16 @@ in {
   options.custom.programs.docker = {
     enable = lib.mkEnableOption "Docker";
     storageDriver = lib.mkOption {
-      type = lib.types.nullOr <| lib.types.enum [
-        "aufs"
-        "btrfs"
-        "devicemapper"
-        "overlay"
-        "overlay2"
-        "zfs"
-      ];
+      type =
+        lib.types.nullOr
+        <| lib.types.enum [
+          "aufs"
+          "btrfs"
+          "devicemapper"
+          "overlay"
+          "overlay2"
+          "zfs"
+        ];
       default = null;
     };
   };
@@ -26,11 +28,6 @@ in {
       enableOnBoot = false;
       autoPrune.enable = true;
       storageDriver = cfg.storageDriver;
-      # enable cgroup namespaces
-      # see https://docs.cilium.io/en/stable/installation/kind/#install-cilium
-      extraOptions = toString [
-        "--default-cgroupns-mode private"
-      ];
     };
   };
 }

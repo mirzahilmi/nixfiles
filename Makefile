@@ -19,8 +19,6 @@ home:
 os:
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Checkout unstaged files"
 	git add --all
-	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Checking for neovim config updates"
-	nix flake update nvim
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Evaluating flake ouputs"
 	nh os switch .
 

@@ -14,6 +14,7 @@
     ./gsettings.nix
     ./gtk.nix
     ./hyprcursor.nix
+    ./hyprland.nix
     ./k9s.nix
     ./kind.nix
     ./lazydocker.nix

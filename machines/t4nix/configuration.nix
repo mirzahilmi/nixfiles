@@ -37,7 +37,6 @@
   };
 
   custom.programs = {
-    sway.enable = true;
     docker.enable = true;
     niri.enable = true;
     sddm.enable = true;

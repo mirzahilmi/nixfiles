@@ -23,7 +23,7 @@ in {
           passwordCharacter = "*";
           passwordMask = true;
           passwordInputWidth = 0.5;
-          passwordInputCursorVisible = false;
+          passwordInputCursorVisible = true;
           passwordFontSize = 96;
           passwordCursorColor = "random";
           showSessionsByDefault = true;
