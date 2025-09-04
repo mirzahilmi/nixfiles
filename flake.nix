@@ -73,10 +73,9 @@
           specialArgs = {inherit inputs outputs helpers;};
         };
     in {
-      nixsina = nixpkgs.lib.nixosSystem {
+      nixsina = mkSystem {
+        hostname = "nixsina";
         system = x86;
-        modules = [./machines/nixsina];
-        specialArgs = {inherit inputs outputs;};
       };
       t4s = mkSystem {
         hostname = "t4s";

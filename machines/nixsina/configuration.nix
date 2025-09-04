@@ -40,6 +40,7 @@
       (pkgs.nerd-fonts)
       blex-mono
       iosevka
+      iosevka-term
       ;
   };
 
@@ -70,12 +71,12 @@
   custom = {
     programs = {
       bootloader.enable = true;
+      docker.enable = true;
       locale.enable = true;
       virt-manager.enable = true;
       cloudflare-warp.enable = true;
     };
     services = {
-      docker.enable = true;
       printer.enable = true;
     };
   };
