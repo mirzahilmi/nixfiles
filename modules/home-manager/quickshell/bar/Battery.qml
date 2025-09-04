@@ -2,9 +2,10 @@ import QtQuick
 import Quickshell.Io
 
 Text {
-    text: `󰁹 ${battery_capacity.value}% ${battery_state.value}`.replace(/\n/gm, "")
+    font.family: "Inter"
     color: "#F9F6EE"
 
+    text: `󰁹  ${battery_capacity.value}% ${battery_state.value}`.replace(/\n/gm, "")
     Process {
         id: battery_capacity
         property string value
@@ -34,4 +35,21 @@ Text {
             battery_state.running = true;
         }
     }
+
+    // text: `󰁹  ${batteryCurrent.text()}% ${batteryState.text()}`.replace(/\n/gm, "")
+    // FileView {
+    //     id: batteryCurrent
+    //     path: Qt.resolvedUrl("/sys/class/power_supply/BAT0/capacity")
+    //     blockLoading: true
+    //     watchChanges: true
+    //     onFileChanged: this.reload()
+    // }
+    //
+    // FileView {
+    //     id: batteryState
+    //     path: Qt.resolvedUrl("/sys/class/power_supply/BAT0/status")
+    //     blockLoading: true
+    //     watchChanges: true
+    //     onFileChanged: this.reload()
+    // }
 }

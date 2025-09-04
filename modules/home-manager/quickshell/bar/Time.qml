@@ -3,8 +3,8 @@ import Quickshell
 
 Text {
     text: Qt.formatDateTime(clock.date, "ddd MMM d, yyyy hh:mm:ss")
+    font.family: "Inter"
     color: "#F9F6EE"
-    horizontalAlignment: Text.AlignHCenter
 
     SystemClock {
         id: clock

@@ -31,7 +31,7 @@ Scope {
                     Layout.alignment: Qt.AlignRight
                     Layout.fillWidth: true
                     spacing: 12
-                    Sound {}
+                    // Sound {}
                     Battery {}
                 }
             }
