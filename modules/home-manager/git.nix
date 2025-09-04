@@ -1,6 +1,6 @@
 {
-  pkgs,
   lib,
+  helpers,
   config,
   current,
   ...
@@ -19,7 +19,7 @@ in {
       ignores = ["*.env" "*.env.json" "*.env.yaml" ".envrc"];
       aliases = {
         a = "add --all";
-        acp = pkgs.libx.stripNewline ''
+        acp = helpers.stripNewline ''
           !f() {
             git add --all &&
             git commit --message "$1" &&

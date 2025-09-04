@@ -1,19 +1,3 @@
-{
-  imports = [
-    ./bootloader.nix
-    ./cloudflare-warp.nix
-    ./docker.nix
-    ./gnome.nix
-    ./gns3.nix
-    ./hyprland.nix
-    ./k3s.nix
-    ./kanata.nix
-    ./locale.nix
-    ./niri.nix
-    ./podman.nix
-    ./printer.nix
-    ./sddm.nix
-    ./virtmanager.nix
-    ./zsh.nix
-  ];
+{helpers, ...}: {
+  imports = helpers.listNixfiles ./.;
 }

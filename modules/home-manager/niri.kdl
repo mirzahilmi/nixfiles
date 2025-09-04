@@ -71,8 +71,7 @@ hotkey-overlay {
 binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
-    Mod+Space { spawn "rofi" "-show" "drun" "-theme" ".config/rofi/config.rasi"; }
-    Mod+R { spawn "rofi" "-show" "run"; }
+    Mod+Space { spawn "rofi" "-show" "drun" "-theme" ".config/rofi/config.rasi" "-show-icons"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: Ghostty" { spawn "ghostty"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }

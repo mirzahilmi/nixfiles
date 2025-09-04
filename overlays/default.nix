@@ -1,8 +1,4 @@
 {inputs, ...}: {
-  libExtensions = final: prev: {
-    libx = import ./lib.nix {inherit final prev;};
-  };
-
   extra = final: prev: import ../pkgs {inherit inputs final prev;};
 
   overridenPackages = final: prev: import ./override.nix {inherit final prev;};

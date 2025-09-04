@@ -22,6 +22,7 @@
   };
 
   fonts.packages = builtins.attrValues {
+    inherit (pkgs) inter;
     inherit
       (pkgs.nerd-fonts)
       blex-mono
@@ -40,6 +41,7 @@
     docker.enable = true;
     niri.enable = true;
     sddm.enable = true;
+    i3.enable = true;
   };
 
   # Suspend the system when battery level drops below 20%

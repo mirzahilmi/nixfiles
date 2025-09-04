@@ -36,4 +36,4 @@ winapps:
 .PHONY: winapps.rm
 winapps.rm:
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Removing windows container"
-	docker compose --file ./modules/home-manager/winapps.yaml down --rmi=all --volumes
+	docker compose --file ./modules/home-manager/winapps.yaml down --volumes

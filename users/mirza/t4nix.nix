@@ -3,7 +3,6 @@
     wl-clipboard
     xfce.thunar
     xfce.tumbler
-    obsidian
     insomnia
     jetbrains.datagrip
     discord
@@ -20,6 +19,10 @@
     zotero
     unstable.gemini-cli
     qwen-code
+    brightnessctl
+    gammastep
+    drawio
+    nautilus
   ];
 
   custom.programs = {
@@ -38,6 +41,8 @@
     wbg.enable = true;
     quickshell.enable = true;
     winapps.enable = true;
+    obs.enable = true;
+    # xdg-portal.enable = true;
   };
 
   services = {
