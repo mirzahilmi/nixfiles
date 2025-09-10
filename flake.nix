@@ -175,6 +175,15 @@
           More info check github.com/mirzahilmi/nixfiles
         '';
       };
+      empty = {
+        path = ./templates/empty;
+        description = "A Nix-flake-based development environment";
+        welcomeText = ''
+          A Nix-flake-based development environment.
+
+          More info check github.com/mirzahilmi/nixfiles
+        '';
+      };
     };
   };
 }
