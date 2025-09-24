@@ -16,7 +16,7 @@
         f {
           pkgs = import inputs.nixpkgs {
             inherit system;
-            overlays = inputs.self.overlays.default;
+            overlays = [inputs.self.overlays.default];
           };
         });
   in {
@@ -24,17 +24,16 @@
 
     devShells = forEachSupportedSystem ({pkgs}: {
       default = pkgs.mkShell {
-        buildInputs = with pkgs; [
-          pkg-config
-          (rust-bin.stable."1.86.0".default.override {
+        nativeBuildInputs = with pkgs; [
+          (rust-bin.stable.latest.default.override {
             extensions = [
               "rust-src"
               "rust-analyzer"
             ];
           })
-          cargo-machete
-          openssl
           lldb
+          pkg-config
+          cargo-machete
         ];
       };
     });
