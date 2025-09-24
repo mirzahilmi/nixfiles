@@ -30,6 +30,7 @@
           go
           gopls
           golangci-lint
+          delve
         ];
       };
     });
