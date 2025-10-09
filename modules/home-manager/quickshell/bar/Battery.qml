@@ -2,7 +2,11 @@ import QtQuick
 import Quickshell.Io
 
 Text {
-    font.family: "Inter"
+    font {
+        family: "Inter"
+        bold: true
+        letterSpacing: 0.2
+    }
     color: "#F9F6EE"
 
     text: `󰁹  ${battery_capacity.value}% ${battery_state.value}`.replace(/\n/gm, "")

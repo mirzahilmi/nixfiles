@@ -1,4 +1,9 @@
-{lib, ...}: {
+{
+  lib,
+  config,
+  osConfig,
+  ...
+}: {
   stripNewline = str: builtins.replaceStrings ["\n"] [""] str;
   listNixfiles = dir:
     builtins.filter (

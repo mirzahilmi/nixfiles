@@ -1,60 +1,71 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     wl-clipboard
-    xfce.thunar
-    xfce.tumbler
     insomnia
     jetbrains.datagrip
     discord
     texliveFull
     mermaid-cli
-    bluetuith
-    wev
-    xwayland-satellite
     eduvpn-client
     mqttui
-    wl-mirror
-    wl-screenrec
     usbutils
     zotero
     unstable.gemini-cli
     qwen-code
-    brightnessctl
-    gammastep
     drawio
-    nautilus
+    postgresql
+    zap
+    rpi-imager
+    freerdp
+    postman
+    obsidian
+    kind
+    kubectl
+    kubectl-explore
+    ungoogled-chromium
+    burpsuite
+    wireshark
+    redisinsight
   ];
 
   custom.programs = {
-    rofi.enable = true;
-    hyprcursor.enable = true;
     zathura.enable = true;
     spicetify.enable = true;
-    flameshot.enable = true;
     gtk.enable = true;
     k9s.enable = true;
-    kind.enable = true;
     ghostty.enable = true;
-    eww.enable = true;
     swayidle.enable = true;
     librewolf.enable = true;
-    wbg.enable = true;
-    quickshell.enable = true;
     winapps.enable = true;
     obs.enable = true;
-    # xdg-portal.enable = true;
-  };
 
-  services = {
-    swww.enable = true;
+    zsh.aliases = {
+      lg = "lazygit";
+      k9 = "k9s";
+      k = "kubectl";
+    };
   };
 
   xdg.mimeApps = {
     enable = true;
     # see https://mimetype.io/all-types
     defaultApplications = {
-      "application/pdf" = ["librewolf.desktop"];
+      "x-scheme-handler/http" = ["librewolf.desktop"];
+      "x-scheme-handler/https" = ["librewolf.desktop"];
+      "x-scheme-handler/ftp" = ["librewolf.desktop"];
       "text/html" = ["librewolf.desktop"];
+      "application/xhtml+xml" = ["librewolf.desktop"];
+      "application/pdf" = ["librewolf.desktop"];
+      "text/uri-list" = ["librewolf.desktop"];
+      "application/x-extension-htm" = ["librewolf.desktop"];
+      "application/x-extension-html" = ["librewolf.desktop"];
+      "application/x-extension-shtml" = ["librewolf.desktop"];
+      "application/x-extension-xhtml" = ["librewolf.desktop"];
+      "application/x-extension-xht" = ["librewolf.desktop"];
     };
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface".color-scheme = "prefer-dark";
   };
 }

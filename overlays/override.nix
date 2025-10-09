@@ -19,4 +19,13 @@
       desktopName = "Discord";
     };
   });
+
+  freerdp = prev.freerdp.overrideAttrs (_: prevAttrs: {
+    src = final.fetchFromGitHub {
+      owner = "FreeRDP";
+      repo = "FreeRDP";
+      rev = "3.17.2";
+      hash = "sha256-r9a+tQ3QIBfF4Vtyo4F4dwqLloxJTTFUQFV8J53ITZ4=";
+    };
+  });
 }

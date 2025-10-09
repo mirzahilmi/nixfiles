@@ -23,6 +23,8 @@
     NUGET_PACKAGES = "${config.xdg.cacheHome}/NuGetPackages";
     # ~/.python_history
     PYTHONSTARTUP = "${config.xdg.configHome}/python/pythonrc";
+    # ~/.kube
+    KUBECONFIG = "${config.xdg.configHome}/kube/config";
   };
 
   # NPM : ~/.npm

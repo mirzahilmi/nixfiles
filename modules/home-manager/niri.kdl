@@ -26,7 +26,6 @@ layout {
 spawn-at-startup "swww-daemon"
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "quickshell" "--daemonize"
-spawn-at-startup "wbg" "/home/mirza/Downloads/sceenery.png"
 
 prefer-no-csd
 screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
@@ -34,6 +33,16 @@ screenshot-path "~/Pictures/Screenshots/%Y-%m-%d-%H-%M-%S.png"
 window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^thunar$"#
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^org\.gnome\.Nautilus$"#
+    open-floating true
 }
 
 window-rule {

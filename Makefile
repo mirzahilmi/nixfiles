@@ -12,8 +12,10 @@ help:
 home:
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Checkout unstaged files"
 	git add --all
+	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Removing annyoing ~/.gtkrc-2.0 conflict"
+	rm -rf ~/.gtkrc-2.0
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Evaluating flake ouputs"
-	nh home switch .
+	home-manager switch --flake .
 
 .PHONY: os
 os:
@@ -33,7 +35,7 @@ winapps:
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Running windows container"
 	docker compose --file ./modules/home-manager/winapps.yaml up --detach
 
-.PHONY: winapps.rm
-winapps.rm:
+.PHONY: winapps.wipe
+winapps.wipe:
 	@printf "$(COLOUR_BLUE)> %s...$(COLOUR_END)\n" "Removing windows container"
-	docker compose --file ./modules/home-manager/winapps.yaml down --volumes
+	docker compose --file ./modules/home-manager/winapps.yaml down --rmi=all --volumes

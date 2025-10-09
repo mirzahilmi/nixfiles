@@ -12,8 +12,8 @@ in {
 
   config = lib.mkIf cfg.enable {
     home.packages = [pkgs.winapps];
-    xdg.configFile."winapps/winapps.conf".source =
-      config.lib.file.mkOutOfStoreSymlink
-      "/home/mirza/.config/nixfiles/modules/home-manager/winapps.conf";
+    # xdg.configFile."winapps/winapps.conf".source =
+    #   config.lib.file.mkOutOfStoreSymlink
+    #   "/home/mirza/.config/nixfiles/modules/home-manager/winapps.conf";
   };
 }

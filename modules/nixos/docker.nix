@@ -7,6 +7,10 @@
 in {
   options.custom.programs.docker = {
     enable = lib.mkEnableOption "Docker";
+    autoStart = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+    };
     storageDriver = lib.mkOption {
       type =
         lib.types.nullOr
@@ -25,7 +29,7 @@ in {
   config = lib.mkIf cfg.enable {
     virtualisation.docker = {
       enable = true;
-      enableOnBoot = false;
+      enableOnBoot = cfg.autoStart;
       autoPrune.enable = true;
       storageDriver = cfg.storageDriver;
     };

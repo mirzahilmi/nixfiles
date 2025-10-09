@@ -50,7 +50,6 @@
     inherit (self) outputs;
     overlays = import ./overlays {inherit inputs;};
     x86 = "x86_64-linux";
-    helpers = import ./overlays/helpers.nix {lib = nixpkgs.lib // home-manager.lib;};
   in {
     inherit overlays;
 
@@ -70,7 +69,14 @@
               ./users/mirza/nixos.nix
             ]
             ++ modules;
-          specialArgs = {inherit inputs outputs helpers;};
+          specialArgs = {
+            inherit inputs outputs;
+            helpers = import ./overlays/helpers.nix {
+              lib = nixpkgs.lib // home-manager.lib;
+              config = outputs.homeConfigurations."mirza@${hostname}".config;
+              osConfig = outputs.nixosConfigurations.${hostname}.config;
+            };
+          };
         };
     in {
       nixsina = mkSystem {
@@ -105,9 +111,14 @@
           ];
           pkgs = nixpkgs.legacyPackages.${system};
           extraSpecialArgs = {
-            inherit inputs outputs helpers;
+            inherit inputs outputs;
             current = {inherit username hostname;};
             osConfig = outputs.nixosConfigurations.${hostname}.config;
+            helpers = import ./overlays/helpers.nix {
+              lib = nixpkgs.lib // home-manager.lib;
+              config = outputs.homeConfigurations."mirza@${hostname}".config;
+              osConfig = outputs.nixosConfigurations.${hostname}.config;
+            };
           };
         };
     in {

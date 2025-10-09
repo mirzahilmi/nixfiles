@@ -13,6 +13,13 @@ in {
       default = true;
       example = false;
     };
+    aliases = lib.mkOption {
+      type = lib.types.attrsOf lib.types.str;
+      default = {};
+      example = {
+        lg = "lazygit";
+      };
+    };
   };
   config = lib.mkIf cfg.enable {
     home.packages = [pkgs.nix-zsh-completions];
@@ -41,11 +48,9 @@ in {
           "Aloxaf/fzf-tab kind:defer"
         ];
       };
-      shellAliases = {
+      shellAliases = lib.mergeAttrs cfg.aliases {
         v = "nvim";
-        lg = "lazygit";
         mk = "make";
-        k9 = "k9s";
       };
       initContent = let
         zshConfigFirst = lib.mkBefore ''

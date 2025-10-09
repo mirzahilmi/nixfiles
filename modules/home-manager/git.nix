@@ -1,4 +1,5 @@
 {
+  pkgs,
   lib,
   helpers,
   config,
@@ -47,7 +48,12 @@ in {
         push.autoSetupRemote = true;
         push.default = "simple";
         rerere.enabled = true;
+
         gpg.format = "ssh";
+        # thanks to:
+        # https://www.reddit.com/r/git/comments/1coropv/comment/l3jeblh
+        # https://www.reddit.com/r/git/comments/1coropv/comment/mdoiau0
+        gpg.ssh.program = "${pkgs.ssh-sign-me-up}/bin/ssh-sign-me-up";
         commit.gpgSign = true;
         user.signingkey = "~/.ssh/id_ed25519.pub";
       };

@@ -14,25 +14,30 @@ in {
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
-      theme = "where_is_my_sddm_theme_qt5";
+      theme = "where_is_my_sddm_theme";
+      settings.General.DisplayServer = "wayland";
     };
     environment.systemPackages = [
       (pkgs.where-is-my-sddm-theme.override {
-        variants = ["qt5"];
         themeConfig.General = {
           passwordCharacter = "*";
           passwordMask = true;
-          passwordInputWidth = 0.5;
+          passwordInputWidth = 0.25;
+          passwordInputBackground = "#7b9fe7";
+          passwordInputRadius = 7;
           passwordInputCursorVisible = true;
-          passwordFontSize = 96;
-          passwordCursorColor = "random";
-          showSessionsByDefault = true;
+          passwordFontSize = 28;
+          passwordCursorColor = "#ffffff";
+          passwordTextColor = "";
+          showSessionsByDefault = false;
           sessionsFontSize = 24;
-          showUsersByDefault = true;
-          usersFontSize = 48;
-          backgroundFill = "#000000";
+          showUsersByDefault = false;
+          usersFontSize = 32;
+          background = "";
+          backgroundFill = "#8aadf4";
           backgroundFillMode = "aspect";
           basicTextColor = "#ffffff";
+          blurRadius = "";
         };
       })
     ];

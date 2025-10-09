@@ -9,36 +9,18 @@ in {
     enable = lib.mkEnableOption "ssh";
   };
   config = lib.mkIf cfg.enable {
+    services.ssh-agent.enable = true;
     programs.ssh = {
       enable = true;
-      addKeysToAgent = "yes";
+      addKeysToAgent = "3h";
       matchBlocks = {
-        "202.249.24.115" = {
-          extraOptions = {
-            KexAlgorithms = "+diffie-hellman-group1-sha1";
-            PubkeyAcceptedAlgorithms = "+ssh-rsa";
-            HostkeyAlgorithms = "+ssh-rsa";
-            Ciphers = "+aes256-cbc";
-          };
-        };
-        "202.249.25.154" = {
-          extraOptions = {
-            kexalgorithms = "+diffie-hellman-group1-sha1";
-            pubkeyacceptedalgorithms = "+ssh-rsa";
-            hostkeyalgorithms = "+ssh-rsa";
-            ciphers = "+aes256-cbc";
-          };
-        };
-        "202.249.25.149" = {
-          extraOptions = {
-            kexalgorithms = "+diffie-hellman-group1-sha1";
-            pubkeyacceptedalgorithms = "+ssh-rsa";
-            hostkeyalgorithms = "+ssh-rsa";
-            ciphers = "+aes256-cbc";
-          };
+        "GitHub" = {
+          hostname = "github.com";
+          user = "git";
+          identityFile = "~/.ssh/id_ed25519";
+          identitiesOnly = true;
         };
       };
     };
-    services.ssh-agent.enable = true;
   };
 }

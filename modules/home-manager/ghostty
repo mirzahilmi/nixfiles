@@ -6,7 +6,6 @@ font-size = 14
 mouse-hide-while-typing = true
 theme = Dark+
 gtk-titlebar-hide-when-maximized = true
-window-decoration = none
 confirm-close-surface = false
 # see https://github.com/ghostty-org/ghostty/issues/4800#issuecomment-2685774252
 app-notifications = no-clipboard-copy
