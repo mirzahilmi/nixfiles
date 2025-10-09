@@ -1,7 +1,6 @@
 {
   inputs,
   pkgs,
-  osConfig,
   ...
 }: {
   imports = [
@@ -97,4 +96,6 @@
     ];
   };
   services.logind.lidSwitch = "lock";
+
+  users.extraUsers.mirza.shell = pkgs.bash;
 }

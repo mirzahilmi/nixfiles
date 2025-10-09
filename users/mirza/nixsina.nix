@@ -36,7 +36,6 @@
   };
   custom.programs = {
     ghostty.enable = true;
-    kind.enable = true;
     obs.enable = true;
     spicetify.enable = true;
   };
