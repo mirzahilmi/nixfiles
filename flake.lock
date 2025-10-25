@@ -456,11 +456,11 @@
     },
     "nixpkgs_6": {
       "locked": {
-        "lastModified": 1754772842,
-        "narHash": "sha256-aKmIQcvT857VRc3XbLvsuMdLeUuYfz+8zQ4eTXe78KE=",
+        "lastModified": 1760349414,
+        "narHash": "sha256-W4Ri1ZwYuNcBzqQQa7NnWfrv0wHMo7rduTWjIeU9dZk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1ef586712f85b4b004caecd385d6b023e7fd2450",
+        "rev": "c12c63cd6c5eb34c7b4c3076c6a99e00fcab86ec",
         "type": "github"
       },
       "original": {
@@ -495,8 +495,8 @@
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1760001684,
-        "narHash": "sha256-NThc/IvA8en0eRQz2Qnd9yTRGl9RxauX4RO1LrgLOhI=",
+        "lastModified": 1760725685,
+        "narHash": "sha256-40QM37yDIE0OcLFaippixI+AKVroxFcL1dHKtag59GA=",
         "path": "/home/mirza/.config/nvim",
         "type": "path"
       },

@@ -8,12 +8,12 @@
       XDG_DATA_HOME = lib.mkDefault "$HOME/.local/share";
       XDG_STATE_HOME = lib.mkDefault "$HOME/.local/state";
     };
-    etc."xdg/user-dirs.defaults".text = ''
-      DOWNLOAD="$HOME/Downloads"
-      DOCUMENTS="$HOME/Documents"
-      MUSIC="$HOME/Musics"
-      PICTURES="$HOME/Pictures"
-      VIDEOS="$HOME/Videos"
-    '';
+    # etc."xdg/user-dirs.defaults".text = ''
+    #   DOWNLOAD="$HOME/Downloads"
+    #   DOCUMENTS="$HOME/Documents"
+    #   MUSIC="$HOME/Musics"
+    #   PICTURES="$HOME/Pictures"
+    #   VIDEOS="$HOME/Videos"
+    # '';
   };
 }

@@ -4,13 +4,11 @@
     insomnia
     jetbrains.datagrip
     discord
-    texliveFull
     mermaid-cli
     eduvpn-client
     mqttui
     usbutils
     zotero
-    unstable.gemini-cli
     qwen-code
     drawio
     postgresql
@@ -25,7 +23,8 @@
     ungoogled-chromium
     burpsuite
     wireshark
-    redisinsight
+    minikube
+    openssl
   ];
 
   custom.programs = {
@@ -67,5 +66,10 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
+
+  # thanks to https://github.com/NixOS/nixpkgs/issues/115878#issuecomment-1152105593
+  home.file = {
+    ".minikube/bin/docker-machine-driver-kvm2".source = "${pkgs.docker-machine-kvm2}/bin/docker-machine-driver-kvm2";
   };
 }

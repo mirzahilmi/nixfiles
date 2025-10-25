@@ -37,8 +37,6 @@
     keyMap = "us";
   };
 
-  environment.systemPackages = with pkgs; [qemu];
-
   custom.programs = {
     docker = {
       enable = true;
@@ -49,6 +47,10 @@
     i3.enable = true;
     kde-plasma.enable = true;
     wireshark.enable = true;
+  };
+
+  programs = {
+    nix-ld.enable = true;
   };
 
   # Suspend the system when battery level drops below 20%
