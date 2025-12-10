@@ -45,11 +45,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  # # fingerprint
-  # services."06cb-009a-fingerprint-sensor" = {
-  #   enable = true;
-  #   backend = "libfprint-tod";
-  #   calib-data-file = ./calib-data.bin;
-  # };
 }

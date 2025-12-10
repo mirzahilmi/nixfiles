@@ -8,7 +8,7 @@
   custom.programs.zsh.enable = true;
   users.extraUsers.mirza = {
     description = "Mirza";
-    shell = lib.mkDefault pkgs.zsh;
+    shell = lib.mkForce pkgs.zsh;
     isNormalUser = true;
     extraGroups = [
       "wheel"
@@ -17,6 +17,7 @@
       "networkmanager"
       "video"
       "wireshark"
+      "dialout"
     ];
   };
 }

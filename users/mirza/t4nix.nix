@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     wl-clipboard
-    insomnia
+    unstable.insomnia
     jetbrains.datagrip
     discord
     mermaid-cli
@@ -13,7 +13,6 @@
     drawio
     postgresql
     zap
-    rpi-imager
     freerdp
     postman
     obsidian
@@ -25,6 +24,11 @@
     wireshark
     minikube
     openssl
+    exiftool
+    tokei
+    anydesk
+    slack
+    pandoc
   ];
 
   custom.programs = {

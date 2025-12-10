@@ -42,7 +42,6 @@
       enable = true;
       autoStart = false;
     };
-    niri.enable = true;
     sddm.enable = true;
     i3.enable = true;
     kde-plasma.enable = true;
@@ -54,10 +53,20 @@
   };
 
   # Suspend the system when battery level drops below 20%
-  services.udev.extraRules = lib.strings.concatMapStringsSep "\n" (pattern: ''
-    SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="${pattern}", RUN+="${pkgs.systemd}/bin/systemctl --check-inhibitors=no poweroff"
-  '') ["[0-9]" "1[0-9]" "2[0-9]"];
+  # services.udev.extraRules = lib.strings.concatMapStringsSep "\n" (pattern: ''
+  #   SUBSYSTEM=="power_supply", ATTR{status}=="Discharging", ATTR{capacity}=="${pattern}", RUN+="${pkgs.systemd}/bin/systemctl --check-inhibitors=no poweroff"
+  # '') ["[0-9]" "1[0-9]" "2[0-9]"];
 
   hardware.bluetooth.enable = true;
   networking.nftables.enable = true;
+
+  networking.extraHosts = ''
+    127.0.0.1 public.example.com
+    127.0.0.1 private.example.com
+    127.0.0.1 any1.example.com
+    127.0.0.1 any2.example.com
+    127.0.0.1 any3.example.com
+  '';
+
+  services.tailscale.enable = true;
 }

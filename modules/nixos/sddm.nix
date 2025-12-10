@@ -22,21 +22,26 @@ in {
         themeConfig.General = {
           passwordCharacter = "*";
           passwordMask = true;
-          passwordInputWidth = 0.25;
-          passwordInputBackground = "#7b9fe7";
-          passwordInputRadius = 7;
+          passwordInputWidth = 0.5;
+          passwordInputBackground = "";
+          passwordInputRadius = "";
           passwordInputCursorVisible = true;
-          passwordFontSize = 28;
-          passwordCursorColor = "#ffffff";
+          passwordFontSize = 96;
+          passwordCursorColor = "random";
           passwordTextColor = "";
+
           showSessionsByDefault = false;
           sessionsFontSize = 24;
+
           showUsersByDefault = false;
-          usersFontSize = 32;
+          usersFontSize = 48;
+
           background = "";
-          backgroundFill = "#8aadf4";
+          backgroundFill = "#000000";
           backgroundFillMode = "aspect";
+
           basicTextColor = "#ffffff";
+
           blurRadius = "";
         };
       })

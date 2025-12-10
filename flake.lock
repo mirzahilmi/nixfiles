@@ -424,11 +424,11 @@
     },
     "nixpkgs_4": {
       "locked": {
-        "lastModified": 1752308619,
-        "narHash": "sha256-pzrVLKRQNPrii06Rm09Q0i0dq3wt2t2pciT/GNq5EZQ=",
+        "lastModified": 1764836381,
+        "narHash": "sha256-8jemYbbW9EBttQKHep7Rj8kzXaxsrk/lACdXA2DN5Xk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "650e572363c091045cdbc5b36b0f4c1f614d3058",
+        "rev": "ff06bd3398fb1bea6c937039ece7e7c8aa396ebf",
         "type": "github"
       },
       "original": {
@@ -492,11 +492,12 @@
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_6",
         "plugins-cord-nvim": "plugins-cord-nvim",
+        "plugins-duck-nvim": "plugins-duck-nvim",
         "plugins-showkeys": "plugins-showkeys"
       },
       "locked": {
-        "lastModified": 1760725685,
-        "narHash": "sha256-40QM37yDIE0OcLFaippixI+AKVroxFcL1dHKtag59GA=",
+        "lastModified": 1765300261,
+        "narHash": "sha256-NzW+cvscuDGHkgaT3SNsnADOKTuwDKOIGRlM03tmLzI=",
         "path": "/home/mirza/.config/nvim",
         "type": "path"
       },
@@ -508,16 +509,32 @@
     "plugins-cord-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1754819978,
-        "narHash": "sha256-NKuenYI2yURXWXKyP+R+TVcPKkuBTqnwM3tlZwRRKMs=",
+        "lastModified": 1761738903,
+        "narHash": "sha256-iatVlFU44iigiQKuXO3fS0OnKAZbgpBImaTLi6uECXs=",
         "owner": "vyfor",
         "repo": "cord.nvim",
-        "rev": "1332d6342dd02e878789483eca01dddcb3680772",
+        "rev": "1af0ff6826b10f9ae8b01c63d16a90b8b31e7c48",
         "type": "github"
       },
       "original": {
         "owner": "vyfor",
         "repo": "cord.nvim",
+        "type": "github"
+      }
+    },
+    "plugins-duck-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1709800496,
+        "narHash": "sha256-97QSkZHpHLq1XyLNhPz88i9VuWy6ux7ZFNJx/g44K2A=",
+        "owner": "tamton-aquib",
+        "repo": "duck.nvim",
+        "rev": "d8a6b08af440e5a0e2b3b357e2f78bb1883272cd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tamton-aquib",
+        "repo": "duck.nvim",
         "type": "github"
       }
     },

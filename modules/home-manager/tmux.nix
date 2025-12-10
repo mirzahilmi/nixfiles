@@ -8,12 +8,6 @@
 in {
   options.custom.programs.tmux = {
     enable = lib.mkEnableOption "Tmux";
-    shell = lib.mkOption {
-      type = lib.types.str;
-      default = "${pkgs.zsh}/bin/zsh";
-      example = "/usr/bin/zsh";
-      description = "default shell absolute path";
-    };
   };
 
   config = lib.mkIf cfg.enable {
